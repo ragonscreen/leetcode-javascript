@@ -1,0 +1,19 @@
+{
+        "name": "leetcode-javascript",
+        "version": "1.0.0",
+        "description": "",
+        "main": "src/main.js",
+        "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1",
+                "fmt": "pnpm exec biome check --write",
+                "dev": "node --watch src/main.js"
+        },
+        "keywords": [],
+        "author": "ragonscreen",
+        "license": "ISC",
+        "packageManager": "pnpm@10.21.0",
+        "type": "module",
+        "devDependencies": {
+                "@biomejs/biome": "2.3.8"
+        }
+}
