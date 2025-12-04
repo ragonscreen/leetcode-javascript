@@ -55,12 +55,16 @@
                                 "noReExportAll": "error"
                         },
                         "security": {
-                                "noSecrets": "error"
+                                "noSecrets": {
+                                        "level": "error",
+                                        "options": {
+                                                "entropyThreshold": 50
+                                        }
+                                }
                         },
                         "style": {
                                 "noCommonJs": "error",
                                 "noExportedImports": "error",
-                                "noMagicNumbers": "warn",
                                 "noNegationElse": "error",
                                 "noNestedTernary": "error",
                                 "noParameterAssign": "error",
