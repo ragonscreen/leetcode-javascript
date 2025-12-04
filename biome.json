@@ -59,7 +59,6 @@
                         },
                         "style": {
                                 "noCommonJs": "error",
-                                "noDefaultExport": "error",
                                 "noExportedImports": "error",
                                 "noMagicNumbers": "warn",
                                 "noNegationElse": "error",
