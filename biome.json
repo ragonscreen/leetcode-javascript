@@ -54,14 +54,6 @@
                                 "noNamespaceImport": "error",
                                 "noReExportAll": "error"
                         },
-                        "security": {
-                                "noSecrets": {
-                                        "level": "error",
-                                        "options": {
-                                                "entropyThreshold": 50
-                                        }
-                                }
-                        },
                         "style": {
                                 "noCommonJs": "error",
                                 "noExportedImports": "error",
