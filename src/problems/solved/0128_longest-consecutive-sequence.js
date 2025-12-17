@@ -8,8 +8,8 @@
 
 /**
  * Implementation: Hash Set
- * Time Complexity: O()
- * Space Complexity: O()
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
  *
  * @param {number[]} nums
  * @return {number}
