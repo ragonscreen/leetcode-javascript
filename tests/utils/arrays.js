@@ -20,4 +20,22 @@ const arrDeepSortAlpha = (arr) => {
         });
 };
 
-export { arrSortNum, arrDeepSortAlpha };
+const arrDeepSortNum = (arr, descending = false) => {
+        const arrCpy = [...arr];
+
+        for (let i = 0; i < arrCpy.length; i++) {
+                if (Array.isArray(arrCpy[i])) {
+                        arrCpy[i] = arrDeepSortNum(arrCpy[i]);
+                }
+        }
+
+        return arrCpy.sort((a, b) => {
+                if (Array.isArray(a)) {
+                        return a.length - b.length;
+                }
+
+                return descending ? b - a : a - b;
+        });
+};
+
+export { arrSortNum, arrDeepSortAlpha, arrDeepSortNum };
