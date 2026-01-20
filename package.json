@@ -4,6 +4,7 @@
         "description": "",
         "main": "src/main.js",
         "scripts": {
+                "new": "node src/lib/new/main.js",
                 "fmt": "pnpm exec biome check --write",
                 "dev": "node --watch src/main.js",
                 "test": "vitest",
@@ -20,5 +21,8 @@
                 "@vitest/coverage-v8": "4.0.15",
                 "@vitest/ui": "4.0.15",
                 "vitest": "^4.0.15"
+        },
+        "dependencies": {
+                "commander": "^14.0.2"
         }
 }
