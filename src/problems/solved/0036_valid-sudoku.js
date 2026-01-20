@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/valid-sudoku/
  * Difficulty: Medium
  * Date: 2025-12-15
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/valid-parentheses/
  * Difficulty: Easy
  * Date: 2025-12-17
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

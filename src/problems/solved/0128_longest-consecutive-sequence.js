@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/longest-consecutive-sequence/
  * Difficulty: Medium
  * Date: 2025-12-16
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

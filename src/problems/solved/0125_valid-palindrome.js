@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/valid-palindrome/
  * Difficulty: Easy
  * Date: 2026-01-15
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

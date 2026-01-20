@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/top-k-frequent-elements/
  * Difficulty: Medium
  * Date: 2025-12-09
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

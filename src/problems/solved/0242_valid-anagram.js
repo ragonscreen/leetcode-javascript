@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/valid-anagram/
  * Difficulty: Easy
  * Date: 2025-12-05
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

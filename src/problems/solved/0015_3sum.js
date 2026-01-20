@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/3sum/
  * Difficulty: Medium
  * Date: 2026-01-19
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/evaluate-reverse-polish-notation/
  * Difficulty: Medium
  * Date: 2026-01-05
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

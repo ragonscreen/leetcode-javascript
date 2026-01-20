@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/contains-duplicate/
  * Difficulty: Easy
  * Date: 2025-12-04
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

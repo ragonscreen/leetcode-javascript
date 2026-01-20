@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/group-anagrams/
  * Difficulty: Medium
  * Date: 2025-12-08
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

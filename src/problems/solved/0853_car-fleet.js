@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/car-fleet/
  * Difficulty: Medium
  * Date: 2026-01-12
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

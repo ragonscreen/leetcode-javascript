@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/product-of-array-except-self/
  * Difficulty: Medium
  * Date: 2025-12-12
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

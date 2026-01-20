@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/encode-and-decode-strings/
  * Difficulty: Medium
  * Date: 2025-12-11
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

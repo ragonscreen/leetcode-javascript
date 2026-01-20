@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/largest-rectangle-in-histogram/
  * Difficulty: Hard
  * Date: 2026-01-14
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

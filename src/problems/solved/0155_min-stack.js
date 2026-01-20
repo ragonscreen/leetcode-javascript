@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/min-stack/
  * Difficulty: Medium
  * Date: 2025-12-18
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**

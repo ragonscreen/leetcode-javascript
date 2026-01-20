@@ -3,7 +3,7 @@
  * Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
  * Difficulty: Medium
  * Date: 2026-01-16
- * Author: ragonscreen
+ * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
 /**
