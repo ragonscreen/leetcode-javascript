@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import MinStack from '../src/problems/solved/0155_min-stack.js';
+import { MinStack } from '../src/problems/solved/0155_min-stack.js';
 
 describe('MinStack', () => {
         const minStack = new MinStack();

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import isPalindrome from '../src/problems/solved/0125_valid-palindrome.js';
+import { isPalindrome } from '../src/problems/solved/0125_valid-palindrome.js';
 
 describe('isPalindrome', () => {
         test('basic test 1', () => {

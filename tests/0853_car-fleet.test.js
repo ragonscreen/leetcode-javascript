@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import carFleet from '../src/problems/solved/0853_car-fleet.js';
+import { carFleet } from '../src/problems/solved/0853_car-fleet.js';
 
 describe('carFleet', () => {
         test('basic test 1', () => {

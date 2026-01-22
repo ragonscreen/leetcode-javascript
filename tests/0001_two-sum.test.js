@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import twoSum from '../src/problems/solved/0001_two-sum.js';
+import { twoSum } from '../src/problems/solved/0001_two-sum.js';
 import { arrSortNum } from './utils/arrays.js';
 
 describe('twoSum', () => {

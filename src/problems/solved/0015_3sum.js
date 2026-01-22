@@ -54,4 +54,4 @@ const threeSum = (nums) => {
         return res;
 };
 
-export default threeSum;
+export { threeSum };

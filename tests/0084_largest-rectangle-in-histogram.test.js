@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import largestRectangleArea from '../src/problems/solved/0084_largest-rectangle-in-histogram.js';
+import { largestRectangleArea } from '../src/problems/solved/0084_largest-rectangle-in-histogram.js';
 
 describe('largestRectangleArea', () => {
         test('basic test 1', () => {

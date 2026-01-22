@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import containsDuplicate from '../src/problems/solved/0217_contains-duplicate.js';
+import { containsDuplicate } from '../src/problems/solved/0217_contains-duplicate.js';
 
 describe('containsDuplicate', () => {
         test('returns true when duplicate exists', () => {

@@ -32,4 +32,4 @@ const dailyTemperatures = (temperatures) => {
         return res;
 };
 
-export default dailyTemperatures;
+export { dailyTemperatures };

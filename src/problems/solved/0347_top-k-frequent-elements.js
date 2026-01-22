@@ -42,4 +42,4 @@ const topKFrequent = (nums, k) => {
         return res;
 };
 
-export default topKFrequent;
+export { topKFrequent };

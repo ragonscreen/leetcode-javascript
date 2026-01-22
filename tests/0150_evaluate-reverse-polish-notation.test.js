@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import evalRPN from '../src/problems/solved/0150_evaluate-reverse-polish-notation.js';
+import { evalRPN } from '../src/problems/solved/0150_evaluate-reverse-polish-notation.js';
 
 describe('evalRPN', () => {
         test('evaluates reverse polish notation', () => {

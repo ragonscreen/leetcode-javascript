@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import trap from '../src/problems/solved/0042_trapping-rain-water.js';
+import { trap } from '../src/problems/solved/0042_trapping-rain-water.js';
 
 describe('trap', () => {
         test('basic test 1', () => {

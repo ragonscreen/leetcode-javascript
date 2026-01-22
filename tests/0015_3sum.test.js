@@ -1,7 +1,7 @@
 // biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: multiple tests in one describe function
 
 import { describe, expect, test } from 'vitest';
-import threeSum from '../src/problems/solved/0015_3sum.js';
+import { threeSum } from '../src/problems/solved/0015_3sum.js';
 import { arrDeepSortNum } from './utils/arrays.js';
 
 describe('threeSum', () => {

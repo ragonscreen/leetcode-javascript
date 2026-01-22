@@ -44,4 +44,4 @@ const isAlpha = (c) => {
         return (v > 47 && v < 58) || (v > 64 && v < 91) || (v > 96 && v < 123);
 };
 
-export default isPalindrome;
+export { isPalindrome };

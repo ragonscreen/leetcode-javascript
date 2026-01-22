@@ -33,4 +33,4 @@ const twoSum = (nums, target) => {
         return [];
 };
 
-export default twoSum;
+export { twoSum };

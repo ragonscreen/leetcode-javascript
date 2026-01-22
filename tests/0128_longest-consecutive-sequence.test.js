@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import longestConsecutive from '../src/problems/solved/0128_longest-consecutive-sequence.js';
+import { longestConsecutive } from '../src/problems/solved/0128_longest-consecutive-sequence.js';
 
 describe('longestConsecutive', () => {
         test('returns the longest consecutive sequence', () => {

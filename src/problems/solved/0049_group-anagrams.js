@@ -38,4 +38,4 @@ const groupAnagrams = (strs) => {
         return Object.values(groups);
 };
 
-export default groupAnagrams;
+export { groupAnagrams };

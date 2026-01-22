@@ -50,4 +50,4 @@ class MinStack {
         };
 }
 
-export default MinStack;
+export { MinStack };

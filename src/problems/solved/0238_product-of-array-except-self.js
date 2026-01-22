@@ -33,4 +33,4 @@ const productExceptSelf = (nums) => {
         return res;
 };
 
-export default productExceptSelf;
+export { productExceptSelf };

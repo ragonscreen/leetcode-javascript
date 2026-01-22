@@ -30,4 +30,4 @@ const twoSum = (numbers, target) => {
         }
 };
 
-export default twoSum;
+export { twoSum };

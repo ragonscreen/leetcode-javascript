@@ -41,4 +41,4 @@ const isValidSudoku = (board) => {
         return true;
 };
 
-export default isValidSudoku;
+export { isValidSudoku };

@@ -37,4 +37,4 @@ const longestConsecutive = (nums) => {
         return max;
 };
 
-export default longestConsecutive;
+export { longestConsecutive };

@@ -3,7 +3,7 @@ import {
         maxProfit,
         maxProfit1,
         maxProfit2,
-} from '../src/problems/0121_best-time-to-buy-and-sell-stock.js';
+} from '../src/problems/solved/0121_best-time-to-buy-and-sell-stock.js';
 
 describe('maxProfit', () => {
         describe('maxProfit', () => {

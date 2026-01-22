@@ -38,4 +38,4 @@ const isAnagram = (s, t) => {
         return true;
 };
 
-export default isAnagram;
+export { isAnagram };

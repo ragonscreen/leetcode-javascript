@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import dailyTemperatures from '../src/problems/solved/0739_daily-temperatures.js';
+import { dailyTemperatures } from '../src/problems/solved/0739_daily-temperatures.js';
 
 describe('dailyTemperatures', () => {
         test('basic test 1', () => {

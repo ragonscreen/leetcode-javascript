@@ -38,4 +38,4 @@ const isValid = (s) => {
         return !stack.length;
 };
 
-export default isValid;
+export { isValid };

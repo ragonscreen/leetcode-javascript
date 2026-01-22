@@ -51,4 +51,4 @@ const evalRPN = (tokens) => {
         return Number(stack[0]);
 };
 
-export default evalRPN;
+export { evalRPN };

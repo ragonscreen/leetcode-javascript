@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import topKFrequent from '../src/problems/solved/0347_top-k-frequent-elements.js';
+import { topKFrequent } from '../src/problems/solved/0347_top-k-frequent-elements.js';
 import { arrSortNum } from './utils/arrays.js';
 
 describe('topKFrequent', () => {

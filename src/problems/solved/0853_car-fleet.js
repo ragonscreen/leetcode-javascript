@@ -40,4 +40,4 @@ const carFleet = (target, position, speed) => {
         return fleets;
 };
 
-export default carFleet;
+export { carFleet };

@@ -51,4 +51,4 @@ class Solution {
         }
 }
 
-export default Solution;
+export { Solution };

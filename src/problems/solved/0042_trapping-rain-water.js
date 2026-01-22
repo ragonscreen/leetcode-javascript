@@ -48,4 +48,4 @@ const trap = (height) => {
         return res;
 };
 
-export default trap;
+export { trap };

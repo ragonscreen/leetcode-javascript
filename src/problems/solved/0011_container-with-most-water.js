@@ -36,4 +36,4 @@ const maxArea = (height) => {
         return max;
 };
 
-export default maxArea;
+export { maxArea };

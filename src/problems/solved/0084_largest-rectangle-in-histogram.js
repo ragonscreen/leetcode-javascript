@@ -56,4 +56,4 @@ const largestRectangleArea = (heights) => {
         return max;
 };
 
-export default largestRectangleArea;
+export { largestRectangleArea };

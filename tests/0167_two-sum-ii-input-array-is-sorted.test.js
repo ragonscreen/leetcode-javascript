@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import twoSum from '../src/problems/solved/0167_two-sum-ii-input-array-is-sorted.js';
+import { twoSum } from '../src/problems/solved/0167_two-sum-ii-input-array-is-sorted.js';
 
 describe('twoSum', () => {
         test('basic test 1', () => {

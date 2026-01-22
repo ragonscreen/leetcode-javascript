@@ -28,4 +28,4 @@ const containsDuplicate = (nums) => {
         return false;
 };
 
-export default containsDuplicate;
+export  {containsDuplicate};

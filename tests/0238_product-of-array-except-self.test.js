@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import productExceptSelf from '../src/problems/solved/0238_product-of-array-except-self.js';
+import { productExceptSelf } from '../src/problems/solved/0238_product-of-array-except-self.js';
 import { normaliseNegZero } from './utils/number.js';
 
 describe('productExceptSelf', () => {

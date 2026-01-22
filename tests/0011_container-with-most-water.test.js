@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import maxArea from '../src/problems/solved/0011_container-with-most-water.js';
+import { maxArea } from '../src/problems/solved/0011_container-with-most-water.js';
 
 describe('maxArea', () => {
         test('basic test 1', () => {
