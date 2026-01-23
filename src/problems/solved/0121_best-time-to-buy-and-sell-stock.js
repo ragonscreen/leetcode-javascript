@@ -77,10 +77,10 @@ const maxProfit2 = (prices) => {
                 }
 
                 if (prices[r] < prices[l]) {
-                        l++;
-                } else {
-                        r++;
+                        l = r;
                 }
+
+                r++;
         }
 
         return max;
