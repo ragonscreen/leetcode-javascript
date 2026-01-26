@@ -70,7 +70,6 @@
                                         }
                                 },
                                 "noSubstr": "error",
-                                "noUnusedTemplateLiteral": "error",
                                 "noUselessElse": "error",
                                 "noYodaExpression": "error",
                                 "useAtIndex": "error",
