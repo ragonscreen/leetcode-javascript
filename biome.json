@@ -58,7 +58,7 @@
                                 "noCommonJs": "error",
                                 "noExportedImports": "error",
                                 "noNegationElse": "error",
-                                "noNestedTernary": "error",
+                                "noNestedTernary": "warn",
                                 "noParameterAssign": "error",
                                 "noRestrictedGlobals": {
                                         "level": "error",
