@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { maxSlidingWindow } from '../src/problems/shelved/0239_sliding-window-maximum.js';
+import { maxSlidingWindow } from '../../src/problems/shelved/0239_sliding-window-maximum.js';
 
 describe('maxSlidingWindow', () => {
         test('basic test 1', () => {
