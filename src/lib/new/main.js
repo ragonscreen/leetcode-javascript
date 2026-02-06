@@ -99,7 +99,7 @@ const ${fn} = () => {};
 
 export { ${fn} };`;
 
-        await writeFile(`src/problems/${filename}`, strSolution);
+        await writeFile(`src/problems/wip/${filename}`, strSolution);
 };
 
 const writeTests = async (problemDetails) => {
@@ -110,7 +110,7 @@ const writeTests = async (problemDetails) => {
         } = getTransformedDetails(problemDetails);
 
         const strTests = `import { describe, expect, test } from 'vitest';
-import { ${fn} } from '../src/problems/${filenameSolution}';
+import { ${fn} } from '../../../src/problems/wip/${filenameSolution}';
 
 describe('${fn}', () => {
         test('basic test 1', () => {
@@ -118,7 +118,7 @@ describe('${fn}', () => {
         });
 });`;
 
-        await writeFile(`tests/${filename}`, strTests);
+        await writeFile(`__tests__/problems/wip/${filename}`, strTests);
 };
 
 const write = async (problemDetails) => {

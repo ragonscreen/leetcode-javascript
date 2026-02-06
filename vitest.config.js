@@ -4,12 +4,15 @@ export default defineConfig({
         test: {
                 globals: true,
                 environment: 'node',
-                include: ['tests/**/*.test.js'],
+                include: ['__tests__/**/*.test.js'],
                 coverage: {
                         provider: 'v8',
                         reporter: ['text', 'html'],
                         include: ['src/**/*.js'],
                 },
-                exclude: [...configDefaults.exclude, './tests/shelved/**'],
+                exclude: [
+                        ...configDefaults.exclude,
+                        '__tests__/problems/shelved/**',
+                ],
         },
 });
