@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { majorityElement } from '../src/problems/wip/0229_majority-element-ii.js';
+import { majorityElement } from '../../src/problems/shelved/0229_majority-element-ii.js';
 
 describe('majorityElement', () => {
         test('basic test 1', () => {
