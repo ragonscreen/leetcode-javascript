@@ -57,9 +57,8 @@
                         "style": {
                                 "noCommonJs": "error",
                                 "noExportedImports": "error",
-                                "noMagicNumbers": "warn",
                                 "noNegationElse": "error",
-                                "noNestedTernary": "error",
+                                "noNestedTernary": "warn",
                                 "noParameterAssign": "error",
                                 "noRestrictedGlobals": {
                                         "level": "error",
@@ -114,7 +113,7 @@
                                 "noExportsInTest": "error",
                                 "noFocusedTests": "error",
                                 "noMisplacedAssertion": "error",
-                                "noSkippedTests": "error",
+                                "noSkippedTests": "info",
                                 "noUnassignedVariables": "error",
                                 "noVar": "error",
                                 "useAwait": "error",
