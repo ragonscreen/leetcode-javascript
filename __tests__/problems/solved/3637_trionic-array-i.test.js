@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { isTrionic } from '../../../src/problems/solved/3637_trionic-array-i.js';
 
 describe('isTrionic', () => {

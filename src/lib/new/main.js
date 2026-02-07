@@ -109,7 +109,7 @@ const writeTests = async (problemDetails) => {
                 filenameTests: filename,
         } = getTransformedDetails(problemDetails);
 
-        const strTests = `import { describe, expect, test } from 'vitest';
+        const strTests = `import { describe, expect, test } from 'bun:test';
 import { ${fn} } from '../../../src/problems/wip/${filenameSolution}';
 
 describe('${fn}', () => {

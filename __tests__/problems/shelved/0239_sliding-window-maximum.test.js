@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { maxSlidingWindow } from '../../../src/problems/shelved/0239_sliding-window-maximum.js';
 
 describe('maxSlidingWindow', () => {

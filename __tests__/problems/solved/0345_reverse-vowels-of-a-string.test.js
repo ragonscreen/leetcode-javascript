@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { reverseVowels } from '../../../src/problems/solved/0345_reverse-vowels-of-a-string.js';
 
 describe('reverseVowels', () => {

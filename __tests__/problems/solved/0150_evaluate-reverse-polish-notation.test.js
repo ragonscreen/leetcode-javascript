@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { evalRPN } from '../../../src/problems/solved/0150_evaluate-reverse-polish-notation.js';
 
 describe('evalRPN', () => {

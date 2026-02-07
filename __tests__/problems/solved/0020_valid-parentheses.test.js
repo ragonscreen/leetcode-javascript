@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { isValid } from '../../../src/problems/solved/0020_valid-parentheses.js';
 
 describe('isValid', () => {

@@ -1,6 +1,6 @@
 // biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: multiple tests in one describe function
 
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { Solution } from '../../../src/problems/solved/0271_encode-and-decode-strings.js';
 
 describe('encode and decode strings', () => {

@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { isPalindrome } from '../../../src/problems/solved/0125_valid-palindrome.js';
 
 describe('isPalindrome', () => {

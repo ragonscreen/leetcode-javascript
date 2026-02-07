@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { lengthOfLongestSubstring } from '../../../src/problems/solved/0003_longest-substring-without-repeating-characters.js';
 
 describe('lengthOfLongestSubstring', () => {

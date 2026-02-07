@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { removeElement } from '../../../src/problems/solved/0027_remove-element.js';
 
 describe('removeElement', () => {

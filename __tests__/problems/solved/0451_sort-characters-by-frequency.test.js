@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { frequencySort } from '../../../src/problems/solved/0451_sort-characters-by-frequency.js';
 
 describe('frequencySort', () => {

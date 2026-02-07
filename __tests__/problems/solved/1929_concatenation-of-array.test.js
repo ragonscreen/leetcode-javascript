@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { getConcatenation } from '../../../src/problems/solved/1929_concatenation-of-array.js';
 
 describe('getConcatenation', () => {

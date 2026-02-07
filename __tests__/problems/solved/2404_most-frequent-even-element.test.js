@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { mostFrequentEven } from '../../../src/problems/solved/2404_most-frequent-even-element.js';
 
 describe('mostFrequentEven', () => {

@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { largestRectangleArea } from '../../../src/problems/solved/0084_largest-rectangle-in-histogram.js';
 
 describe('largestRectangleArea', () => {

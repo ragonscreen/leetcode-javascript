@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { isAnagram } from '../../../src/problems/solved/0242_valid-anagram.js';
 
 describe('isAnagram', () => {

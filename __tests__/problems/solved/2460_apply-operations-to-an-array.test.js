@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { applyOperations } from '../../../src/problems/solved/2460_apply-operations-to-an-array.js';
 
 describe('applyOperations', () => {

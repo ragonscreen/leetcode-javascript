@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { isValidSudoku } from '../../../src/problems/solved/0036_valid-sudoku.js';
 
 describe('isValidSudoku', () => {

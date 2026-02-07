@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { removeDuplicates } from '../../../src/problems/solved/0026_remove-duplicates-from-sorted-array.js';
 
 describe('removeDuplicates', () => {

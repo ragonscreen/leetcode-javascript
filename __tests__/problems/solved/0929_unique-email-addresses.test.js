@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { numUniqueEmails } from '../../../src/problems/solved/0929_unique-email-addresses.js';
 
 describe('numUniqueEmails', () => {

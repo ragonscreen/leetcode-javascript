@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { productExceptSelf } from '../../../src/problems/solved/0238_product-of-array-except-self.js';
 import { normaliseNegZero } from '../../utils/number.js';
 

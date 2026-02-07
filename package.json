@@ -1,28 +1,22 @@
 {
         "name": "leetcode-javascript",
-        "version": "1.0.0",
-        "description": "",
-        "main": "src/main.js",
-        "scripts": {
-                "new": "node src/lib/new/main.js",
-                "fmt": "pnpm exec biome check --write",
-                "dev": "node --watch src/main.js",
-                "test": "vitest",
-                "test:ui": "vitest --ui",
-                "test:coverage": "vitest --coverage"
-        },
-        "keywords": [],
-        "author": "ragonscreen",
-        "license": "ISC",
-        "packageManager": "pnpm@10.21.0",
+        "module": "index.js",
         "type": "module",
+        "private": true,
         "devDependencies": {
-                "@biomejs/biome": "2.3.8",
-                "@vitest/coverage-v8": "4.0.15",
-                "@vitest/ui": "4.0.15",
-                "vitest": "^4.0.15"
+                "@biomejs/biome": "2.3.14",
+                "@types/bun": "latest"
+        },
+        "peerDependencies": {
+                "typescript": "^5"
+        },
+        "author": "ragonscreen",
+        "scripts": {
+                "new": "bun src/lib/new/main.js",
+                "dev": "bun --watch run ./src/main.js",
+                "fmt": "bunx biome check --write"
         },
         "dependencies": {
-                "commander": "^14.0.2"
+                "commander": "^14.0.3"
         }
 }

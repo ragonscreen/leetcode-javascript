@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { characterReplacement } from '../../../src/problems/solved/0424_longest-repeating-character-replacement.js';
 
 describe('characterReplacement', () => {

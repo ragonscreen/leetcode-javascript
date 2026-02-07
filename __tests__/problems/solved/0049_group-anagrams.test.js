@@ -1,6 +1,6 @@
 // biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: multiple tests in one describe function
 
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { groupAnagrams } from '../../../src/problems/solved/0049_group-anagrams.js';
 import { arrDeepSortAlpha } from '../../utils/arrays.js';
 

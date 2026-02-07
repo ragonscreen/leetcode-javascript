@@ -1,5 +1,5 @@
 /** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: multiple tests in one describe function */
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import {
         minWindow,
         minWindow1,

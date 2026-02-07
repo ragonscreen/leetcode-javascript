@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { twoSum } from '../../../src/problems/solved/0167_two-sum-ii-input-array-is-sorted.js';
 
 describe('twoSum', () => {

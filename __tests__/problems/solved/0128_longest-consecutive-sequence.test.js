@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { longestConsecutive } from '../../../src/problems/solved/0128_longest-consecutive-sequence.js';
 
 describe('longestConsecutive', () => {

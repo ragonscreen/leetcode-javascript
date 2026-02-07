@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { NumArray } from '../../../src/problems/solved/0303_range-sum-query-immutable.js';
 
 describe('NumArray', () => {

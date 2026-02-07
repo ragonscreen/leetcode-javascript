@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { maxArea } from '../../../src/problems/solved/0011_container-with-most-water.js';
 
 describe('maxArea', () => {

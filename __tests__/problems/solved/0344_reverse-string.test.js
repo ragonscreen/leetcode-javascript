@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { reverseString } from '../../../src/problems/solved/0344_reverse-string.js';
 
 describe('reverseString', () => {

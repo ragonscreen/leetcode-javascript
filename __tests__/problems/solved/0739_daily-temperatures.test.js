@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { dailyTemperatures } from '../../../src/problems/solved/0739_daily-temperatures.js';
 
 describe('dailyTemperatures', () => {

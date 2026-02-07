@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { equalFrequency } from '../../../src/problems/solved/2423_remove-letter-to-equalize-frequency.js';
 
 describe('equalFrequency', () => {

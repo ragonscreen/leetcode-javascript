@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { trap } from '../../../src/problems/solved/0042_trapping-rain-water.js';
 
 describe('trap', () => {

@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { twoSum } from '../../../src/problems/solved/0001_two-sum.js';
 import { arrSortNum } from '../../utils/arrays.js';
 

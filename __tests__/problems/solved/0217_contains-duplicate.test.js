@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { containsDuplicate } from '../../../src/problems/solved/0217_contains-duplicate.js';
 
 describe('containsDuplicate', () => {

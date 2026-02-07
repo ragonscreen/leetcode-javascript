@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { majorityElement } from '../../../src/problems/shelved/0229_majority-element-ii.js';
 
 describe('majorityElement', () => {
