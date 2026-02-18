@@ -19,10 +19,8 @@ const asteroidCollision = (asteroids) => {
 
         for (const a of asteroids) {
                 const v = Math.abs(a);
-                const s = Math.sign(a);
-                const topS = Math.sign(stack.at(-1));
 
-                if (!stack.length || s === topS || (s === 1 && topS === -1)) {
+                if (!(stack.length && a < 0 && stack.at(-1) > 0)) {
                         stack.push(a);
                         continue;
                 }
@@ -30,31 +28,25 @@ const asteroidCollision = (asteroids) => {
                 let willAdd = false;
 
                 while (stack.length) {
-                        const curTop = stack.at(-1);
-                        const curTopS = Math.sign(curTop);
-                        const curTopV = Math.abs(curTop);
+                        const top = stack.at(-1);
+                        const topV = Math.abs(top);
 
-                        if (s === -1 && curTopS === 1) {
-                                if (v === curTopV) {
-                                        stack.pop();
-                                        willAdd = false;
-                                        break;
-                                }
+                        if (!(a < 0 && top > 0)) {
+                                willAdd = true;
+                                break;
+                        }
 
-                                if (v < curTopV) {
-                                        willAdd = false;
-                                        break;
-                                }
+                        if (v === topV) {
+                                stack.pop();
+                        }
 
-                                if (v > curTopV) {
-                                        willAdd = true;
-                                        stack.pop();
-                                }
-                        } else {
-                                stack.push(a);
+                        if (v <= topV) {
                                 willAdd = false;
                                 break;
                         }
+
+                        willAdd = true;
+                        stack.pop();
                 }
 
                 if (willAdd) {
