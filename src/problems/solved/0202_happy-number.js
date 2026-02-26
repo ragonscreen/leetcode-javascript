@@ -18,7 +18,7 @@ const isHappy = (n) => {
         let slow = getVal(n);
         let fast = getVal(getVal(n));
 
-        while (slow !== fast) {
+        while (slow !== fast || fast === 1) {
                 if (fast === 1) {
                         return true;
                 }
