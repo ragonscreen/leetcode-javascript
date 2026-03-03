@@ -7,7 +7,7 @@
  */
 
 /**
- * Implementation: Hash Map
+ * Implementation: Prefix Sum + Hash Map (Optimal)
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  *
@@ -16,6 +16,35 @@
  * @return {number}
  */
 const subarraySum = (nums, k) => {
+        const map = new Map();
+        let preSum = 0;
+        let res = 0;
+
+        for (const num of nums) {
+                preSum += num;
+
+                if (preSum === k) {
+                        res++;
+                }
+
+                res += map.get(preSum) || 0;
+                const pair = preSum + k;
+                map.set(pair, (map.get(pair) || 0) + 1);
+        }
+
+        return res;
+};
+
+/**
+ * Implementation: Prefix Sum + Hash Map
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ *
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+const subarraySum1 = (nums, k) => {
         const pre = new Array(nums.length);
         let sum = 0;
 
@@ -40,4 +69,4 @@ const subarraySum = (nums, k) => {
         return res;
 };
 
-export { subarraySum };
+export { subarraySum, subarraySum1 };
