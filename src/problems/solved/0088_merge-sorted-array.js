@@ -7,9 +7,9 @@
  */
 
 /**
- * Implementation:
- * Time Complexity: O()
- * Space Complexity: O()
+ * Implementation: Two Pointers
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  *
  * @param {number[]} nums1
  * @param {number} m
