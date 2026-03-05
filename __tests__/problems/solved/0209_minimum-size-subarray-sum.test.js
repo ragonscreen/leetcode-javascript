@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { minSubArrayLen } from '../../../src/problems/wip/0209_minimum-size-subarray-sum.js';
+import { minSubArrayLen } from '../../../src/problems/solved/0209_minimum-size-subarray-sum.js';
 
 describe('minSubArrayLen', () => {
         test('basic test 1', () => {
