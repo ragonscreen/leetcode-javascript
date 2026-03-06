@@ -9,7 +9,7 @@
 /**
  * Implementation: Two Pointers
  * Time Complexity: O(n)
- * Space Complexity: O(n) total, O(1) auxiliary
+ * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
  * @return {number[]}
