@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { simplifyPath } from '../../../src/problems/wip/0071_simplify-path.js';
+import { simplifyPath } from '../../../src/problems/solved/0071_simplify-path.js';
 
 describe('simplifyPath', () => {
         describe('simplifyPath', () => {
