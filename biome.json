@@ -96,7 +96,6 @@
                         },
                         "suspicious": {
                                 "noAlert": "error",
-                                "noBitwiseOperators": "warn",
                                 "noConsole": {
                                         "level": "warn",
                                         "options": {
