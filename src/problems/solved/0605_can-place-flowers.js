@@ -7,7 +7,7 @@
  */
 
 /**
- * Implementation: Simulation
+ * Implementation: Greedy
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  *
@@ -23,9 +23,13 @@ const canPlaceFlowers = (flowerbed, n) => {
                         count++;
                         i++;
                 }
+
+                if (count >= n) {
+                        return true;
+                }
         }
 
-        return count >= n;
+        return false;
 };
 
 export { canPlaceFlowers };
