@@ -19,37 +19,29 @@ const asteroidCollision = (asteroids) => {
 
         for (const a of asteroids) {
                 const v = Math.abs(a);
-
-                if (!(stack.length && a < 0 && stack.at(-1) > 0)) {
-                        stack.push(a);
-                        continue;
-                }
-
-                let willAdd = false;
+                let push = true;
 
                 while (stack.length) {
                         const top = stack.at(-1);
                         const topV = Math.abs(top);
 
-                        if (!(a < 0 && top > 0)) {
-                                willAdd = true;
+                        if (top < 0 || a > 0) {
                                 break;
                         }
 
-                        if (v === topV) {
+                        if (topV === v) {
                                 stack.pop();
                         }
 
-                        if (v <= topV) {
-                                willAdd = false;
+                        if (topV >= v) {
+                                push = false;
                                 break;
                         }
 
-                        willAdd = true;
                         stack.pop();
                 }
 
-                if (willAdd) {
+                if (push) {
                         stack.push(a);
                 }
         }
