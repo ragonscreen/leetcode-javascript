@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import { groupStrings } from '../../../src/problems/0201-0300/0249_group-shifted-strings.js';
-import { normaliseNestedArray } from '../../utils/utils.js';
+import { arrDeepSort } from '../../utils/array.js';
 
 const testcases = [
         {
@@ -88,7 +88,7 @@ describe('groupStrings', () => {
                 structuredClone(testcases),
         )('groupStrings($strings) -> $expected', ({ strings, expected }) => {
                 expect(
-                        normaliseNestedArray(groupStrings(strings)),
-                ).toStrictEqual(normaliseNestedArray(expected));
+                        arrDeepSort(groupStrings(strings), 'string'),
+                ).toStrictEqual(arrDeepSort(expected, 'string'));
         });
 });

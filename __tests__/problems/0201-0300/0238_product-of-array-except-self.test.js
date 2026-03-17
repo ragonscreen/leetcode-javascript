@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import { productExceptSelf } from '../../../src/problems/0201-0300/0238_product-of-array-except-self.js';
-import { normaliseNegZero } from '../../utils/utils.js';
+import { normaliseNegZero } from '../../utils/number.js';
 
 const testcases = [
         { nums: [1, 2, 3, 4], expected: [24, 12, 8, 6] },

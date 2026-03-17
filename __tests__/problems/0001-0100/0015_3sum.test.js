@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import { threeSum } from '../../../src/problems/0001-0100/0015_3sum.js';
-import { normaliseNestedArrayNums } from '../../utils/utils.js';
+import { arrDeepSort } from '../../utils/array.js';
 
 const testcases = [
         {
@@ -41,8 +41,8 @@ describe('threeSum', () => {
                 nums,
                 expected,
         }) => {
-                expect(threeSum(nums)).toStrictEqual(
-                        normaliseNestedArrayNums(expected),
+                expect(arrDeepSort(threeSum(nums))).toStrictEqual(
+                        arrDeepSort(expected),
                 );
         });
 });
