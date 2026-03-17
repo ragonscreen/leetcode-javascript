@@ -1,0 +1,15 @@
+import { describe, expect, test } from 'bun:test';
+import { applyOperations } from '../../../src/problems/2401-2500/2460_apply-operations-to-an-array.js';
+
+const testcases = [
+        { nums: [1, 2, 2, 1, 1, 0], expected: [1, 4, 2, 0, 0, 0] },
+        { nums: [0, 1], expected: [1, 0] },
+];
+
+describe('applyOperations', () => {
+        test.each(
+                structuredClone(testcases),
+        )('applyOperations($nums) -> $expected', ({ nums, expected }) => {
+                expect(applyOperations(nums)).toStrictEqual(expected);
+        });
+});

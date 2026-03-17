@@ -1,0 +1,20 @@
+import { describe, expect, test } from 'bun:test';
+import { twoSum } from '../../../src/problems/0001-0100/0001_two-sum.js';
+
+const testcases = [
+        { nums: [2, 7, 11, 15], target: 9, expected: [0, 1] },
+        { nums: [3, 2, 4], target: 6, expected: [1, 2] },
+        { nums: [3, 3], target: 6, expected: [0, 1] },
+];
+
+describe('twoSum', () => {
+        test.each(
+                structuredClone(testcases),
+        )('twoSum($nums, $target) -> $expected', ({
+                nums,
+                target,
+                expected,
+        }) => {
+                expect(twoSum(nums, target)).toContainAllValues(expected);
+        });
+});

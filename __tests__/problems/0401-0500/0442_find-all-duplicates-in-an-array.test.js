@@ -1,0 +1,16 @@
+import { describe, expect, test } from 'bun:test';
+import { findDuplicates } from '../../../src/problems/0401-0500/0442_find-all-duplicates-in-an-array.js';
+
+const testcases = [
+        { nums: [4, 3, 2, 7, 8, 2, 3, 1], expected: [2, 3] },
+        { nums: [1, 1, 2], expected: [1] },
+        { nums: [1], expected: [] },
+];
+
+describe('findDuplicates', () => {
+        test.each(
+                structuredClone(testcases),
+        )('findDuplicates($nums) -> $expected', ({ nums, expected }) => {
+                expect(findDuplicates(nums)).toStrictEqual(expected);
+        });
+});

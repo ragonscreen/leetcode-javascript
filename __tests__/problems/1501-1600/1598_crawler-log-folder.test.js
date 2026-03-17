@@ -1,0 +1,16 @@
+import { describe, expect, test } from 'bun:test';
+import { minOperations } from '../../../src/problems/1501-1600/1598_crawler-log-folder.js';
+
+const testcases = [
+        { logs: ['d1/', 'd2/', '../', 'd21/', './'], expected: 2 },
+        { logs: ['d1/', 'd2/', './', 'd3/', '../', 'd31/'], expected: 3 },
+        { logs: ['d1/', '../', '../', '../'], expected: 0 },
+];
+
+describe('minOperations', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minOperations($logs) -> $expected', ({ logs, expected }) => {
+                expect(minOperations(logs)).toStrictEqual(expected);
+        });
+});

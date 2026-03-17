@@ -1,0 +1,25 @@
+query getProblemDetail($titleSlug: String!) {
+        question(titleSlug: $titleSlug) {
+                questionFrontendId
+                questionTitle # or title
+                questionTitleSlug # or titleSlug
+                questionType
+                content
+                difficulty
+                categoryTitle
+                metaData
+                exampleTestcaseList
+                stats
+                similarQuestions
+                topicTags {
+                        name
+                        slug
+                        id
+                }
+                codeSnippets {
+                        lang
+                        code
+                }
+                isPaidOnly
+        }
+}

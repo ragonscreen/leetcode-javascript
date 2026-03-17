@@ -1,134 +1,92 @@
-import { writeFile } from 'node:fs/promises';
-import { program } from 'commander';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { argv } from 'node:process';
+import { constructSolution, constructTest } from './construct-problem-files.js';
+import { getFilePaths } from './get-file-path.js';
+import { parseProblemData } from './parse-problem-data.js';
 
-const getFlags = () => {
-        program.requiredOption('-i, --problem-id <number>', 'id of the problem')
-                .requiredOption(
-                        '-t, --problem-title <string>',
-                        'title of the problem',
-                )
-                .requiredOption(
-                        '-d, --difficulty <string>',
-                        'difficulty of the problem',
-                )
-                .requiredOption(
-                        '-f, --function-name <string>',
-                        'name of the function',
-                );
-
-        program.parse();
-        const flags = program.opts();
-
-        return flags;
+const parseProvidedIdentifier = () => {
+        return argv[2]
+                ?.replace(/https:\/\/|problems\/|leetcode\.com\//gi, '')
+                ?.split('/')?.[0];
 };
 
-const getDifficulty = (difficulty) => {
-        const difficultyMap = {
-                e: 'Easy',
-                m: 'Medium',
-                h: 'Hard',
-                easy: 'Easy',
-                medium: 'Medium',
-                hard: 'Hard',
-        };
-
-        return difficultyMap[String(difficulty).toLowerCase()];
+const getQuery = async () => {
+        return await readFile(
+                'src/lib/new/graphql/get-problem-detail.gql',
+                'utf-8',
+        );
 };
 
-const getCurrentDate = () => {
-        const date = new Date();
-        const y = date.getFullYear();
-        const m = String(date.getMonth() + 1).padStart(2, '0');
-        const d = String(date.getDate()).padStart(2, '0');
-
-        return `${y}-${m}-${d}`;
-};
-
-const getTransformedDetails = ({
-        problemId,
-        problemTitle,
-        difficulty,
-        functionName,
-}) => {
-        const problemIdPadded = String(problemId).trim().padStart(4, '0');
-        const problemTitleSanitized = String(problemTitle)
-                .trim()
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, '-');
-        const filenameBase = `${problemIdPadded}_${problemTitleSanitized}`;
-        const filenameSolution = `${filenameBase}.js`;
-        const filenameTests = `${filenameBase}.test.js`;
-
-        return {
-                id: problemIdPadded,
-                titleFull: String(problemTitle).trim(),
-                title: problemTitleSanitized,
-                difficulty: getDifficulty(difficulty),
-                date: getCurrentDate(),
-                fn: functionName,
-                filenameSolution,
-                filenameTests,
-        };
-};
-
-const writeSolution = async (problemDetails) => {
-        const {
-                id,
-                titleFull,
-                title,
-                difficulty,
-                date,
-                fn,
-                filenameSolution: filename,
-        } = getTransformedDetails(problemDetails);
-
-        const strSolution = `/**
- * ${id}. ${titleFull}
- * Link: https://leetcode.com/problems/${title}/
- * Difficulty: ${difficulty}
- * Date: ${date}
- * Author: ragonscreen (https://github.com/ragonscreen/)
- */
-
-/**
- * Implementation:
- * Time Complexity: O()
- * Space Complexity: O()
- */
-const ${fn} = () => {};
-
-export { ${fn} };`;
-
-        await writeFile(`src/problems/wip/${filename}`, strSolution);
-};
-
-const writeTests = async (problemDetails) => {
-        const {
-                fn,
-                filenameSolution,
-                filenameTests: filename,
-        } = getTransformedDetails(problemDetails);
-
-        const strTests = `import { describe, expect, test } from 'bun:test';
-import { ${fn} } from '../../../src/problems/wip/${filenameSolution}';
-
-describe('${fn}', () => {
-        test('basic test 1', () => {
-                expect(${fn}()).toStrictEqual();
+const getProblemData = async (query, titleSlug) => {
+        const res = await fetch('https://leetcode.com/graphql', {
+                method: 'POST',
+                headers: {
+                        'Content-Type': 'application/json',
+                        // Cookie: 'LEETCODE_SESSION=x; csrftoken=x',
+                        // 'Referer': 'https://leetcode.com/problems/asteroid-collision/description/'
+                },
+                body: JSON.stringify({
+                        query,
+                        variables: { titleSlug },
+                }),
         });
-});`;
 
-        await writeFile(`__tests__/problems/wip/${filename}`, strTests);
+        const data = await res.json();
+
+        return data?.data?.question;
 };
 
-const write = async (problemDetails) => {
-        await writeSolution(problemDetails);
-        writeTests(problemDetails);
+const throwIdentifierError = () => {
+        throw new Error(`
+Invalid identifier. Identifier must be a valid problem slug of one of the following forms:
+
+https://leetcode.com/problems/two-sum
+leetcode.com/problems/two-sum
+problems/two-sum
+two-sum`);
+};
+
+const createFile = async (filePath, fileContents) => {
+        const dir = filePath.split('/').slice(0, -1).join('/');
+        await mkdir(dir, { recursive: true });
+
+        try {
+                await writeFile(filePath, fileContents, {
+                        flag: 'wx',
+                        encoding: 'utf-8',
+                });
+
+                console.log(`File '${filePath}' created.`);
+        } catch (error) {
+                if (error.code === 'EEXIST') {
+                        console.warn(`File '${filePath}' already exists.`);
+                } else {
+                        throw error;
+                }
+        }
 };
 
 const main = async () => {
-        const problemDetails = getFlags();
-        await write(problemDetails);
+        const titleSlug = parseProvidedIdentifier();
+
+        if (!titleSlug) {
+                throwIdentifierError();
+        }
+
+        const query = await getQuery();
+        const problemData = await getProblemData(query, titleSlug);
+
+        if (!problemData) {
+                throwIdentifierError();
+        }
+
+        const problemDataParsed = parseProblemData(problemData);
+        const filePaths = getFilePaths(problemDataParsed);
+        const solution = constructSolution(problemDataParsed);
+        const test = constructTest(problemDataParsed, filePaths);
+
+        await createFile(filePaths.filePathSolution, solution);
+        await createFile(filePaths.filePathTest, test);
 };
 
-main();
+await main();

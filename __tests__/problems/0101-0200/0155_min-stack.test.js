@@ -1,0 +1,16 @@
+import { describe, expect, test } from 'bun:test';
+import { MinStack } from '../../../src/problems/0101-0200/0155_min-stack.js';
+
+describe('MinStack', () => {
+        test('default test 1', () => {
+                const minStack = new MinStack();
+
+                expect(minStack.push(-2)).toBeNil();
+                expect(minStack.push(0)).toBeNil();
+                expect(minStack.push(-3)).toBeNil();
+                expect(minStack.getMin()).toStrictEqual(-3);
+                expect(minStack.pop()).toBeNil();
+                expect(minStack.top()).toStrictEqual(0);
+                expect(minStack.getMin()).toStrictEqual(-2);
+        });
+});

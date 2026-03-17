@@ -1,0 +1,15 @@
+import { describe, expect, test } from 'bun:test';
+import { getConcatenation } from '../../../src/problems/1901-2000/1929_concatenation-of-array.js';
+
+const testcases = [
+        { nums: [1, 2, 1], expected: [1, 2, 1, 1, 2, 1] },
+        { nums: [1, 3, 2, 1], expected: [1, 3, 2, 1, 1, 3, 2, 1] },
+];
+
+describe('getConcatenation', () => {
+        test.each(
+                structuredClone(testcases),
+        )('getConcatenation($nums) -> $expected', ({ nums, expected }) => {
+                expect(getConcatenation(nums)).toStrictEqual(expected);
+        });
+});
