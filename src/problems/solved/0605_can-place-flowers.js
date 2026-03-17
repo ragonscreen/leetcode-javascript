@@ -2,7 +2,7 @@
  * 0605. Can Place Flowers
  * Link: https://leetcode.com/problems/can-place-flowers/
  * Difficulty: Easy
- * Date: 2026-03-08
+ * Date: 2026-03-08 (Updated: 2026-03-10)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  */
 
