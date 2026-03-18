@@ -25,7 +25,7 @@
  */
 
 /**
- * Approach: Euclidean Algorithm + Stack
+ * Approach: Math + Stack
  * Time Complexity: O(n * log k)
  * Space Complexity: O(n)
  * `n` = length of `nums`, `k` = largest number encountered when calculating GCD

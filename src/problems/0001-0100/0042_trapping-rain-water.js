@@ -28,7 +28,7 @@
  */
 
 /**
- * Approach: Prefix & Suffix
+ * Approach: Prefix Max
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  *
