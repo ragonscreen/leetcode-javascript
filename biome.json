@@ -1,5 +1,5 @@
 {
-        "$schema": "https://biomejs.dev/schemas/2.3.14/schema.json",
+        "$schema": "https://biomejs.dev/schemas/2.4.7/schema.json",
         "vcs": {
                 "enabled": true,
                 "clientKind": "git",
@@ -26,13 +26,15 @@
                 "rules": {
                         "recommended": true,
                         "complexity": {
-                                "noExcessiveCognitiveComplexity": "warn",
-                                "noExcessiveLinesPerFunction": "warn",
+                                "noExcessiveCognitiveComplexity": "info",
                                 "noExcessiveNestedTestSuites": "error",
                                 "noForEach": "error",
                                 "noImplicitCoercions": "info",
+                                "noUselessCatchBinding": "warn",
                                 "noUselessStringConcat": "warn",
+                                "noUselessUndefined": "error",
                                 "noVoid": "error",
+                                "useMaxParams": "error",
                                 "useSimplifiedLogicExpression": "warn",
                                 "useWhile": "warn"
                         },
@@ -45,7 +47,27 @@
                                 "useSingleJsDocAsterisk": "info"
                         },
                         "nursery": {
-                                "useMaxParams": "error"
+                                "noEqualsToNull": "error",
+                                "noExcessiveLinesPerFile": {
+                                        "level": "warn",
+                                        "options": {
+                                                "maxLines": 250
+                                        }
+                                },
+                                "noFloatingClasses": "error",
+                                "noFloatingPromises": "error",
+                                "noForIn": "error",
+                                "noMultiAssign": "error",
+                                "noMultiStr": "error",
+                                "noNestedPromises": "error",
+                                "noProto": "error",
+                                "noReturnAssign": "error",
+                                "noRedundantDefaultExport": "error",
+                                "noShadow": "error",
+                                "noSyncScripts": "error",
+                                "useErrorCause": "error",
+                                "useGlobalThis": "error",
+                                "useSpread": "error"
                         },
                         "performance": {
                                 "noAwaitInLoops": "error",
@@ -58,7 +80,6 @@
                                 "noCommonJs": "error",
                                 "noExportedImports": "error",
                                 "noNegationElse": "error",
-                                "noNestedTernary": "warn",
                                 "noParameterAssign": "error",
                                 "noRestrictedGlobals": {
                                         "level": "error",
@@ -96,6 +117,7 @@
                         },
                         "suspicious": {
                                 "noAlert": "error",
+                                "noUnusedExpressions": "warn",
                                 "noConsole": {
                                         "level": "warn",
                                         "options": {
@@ -109,6 +131,7 @@
                                 "noConstantBinaryExpressions": "error",
                                 "noDuplicateTestHooks": "error",
                                 "noEmptyBlockStatements": "error",
+                                "noEmptySource": "error",
                                 "noExportsInTest": "error",
                                 "noFocusedTests": "error",
                                 "noMisplacedAssertion": "error",
@@ -117,7 +140,6 @@
                                 "noVar": "error",
                                 "useAwait": "error",
                                 "useErrorMessage": "error",
-                                "useGuardForIn": "error",
                                 "useNumberToFixedDigitsArgument": "error",
                                 "useStaticResponseMethods": "error"
                         }

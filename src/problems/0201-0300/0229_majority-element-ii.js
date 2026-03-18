@@ -46,10 +46,10 @@ const majorityElement = (nums) => {
                         for (const [key, val] of map) {
                                 const newFrq = val - 1;
 
-                                if (newFrq !== 0) {
-                                        map.set(key, newFrq);
-                                } else {
+                                if (newFrq === 0) {
                                         map.delete(key);
+                                } else {
+                                        map.set(key, newFrq);
                                 }
                         }
                 }

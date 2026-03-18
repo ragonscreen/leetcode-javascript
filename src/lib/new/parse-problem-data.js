@@ -1,5 +1,3 @@
-/** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: <explanation> */
-/** biome-ignore-all lint/nursery/noExcessiveLinesPerFile: <explanation> */
 const handleFatalErrors = (problemData) => {
         const { categoryTitle } = problemData;
         const isConcurrency = categoryTitle === 'Concurrency';
