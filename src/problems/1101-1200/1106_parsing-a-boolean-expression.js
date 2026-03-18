@@ -28,72 +28,48 @@
  */
 const parseBoolExpr = (expression) => {
         const stack = [];
-        let l = 0;
 
-        for (let r = 0; r < expression.length; r++) {
-                const c = expression[r];
-
-                if (c === '(') {
-                        stack.push(expression[r - 1]);
-                        l = r + 1;
+        for (const c of expression) {
+                if (c === ',') {
                         continue;
                 }
 
                 if (c !== ')') {
+                        stack.push(c);
                         continue;
                 }
 
-                const ops = '!|&';
-                const vals = [];
+                let hasTrue = false;
+                let hasFalse = false;
 
-                while (!ops.includes(stack.at(-1))) {
-                        vals.push(stack.pop());
-                }
+                while (stack.at(-1) !== '(') {
+                        const val = stack.pop();
 
-                const cur = expression.slice(l, r);
+                        if (val === 't') {
+                                hasTrue = true;
+                        }
 
-                if (cur) {
-                        vals.push(cur);
-                }
-
-                const o = stack.pop();
-                let res;
-
-                outer: for (const v of vals) {
-                        for (const s of v) {
-                                if (s === ',') {
-                                        continue;
-                                }
-
-                                const _s = s === 't';
-
-                                if (o === '!') {
-                                        res = !_s;
-                                        break outer;
-                                }
-
-                                if (res === undefined) {
-                                        res = _s;
-                                        continue;
-                                }
-
-                                if (o === '|' && _s) {
-                                        res = true;
-                                        break outer;
-                                }
-
-                                if (o === '&' && !_s) {
-                                        res = false;
-                                        break outer;
-                                }
+                        if (val === 'f') {
+                                hasFalse = true;
                         }
                 }
 
+                stack.pop();
+                const o = stack.pop();
+                let res;
+
+                if (o === '!') {
+                        res = hasFalse;
+                } else if (o === '|') {
+                        res = hasTrue;
+                } else {
+                        res = !hasFalse;
+                }
+
                 stack.push(res ? 't' : 'f');
-                l = r + 1;
         }
 
-        return stack.length ? stack[0] === 't' : expression[0] === 't';
+        return stack[0] === 't';
 };
 
 export { parseBoolExpr };
