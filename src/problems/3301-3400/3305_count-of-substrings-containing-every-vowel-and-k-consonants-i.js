@@ -1,7 +1,7 @@
 /**
- * 3306. Count of Substrings Containing Every Vowel and K Consonants II
+ * 3305. Count of Substrings Containing Every Vowel and K Consonants I
  *
- * Link: https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/
+ * Link: https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-i/
  * Category: Algorithms
  * Difficulty: Medium
  * Date: 2026-03-20
@@ -13,9 +13,9 @@
  * - Sliding Window (topic_55821)
  *
  * Stats:
- * - Total Accepted: 114,227
- * - Total Submissions: 281,073
- * - Acceptance Rate: 40.6%
+ * - Total Accepted: 32,646
+ * - Total Submissions: 78,176
+ * - Acceptance Rate: 41.8%
  *
  * Similar Problems:
  * - count-vowel-substrings-of-a-string (Easy)
