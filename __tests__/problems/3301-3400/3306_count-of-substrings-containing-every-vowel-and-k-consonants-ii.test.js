@@ -1,0 +1,21 @@
+import { describe, expect, test } from 'bun:test';
+import { countOfSubstrings } from '../../../src/problems/3301-3400/3306_count-of-substrings-containing-every-vowel-and-k-consonants-ii.js';
+
+const testcases = [
+        { word: 'aeioqq', k: 1, expected: 0 },
+        { word: 'aeiou', k: 0, expected: 1 },
+        { word: 'ieaouqqieaouqq', k: 1, expected: 3 },
+        { word: 'iqeaouqi', k: 2, expected: 3 },
+];
+
+describe('countOfSubstrings', () => {
+        test.each(
+                structuredClone(testcases),
+        )('countOfSubstrings($word, $k) -> $expected', ({
+                word,
+                k,
+                expected,
+        }) => {
+                expect(countOfSubstrings(word, k)).toStrictEqual(expected);
+        });
+});
