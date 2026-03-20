@@ -1,0 +1,27 @@
+import { describe, expect, test } from 'bun:test';
+import { numOfSubarrays } from '../../../src/problems/1301-1400/1343_number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.js';
+
+const testcases = [
+        { arr: [2, 2, 2, 2, 5, 5, 5, 8], k: 3, threshold: 4, expected: 3 },
+        {
+                arr: [11, 13, 17, 23, 29, 31, 7, 5, 2, 3],
+                k: 3,
+                threshold: 5,
+                expected: 6,
+        },
+];
+
+describe('numOfSubarrays', () => {
+        test.each(
+                structuredClone(testcases),
+        )('numOfSubarrays($arr, $k, $threshold) -> $expected', ({
+                arr,
+                k,
+                threshold,
+                expected,
+        }) => {
+                expect(numOfSubarrays(arr, k, threshold)).toStrictEqual(
+                        expected,
+                );
+        });
+});
