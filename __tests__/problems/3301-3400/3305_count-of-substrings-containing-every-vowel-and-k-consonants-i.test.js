@@ -5,6 +5,7 @@ const testcases = [
         { word: 'aeioqq', k: 1, expected: 0 },
         { word: 'aeiou', k: 0, expected: 1 },
         { word: 'ieaouqqieaouqq', k: 1, expected: 3 },
+        { word: 'iqeaouqi', k: 2, expected: 3 },
 ];
 
 describe('countOfSubstrings', () => {
