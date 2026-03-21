@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: <explanation> */
+/** biome-ignore-all lint/nursery/noExcessiveLinesPerFile: <explanation> */
 const handleFatalErrors = (problemData) => {
         const { categoryTitle } = problemData;
         const isConcurrency = categoryTitle === 'Concurrency';
@@ -113,14 +115,16 @@ const parseInputs = (exampleTestcaseList) => {
 };
 
 const parseMetadata = (metaData) => {
-        let metaDataParsed = metaData.replace(
-                /integer|float|double|long/g,
-                'number',
-        );
+        let metaDataParsed = metaData;
 
         while (metaDataParsed.includes('list<')) {
                 metaDataParsed = metaDataParsed.replace(/list<(.+)>/g, '$1[]');
         }
+
+        metaDataParsed = metaDataParsed.replace(
+                /"type": "(integer|float|double|long)/g,
+                '"type": "number',
+        );
 
         return JSON.parse(metaDataParsed);
 };
