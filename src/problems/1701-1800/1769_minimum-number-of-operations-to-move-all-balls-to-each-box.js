@@ -65,7 +65,7 @@ const minOperations = (boxes) => {
 /**
  * Approach: Math + Simulation
  * Time Complexity: O(n * k)
- * Space Complexity: O(1) auxiliary, O(n) total
+ * Space Complexity: O(k) auxiliary, O(n + k) total
  * `n` = length of `boxes`, `k` = number of 1s in `boxes`
  *
  * @param {string} boxes

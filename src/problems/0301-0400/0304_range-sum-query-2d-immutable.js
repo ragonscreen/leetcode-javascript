@@ -31,7 +31,7 @@ class NumMatrix {
         /**
          * Time Complexity: O(n * m)
          * Space Complexity: O(n * m)
-         * `n` = length of `matrix`, `m` = length of each column in `matrix`
+         * `n` = length of `matrix`, `m` = length of `matrix[i]`
          *
          * @param {number[][]} matrix
          */

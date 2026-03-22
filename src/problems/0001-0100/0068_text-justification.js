@@ -27,7 +27,7 @@
  * Approach: Greedy + Simulation
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = length of `words`, `m` = length of longest string in `words`
+ * `n` = length of `words`, `m` = length of the longest string in `words`
  *
  * @param {string[]} words
  * @param {number} maxWidth
