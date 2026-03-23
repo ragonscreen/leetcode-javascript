@@ -97,7 +97,7 @@ class MyQueue1 {
          * Space Complexity: O(1)
          */
         constructor() {
-                this.stack = [];
+                this.elements = [];
                 this.offset = 0;
         }
 
@@ -108,13 +108,13 @@ class MyQueue1 {
          * @return {void}
          */
         _reset() {
-                if (this.offset === Math.floor(this.stack.length / 2)) {
-                        this.stack = this.stack.slice(this.offset);
+                if (this.offset === Math.floor(this.elements.length / 2)) {
+                        this.elements = this.elements.slice(this.offset);
                         this.offset = 0;
                 }
 
-                if (this.offset === this.stack.length) {
-                        this.stack = [];
+                if (this.offset === this.elements.length) {
+                        this.elements = [];
                         this.offset = 0;
                 }
         }
@@ -127,7 +127,7 @@ class MyQueue1 {
          * @return {void}
          */
         push(x) {
-                this.stack.push(x);
+                this.elements.push(x);
         }
 
         /**
@@ -141,7 +141,7 @@ class MyQueue1 {
                         return;
                 }
 
-                const top = this.stack[this.offset++];
+                const top = this.elements[this.offset++];
                 this._reset();
 
                 return top;
@@ -154,7 +154,7 @@ class MyQueue1 {
          * @return {number}
          */
         peek() {
-                return this.stack[this.offset];
+                return this.elements[this.offset];
         }
 
         /**
@@ -164,7 +164,7 @@ class MyQueue1 {
          * @return {boolean}
          */
         empty() {
-                return !this.stack.length;
+                return !this.elements.length;
         }
 }
 
