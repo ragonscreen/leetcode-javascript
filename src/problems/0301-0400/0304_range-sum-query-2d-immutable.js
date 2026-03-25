@@ -36,19 +36,20 @@ class NumMatrix {
          * @param {number[][]} matrix
          */
         constructor(matrix) {
-                this.pre = [];
+                const n = matrix.length;
+                const m = matrix[0].length;
+                this.pre = new Array(n);
 
-                for (let r = 0; r < matrix.length; r++) {
-                        const rowPre = [];
-                        let sum = 0;
+                for (let r = 0; r < n; r++) {
+                        const row = new Array(m);
+                        let prefix = 0;
 
-                        for (let c = 0; c < matrix[r].length; c++) {
-                                sum += matrix[r][c];
-                                const total = sum + (this.pre[r - 1]?.[c] ?? 0);
-                                rowPre.push(total);
+                        for (let c = 0; c < m; c++) {
+                                prefix += matrix[r][c];
+                                row[c] = prefix + (this.pre[r - 1]?.[c] ?? 0);
                         }
 
-                        this.pre.push(rowPre);
+                        this.pre[r] = row;
                 }
         }
 

@@ -26,7 +26,7 @@
  */
 
 /**
- * Approach: Hash Map + Prefix Sum
+ * Approach: Hash Map + Math + Prefix Sum
  * Time Complexity: O(n)
  * Space Complexity: O(k)
  *
