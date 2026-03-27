@@ -16,8 +16,7 @@ describe('findDisappearedNumbers', () => {
                 nums,
                 expected,
         }) => {
-                const _nums = structuredClone(nums);
-                expect(findDisappearedNumbers(_nums)).toStrictEqual(expected);
+                expect(findDisappearedNumbers(nums)).toStrictEqual(expected);
         });
 });
 
@@ -28,7 +27,6 @@ describe('findDisappearedNumbers1', () => {
                 nums,
                 expected,
         }) => {
-                const _nums = structuredClone(nums);
-                expect(findDisappearedNumbers1(_nums)).toStrictEqual(expected);
+                expect(findDisappearedNumbers1(nums)).toStrictEqual(expected);
         });
 });
