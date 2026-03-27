@@ -35,23 +35,21 @@ const totalFruit = (fruits) => {
         let res = 0;
 
         for (let l = 0, r = 0; r < fruits.length; r++) {
-                const v = fruits[r];
-                map.set(v, (map.get(v) || 0) + 1);
+                const fr = fruits[r];
+                map.set(fr, (map.get(fr) || 0) + 1);
 
                 while (map.size > 2) {
-                        const vl = fruits[l];
-                        map.set(vl, map.get(vl) - 1);
+                        const fl = fruits[l++];
+                        const val = map.get(fl);
 
-                        if (map.get(vl) === 0) {
-                                map.delete(vl);
+                        if (val === 1) {
+                                map.delete(fl);
+                        } else {
+                                map.set(fl, val - 1);
                         }
-
-                        l++;
                 }
 
-                if (map.size <= 2) {
-                        res = Math.max(res, r - l + 1);
-                }
+                res = Math.max(res, r - l + 1);
         }
 
         return res;
