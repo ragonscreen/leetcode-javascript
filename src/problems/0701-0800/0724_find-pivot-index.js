@@ -57,7 +57,7 @@ const pivotIndex = (nums) => {
 };
 
 /**
- * Approach: Prefix Sum (One Array)
+ * Approach: Prefix Sum [One Array]
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  *
@@ -89,7 +89,7 @@ const pivotIndex1 = (nums) => {
 };
 
 /**
- * Approach: Prefix Sum (Two Arrays)
+ * Approach: Prefix Sum [Two Arrays]
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  *
