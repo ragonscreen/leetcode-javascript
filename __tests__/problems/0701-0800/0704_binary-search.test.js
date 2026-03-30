@@ -1,0 +1,19 @@
+import { describe, expect, test } from 'bun:test';
+import { search } from '../../../src/problems/0701-0800/0704_binary-search.js';
+
+const testcases = [
+        { nums: [-1, 0, 3, 5, 9, 12], target: 9, expected: 4 },
+        { nums: [-1, 0, 3, 5, 9, 12], target: 2, expected: -1 },
+];
+
+describe('search', () => {
+        test.each(
+                structuredClone(testcases),
+        )('search($nums, $target) -> $expected', ({
+                nums,
+                target,
+                expected,
+        }) => {
+                expect(search(nums, target)).toStrictEqual(expected);
+        });
+});
