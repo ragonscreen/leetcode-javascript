@@ -1,0 +1,15 @@
+import { describe, expect, test } from 'bun:test';
+import { replaceElements } from '../../../src/problems/1201-1300/1299_replace-elements-with-greatest-element-on-right-side.js';
+
+const testcases = [
+        { arr: [17, 18, 5, 4, 6, 1], expected: [18, 6, 6, 6, 1, -1] },
+        { arr: [400], expected: [-1] },
+];
+
+describe('replaceElements', () => {
+        test.each(
+                structuredClone(testcases),
+        )('replaceElements($arr) -> $expected', ({ arr, expected }) => {
+                expect(replaceElements(arr)).toStrictEqual(expected);
+        });
+});
