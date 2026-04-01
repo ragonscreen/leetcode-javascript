@@ -44,46 +44,44 @@ const survivedRobotsHealths = (positions, healths, directions) => {
         const stack = [];
 
         for (let i = 0; i < n; i++) {
-                const robot = positions[i];
-                const idx = map.get(robot);
-                let willAdd = true;
+                const idx = map.get(positions[i]);
+                let push = true;
 
                 while (stack.length) {
-                        const topIdx = map.get(stack.at(-1));
+                        const top = stack.at(-1);
 
                         if (
                                 !(
-                                        directions[topIdx] === 'R' &&
+                                        directions[top] === 'R' &&
                                         directions[idx] === 'L'
                                 )
                         ) {
                                 break;
                         }
 
-                        const topHp = healths[topIdx];
-                        const robotHp = healths[idx];
+                        const ht = healths[top];
+                        const hp = healths[idx];
 
-                        if (topHp >= robotHp) {
-                                if (topHp === robotHp) {
-                                        healths[topIdx] = 0;
-                                        healths[idx] = 0;
+                        if (ht >= hp) {
+                                if (ht === hp) {
                                         stack.pop();
+                                        healths[top] = 0;
                                 } else {
-                                        healths[topIdx]--;
-                                        healths[idx] = 0;
+                                        healths[top]--;
                                 }
 
-                                willAdd = false;
+                                healths[idx] = 0;
+                                push = false;
                                 break;
                         }
 
                         stack.pop();
-                        healths[topIdx] = 0;
+                        healths[top] = 0;
                         healths[idx]--;
                 }
 
-                if (willAdd) {
-                        stack.push(robot);
+                if (push) {
+                        stack.push(idx);
                 }
         }
 
