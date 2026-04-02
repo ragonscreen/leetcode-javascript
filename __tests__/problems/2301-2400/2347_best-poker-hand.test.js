@@ -1,0 +1,32 @@
+import { describe, expect, test } from 'bun:test';
+import { bestHand } from '../../../src/problems/2301-2400/2347_best-poker-hand.js';
+
+const testcases = [
+        {
+                ranks: [13, 2, 3, 1, 9],
+                suits: ['a', 'a', 'a', 'a', 'a'],
+                expected: 'Flush',
+        },
+        {
+                ranks: [4, 4, 2, 4, 4],
+                suits: ['d', 'a', 'a', 'b', 'c'],
+                expected: 'Three of a Kind',
+        },
+        {
+                ranks: [10, 10, 2, 12, 9],
+                suits: ['a', 'b', 'c', 'a', 'd'],
+                expected: 'Pair',
+        },
+];
+
+describe('bestHand', () => {
+        test.each(
+                structuredClone(testcases),
+        )('bestHand($ranks, $suits) -> $expected', ({
+                ranks,
+                suits,
+                expected,
+        }) => {
+                expect(bestHand(ranks, suits)).toStrictEqual(expected);
+        });
+});
