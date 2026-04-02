@@ -26,6 +26,7 @@
  * Approach: Binary Search
  * Time Complexity: O(log(n * m))
  * Space Complexity: O(1)
+ * `n` = length of `matrix`, `m` = length of `matrix[i]`
  *
  * @param {number[][]} matrix
  * @param {number} target
