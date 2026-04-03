@@ -43,20 +43,21 @@ const search = (nums, target) => {
                         return true;
                 }
 
-                if (nm > nl) {
-                        if (target <= nm && target >= nl) {
+                if (nm === nl && nm === nr) {
+                        l++;
+                        r--;
+                } else if (nm >= nl) {
+                        if (target < nm && target >= nl) {
                                 r = m - 1;
                         } else {
                                 l = m + 1;
-                        }
-                } else if (nm < nl) {
-                        if (target >= nm && target <= nr) {
-                                l = m + 1;
-                        } else {
-                                r = m - 1;
                         }
                 } else {
-                        l++;
+                        if (target > nm && target <= nr) {
+                                l = m + 1;
+                        } else {
+                                r = m - 1;
+                        }
                 }
         }
 

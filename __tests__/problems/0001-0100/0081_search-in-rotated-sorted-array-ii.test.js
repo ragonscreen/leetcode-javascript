@@ -14,6 +14,7 @@ const testcases = [
                 target: 3,
                 expected: true,
         },
+        { nums: [3, 1], target: 1, expected: true },
 ];
 
 describe('search', () => {
