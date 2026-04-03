@@ -36,23 +36,20 @@
  * @return {string[]}
  */
 const splitMessage = (message, limit) => {
+        const map = new Map();
+        const n = message.length;
+        console.log({ message, n });
         let l = 1;
-        let r = message.length;
-        let upperBound = 0;
+        let r = n;
 
         while (l < r) {
                 const m = l + Math.floor((r - l) / 2);
-
-                console.log({
-                        l,
-                        r,
-                        curPartCount: m,
-                });
-
-                const partLengthBase = Math.floor(message.length / m);
+                const partLengthBase = Math.ceil(n / m);
                 const partLengthMax = partLengthBase + 3 + 2 * digitsInNum(m);
                 const parts = getParts(m);
-                const charsAdded = getChunk(parts, partLengthBase);
+                const actualParts = getActualParts(n, parts, partLengthBase);
+
+                map.set(m, [actualParts, partLengthBase]);
 
                 if (partLengthMax <= limit) {
                         r = m;
@@ -60,26 +57,63 @@ const splitMessage = (message, limit) => {
                         l = m + 1;
                 }
 
-                // if (charsAdded >= message.length) {
-                //         upperBound = Math.max(upperBound, m);
-                // }
-
-                console.log({
-                        mn: message.length,
-                        partLengthBase,
-                        partLengthMax,
-                        parts,
-                        charsAdded,
-                });
+                // console.log({
+                //         l,
+                //         r,
+                //         m,
+                //         partLengthBase,
+                //         partLengthMax,
+                //         parts,
+                //         charsAdded,
+                //         actualParts,
+                // });
         }
 
-        console.log();
-        console.log({ r });
+        console.log(l, map.get(l));
+
+        const lines = display(message, map.get(l)[0], map.get(l)[1]);
+
+        // console.log(lines);
+
+        return lines;
+};
+
+const display = (str, actualParts, partLengthBase) => {
+        const _parts = getParts(actualParts);
+        const n = _parts.length;
+        let s = '';
+        let ptr = 0;
+        let i = 0;
+        const res = [];
+        let cnt = 1;
+
+        console.log({ str });
+
+        while (_parts[ptr]) {
+                const j = partLengthBase + (n - ptr - 1);
+
+                console.log({ i1: i, j1: j });
+
+                res.push(str.slice(i, i + j) + `<${cnt}/${actualParts}>`);
+                i += j;
+
+                _parts[ptr]--;
+
+                if (_parts[ptr] === 0) {
+                        ptr++;
+                }
+
+                console.log({ i2: i, j2: j });
+                cnt++;
+        }
+
+        return res;
 };
 
 // const splitMessage = (message, limit) => {
 //         let l = 1;
 //         let r = message.length;
+//         let upperBound = 0;
 
 //         while (l < r) {
 //                 const m = l + Math.floor((r - l) / 2);
@@ -100,6 +134,10 @@ const splitMessage = (message, limit) => {
 //                 } else {
 //                         l = m + 1;
 //                 }
+
+//                 // if (charsAdded >= message.length) {
+//                 //         upperBound = Math.max(upperBound, m);
+//                 // }
 
 //                 console.log({
 //                         mn: message.length,
@@ -147,6 +185,30 @@ const getChunk = (parts, partLengthBase) => {
         }
 
         return ptr;
+};
+
+const getActualParts = (strlen, parts, partLengthBase) => {
+        const n = parts.length;
+        const _parts = [...parts];
+        let ptr = 0;
+        let chars = 0;
+        let res = 0;
+
+        while (_parts[ptr]) {
+                chars += partLengthBase + (n - ptr - 1);
+                res++;
+                _parts[ptr]--;
+
+                if (_parts[ptr] === 0) {
+                        ptr++;
+                }
+
+                if (chars >= strlen) {
+                        return res;
+                }
+        }
+
+        return res;
 };
 
 // const getParts = (num) => {

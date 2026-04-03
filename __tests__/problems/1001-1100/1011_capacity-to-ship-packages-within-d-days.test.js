@@ -1,0 +1,20 @@
+import { describe, expect, test } from 'bun:test';
+import { shipWithinDays } from '../../../src/problems/1001-1100/1011_capacity-to-ship-packages-within-d-days.js';
+
+const testcases = [
+        { weights: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], days: 5, expected: 15 },
+        { weights: [3, 2, 2, 4, 1, 4], days: 3, expected: 6 },
+        { weights: [1, 2, 3, 1, 1], days: 4, expected: 3 },
+];
+
+describe('shipWithinDays', () => {
+        test.each(
+                structuredClone(testcases),
+        )('shipWithinDays($weights, $days) -> $expected', ({
+                weights,
+                days,
+                expected,
+        }) => {
+                expect(shipWithinDays(weights, days)).toStrictEqual(expected);
+        });
+});
