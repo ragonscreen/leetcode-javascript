@@ -25,7 +25,7 @@
  */
 
 /**
- * Approach: Binary Search
+ * Approach: Binary Search [Optimal]
  * Time Complexity: O(log n)
  * Space Complexity: O(1)
  *
@@ -33,6 +33,31 @@
  * @return {number}
  */
 const findPeakElement = (nums) => {
+        let l = 0;
+        let r = nums.length - 1;
+
+        while (l < r) {
+                const m = l + Math.floor((r - l) / 2);
+
+                if (nums[m] < nums[m + 1]) {
+                        l = m + 1;
+                } else {
+                        r = m;
+                }
+        }
+
+        return l;
+};
+
+/**
+ * Approach: Binary Search
+ * Time Complexity: O(log n)
+ * Space Complexity: O(1)
+ *
+ * @param {number[]} nums
+ * @return {number}
+ */
+const findPeakElement1 = (nums) => {
         const min = Number.MIN_SAFE_INTEGER;
         let l = 0;
         let r = nums.length - 1;
@@ -55,4 +80,4 @@ const findPeakElement = (nums) => {
         }
 };
 
-export { findPeakElement };
+export { findPeakElement, findPeakElement1 };
