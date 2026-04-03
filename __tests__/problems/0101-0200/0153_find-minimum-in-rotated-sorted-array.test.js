@@ -1,0 +1,17 @@
+import { describe, expect, test } from 'bun:test';
+import { findMin } from '../../../src/problems/0101-0200/0153_find-minimum-in-rotated-sorted-array.js';
+
+const testcases = [
+        { nums: [3, 4, 5, 1, 2], expected: 1 },
+        { nums: [4, 5, 6, 7, 0, 1, 2], expected: 0 },
+        { nums: [11, 13, 15, 17], expected: 11 },
+];
+
+describe('findMin', () => {
+        test.each(structuredClone(testcases))('findMin($nums) -> $expected', ({
+                nums,
+                expected,
+        }) => {
+                expect(findMin(nums)).toStrictEqual(expected);
+        });
+});

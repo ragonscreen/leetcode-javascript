@@ -28,7 +28,7 @@
  * Approach: Binary Search
  * Time Complexity: O(n log k)
  * Space Complexity: O(1)
- * `n` = length of `piles`, `k` = maximum number in `piles`
+ * `n` = length of `piles`, `k` = maximum value in `piles`
  *
  * @param {number[]} piles
  * @param {number} h
