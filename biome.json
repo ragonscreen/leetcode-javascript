@@ -95,7 +95,6 @@
                                 "noYodaExpression": "error",
                                 "useAtIndex": "error",
                                 "useBlockStatements": "error",
-                                "useCollapsedElseIf": "error",
                                 "useCollapsedIf": "error",
                                 "useConsistentBuiltinInstantiation": "error",
                                 "useConsistentObjectDefinitions": "error",

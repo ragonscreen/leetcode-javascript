@@ -23,7 +23,7 @@
  */
 
 /**
- * Approach: Binary Search
+ * Approach: Binary Search [Optimal]
  * Time Complexity: O(log n)
  * Space Complexity: O(1)
  *
@@ -32,6 +32,47 @@
  * @return {number}
  */
 const search = (nums, target) => {
+        let l = 0;
+        let r = nums.length - 1;
+
+        while (l <= r) {
+                const m = l + Math.floor((r - l) / 2);
+                const nm = nums[m];
+                const nl = nums[l];
+                const nr = nums[r];
+
+                if (nm === target) {
+                        return m;
+                }
+
+                if (nm >= nl) {
+                        if (target < nm && target >= nl) {
+                                r = m - 1;
+                        } else {
+                                l = m + 1;
+                        }
+                } else {
+                        if (target > nm && target <= nr) {
+                                l = m + 1;
+                        } else {
+                                r = m - 1;
+                        }
+                }
+        }
+
+        return -1;
+};
+
+/**
+ * Approach: Binary Search
+ * Time Complexity: O(log n)
+ * Space Complexity: O(1)
+ *
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+const search1 = (nums, target) => {
         const n = nums.length;
         let l = 0;
         let r = n - 1;
@@ -64,4 +105,4 @@ const search = (nums, target) => {
         return -1;
 };
 
-export { search };
+export { search, search1 };
