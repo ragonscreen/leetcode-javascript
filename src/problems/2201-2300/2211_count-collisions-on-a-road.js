@@ -62,7 +62,7 @@ const countCollisions = (directions) => {
                         stack.push('S');
                 }
 
-                if (pushSelf) {
+                if (pushSelf && d !== 'S') {
                         stack.push(d);
                 }
         }

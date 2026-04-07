@@ -25,7 +25,7 @@
 
 /**
  * Approach: Simulation + Two Pointers
- * Time Complexity: O(max(n, m))
+ * Time Complexity: O(n + m)
  * Space Complexity: O(1)
  * `n` = length of `s`, `m` = length of `t`
  *

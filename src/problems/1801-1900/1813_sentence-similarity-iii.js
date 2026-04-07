@@ -20,8 +20,8 @@
 
 /**
  * Approach: Two Pointers
- * Time Complexity: O(max(n, m))
- * Space Complexity: O(max(n, m))
+ * Time Complexity: O(n + m)
+ * Space Complexity: O(n + m)
  * `n` = length of `sentence1`, `m` = length of `sentence2`
  *
  * @param {string} sentence1

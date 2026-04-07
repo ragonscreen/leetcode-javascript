@@ -25,7 +25,7 @@
 
 /**
  * Approach: Counting Sort
- * Time Complexity: O(max(n, m))
+ * Time Complexity: O(n + m)
  * Space Complexity: O(n)
  * `n` = `target`, `m` = length of `position`
  *

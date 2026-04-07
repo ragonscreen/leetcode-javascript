@@ -25,7 +25,7 @@
 
 /**
  * Approach: Hash Map
- * Time Complexity: O(max(n, m))
+ * Time Complexity: O(n + m)
  * Space Complexity: O(n)
  * `n` = length of `nums`, `m` = length of `operations`
  *

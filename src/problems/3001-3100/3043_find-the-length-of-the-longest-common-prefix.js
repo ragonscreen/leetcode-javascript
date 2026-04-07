@@ -25,7 +25,7 @@
 
 /**
  * Approach: Hash Set + Math
- * Time Complexity: O(max(n log a, m log b))
+ * Time Complexity: O(n log a + m log b)
  * Space Complexity: O(k)
  * `n` = length of `arr1`, `m` = length of `arr2`
  * `a` = largest number in `arr1`, `b` = largest number in `arr2`
