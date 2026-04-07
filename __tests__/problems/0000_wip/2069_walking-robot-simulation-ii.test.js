@@ -1,0 +1,18 @@
+import { describe, expect, test } from 'bun:test';
+import { Robot } from '../../../src/problems/0000_wip/2069_walking-robot-simulation-ii.js';
+
+describe('Robot', () => {
+        test.skip('default test 1', () => {
+                const robot = new Robot(6, 3);
+
+                expect(robot.step(2)).toBeNil();
+                expect(robot.step(2)).toBeNil();
+                expect(robot.getPos()).toStrictEqual([4, 0]);
+                expect(robot.getDir()).toStrictEqual('East');
+                expect(robot.step(2)).toBeNil();
+                expect(robot.step(1)).toBeNil();
+                expect(robot.step(4)).toBeNil();
+                expect(robot.getPos()).toStrictEqual([1, 2]);
+                expect(robot.getDir()).toStrictEqual('West');
+        });
+});
