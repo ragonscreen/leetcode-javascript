@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { Robot } from '../../../src/problems/0000_wip/2069_walking-robot-simulation-ii.js';
+import { Robot } from '../../../src/problems/2001-2100/2069_walking-robot-simulation-ii.js';
 
 describe('Robot', () => {
-        test.skip('default test 1', () => {
+        test('default test 1', () => {
                 const robot = new Robot(6, 3);
 
                 expect(robot.step(2)).toBeNil();
