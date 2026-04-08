@@ -23,7 +23,7 @@
  */
 
 /**
- * Approach: Hash Map + Sorting + Stack [Optimal]
+ * Approach: Sorting + Hash Map + Stack [Optimal]
  * Time Complexity: O(n log n)
  * Space Complexity: O(n)
  *

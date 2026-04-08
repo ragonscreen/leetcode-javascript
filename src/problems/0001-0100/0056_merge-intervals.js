@@ -38,7 +38,7 @@
  */
 
 /**
- * Approach: Greedy + Sorting + Two Pointers
+ * Approach: Sorting + Greedy + Two Pointers
  * Time Complexity: O(n log n)
  * Space Complexity: O(1) auxiliary, O(n) for sorting, O(n) total
  *

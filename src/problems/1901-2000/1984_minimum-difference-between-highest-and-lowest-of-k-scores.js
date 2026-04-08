@@ -22,7 +22,7 @@
  */
 
 /**
- * Approach: Sliding Window + Sorting
+ * Approach: Sorting + Sliding Window
  * Time Complexity: O(n log n)
  * Space Complexity: O(1) auxiliary, O(n) for sorting
  *
