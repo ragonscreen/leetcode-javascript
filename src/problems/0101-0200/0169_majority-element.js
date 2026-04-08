@@ -55,7 +55,7 @@ const majorityElement = (nums) => {
 };
 
 /**
- * Approach: Boyer-Moore majority vote algorithm
+ * Approach: Boyer-Moore Majority Vote Algorithm
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  *
