@@ -1,0 +1,39 @@
+import { describe, expect, test } from 'bun:test';
+import {
+        addSpaces,
+        addSpaces1,
+} from '../../../src/problems/2101-2200/2109_adding-spaces-to-a-string.js';
+
+const testcases = [
+        {
+                s: 'LeetcodeHelpsMeLearn',
+                spaces: [8, 13, 15],
+                expected: 'Leetcode Helps Me Learn',
+        },
+        {
+                s: 'icodeinpython',
+                spaces: [1, 5, 7, 9],
+                expected: 'i code in py thon',
+        },
+        {
+                s: 'spacing',
+                spaces: [0, 1, 2, 3, 4, 5, 6],
+                expected: ' s p a c i n g',
+        },
+];
+
+describe('addSpaces', () => {
+        test.each(
+                structuredClone(testcases),
+        )('addSpaces($s, $spaces) -> $expected', ({ s, spaces, expected }) => {
+                expect(addSpaces(s, spaces)).toStrictEqual(expected);
+        });
+});
+
+describe('addSpaces1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('addSpaces1($s, $spaces) -> $expected', ({ s, spaces, expected }) => {
+                expect(addSpaces1(s, spaces)).toStrictEqual(expected);
+        });
+});
