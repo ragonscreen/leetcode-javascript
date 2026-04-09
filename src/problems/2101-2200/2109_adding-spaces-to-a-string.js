@@ -32,11 +32,9 @@
 const addSpaces = (s, spaces) => {
         const res = new Array(spaces.length + 1);
 
-        for (let i = 0; i < spaces.length; i++) {
-                res[i] = s.slice(spaces[i - 1] ?? 0, spaces[i]);
+        for (let i = 0; i <= spaces.length; i++) {
+                res[i] = s.slice(spaces[i - 1], spaces[i]);
         }
-
-        res[res.length - 1] = s.slice(spaces.at(-1));
 
         return res.join(' ');
 };
