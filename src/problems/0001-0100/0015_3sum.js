@@ -30,7 +30,7 @@
 /**
  * Approach: Two Pointers
  * Time Complexity: O(n^2)
- * Space Complexity: O(n) for sorting, O(max(n, m)) total
+ * Space Complexity: O(n) for sorting, O(n + m) total
  * `n` = length of `nums`, `m` = number of triplets in `nums`
  *
  * @param {number[]} nums
