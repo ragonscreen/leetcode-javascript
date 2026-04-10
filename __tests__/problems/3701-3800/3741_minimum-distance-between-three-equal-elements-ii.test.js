@@ -1,0 +1,17 @@
+import { describe, expect, test } from 'bun:test';
+import { minimumDistance } from '../../../src/problems/3701-3800/3741_minimum-distance-between-three-equal-elements-ii.js';
+
+const testcases = [
+        { nums: [1, 2, 1, 1, 3], expected: 6 },
+        { nums: [1, 1, 2, 3, 2, 1, 2], expected: 8 },
+        { nums: [1], expected: -1 },
+        { nums: [1, 1, 1], expected: 4 },
+];
+
+describe('minimumDistance', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minimumDistance($nums) -> $expected', ({ nums, expected }) => {
+                expect(minimumDistance(nums)).toStrictEqual(expected);
+        });
+});
