@@ -23,31 +23,36 @@
 
 /**
  * Approach: Hash Map
- * Time Complexity: O(n + m)
- * Space Complexity: O(1)
- * `n` = length of `order`, `m` = length of `s`
+ * Time Complexity: O(m)
+ * Space Complexity: O(m)
+ * `m` = length of `s`
  *
  * @param {string} order
  * @param {string} s
  * @return {string}
  */
 const customSortString = (order, s) => {
-        const map = new Map();
+        const map = new Array(26).fill(0);
+        const a = 'a'.charCodeAt();
 
         for (const c of s) {
-                map[c] = (map[c] || 0) + 1;
-                map.set(c, (map.get(c) || 0) + 1);
+                map[c.charCodeAt() - a]++;
         }
 
         let res = '';
 
         for (const c of order) {
-                res += c.repeat(map.get(c));
-                map.set(c, 0);
+                const idx = c.charCodeAt() - a;
+                res += c.repeat(map[idx]);
+                map[idx] = 0;
         }
 
-        for (const [c, v] of map) {
-                res += c.repeat(v);
+        for (let i = 0; i < 26; i++) {
+                const v = map[i];
+
+                if (v) {
+                        res += String.fromCharCode(i + a).repeat(v);
+                }
         }
 
         return res;
