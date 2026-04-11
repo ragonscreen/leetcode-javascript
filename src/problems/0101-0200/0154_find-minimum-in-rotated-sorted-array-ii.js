@@ -21,9 +21,9 @@
  */
 
 /**
- * Approach:
- * Time Complexity: O()
- * Space Complexity: O()
+ * Approach: Binary Search
+ * Time Complexity: O(log n) average, O(n) worst
+ * Space Complexity: O(1)
  *
  * @param {number[]} nums
  * @return {number}
