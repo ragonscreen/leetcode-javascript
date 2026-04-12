@@ -24,7 +24,7 @@
 /**
  * Approach: Simulation [Optimal]
  * Time Complexity: O(n)
- * Space Complexity: O(1) auxiliary, O(n) total
+ * Space Complexity: O(1)
  *
  * @param {string} s
  * @return {number}
@@ -71,7 +71,7 @@ const myAtoi = (s) => {
 /**
  * Approach: Simulation
  * Time Complexity: O(n)
- * Space Complexity: O(1) auxiliary, O(n) total
+ * Space Complexity: O(n)
  *
  * @param {string} s
  * @return {number}
