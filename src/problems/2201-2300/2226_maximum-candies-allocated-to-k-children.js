@@ -38,7 +38,7 @@
  * @return {number}
  */
 const maximumCandies = (candies, k) => {
-        const isValid = (val) => {
+        const check = (val) => {
                 let count = 0;
 
                 for (const candy of candies) {
@@ -52,20 +52,20 @@ const maximumCandies = (candies, k) => {
                 return false;
         };
 
-        let l = 0;
-        let r = Math.max(...candies);
+        let ok = 0;
+        let ng = Math.max(...candies) + 1;
 
-        while (l < r) {
-                const m = l + ((r - l) >> 1);
+        while (Math.abs(ok - ng) > 1) {
+                const m = (ok + ng) >> 1;
 
-                if (isValid(m + 1)) {
-                        l = m + 1;
+                if (check(m)) {
+                        ok = m;
                 } else {
-                        r = m;
+                        ng = m;
                 }
         }
 
-        return l;
+        return ok;
 };
 
 export { maximumCandies };
