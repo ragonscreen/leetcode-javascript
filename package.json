@@ -16,5 +16,8 @@
                 "test": "bun test --watch --only-failures",
                 "fmt": "bunx biome check --write"
         },
-        "type": "module"
+        "type": "module",
+        "dependencies": {
+                "@datastructures-js/queue": "^4.3.0"
+        }
 }
