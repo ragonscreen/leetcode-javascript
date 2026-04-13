@@ -23,10 +23,13 @@
  * - maximum-elegance-of-a-k-length-subsequence (Hard)
  */
 
-import { PriorityQueue as PQ } from '@datastructures-js/priority-queue';
+import {
+        MaxPriorityQueue,
+        PriorityQueue,
+} from '@datastructures-js/priority-queue';
 
 /**
- * Approach: Priority Queue
+ * Approach: Priority Queue [Optimal]
  * Time Complexity: O(n + n log n)
  * Space Complexity: O(n)
  * `n` = length of `profits`
@@ -39,14 +42,93 @@ import { PriorityQueue as PQ } from '@datastructures-js/priority-queue';
  */
 const findMaximizedCapital = (k, w, profits, capital) => {
         const n = profits.length;
+        const projects = Array.from({ length: n }, (_, i) => i);
+        projects.sort((a, b) => capital[a] - capital[b]);
+        const pq = new MaxPriorityQueue();
+        let res = w;
+        let idx = 0;
+        let count = 0;
+
+        while (count < k) {
+                while (capital[projects[idx]] <= res) {
+                        pq.enqueue(profits[projects[idx++]]);
+                }
+
+                if (pq.isEmpty()) {
+                        return res;
+                }
+
+                res += pq.dequeue();
+                count++;
+        }
+
+        return res;
+};
+
+/**
+ * Approach: Priority Queue [One Queue]
+ * Time Complexity: O(n + n log n)
+ * Space Complexity: O(n)
+ * `n` = length of `profits`
+ *
+ * @param {number} k
+ * @param {number} w
+ * @param {number[]} profits
+ * @param {number[]} capital
+ * @return {number}
+ */
+const findMaximizedCapital1 = (k, w, profits, capital) => {
+        const n = profits.length;
         const projects = new Array(n);
 
         for (let i = 0; i < n; i++) {
                 projects[i] = [profits[i], capital[i]];
         }
 
-        const pqc = new PQ((a, b) => a[1] - b[1], projects);
-        const pqp = new PQ((a, b) => b[0] - a[0]);
+        projects.sort((a, b) => a[1] - b[1]);
+        const pq = new MaxPriorityQueue();
+        let res = w;
+        let idx = 0;
+        let count = 0;
+
+        while (count < k) {
+                while (projects[idx]?.[1] <= res) {
+                        pq.enqueue(projects[idx++][0]);
+                }
+
+                if (pq.isEmpty()) {
+                        return res;
+                }
+
+                res += pq.dequeue();
+                count++;
+        }
+
+        return res;
+};
+
+/**
+ * Approach: Priority Queue [Two Queues]
+ * Time Complexity: O(n + n log n)
+ * Space Complexity: O(n)
+ * `n` = length of `profits`
+ *
+ * @param {number} k
+ * @param {number} w
+ * @param {number[]} profits
+ * @param {number[]} capital
+ * @return {number}
+ */
+const findMaximizedCapital2 = (k, w, profits, capital) => {
+        const n = profits.length;
+        const projects = new Array(n);
+
+        for (let i = 0; i < n; i++) {
+                projects[i] = [profits[i], capital[i]];
+        }
+
+        const pqc = new PriorityQueue((a, b) => a[1] - b[1], projects);
+        const pqp = new PriorityQueue((a, b) => b[0] - a[0]);
         let res = w;
         let count = 0;
 
@@ -66,4 +148,4 @@ const findMaximizedCapital = (k, w, profits, capital) => {
         return res;
 };
 
-export { findMaximizedCapital };
+export { findMaximizedCapital, findMaximizedCapital1, findMaximizedCapital2 };

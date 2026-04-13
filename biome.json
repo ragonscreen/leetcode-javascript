@@ -48,12 +48,6 @@
                         },
                         "nursery": {
                                 "noEqualsToNull": "error",
-                                "noExcessiveLinesPerFile": {
-                                        "level": "warn",
-                                        "options": {
-                                                "maxLines": 250
-                                        }
-                                },
                                 "noFloatingClasses": "error",
                                 "noFloatingPromises": "error",
                                 "noForIn": "error",
