@@ -24,7 +24,7 @@
  */
 
 /**
- * Approach: Binary Search
+ * Approach: Binary Search + Greedy
  * Time Complexity: O(n log m)
  * Space Complexity: O(1)
  * `n` = length of `nums`, `m` = maximum value in `nums`
