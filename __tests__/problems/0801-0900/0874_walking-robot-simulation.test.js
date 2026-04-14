@@ -1,0 +1,20 @@
+import { describe, expect, test } from 'bun:test';
+import { robotSim } from '../../../src/problems/0801-0900/0874_walking-robot-simulation.js';
+
+const testcases = [
+        { commands: [4, -1, 3], obstacles: [], expected: 25 },
+        { commands: [4, -1, 4, -2, 4], obstacles: [[2, 4]], expected: 65 },
+        { commands: [6, -1, -1, 6], obstacles: [[0, 0]], expected: 36 },
+];
+
+describe('robotSim', () => {
+        test.each(
+                structuredClone(testcases),
+        )('robotSim($commands, $obstacles) -> $expected', ({
+                commands,
+                obstacles,
+                expected,
+        }) => {
+                expect(robotSim(commands, obstacles)).toStrictEqual(expected);
+        });
+});
