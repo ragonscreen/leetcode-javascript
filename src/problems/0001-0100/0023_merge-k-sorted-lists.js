@@ -28,9 +28,9 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
 import { ListNode } from '../../data-structures/linked-list/LinkedListNode.js';
 
 /**
- * Approach: Sorting
+ * Approach: Sorting [Optimal]
  * Time Complexity: O(n + k log k)
- * Space Complexity: O(1) auxiliary, O(k) total
+ * Space Complexity: O(k)
  * `k` = total number of nodes across all lists in `lists`
  *
  * @param {ListNode[]} lists
@@ -61,7 +61,7 @@ const mergeKLists = (lists) => {
 /**
  * Approach: Priority Queue
  * Time Complexity: O(n + k log n)
- * Space Complexity: O(1) auxiliary, O(n) total
+ * Space Complexity: O(n)
  * `n` = length of `lists`, `k` = total number of nodes across all lists in `lists`
  *
  * @param {ListNode[]} lists
@@ -96,7 +96,7 @@ const mergeKLists1 = (lists) => {
 /**
  * Approach: Iteration
  * Time Complexity: O(n * k)
- * Space Complexity: O(1) auxiliary, O(n * k) total
+ * Space Complexity: O(1) auxiliary, O(k) total
  * `n` = length of `lists`, `k` = total number of nodes across all lists in `lists`
  *
  * @param {ListNode[]} lists
