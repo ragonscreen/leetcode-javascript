@@ -1,4 +1,4 @@
-import { ListNode } from './list-node.js';
+import { ListNode } from '../../src/data-structures/linked-list/LinkedListNode.js';
 
 const arrayToList = (array) => {
         return array.reduceRight((acc, cur) => new ListNode(cur, acc), null);

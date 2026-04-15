@@ -1,9 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import { reverseBetween } from '../../../src/problems/0001-0100/0092_reverse-linked-list-ii.js';
-import {
-        arrayToList,
-        listToArray,
-} from '../../utils/linked-list/linked-list.js';
+import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
 const testcases = [
         { head: [1, 2, 3, 4, 5], left: 2, right: 4, expected: [1, 4, 3, 2, 5] },
