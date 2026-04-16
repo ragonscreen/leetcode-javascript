@@ -23,43 +23,39 @@
 
 /**
  * Approach: Math
- * Time Complexity: O()
- * Space Complexity: O()
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(n)
  *
  * @param {number} n
  * @param {number} k
  * @return {string}
  */
 const getPermutation = (n, k) => {
-        const set = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        const memo = [1];
+
+        const f = (v) => {
+                if (memo[v] !== undefined) {
+                        return memo[v];
+                }
+
+                let num = memo.length - 1;
+
+                while (num++ < v) {
+                        memo[num] = num * memo[num - 1];
+                }
+
+                return memo.at(-1);
+        };
+
+        const digits = Array.from({ length: n }, (_, i) => i + 1);
         let res = '';
-        const num = k;
-        // let parts = f(n - 1);
-        // absolute cinema
 
         for (let i = 0; i < n; i++) {
-                const arr = Array.from(set);
-                const fact = f(n - i - 1);
-                // const idx = Math.floor((Math.max(0, num - 1)) / fact) % fact;
-                const idx = Math.floor((num - 1) / fact) % (n - i);
-                const digit = arr[idx];
-                res += digit;
-                set.delete(digit);
-                // num = (num + fact - 1) % fact;
-                // num %= fact;
-
-                // console.log({ fact, idx, digit, num });
-        }
-
-        return res;
-};
-
-const f = (v) => {
-        let res = 1;
-        let num = 1;
-
-        while (num++ < v) {
-                res *= num;
+                const num = n - i;
+                const fact = f(num - 1);
+                const digitIdx = Math.floor((k - 1) / fact) % num;
+                res += digits[digitIdx];
+                digits.splice(digitIdx, 1);
         }
 
         return res;
