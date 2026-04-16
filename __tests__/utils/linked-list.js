@@ -16,4 +16,27 @@ const listToArray = (list) => {
         return array;
 };
 
-export { arrayToList, listToArray };
+const createCycle = (list, pos) => {
+        if (pos === -1) {
+                return list;
+        }
+
+        let curr = list;
+        let anchor = null;
+        let p = 0;
+
+        while (curr.next) {
+                if (p === pos) {
+                        anchor = curr;
+                }
+
+                curr = curr.next;
+                p++;
+        }
+
+        curr.next = anchor;
+
+        return list;
+};
+
+export { arrayToList, createCycle, listToArray };
