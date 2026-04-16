@@ -1,0 +1,17 @@
+import { describe, expect, test } from 'bun:test';
+import { getPermutation } from '../../../src/problems/0001-0100/0060_permutation-sequence.js';
+
+const testcases = [
+        { n: 3, k: 3, expected: '213' },
+        { n: 4, k: 9, expected: '2314' },
+        { n: 3, k: 1, expected: '123' },
+        { n: 4, k: 8, expected: '2143' },
+];
+
+describe('getPermutation', () => {
+        test.each(
+                structuredClone(testcases),
+        )('getPermutation($n, $k) -> $expected', ({ n, k, expected }) => {
+                expect(getPermutation(n, k)).toStrictEqual(expected);
+        });
+});
