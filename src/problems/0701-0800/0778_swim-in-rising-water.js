@@ -25,7 +25,50 @@
  * - path-with-minimum-effort (Medium)
  */
 
+import { MinPriorityQueue } from '@datastructures-js/priority-queue';
 import { Queue } from '@datastructures-js/queue';
+
+/**
+ * Approach: Dijkstra's Algorithm
+ * Time Complexity: O(n^2 log n^2) = O(n^2 log n)
+ * Space Complexity: O(n^2)
+ *
+ * @param {number[][]} grid
+ * @return {number}
+ */
+const swimInWater = (grid) => {
+        const n = grid.length;
+        const visited = Array.from({ length: n }, () => new Array(n).fill(0));
+        const minq = new MinPriorityQueue((e) => e[0], [[grid[0][0], 0, 0]]);
+        visited[0][0] = 1;
+        const dirs = [
+                [-1, 0],
+                [0, 1],
+                [1, 0],
+                [0, -1],
+        ];
+
+        while (minq.size()) {
+                const [time, y, x] = minq.dequeue();
+
+                if (y === n - 1 && x === n - 1) {
+                        return time;
+                }
+
+                for (const [dy, dx] of dirs) {
+                        const ny = y + dy;
+                        const nx = x + dx;
+
+                        if (visited[ny]?.[nx] === 0) {
+                                visited[ny][nx] = 1;
+                                const newTime = Math.max(time, grid[ny][nx]);
+                                minq.enqueue([newTime, ny, nx]);
+                        }
+                }
+        }
+
+        return -1;
+};
 
 /**
  * Approach: Binary Search + BFS
@@ -36,7 +79,7 @@ import { Queue } from '@datastructures-js/queue';
  * @param {number[][]} grid
  * @return {number}
  */
-const swimInWater = (grid) => {
+const swimInWater1 = (grid) => {
         const n = grid.length;
         const visited = Array.from({ length: n }, () => new Array(n).fill(0));
 
@@ -46,6 +89,7 @@ const swimInWater = (grid) => {
                 }
 
                 const q = new Queue([[0, 0]]);
+                visited[0][0] = 1;
                 const dirs = [
                         [-1, 0],
                         [0, 1],
@@ -107,4 +151,4 @@ const swimInWater = (grid) => {
         return ok;
 };
 
-export { swimInWater };
+export { swimInWater, swimInWater1 };

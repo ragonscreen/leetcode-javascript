@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { swimInWater } from '../../../src/problems/0701-0800/0778_swim-in-rising-water.js';
+import {
+        swimInWater,
+        swimInWater1,
+} from '../../../src/problems/0701-0800/0778_swim-in-rising-water.js';
 
 const testcases = [
         {
@@ -26,5 +29,13 @@ describe('swimInWater', () => {
                 structuredClone(testcases),
         )('swimInWater($grid) -> $expected', ({ grid, expected }) => {
                 expect(swimInWater(grid)).toStrictEqual(expected);
+        });
+});
+
+describe('swimInWater1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('swimInWater1($grid) -> $expected', ({ grid, expected }) => {
+                expect(swimInWater1(grid)).toStrictEqual(expected);
         });
 });
