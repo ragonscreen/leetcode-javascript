@@ -37,10 +37,6 @@ const minSwaps = (nums) => {
                 count += nums[i];
         }
 
-        if (!count) {
-                return 0;
-        }
-
         let res = n;
         let have = 0;
 
@@ -52,7 +48,7 @@ const minSwaps = (nums) => {
                         continue;
                 }
 
-                const swaps = len - have;
+                const swaps = count - have;
                 res = Math.min(res, swaps);
                 have -= nums[l++];
         }
