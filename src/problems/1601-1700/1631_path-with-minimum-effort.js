@@ -56,6 +56,11 @@ const minimumEffortPath = (heights) => {
         while (minq.size()) {
                 const [effort, y, x] = minq.dequeue();
 
+                // outdated path - already have better path to this cell
+                if (effort > bestEfforts[y][x]) {
+                        continue;
+                }
+
                 if (y === n - 1 && x === m - 1) {
                         return effort;
                 }
@@ -79,8 +84,6 @@ const minimumEffortPath = (heights) => {
                         }
                 }
         }
-
-        return -1;
 };
 
 /**
