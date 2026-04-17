@@ -27,7 +27,61 @@
  * - swim-in-rising-water (Hard)
  */
 
+import { MinPriorityQueue } from '@datastructures-js/priority-queue';
 import { Queue } from '@datastructures-js/queue';
+
+/**
+ * Approach: Dijkstra's Algorithm
+ * Time Complexity: O(n * m log (n * m))
+ * Space Complexity: O(n * m)
+ *
+ * @param {number[][]} heights
+ * @return {number}
+ */
+const minimumEffortPath = (heights) => {
+        const n = heights.length;
+        const m = heights[0].length;
+        const minq = new MinPriorityQueue((e) => e[0], [[0, 0, 0]]);
+        const bestEfforts = Array.from({ length: n }, () =>
+                new Array(m).fill(Number.MAX_SAFE_INTEGER),
+        );
+        bestEfforts[0][0] = 0;
+        const dirs = [
+                [-1, 0],
+                [0, 1],
+                [1, 0],
+                [0, -1],
+        ];
+
+        while (minq.size()) {
+                const [effort, y, x] = minq.dequeue();
+
+                if (y === n - 1 && x === m - 1) {
+                        return effort;
+                }
+
+                for (const [dy, dx] of dirs) {
+                        const ny = y + dy;
+                        const nx = x + dx;
+
+                        if (ny > -1 && ny < n && nx > -1 && nx < m) {
+                                const newEffort = Math.max(
+                                        effort,
+                                        Math.abs(
+                                                heights[y][x] - heights[ny][nx],
+                                        ),
+                                );
+
+                                if (newEffort < bestEfforts[ny][nx]) {
+                                        bestEfforts[ny][nx] = newEffort;
+                                        minq.enqueue([newEffort, ny, nx]);
+                                }
+                        }
+                }
+        }
+
+        return -1;
+};
 
 /**
  * Approach: Binary Search + BFS
@@ -38,7 +92,7 @@ import { Queue } from '@datastructures-js/queue';
  * @param {number[][]} heights
  * @return {number}
  */
-const minimumEffortPath = (heights) => {
+const minimumEffortPath1 = (heights) => {
         const n = heights.length;
         const m = heights[0].length;
         const visited = Array.from({ length: n }, () => new Array(m).fill(0));
@@ -109,4 +163,4 @@ const minimumEffortPath = (heights) => {
         return ok;
 };
 
-export { minimumEffortPath };
+export { minimumEffortPath, minimumEffortPath1 };

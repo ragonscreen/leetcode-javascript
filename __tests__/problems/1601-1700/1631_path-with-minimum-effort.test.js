@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { minimumEffortPath } from '../../../src/problems/1601-1700/1631_path-with-minimum-effort.js';
+import {
+        minimumEffortPath,
+        minimumEffortPath1,
+} from '../../../src/problems/1601-1700/1631_path-with-minimum-effort.js';
 
 const testcases = [
         {
@@ -28,6 +31,10 @@ const testcases = [
                 ],
                 expected: 0,
         },
+        {
+                heights: [[1, 10, 6, 7, 9, 10, 4, 9]],
+                expected: 9,
+        },
 ];
 
 describe('minimumEffortPath', () => {
@@ -38,5 +45,16 @@ describe('minimumEffortPath', () => {
                 expected,
         }) => {
                 expect(minimumEffortPath(heights)).toStrictEqual(expected);
+        });
+});
+
+describe('minimumEffortPath1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minimumEffortPath1($heights) -> $expected', ({
+                heights,
+                expected,
+        }) => {
+                expect(minimumEffortPath1(heights)).toStrictEqual(expected);
         });
 });
