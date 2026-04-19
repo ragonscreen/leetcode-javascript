@@ -32,7 +32,7 @@
  * Approach: Binary Search + Sliding Window [Optimal]
  * Time Complexity: O(n log n + n log d)
  * Space Complexity: O(1) auxiliary, O(n) for sorting
- * `n` = length of `nums`, `d` = difference between maximum and minimum value of `nums`
+ * `n` = length of `nums`, `d` = difference between maximum and minimum value in `nums`
  *
  * @param {number[]} nums
  * @param {number} k
@@ -80,7 +80,7 @@ const smallestDistancePair = (nums, k) => {
  * Approach: Binary Search
  * Time Complexity: O(n log n + n log n log d)
  * Space Complexity: O(1) auxiliary, O(n) for sorting
- * `n` = length of `nums`, `d` = difference between maximum and minimum value of `nums`
+ * `n` = length of `nums`, `d` = difference between maximum and minimum value in `nums`
  *
  * @param {number[]} nums
  * @param {number} k
