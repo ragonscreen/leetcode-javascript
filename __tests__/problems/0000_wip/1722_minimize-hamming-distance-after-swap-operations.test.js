@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { minimumHammingDistance } from '../../../src/problems/0000_wip/1722_minimize-hamming-distance-after-swap-operations.js';
+import {
+        minimumHammingDistance,
+        minimumHammingDistance1,
+} from '../../../src/problems/0000_wip/1722_minimize-hamming-distance-after-swap-operations.js';
 
 const testcases = [
         {
@@ -132,6 +135,21 @@ describe.skip('minimumHammingDistance', () => {
         }) => {
                 expect(
                         minimumHammingDistance(source, target, allowedSwaps),
+                ).toStrictEqual(expected);
+        });
+});
+
+describe.skip('minimumHammingDistance1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minimumHammingDistance1($source, $target, $allowedSwaps) -> $expected', ({
+                source,
+                target,
+                allowedSwaps,
+                expected,
+        }) => {
+                expect(
+                        minimumHammingDistance1(source, target, allowedSwaps),
                 ).toStrictEqual(expected);
         });
 });

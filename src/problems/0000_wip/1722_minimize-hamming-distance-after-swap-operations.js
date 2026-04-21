@@ -22,8 +22,10 @@
  * - smallest-string-with-swaps (Medium)
  */
 
+import { Queue } from '@datastructures-js/queue';
+
 /**
- * Approach:
+ * Approach: BFS [TLE]
  * Time Complexity: O()
  * Space Complexity: O()
  *
@@ -52,17 +54,86 @@ const minimumHammingDistance = (source, target, allowedSwaps) => {
                 g.get(j).push(i);
         }
 
-        console.log(g);
+        const placed = new Set();
 
-        let displacedCorrect = 0;
-        let res = n;
+        const bfs = (val, idx) => {
+                const q = new Queue(g.get(idx));
 
-        const dfs = (val, i, visited) => {
-                if (val === target[i]) {
-                        return displacedCorrect ? 0 : 1;
+                if (val === target[idx] && !placed.has(idx)) {
+                        placed.add(idx);
+
+                        return 1;
                 }
 
-                displacedCorrect = target[i] === source[i] ? 0 : 1;
+                const visited = new Set();
+
+                while (q.size()) {
+                        const i = q.dequeue();
+
+                        for (const j of g.get(i)) {
+                                if (val === target[j] && !placed.has(j)) {
+                                        placed.add(j);
+
+                                        return 1;
+                                }
+
+                                if (!visited.has(j)) {
+                                        visited.add(j);
+                                        q.enqueue(j);
+                                }
+                        }
+                }
+
+                return 0;
+        };
+
+        let res = n;
+
+        for (let i = 0; i < n; i++) {
+                res -= bfs(source[i], i);
+        }
+
+        return res;
+};
+
+/**
+ * Approach: DFS [TLE]
+ * Time Complexity: O()
+ * Space Complexity: O()
+ *
+ * @param {number[]} source
+ * @param {number[]} target
+ * @param {number[][]} allowedSwaps
+ * @return {number}
+ */
+const minimumHammingDistance1 = (source, target, allowedSwaps) => {
+        const n = source.length;
+        const m = allowedSwaps.length;
+        const g = new Map();
+
+        for (let k = 0; k < m; k++) {
+                const [i, j] = allowedSwaps[k];
+
+                if (!g.has(i)) {
+                        g.set(i, []);
+                }
+
+                if (!g.has(j)) {
+                        g.set(j, []);
+                }
+
+                g.get(i).push(j);
+                g.get(j).push(i);
+        }
+
+        const placed = new Set();
+
+        const dfs = (val, i, visited) => {
+                if (val === target[i] && !placed.has(i)) {
+                        placed.add(i);
+                        return 1;
+                }
+
                 visited.add(i);
 
                 for (const j of g.get(i) ?? []) {
@@ -70,17 +141,15 @@ const minimumHammingDistance = (source, target, allowedSwaps) => {
                                 continue;
                         }
 
-                        if (target[j] === source[j]) {
-                                displacedCorrect = 0;
-                        }
-
                         if (dfs(val, j, visited)) {
-                                return 1 + displacedCorrect;
+                                return 1;
                         }
                 }
 
                 return 0;
         };
+
+        let res = n;
 
         for (let i = 0; i < n; i++) {
                 const visited = new Set();
@@ -88,9 +157,7 @@ const minimumHammingDistance = (source, target, allowedSwaps) => {
                 visited.clear();
         }
 
-        // console.log(displacedCorrect);
-
         return res;
 };
 
-export { minimumHammingDistance };
+export { minimumHammingDistance, minimumHammingDistance1 };
