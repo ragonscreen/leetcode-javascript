@@ -22,7 +22,7 @@
  */
 
 /**
- * Approach: Sliding Window
+ * Approach: Dynamic Programming
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  *
@@ -33,16 +33,57 @@ const minFlips = (s) => {
         const n = s.length;
         let cnt = 0;
 
+        for (let i = 0; i < n; i++) {
+                cnt += (i % 2) ^ s[i];
+        }
+
+        let dp0 = cnt;
+        let dp1 = n - cnt;
+        let res = Math.min(dp0, dp1);
+
+        if (n % 2 === 0) {
+                return res;
+        }
+
+        for (let i = 0; i < n; i++) {
+                [dp0, dp1] = [dp1, dp0];
+
+                if (s[i] === '0') {
+                        dp0--;
+                        dp1++;
+                } else {
+                        dp0++;
+                        dp1--;
+                }
+
+                res = Math.min(res, dp0, dp1);
+        }
+
+        return res;
+};
+
+/**
+ * Approach: Sliding Window
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ *
+ * @param {string} s
+ * @return {number}
+ */
+const minFlips1 = (s) => {
+        const n = s.length;
+        let cnt = 0;
+
         // check forward
         for (let i = 0; i < n; i++) {
-                cnt += i % 2 !== +s[i];
+                cnt += i % 2 !== Number(s[i]);
         }
 
         let res = Math.min(cnt, n - cnt);
 
         // check cycles
         for (let i = 0; i < n; i++) {
-                let match = +s[i] === i % 2;
+                let match = Number(s[i]) === i % 2;
 
                 // swap value of match for every other index
                 if (i % 2) {
@@ -69,4 +110,4 @@ const minFlips = (s) => {
         return res;
 };
 
-export { minFlips };
+export { minFlips, minFlips1 };
