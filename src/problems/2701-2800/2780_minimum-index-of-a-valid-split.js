@@ -23,7 +23,7 @@
  */
 
 /**
- * Approach: Boyer-Moore Majority Vote Algorithm [Space Optimised]
+ * Approach: Boyer-Moore Majority Vote Algorithm [Optimal Space]
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  *
@@ -112,4 +112,4 @@ const minimumIndex1 = (nums) => {
         return -1;
 };
 
-export { minimumIndex };
+export { minimumIndex, minimumIndex1 };

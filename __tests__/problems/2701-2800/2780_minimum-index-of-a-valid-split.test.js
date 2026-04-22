@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { minimumIndex } from '../../../src/problems/2701-2800/2780_minimum-index-of-a-valid-split.js';
+import {
+        minimumIndex,
+        minimumIndex1,
+} from '../../../src/problems/2701-2800/2780_minimum-index-of-a-valid-split.js';
 
 const testcases = [
         { nums: [1, 2, 2, 2], expected: 2 },
@@ -12,5 +15,13 @@ describe('minimumIndex', () => {
                 structuredClone(testcases),
         )('minimumIndex($nums) -> $expected', ({ nums, expected }) => {
                 expect(minimumIndex(nums)).toStrictEqual(expected);
+        });
+});
+
+describe('minimumIndex1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minimumIndex1($nums) -> $expected', ({ nums, expected }) => {
+                expect(minimumIndex1(nums)).toStrictEqual(expected);
         });
 });
