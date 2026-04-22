@@ -27,7 +27,8 @@
 /**
  * Approach: Sliding Window
  * Time Complexity: O(n)
- * Space Complexity: O(26) = O(1)
+ * Space Complexity: O(m) [O(26) = O(1)]
+ * `n` = length of `s`, `m` = number of unique characters in `s`
  *
  * @param {string} s
  * @return {number}
