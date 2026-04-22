@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/max-consecutive-ones-iii/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-03-21
+ * Date: 2026-03-21 (Updated: 2026-04-22)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -42,19 +42,13 @@
  */
 const longestOnes = (nums, k) => {
         let res = 0;
-        let flipped = 0;
+        let flips = 0;
 
         for (let l = 0, r = 0; r < nums.length; r++) {
-                if (nums[r] === 0) {
-                        flipped++;
-                }
+                flips += nums[r] ^ 1;
 
-                while (flipped > k) {
-                        if (nums[l] === 0) {
-                                flipped--;
-                        }
-
-                        l++;
+                while (flips > k) {
+                        flips -= nums[l++] ^ 1;
                 }
 
                 res = Math.max(res, r - l + 1);
