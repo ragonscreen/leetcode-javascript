@@ -23,9 +23,9 @@
 
 /**
  * Approach: Simulation
- * Time Complexity: O(n * m)
+ * Time Complexity: O(n * m * w)
  * Space Complexity: O(1) auxiliary, O(n) total
- * `n` = length of `queries`, `m` = length of `dictionary`
+ * `n` = length of `queries`, `m` = length of `dictionary`, `w` = maximum length of `dictionary[i]`
  *
  * @param {string[]} queries
  * @param {string[]} dictionary
@@ -34,7 +34,7 @@
 const twoEditWords = (queries, dictionary) => {
         const res = [];
 
-        querySearch: for (const q of queries) {
+        for (const q of queries) {
                 wordSearch: for (const w of dictionary) {
                         let diff = 0;
 
@@ -49,7 +49,7 @@ const twoEditWords = (queries, dictionary) => {
                         }
 
                         res.push(q);
-                        continue querySearch;
+                        break;
                 }
         }
 
