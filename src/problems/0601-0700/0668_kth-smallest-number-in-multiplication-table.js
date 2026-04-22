@@ -25,6 +25,47 @@
  */
 
 /**
+ * Approach: Binary Search [Optimal]
+ * Time Complexity: O(m log (m * n))
+ * Space Complexity: O(1)
+ *
+ * @param {number} m
+ * @param {number} n
+ * @param {number} k
+ * @return {number}
+ */
+const findKthNumber = (m, n, k) => {
+        const check = (num) => {
+                let cnt = 0;
+
+                for (let i = 1; i <= m; i++) {
+                        cnt += Math.min(Math.floor(num / i), n);
+
+                        if (cnt >= k) {
+                                return true;
+                        }
+                }
+
+                return false;
+        };
+
+        let ok = m * n;
+        let ng = 0;
+
+        while (Math.abs(ok - ng) > 1) {
+                const mid = (ok + ng) >> 1;
+
+                if (check(mid)) {
+                        ok = mid;
+                } else {
+                        ng = mid;
+                }
+        }
+
+        return ok;
+};
+
+/**
  * Approach: Binary Search + Sliding Window
  * Time Complexity: O((m + n) log (m * n))
  * Space Complexity: O(1)
@@ -34,7 +75,7 @@
  * @param {number} k
  * @return {number}
  */
-const findKthNumber = (m, n, k) => {
+const findKthNumber1 = (m, n, k) => {
         const check = (num) => {
                 let cnt = 0;
 
@@ -69,4 +110,4 @@ const findKthNumber = (m, n, k) => {
         return ok;
 };
 
-export { findKthNumber };
+export { findKthNumber, findKthNumber1 };
