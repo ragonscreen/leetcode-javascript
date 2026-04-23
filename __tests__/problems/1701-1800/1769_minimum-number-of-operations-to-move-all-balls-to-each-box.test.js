@@ -2,6 +2,7 @@ import { describe, expect, test } from 'bun:test';
 import {
         minOperations,
         minOperations1,
+        minOperations2,
 } from '../../../src/problems/1701-1800/1769_minimum-number-of-operations-to-move-all-balls-to-each-box.js';
 
 const testcases = [
@@ -14,7 +15,9 @@ describe('minOperations', () => {
         test.each(
                 structuredClone(testcases),
         )('minOperations($boxes) -> $expected', ({ boxes, expected }) => {
-                expect(minOperations(boxes)).toStrictEqual(expected);
+                expect(Array.from(minOperations(boxes))).toStrictEqual(
+                        expected,
+                );
         });
 });
 
@@ -22,6 +25,16 @@ describe('minOperations1', () => {
         test.each(
                 structuredClone(testcases),
         )('minOperations1($boxes) -> $expected', ({ boxes, expected }) => {
-                expect(minOperations1(boxes)).toStrictEqual(expected);
+                expect(Array.from(minOperations1(boxes))).toStrictEqual(
+                        expected,
+                );
+        });
+});
+
+describe('minOperations2', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minOperations2($boxes) -> $expected', ({ boxes, expected }) => {
+                expect(minOperations2(boxes)).toStrictEqual(expected);
         });
 });

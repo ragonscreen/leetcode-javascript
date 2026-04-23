@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-03-22
+ * Date: 2026-03-22 (Updated: 2026-04-23)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -23,7 +23,7 @@
  */
 
 /**
- * Approach: Prefix Sum
+ * Approach: Prefix Sum [One Pass]
  * Time Complexity: O(n)
  * Space Complexity: O(1) auxiliary, O(n) total
  *
@@ -32,31 +32,52 @@
  */
 const minOperations = (boxes) => {
         const n = boxes.length;
-        const res = new Array(n);
-        let prefix = 0;
-        let count = 0;
+        const res = new Uint32Array(n);
+        let cntL = 0;
+        let preL = 0;
+        let cntR = 0;
+        let preR = 0;
 
-        for (let i = 0; i < n; i++) {
-                res[i] = prefix;
-
-                if (boxes[i] === '1') {
-                        count++;
-                }
-
-                prefix += count;
+        for (let l = 0; l < n; l++) {
+                res[l] += preL;
+                cntL += boxes[l] ^ 0;
+                preL += cntL;
+                const r = n - 1 - l;
+                res[r] += preR;
+                cntR += boxes[r] ^ 0;
+                preR += cntR;
         }
 
-        prefix = 0;
-        count = 0;
+        return res;
+};
 
-        for (let i = n - 1; i >= 0; i--) {
-                res[i] += prefix;
+/**
+ * Approach: Prefix Sum
+ * Time Complexity: O(n)
+ * Space Complexity: O(1) auxiliary, O(n) total
+ *
+ * @param {string} boxes
+ * @return {number[]}
+ */
+const minOperations1 = (boxes) => {
+        const n = boxes.length;
+        const res = new Uint32Array(n);
+        let cnt = 0;
+        let pre = 0;
 
-                if (boxes[i] === '1') {
-                        count++;
-                }
+        for (let i = 0; i < n; i++) {
+                res[i] = pre;
+                cnt += boxes[i] === '1';
+                pre += cnt;
+        }
 
-                prefix += count;
+        cnt = 0;
+        pre = 0;
+
+        for (let i = n - 1; i > -1; i--) {
+                res[i] += pre;
+                cnt += boxes[i] === '1';
+                pre += cnt;
         }
 
         return res;
@@ -71,7 +92,7 @@ const minOperations = (boxes) => {
  * @param {string} boxes
  * @return {number[]}
  */
-const minOperations1 = (boxes) => {
+const minOperations2 = (boxes) => {
         const n = boxes.length;
         const balls = [];
 
@@ -96,4 +117,4 @@ const minOperations1 = (boxes) => {
         return res;
 };
 
-export { minOperations, minOperations1 };
+export { minOperations, minOperations1, minOperations2 };
