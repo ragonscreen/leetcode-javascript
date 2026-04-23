@@ -24,7 +24,7 @@
  */
 
 /**
- * Approach: Prefix Sum
+ * Approach: Hash Map + Prefix Sum
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  *
@@ -33,7 +33,7 @@
  */
 const distance = (nums) => {
         const n = nums.length;
-        const res = new Array(n).fill(0);
+        const res = new Float64Array(n);
         const idxMapL = new Map();
         const cntMapL = new Map();
         const preMapL = new Map();
