@@ -55,9 +55,9 @@ const shiftingLetters = (s, shifts) => {
         let cnt = 0;
 
         for (let i = 0; i < n; i++) {
-                cnt = (cnt + diff[i]) % 26;
+                cnt += (diff[i] % 26) + 26;
                 res += String.fromCharCode(
-                        ((s[i].charCodeAt() - a + cnt + 26) % 26) + a,
+                        ((s[i].charCodeAt() - a + cnt) % 26) + a,
                 );
         }
 
