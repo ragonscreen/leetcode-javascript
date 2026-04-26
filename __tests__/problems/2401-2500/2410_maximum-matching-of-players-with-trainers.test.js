@@ -1,0 +1,21 @@
+import { describe, expect, test } from 'bun:test';
+import { matchPlayersAndTrainers } from '../../../src/problems/2401-2500/2410_maximum-matching-of-players-with-trainers.js';
+
+const testcases = [
+        { players: [4, 7, 9], trainers: [8, 2, 5, 8], expected: 2 },
+        { players: [1, 1, 1], trainers: [10], expected: 1 },
+];
+
+describe('matchPlayersAndTrainers', () => {
+        test.each(
+                structuredClone(testcases),
+        )('matchPlayersAndTrainers($players, $trainers) -> $expected', ({
+                players,
+                trainers,
+                expected,
+        }) => {
+                expect(
+                        matchPlayersAndTrainers(players, trainers),
+                ).toStrictEqual(expected);
+        });
+});
