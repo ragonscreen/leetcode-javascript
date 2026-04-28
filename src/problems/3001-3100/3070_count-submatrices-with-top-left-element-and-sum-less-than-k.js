@@ -34,17 +34,20 @@ const countSubmatrices = (grid, k) => {
         let res = 0;
 
         for (let y = 0; y < n; y++) {
-                for (let x = 0, sum = 0; x < m; x++) {
+                let x = 0;
+
+                for (let sum = 0; x < m; x++) {
                         prefix[x] += grid[y][x];
                         sum += prefix[x];
 
                         // adding further columns will never satisfy
                         if (sum > k) {
-                                continue;
+                                break;
                         }
-
-                        res++;
                 }
+
+                // col stopped at = cnt submatrices with this row
+                res += x;
         }
 
         return res;
