@@ -6,6 +6,16 @@ const testcases = [
         { s: 'bbbbb', expected: 1 },
         { s: 'pwwkew', expected: 3 },
         { s: ' ', expected: 1 },
+        { s: '   ', expected: 1 },
+        { s: '~~~', expected: 1 },
+        {
+                s: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~ ',
+                expected: 33,
+        },
+        {
+                s: "\\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ !#$%&'()*+,-./:;<=>?@[]^_`{|}~ ",
+                expected: 32,
+        },
 ];
 
 describe('lengthOfLongestSubstring', () => {

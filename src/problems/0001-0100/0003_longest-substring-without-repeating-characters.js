@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-01-23
+ * Date: 2026-01-23 (Updated: 2026-05-01)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -41,29 +41,24 @@
  * @return {number}
  */
 const lengthOfLongestSubstring = (s) => {
-        const set = new Set();
-        let max = 0;
-        let l = 0;
-        let r = 0;
+        // ascii values 32 to 126 are available
+        // size must be 126 - 32 + 1 = 95
+        const set = new Uint8Array(95);
+        let res = 0;
 
-        while (r < s.length) {
-                const c = s[r];
+        for (let l = 0, r = 0; r < s.length; r++) {
+                const vr = s.charCodeAt(r) - 32;
 
-                if (set.has(c)) {
-                        max = Math.max(max, r - l);
+                while (set[vr]) {
+                        const vl = s.charCodeAt(l++) - 32;
+                        set[vl] = 0;
                 }
 
-                while (set.has(c)) {
-                        set.delete(s[l++]);
-                }
-
-                set.add(c);
-                r++;
+                set[vr] = 1;
+                res = Math.max(res, r - l + 1);
         }
 
-        max = Math.max(max, r - l);
-
-        return max;
+        return res;
 };
 
 export { lengthOfLongestSubstring };
