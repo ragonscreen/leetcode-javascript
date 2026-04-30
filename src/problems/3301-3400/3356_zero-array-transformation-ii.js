@@ -25,7 +25,7 @@
  */
 
 /**
- * Approach: Difference Array + Line Sweep
+ * Approach: Difference Array + Greedy + Sweep Line
  * Time Complexity: O(n + q)
  * Space Complexity: O(n)
  *
@@ -41,6 +41,8 @@ const minZeroArray = (nums, queries) => {
         let cnt = 0;
 
         for (let i = 0; i < n; i++) {
+                // if we get stuck process next queries
+                // otherwise keep sweeping
                 while (nums[i] + cnt + diffs[i] > 0) {
                         if (qi === q) {
                                 return -1;
