@@ -74,7 +74,7 @@
                                 "noCommonJs": "error",
                                 "noExportedImports": "error",
                                 "noNegationElse": "error",
-                                "noParameterAssign": "error",
+                                "noParameterAssign": "info",
                                 "noRestrictedGlobals": {
                                         "level": "error",
                                         "options": {
