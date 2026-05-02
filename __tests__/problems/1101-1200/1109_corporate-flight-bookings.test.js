@@ -1,0 +1,36 @@
+import { describe, expect, test } from 'bun:test';
+import { corpFlightBookings } from '../../../src/problems/1101-1200/1109_corporate-flight-bookings.js';
+
+const testcases = [
+        {
+                bookings: [
+                        [1, 2, 10],
+                        [2, 3, 20],
+                        [2, 5, 25],
+                ],
+                n: 5,
+                expected: [10, 55, 45, 25, 25],
+        },
+        {
+                bookings: [
+                        [1, 2, 10],
+                        [2, 2, 15],
+                ],
+                n: 2,
+                expected: [10, 25],
+        },
+];
+
+describe('corpFlightBookings', () => {
+        test.each(
+                structuredClone(testcases),
+        )('corpFlightBookings($bookings, $n) -> $expected', ({
+                bookings,
+                n,
+                expected,
+        }) => {
+                expect(
+                        Array.from(corpFlightBookings(bookings, n)),
+                ).toStrictEqual(expected);
+        });
+});
