@@ -23,7 +23,7 @@
  */
 const countOppositeParity = (nums) => {
         const n = nums.length;
-        const res = new Uint32Array(n);
+        const res = new Uint8Array(n);
         let cntOdd = 0;
         let cntEven = 0;
 
