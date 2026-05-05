@@ -7,14 +7,16 @@ describe('generateTheString', () => {
         test.each(
                 structuredClone(testcases),
         )('generateTheString($n) -> $expected', ({ n }) => {
-                const countMap = {};
-                const received = generateTheString(n);
+                const countMap = new Map();
+                const actual = generateTheString(n);
 
-                for (const char of received) {
-                        countMap[char] = (countMap[char] || 0) + 1;
+                for (const char of actual) {
+                        countMap.set(char, (countMap.get(char) || 0) + 1);
                 }
 
-                expect(received).toHaveLength(n);
-                expect(Object.values(countMap).every((e) => e % 2));
+                expect(actual).toHaveLength(n);
+                expect(countMap.values().every((e) => e % 2)).toStrictEqual(
+                        true,
+                );
         });
 });
