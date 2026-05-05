@@ -20,9 +20,6 @@ describe('removeElement', () => {
         }) => {
                 const k = removeElement(nums, val);
                 expect(k).toStrictEqual(expected.len);
-
-                for (let i = 0; i < k; i++) {
-                        expect(nums[i]).toStrictEqual(expected.nums[i]);
-                }
+                expect(nums.slice(0, k)).toStrictEqual(expected.nums);
         });
 });
