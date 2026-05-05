@@ -58,11 +58,7 @@ describe('rotate', () => {
                 expect(rotate(matrix)).toBeNil();
 
                 for (let i = 0; i < matrix.length; i++) {
-                        for (let j = 0; j < matrix.length; j++) {
-                                expect(matrix[i][j]).toStrictEqual(
-                                        expected[i][j],
-                                );
-                        }
+                        expect(matrix[i]).toStrictEqual(expected[i]);
                 }
         });
 });
