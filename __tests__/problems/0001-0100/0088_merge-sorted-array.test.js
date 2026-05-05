@@ -31,8 +31,7 @@ describe('merge', () => {
                 n,
                 expected,
         }) => {
-                const _nums1 = structuredClone(nums1);
-                expect(merge(_nums1, m, nums2, n)).toBeNil();
-                expect(_nums1).toStrictEqual(expected);
+                expect(merge(nums1, m, nums2, n)).toBeNil();
+                expect(nums1).toStrictEqual(expected);
         });
 });
