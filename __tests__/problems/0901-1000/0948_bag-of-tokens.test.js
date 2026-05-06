@@ -1,0 +1,32 @@
+import { describe, expect, test } from 'bun:test';
+import { bagOfTokensScore } from '../../../src/problems/0901-1000/0948_bag-of-tokens.js';
+
+const testcases = [
+        {
+                tokens: [100],
+                power: 50,
+                expected: 0,
+        },
+        {
+                tokens: [200, 100],
+                power: 150,
+                expected: 1,
+        },
+        {
+                tokens: [100, 200, 300, 400],
+                power: 200,
+                expected: 2,
+        },
+];
+
+describe('bagOfTokensScore', () => {
+        test.each(
+                structuredClone(testcases),
+        )('bagOfTokensScore($tokens, $power) -> $expected', ({
+                tokens,
+                power,
+                expected,
+        }) => {
+                expect(bagOfTokensScore(tokens, power)).toStrictEqual(expected);
+        });
+});
