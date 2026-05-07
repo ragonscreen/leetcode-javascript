@@ -45,7 +45,11 @@ const maxValue = (nums) => {
         res[n - 1] = mxs[n - 1];
 
         for (let i = n - 2; i > -1; i--) {
-                // connected if mxs[i] > mns[i + 1], thus merge possible
+                // every element to the right of `i` can reach
+                // the minimum value `mns[i + 1]`. thus if `mxs[i]`
+                // is greater than this minimum value,
+                // the element at `i` can also reach the best value
+                // jumps from nums[i] -> mxs[i] -> mns[i + 1] -> best value
                 res[i] = mxs[i] > mns[i + 1] ? res[i + 1] : mxs[i];
         }
 
