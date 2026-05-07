@@ -25,7 +25,7 @@
 
 /**
  * Approach: Math
- * Time Complexity: O(n + m + lg k)
+ * Time Complexity: O(n + m + log k)
  * Space Complexity: O(1) auxiliary
  * `n` = length of `nums`, `m` = length of `numsDivide`
  * `k` = maximum value of `numsDivide[i]`
@@ -72,7 +72,7 @@ const minOperations = (nums, numsDivide) => {
 
 /**
  * Approach: Sorting + Math
- * Time Complexity: O(n lg n + m + lg k)
+ * Time Complexity: O(n log n + m + log k)
  * Space Complexity: O(1) auxiliary, O(n) for sorting
  * `n` = length of `nums`, `m` = length of `numsDivide`
  * `k` = maximum value of `numsDivide[i]`
