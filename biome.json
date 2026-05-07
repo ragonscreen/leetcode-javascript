@@ -95,7 +95,6 @@
                                 "useDefaultParameterLast": "error",
                                 "useDefaultSwitchClause": "warn",
                                 "useExportsLast": "error",
-                                "useForOf": "error",
                                 "useGroupedAccessorPairs": "error",
                                 "useNodeAssertStrict": "error",
                                 "useNumberNamespace": "error",
