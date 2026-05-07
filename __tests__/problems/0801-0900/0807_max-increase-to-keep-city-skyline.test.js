@@ -1,0 +1,33 @@
+import { describe, expect, test } from 'bun:test';
+import { maxIncreaseKeepingSkyline } from '../../../src/problems/0801-0900/0807_max-increase-to-keep-city-skyline.js';
+
+const testcases = [
+        {
+                grid: [
+                        [3, 0, 8, 4],
+                        [2, 4, 5, 7],
+                        [9, 2, 6, 3],
+                        [0, 3, 1, 0],
+                ],
+                expected: 35,
+        },
+        {
+                grid: [
+                        [0, 0, 0],
+                        [0, 0, 0],
+                        [0, 0, 0],
+                ],
+                expected: 0,
+        },
+];
+
+describe('maxIncreaseKeepingSkyline', () => {
+        test.each(
+                structuredClone(testcases),
+        )('maxIncreaseKeepingSkyline($grid) -> $expected', ({
+                grid,
+                expected,
+        }) => {
+                expect(maxIncreaseKeepingSkyline(grid)).toStrictEqual(expected);
+        });
+});
