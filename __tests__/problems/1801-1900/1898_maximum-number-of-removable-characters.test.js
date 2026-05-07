@@ -1,0 +1,34 @@
+import { describe, expect, test } from 'bun:test';
+import { maximumRemovals } from '../../../src/problems/1801-1900/1898_maximum-number-of-removable-characters.js';
+
+const testcases = [
+        { s: 'abcacb', p: 'ab', removable: [3, 1, 0], expected: 2 },
+        {
+                s: 'abcbddddd',
+                p: 'abcd',
+                removable: [3, 2, 1, 4, 5, 6],
+                expected: 1,
+        },
+        { s: 'abcab', p: 'abc', removable: [0, 1, 2, 3, 4], expected: 0 },
+        {
+                s: 'qlevcvgzfpryiqlwy',
+                p: 'qlecfqlw',
+                removable: [12, 5],
+                expected: 2,
+        },
+];
+
+describe('maximumRemovals', () => {
+        test.each(
+                structuredClone(testcases),
+        )('maximumRemovals($s, $p, $removable) -> $expected', ({
+                s,
+                p,
+                removable,
+                expected,
+        }) => {
+                expect(maximumRemovals(s, p, removable)).toStrictEqual(
+                        expected,
+                );
+        });
+});
