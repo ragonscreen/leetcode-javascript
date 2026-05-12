@@ -34,6 +34,33 @@
  */
 
 /**
+ * Approach: Dynamic Programming [Space Optimized]
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ *
+ * @param {number[]} nums
+ * @return {number}
+ */
+const rob = (nums) => {
+        const n = nums.length;
+
+        if (n <= 1) {
+                return n ? nums[0] : 0;
+        }
+
+        let dp1 = 0;
+        let dp2 = 0;
+
+        for (let i = 0; i < n; i++) {
+                const max = Math.max(dp1 + nums[i], dp2);
+                dp1 = dp2;
+                dp2 = max;
+        }
+
+        return dp2;
+};
+
+/**
  * Approach: Dynamic Programming
  * Time Complexity: O(n)
  * Space Complexity: O(n)
@@ -41,7 +68,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const rob = (nums) => {
+const rob1 = (nums) => {
         const n = nums.length;
 
         if (n <= 1) {
@@ -59,4 +86,4 @@ const rob = (nums) => {
         return dp[n - 1];
 };
 
-export { rob };
+export { rob, rob1 };
