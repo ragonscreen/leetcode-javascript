@@ -52,7 +52,7 @@ describe('MyCircularQueue1', () => {
         });
 
         test('default test 2', () => {
-                const myCircularQueue = new MyCircularQueue(6);
+                const myCircularQueue = new MyCircularQueue1(6);
 
                 expect(myCircularQueue.enQueue(6)).toStrictEqual(true);
                 expect(myCircularQueue.Rear()).toStrictEqual(6);
