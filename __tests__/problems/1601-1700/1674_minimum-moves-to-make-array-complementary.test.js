@@ -5,6 +5,12 @@ const testcases = [
         { nums: [1, 2, 4, 3], limit: 4, expected: 1 },
         { nums: [1, 2, 2, 1], limit: 2, expected: 2 },
         { nums: [1, 2, 1, 2], limit: 2, expected: 0 },
+        { nums: [1, 2], limit: 2, expected: 0 },
+        {
+                nums: [20_744, 7642, 19_090, 9992, 2457, 16_848, 3458, 15_721],
+                limit: 22_891,
+                expected: 4,
+        },
 ];
 
 describe('minMoves', () => {
