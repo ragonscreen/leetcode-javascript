@@ -12,7 +12,7 @@ const testcases = [
         { n: 40, expected: 17 },
         { n: 3, expected: 2 },
         { n: 1, expected: 0 },
-        // { n: 5e5, expected: 398_771 }, // Disabled for test performance
+        // { n: 5e5, expected: 398_771 }, // disabled for test performance
 ];
 
 describe('largestPrime', () => {

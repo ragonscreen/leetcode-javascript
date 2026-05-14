@@ -13,7 +13,7 @@
         "scripts": {
                 "new": "bun src/lib/new/main.js",
                 "dev": "bun --watch run ./src/main.js",
-                "test": "bun test --watch --only-failures",
+                "test": "bun test --watch --only-failures --bail --timeout 4",
                 "fmt": "bunx biome check --write"
         },
         "type": "module",
