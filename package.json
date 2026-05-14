@@ -14,7 +14,7 @@
                 "new": "bun src/lib/new/main.js",
                 "dev": "bun --watch run ./src/main.js",
                 "test": "bun test --watch --only-failures",
-                "test:prune": "bun test --watch --only-failures --bail --timeout 4",
+                "test:prune": "bun test --watch --only-failures --bail --timeout 4 --rerun-each 10",
                 "fmt": "bunx biome check --write"
         },
         "type": "module",
