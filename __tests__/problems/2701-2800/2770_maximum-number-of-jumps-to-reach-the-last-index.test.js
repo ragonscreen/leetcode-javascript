@@ -1,0 +1,21 @@
+import { describe, expect, test } from 'bun:test';
+import { maximumJumps } from '../../../src/problems/2701-2800/2770_maximum-number-of-jumps-to-reach-the-last-index.js';
+
+const testcases = [
+        { nums: [1, 3, 6, 4, 1, 2], target: 2, expected: 3 },
+        { nums: [1, 3, 6, 4, 1, 2], target: 3, expected: 5 },
+        { nums: [1, 3, 6, 4, 1, 2], target: 0, expected: -1 },
+        { nums: [0, 2, 1, 3], target: 1, expected: -1 },
+];
+
+describe('maximumJumps', () => {
+        test.each(
+                structuredClone(testcases),
+        )('maximumJumps($nums, $target) -> $expected', ({
+                nums,
+                target,
+                expected,
+        }) => {
+                expect(maximumJumps(nums, target)).toStrictEqual(expected);
+        });
+});
