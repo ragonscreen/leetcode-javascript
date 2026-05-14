@@ -20,30 +20,6 @@
  * - count-ways-to-make-array-with-product (Hard)
  */
 
-const N = 1e6;
-const SIEVE = new Uint32Array(N + 1).fill(1);
-
-const getSieve = () => {
-        if (!SIEVE[0]) {
-                return;
-        }
-
-        SIEVE[0] = 0;
-        SIEVE[1] = 0;
-
-        for (let i = 2; i <= Math.sqrt(N); i++) {
-                if (!SIEVE[i]) {
-                        continue;
-                }
-
-                for (let j = i ** 2; j <= N; j += i) {
-                        SIEVE[j] = 0;
-                }
-        }
-
-        return;
-};
-
 /**
  * Approach: Sieve of Eratosthenes
  * Time Complexity: O(n log log n)
@@ -55,7 +31,25 @@ const getSieve = () => {
  * @return {number[]}
  */
 const closestPrimes = (left, right) => {
-        getSieve();
+        const SIEVE = new Uint32Array(right + 1).fill(1);
+
+        if (!SIEVE[0]) {
+                return;
+        }
+
+        SIEVE[0] = 0;
+        SIEVE[1] = 0;
+
+        for (let i = 2; i <= Math.sqrt(right); i++) {
+                if (!SIEVE[i]) {
+                        continue;
+                }
+
+                for (let j = i ** 2; j <= right; j += i) {
+                        SIEVE[j] = 0;
+                }
+        }
+
         let i = left;
 
         while (i <= right && !SIEVE[i]) {
@@ -80,7 +74,7 @@ const closestPrimes = (left, right) => {
         }
 
         const res = new Uint32Array(2);
-        let min = N;
+        let min = Number.MAX_SAFE_INTEGER;
 
         while (i <= right) {
                 while (i <= right && !SIEVE[i]) {
@@ -88,7 +82,7 @@ const closestPrimes = (left, right) => {
                 }
 
                 if (i - j < min) {
-                        min = Math.min(min, i - j);
+                        min = i - j;
                         res[0] = j;
                         res[1] = i;
                 }
