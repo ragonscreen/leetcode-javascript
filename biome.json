@@ -88,7 +88,7 @@
                                 "noUselessElse": "error",
                                 "noYodaExpression": "error",
                                 "useAtIndex": "error",
-                                "useBlockStatements": "error",
+                                "useBlockStatements": "info",
                                 "useCollapsedIf": "error",
                                 "useConsistentBuiltinInstantiation": "error",
                                 "useConsistentObjectDefinitions": "error",
