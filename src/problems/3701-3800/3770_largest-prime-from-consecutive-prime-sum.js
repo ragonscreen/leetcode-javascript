@@ -18,30 +18,6 @@
  * - Acceptance Rate: 39.1%
  */
 
-const N = 5e5; // constraint
-const SIEVE = new Uint32Array(N + 1).fill(1);
-
-const getSieve = () => {
-        if (!SIEVE[0]) {
-                return;
-        }
-
-        SIEVE[0] = 0;
-        SIEVE[1] = 0;
-
-        for (let i = 2; i <= Math.sqrt(N); i++) {
-                if (!SIEVE[i]) {
-                        continue;
-                }
-
-                for (let j = i ** 2; j <= N; j += i) {
-                        SIEVE[j] = 0;
-                }
-        }
-
-        return;
-};
-
 /**
  * Approach: Sieve of Eratosthenes
  * Time Complexity: O(n log log n)
@@ -51,7 +27,20 @@ const getSieve = () => {
  * @return {number}
  */
 const largestPrime = (n) => {
-        getSieve();
+        const SIEVE = new Uint32Array(n + 1).fill(1);
+        SIEVE[0] = 0;
+        SIEVE[1] = 0;
+
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (!SIEVE[i]) {
+                        continue;
+                }
+
+                for (let j = i ** 2; j <= n; j += i) {
+                        SIEVE[j] = 0;
+                }
+        }
+
         let res = 0;
         let sum = 0;
 
