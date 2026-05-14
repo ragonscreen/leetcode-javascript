@@ -13,28 +13,6 @@
  * - Acceptance Rate: 73.9%
  */
 
-const N = 1000;
-const SIEVE = new Uint8Array(N + 1).fill(1);
-
-const getSieve = () => {
-        if (SIEVE[0] === 0) {
-                return;
-        }
-
-        SIEVE[0] = 0;
-        SIEVE[1] = 0;
-
-        for (let i = 2; i <= Math.sqrt(N); i++) {
-                if (!SIEVE[i]) {
-                        continue;
-                }
-
-                for (let j = i * i; j <= N; j += i) {
-                        SIEVE[j] = 0;
-                }
-        }
-};
-
 /**
  * Approach: Sieve of Eratosthenes
  * Time Complexity: O(n log log n)
@@ -44,8 +22,6 @@ const getSieve = () => {
  * @return {number}
  */
 const sumOfPrimesInRange = (n) => {
-        getSieve();
-
         const r = (num) => {
                 let res = 0;
                 let x = num;
@@ -61,6 +37,20 @@ const sumOfPrimesInRange = (n) => {
         const rev = r(n);
         const min = Math.min(n, rev);
         const max = Math.max(n, rev);
+        const SIEVE = new Uint8Array(max + 1).fill(1);
+        SIEVE[0] = 0;
+        SIEVE[1] = 0;
+
+        for (let i = 2; i <= Math.sqrt(max); i++) {
+                if (!SIEVE[i]) {
+                        continue;
+                }
+
+                for (let j = i * i; j <= max; j += i) {
+                        SIEVE[j] = 0;
+                }
+        }
+
         let res = 0;
 
         for (let i = min; i <= max; i++) {
