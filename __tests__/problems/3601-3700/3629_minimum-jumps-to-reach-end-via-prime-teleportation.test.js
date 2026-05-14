@@ -5,6 +5,7 @@ const testcases = [
         { nums: [1, 2, 4, 6], expected: 2 },
         { nums: [2, 3, 4, 7, 9], expected: 2 },
         { nums: [4, 6, 5, 8], expected: 3 },
+        { nums: [5,2,20,1,15], expected: 1 },
 ];
 
 describe('minJumps', () => {
