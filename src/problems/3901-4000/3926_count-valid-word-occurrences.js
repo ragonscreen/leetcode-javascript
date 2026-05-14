@@ -26,7 +26,7 @@
  */
 const countWordOccurrences = (chunks, queries) => {
         const n = chunks.length;
-        const words = [];
+        const map = new Map();
         let lastWord = '';
         let word = '';
         let lastSeenHyp = false;
@@ -45,7 +45,8 @@ const countWordOccurrences = (chunks, queries) => {
                         }
 
                         if (isSpc || (isHyp && lastSeenHyp)) {
-                                words.push(lastSeenHyp ? lastWord : word);
+                                const val = lastSeenHyp ? lastWord : word;
+                                map.set(val, (map.get(val) || 0) + 1);
                                 word = '';
                                 lastWord = '';
                                 lastSeenHyp = false;
@@ -59,13 +60,8 @@ const countWordOccurrences = (chunks, queries) => {
         }
 
         if (word) {
-                words.push(lastSeenHyp ? lastWord : word);
-        }
-
-        const map = new Map();
-
-        for (const w of words) {
-                map.set(w, (map.get(w) || 0) + 1);
+                const val = lastSeenHyp ? lastWord : word;
+                map.set(val, (map.get(val) || 0) + 1);
         }
 
         const q = queries.length;
