@@ -34,6 +34,7 @@ const isGood = (nums) => {
         }
 
         const max = n - 1;
+        let cntMax = 0;
 
         for (let i = 0; i < n; i++) {
                 const num = Math.abs(nums[i]);
@@ -46,10 +47,18 @@ const isGood = (nums) => {
                         return false;
                 }
 
+                if (num === max) {
+                        if (cntMax === 2) {
+                                return false;
+                        }
+
+                        cntMax++;
+                }
+
                 nums[num] *= -1;
         }
 
-        return nums[max] > 0;
+        return true;
 };
 
 /**

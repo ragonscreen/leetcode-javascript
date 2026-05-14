@@ -14,6 +14,7 @@ const testcases = [
         { nums: [1, 1, 1], expected: false },
         { nums: [1], expected: false },
         { nums: [4, 1, 2, 3, 4], expected: true },
+        { nums: [4, 4, 4, 4, 2], expected: false },
 ];
 
 describe('isGood', () => {
