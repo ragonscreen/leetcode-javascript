@@ -35,6 +35,10 @@
  * @return {number}
  */
 const findDuplicate = (nums) => {
+        // the distance between intersection and entry point ==
+        // the distance between start of list and entry point
+        // the fast pointer must always do at least one full loop of the cycle
+        // before traversing part of the cycle again to reach the slow pointer
         let slow = nums[0];
         let fast = nums[nums[0]];
 
