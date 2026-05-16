@@ -29,9 +29,9 @@
  */
 
 /**
- * Approach:
- * Time Complexity: O()
- * Space Complexity: O()
+ * Approach: DFS + Memoization
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(n * m)
  *
  * @param {number[][]} grid
  * @return {number}
