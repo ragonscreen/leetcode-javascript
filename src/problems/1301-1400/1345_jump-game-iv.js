@@ -23,8 +23,6 @@
  * - maximum-number-of-jumps-to-reach-the-last-index (Medium)
  */
 
-import { Queue } from '@datastructures-js/queue';
-
 /**
  * Approach: BFS
  * Time Complexity: O(n)
@@ -35,56 +33,57 @@ import { Queue } from '@datastructures-js/queue';
  */
 const minJumps = (arr) => {
         const n = arr.length;
-        const map = new Map();
+        const g = new Map();
 
         for (let i = 0; i < n; i++) {
                 const num = arr[i];
 
-                if (!map.has(num)) {
-                        map.set(num, []);
+                if (g.has(num)) {
+                        g.get(num).push(i);
+                } else {
+                        g.set(num, [i]);
                 }
-
-                map.get(num).push(i);
         }
 
-        const q = new Queue([0]);
-        const visited = new Uint8Array(n);
-        visited[0] = 1;
+        let q = [0];
+        const v = new Uint8Array(n);
+        v[0] = 1;
         let res = 0;
 
-        while (q.size()) {
-                const sz = q.size();
+        while (q.length) {
+                const q2 = [];
 
-                for (let i = 0; i < sz; i++) {
-                        const j = q.dequeue();
+                for (let qi = 0; qi < q.length; qi++) {
+                        const i = q[qi];
+                        const num = arr[i];
 
-                        if (j === n - 1) {
+                        if (i === n - 1) {
                                 return res;
                         }
 
-                        const val = arr[j];
-                        const indices = map.get(val) ?? [];
-                        indices.push(j + 1, j - 1);
-                        map.delete(val);
+                        if (i > 0 && !v[i - 1]) {
+                                q2.push(i - 1);
+                                v[i - 1] = 1;
+                        }
 
-                        for (let l = indices.length - 1; l > -1; l--) {
-                                const k = indices[l];
+                        if (!v[i + 1]) {
+                                q2.push(i + 1);
+                                v[i + 1] = 1;
+                        }
 
-                                if (k < 0 || k >= n || k === j) {
-                                        continue;
-                                }
-
-                                if (!visited[k]) {
-                                        q.enqueue(k);
-                                        visited[k] = 1;
+                        for (const j of g.get(num)) {
+                                if (!v[j]) {
+                                        q2.push(j);
+                                        v[j] = 1;
                                 }
                         }
+
+                        g.set(num, []);
                 }
 
                 res++;
+                q = q2;
         }
-
-        return -1;
 };
 
 export { minJumps };
