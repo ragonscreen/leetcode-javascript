@@ -2,6 +2,7 @@ import { describe, expect, test } from 'bun:test';
 import {
         findAnagrams,
         findAnagrams1,
+        findAnagrams2,
 } from '../../../src/problems/0401-0500/0438_find-all-anagrams-in-a-string.js';
 
 const testcases = [
@@ -23,5 +24,13 @@ describe('findAnagrams1', () => {
                 structuredClone(testcases),
         )('findAnagrams1($s, $p) -> $expected', ({ s, p, expected }) => {
                 expect(findAnagrams1(s, p)).toStrictEqual(expected);
+        });
+});
+
+describe('findAnagrams2', () => {
+        test.each(
+                structuredClone(testcases),
+        )('findAnagrams2($s, $p) -> $expected', ({ s, p, expected }) => {
+                expect(findAnagrams2(s, p)).toStrictEqual(expected);
         });
 });
