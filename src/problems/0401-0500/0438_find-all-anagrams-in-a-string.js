@@ -11,6 +11,7 @@
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
+ * - Junior (position_junior)
  *
  * Stats:
  * - Total Accepted: 1,191,534
@@ -20,66 +21,58 @@
  * Similar Problems:
  * - valid-anagram (Easy)
  * - permutation-in-string (Medium)
+ *
+ * Custom Details:
+ * - Level 5 (custom-level_5)
+ * - Frequency Counting (custom-topic_frequency-counting)
+ * - Sliding Window (custom-topic_sliding-window)
+ * - Sliding Window Fixed Size (custom-tag_sliding-window-fixed-size)
+ * - Sliding Window with Frequency Counting (custom-tag_sliding-window-with-frequency-counting)
  */
 
 /**
  * Approach: Sliding Window [Optimal]
  * Time Complexity: O(n + m)
  * Space Complexity: O(26) = O(1)
- * `n` = length of `s`, `m` = length of `p`
+ * `n` = `s.length`, `m` = `p.length`
  *
  * @param {string} s
  * @param {string} p
  * @return {number[]}
  */
 const findAnagrams = (s, p) => {
-        const set = new Array(26).fill(0);
-        const a = 'a'.charCodeAt();
+        const ord = (c) => c.charCodeAt() - 97;
+        const n = s.length;
+        const m = p.length;
+        const need = new Uint32Array(26);
         let match = 26;
 
-        for (const c of p) {
-                const idx = c.charCodeAt() - a;
-
-                if (set[idx] === 0) {
-                        match--;
-                }
-
-                set[idx]++;
+        for (let i = 0; i < m; i++) {
+                const cnt = ++need[ord(p[i])];
+                match -= cnt === 1 ? 1 : 0;
         }
 
-        const curr = new Array(26).fill(0);
+        const have = new Uint32Array(26);
         const res = [];
 
-        for (let l = 0, r = 0; r < s.length; r++) {
-                const idx = s.charCodeAt(r) - a;
-                curr[idx]++;
-                let have = curr[idx];
-                let need = set[idx];
+        for (let r = 0; r < n; r++) {
+                const valr = ord(s[r]);
+                const cntr = ++have[valr];
+                const reqr = need[valr];
+                match += cntr === reqr ? 1 : cntr === reqr + 1 ? -1 : 0;
 
-                if (have === need) {
-                        match++;
-                } else if (have === need + 1) {
-                        match--;
-                }
-
-                if (r - l + 1 < p.length) {
+                if (r < m - 1) {
                         continue;
                 }
 
                 if (match === 26) {
-                        res.push(l);
+                        res.push(r - m + 1);
                 }
 
-                const idxL = s.charCodeAt(l++) - a;
-                curr[idxL]--;
-                have = curr[idxL];
-                need = set[idxL];
-
-                if (have === need) {
-                        match++;
-                } else if (have === need - 1) {
-                        match--;
-                }
+                const vall = ord(s[r - m + 1]);
+                const cntl = --have[vall];
+                const reql = need[vall];
+                match += cntl === reql ? 1 : cntl === reql - 1 ? -1 : 0;
         }
 
         return res;
@@ -89,7 +82,7 @@ const findAnagrams = (s, p) => {
  * Approach: Sliding Window
  * Time Complexity: O(26 * n + m) = O(n + m)
  * Space Complexity: O(26) = O(1)
- * `n` = length of `s`, `m` = length of `p`
+ * `n` = `s.length`, `m` = `p.length`
  *
  * @param {string} s
  * @param {string} p

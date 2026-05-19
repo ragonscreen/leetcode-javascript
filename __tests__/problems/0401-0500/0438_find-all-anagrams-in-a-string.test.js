@@ -7,6 +7,7 @@ import {
 const testcases = [
         { s: 'cbaebabacd', p: 'abc', expected: [0, 6] },
         { s: 'abab', p: 'ab', expected: [0, 1, 2] },
+        { s: 'baa', p: 'aa', expected: [1] },
 ];
 
 describe('findAnagrams', () => {
