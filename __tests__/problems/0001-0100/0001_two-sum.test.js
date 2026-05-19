@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { twoSum } from '../../../src/problems/0001-0100/0001_two-sum.js';
+import {
+        twoSum,
+        twoSum1,
+} from '../../../src/problems/0001-0100/0001_two-sum.js';
 
 const testcases = [
         { nums: [2, 7, 11, 15], target: 9, expected: [0, 1] },
@@ -16,5 +19,17 @@ describe('twoSum', () => {
                 expected,
         }) => {
                 expect(twoSum(nums, target)).toContainAllValues(expected);
+        });
+});
+
+describe('twoSum1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('twoSum1($nums, $target) -> $expected', ({
+                nums,
+                target,
+                expected,
+        }) => {
+                expect(twoSum1(nums, target)).toContainAllValues(expected);
         });
 });
