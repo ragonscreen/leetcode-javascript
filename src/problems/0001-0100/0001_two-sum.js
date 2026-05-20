@@ -52,6 +52,7 @@
  * Approach: Simulation
  * Time Complexity: O(n)
  * Space Complexity: O(n)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @param {number} target
@@ -79,6 +80,7 @@ const twoSum = (nums, target) => {
  * Approach: Sorting + Two Pointers
  * Time Complexity: O(n lg n)
  * Space Complexity: O(n)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @param {number} target
