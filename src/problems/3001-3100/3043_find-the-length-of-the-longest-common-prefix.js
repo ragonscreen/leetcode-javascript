@@ -12,6 +12,8 @@
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Trie (topic_27)
+ * - Senior (position_senior)
+ * - Weekly Contest 385 (contest_weekly-contest-385)
  *
  * Stats:
  * - Total Accepted: 175,838
@@ -24,7 +26,7 @@
  */
 
 /**
- * Approach: Hash Set + Math
+ * Approach: Math
  * Time Complexity: O(n log a + m log b)
  * Space Complexity: O(k)
  * `n` = length of `arr1`, `m` = length of `arr2`
@@ -36,10 +38,14 @@
  * @return {number}
  */
 const longestCommonPrefix = (arr1, arr2) => {
+        const n = arr1.length;
+        const m = arr2.length;
         const set = new Set();
 
-        for (let num of arr1) {
-                while (num > 0 && !set.has(num)) {
+        for (let i = 0; i < n; i++) {
+                let num = arr1[i];
+
+                while (num && !set.has(num)) {
                         set.add(num);
                         num = 0 | (num / 10);
                 }
@@ -47,8 +53,10 @@ const longestCommonPrefix = (arr1, arr2) => {
 
         let res = 0;
 
-        for (let num of arr2) {
-                while (num > 0) {
+        for (let i = 0; i < m; i++) {
+                let num = arr2[i];
+
+                while (num) {
                         if (set.has(num)) {
                                 const len = (0 | Math.log10(num)) + 1;
                                 res = Math.max(res, len);
