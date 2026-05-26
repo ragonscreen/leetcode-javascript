@@ -21,7 +21,7 @@
  */
 
 /**
- * Approach: Math + Greedy
+ * Approach: Math + Greedy + Binary Search
  * Time Complexity: O(lg K)
  * Space Complexity: O(1)
  * `K` = `maxSum`
@@ -56,7 +56,7 @@ const maxValue = (n, index, maxSum) => {
 };
 
 /**
- * Approach: Math + Greedy [Expanded]
+ * Approach: Math + Greedy + Binary Search [Expanded]
  * Time Complexity: O(lg K)
  * Space Complexity: O(1)
  * `K` = `maxSum`
