@@ -29,6 +29,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * Approach: Priority Queue
  * Time Complexity: O(n lg n)
  * Space Complexity: O(n)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @param {number} k

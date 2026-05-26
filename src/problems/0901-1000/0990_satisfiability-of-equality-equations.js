@@ -25,6 +25,7 @@
  * Approach: BFS
  * Time Complexity: O(n)
  * Space Complexity: O(n)
+ * `n` = `equations.length`
  *
  * @param {string[]} equations
  * @return {boolean}

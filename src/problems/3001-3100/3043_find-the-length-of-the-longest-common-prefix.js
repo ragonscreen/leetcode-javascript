@@ -29,9 +29,8 @@
  * Approach: Math
  * Time Complexity: O(n log a + m log b)
  * Space Complexity: O(k)
- * `n` = length of `arr1`, `m` = length of `arr2`
- * `a` = largest number in `arr1`, `b` = largest number in `arr2`
- * `k` = total number of prefixes of all numbers
+ * `n` = `arr1.length`, `m` = `arr2.length`
+ * `a` = `max(arr1[i])`, `b` = `max(arr2[i])`, `k` = `sum(log arr1[i])`
  *
  * @param {number[]} arr1
  * @param {number[]} arr2
