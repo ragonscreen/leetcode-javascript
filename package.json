@@ -4,7 +4,8 @@
         "module": "index.js",
         "devDependencies": {
                 "@biomejs/biome": "2.4.7",
-                "@types/bun": "^1.3.10"
+                "@types/bun": "^1.3.10",
+                "leetcode-templater-js": "^1.0.0"
         },
         "peerDependencies": {
                 "typescript": "^5.9.3"
@@ -21,5 +22,13 @@
         "dependencies": {
                 "@datastructures-js/priority-queue": "^6.3.5",
                 "@datastructures-js/queue": "^4.3.0"
+        },
+        "lct": {
+                "SOLUTION_AUTHOR_NAME": "ragonscreen",
+                "SOLUTION_AUTHOR_URL": "https://github.com/ragonscreen/",
+                "INDENT_WIDTH": 8,
+                "DIR_SOLUTIONS": ["src", "problems"],
+                "DIR_TESTS": ["__tests__", "problems"],
+                "ADD_HINTS": false
         }
 }

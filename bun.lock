@@ -11,6 +11,7 @@
       "devDependencies": {
         "@biomejs/biome": "2.4.7",
         "@types/bun": "^1.3.10",
+        "leetcode-templater-js": "^1.0.0",
       },
       "peerDependencies": {
         "typescript": "^5.9.3",
@@ -47,6 +48,8 @@
     "@types/node": ["@types/node@25.2.1", "", { "dependencies": { "undici-types": "~7.16.0" } }, "sha512-CPrnr8voK8vC6eEtyRzvMpgp3VyVRhgclonE7qYi6P9sXwYb59ucfrnmFBTaP0yUi8Gk4yZg/LlTJULGxvTNsg=="],
 
     "bun-types": ["bun-types@1.3.10", "", { "dependencies": { "@types/node": "*" } }, "sha512-tcpfCCl6XWo6nCVnpcVrxQ+9AYN1iqMIzgrSKYMB/fjLtV2eyAVEg7AxQJuCq/26R6HpKWykQXuSOq/21RYcbg=="],
+
+    "leetcode-templater-js": ["leetcode-templater-js@1.0.0", "", { "bin": { "lct": "src/main.js" } }, "sha512-Sx4UIrBvQ+NpiJOCympB2gn0JxLflhxnA291oIzYWyFbrZFUungYEIGYLsDRUmZCWylt0e8wTEBKnb5giWqQtQ=="],
 
     "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
 
