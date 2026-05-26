@@ -50,7 +50,7 @@ const separateDigits = (nums) => {
 };
 
 /**
- * Approach: Simulation
+ * Approach: Simulation [One-Liner]
  * Time Complexity: O(n log m)
  * Space Complexity: O(1) auxiliary, O(k) total
  * `n` = length of `nums`, `m` = maximum value of `nums[i]`

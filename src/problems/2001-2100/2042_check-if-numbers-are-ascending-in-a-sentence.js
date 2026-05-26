@@ -89,7 +89,7 @@ const areNumbersAscending1 = (s) => {
 };
 
 /**
- * Approach: Simulation
+ * Approach: Simulation [One-Liner]
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  *
