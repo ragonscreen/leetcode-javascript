@@ -23,11 +23,6 @@
  * Similar Problems:
  * - intersection-of-two-arrays (Easy)
  * - intersection-of-two-arrays-ii (Easy)
- *
- * Custom Details:
- * - Level 3 (custom-level_3)
- * - Two Pointers (custom-topic_two-pointers)
- * - Two Pointers on Separate Arrays (custom-tag_two-pointers-on-separate-arrays)
  */
 
 /**

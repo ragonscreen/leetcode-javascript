@@ -39,13 +39,6 @@
  * - subarray-sum-equals-k (Medium)
  * - two-sum-ii-input-array-is-sorted (Medium)
  * - number-of-excellent-pairs (Hard)
- *
- * Custom Details:
- * - Level 3 (custom-level_3)
- * - Simulation (custom-topic_simulation)
- * - Sorting (custom-topic_sorting)
- * - Two Pointers (custom-topic_two-pointers)
- * - Two Pointers on One Array (custom-tag_two-pointers-on-one-array)
  */
 
 /**

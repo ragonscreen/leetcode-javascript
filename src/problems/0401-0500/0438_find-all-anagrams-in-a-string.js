@@ -21,13 +21,6 @@
  * Similar Problems:
  * - valid-anagram (Easy)
  * - permutation-in-string (Medium)
- *
- * Custom Details:
- * - Level 5 (custom-level_5)
- * - Frequency Counting (custom-topic_frequency-counting)
- * - Sliding Window (custom-topic_sliding-window)
- * - Sliding Window Fixed Size (custom-tag_sliding-window-fixed-size)
- * - Sliding Window with Frequency Counting (custom-tag_sliding-window-with-frequency-counting)
  */
 
 /**

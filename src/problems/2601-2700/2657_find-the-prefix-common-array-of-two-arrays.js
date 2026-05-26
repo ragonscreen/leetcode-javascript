@@ -18,10 +18,6 @@
  * - Total Accepted: 275,079
  * - Total Submissions: 314,078
  * - Acceptance Rate: 87.6%
- *
- * Custom Details:
- * - Level 3 (custom-level_3)
- * - Simulation (custom-topic_simulation)
  */
 
 /**

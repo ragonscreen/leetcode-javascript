@@ -17,11 +17,6 @@
  * - Total Accepted: 276,299
  * - Total Submissions: 317,174
  * - Acceptance Rate: 87.1%
- *
- * Custom Details:
- * - Level 4 (custom-level_4)
- * - Enumeration (custom-topic_enumeration)
- * - Math (custom-topic_math)
  */
 
 /**
