@@ -50,7 +50,9 @@ const minimumObstacles = (grid) => {
 
         while (li < ri) {
                 const k = dq[li++];
-                const [y, x] = [0 | (k / m), k % m];
+                const y = 0 | (k / m);
+                const x = k % m;
+                const cur = dist[k];
 
                 for (let i = 0; i < 4; i++) {
                         const ny = y + d[i];
@@ -61,7 +63,7 @@ const minimumObstacles = (grid) => {
                         }
 
                         const cost = grid[ny][nx];
-                        const newCost = dist[k] + cost;
+                        const newCost = cur + cost;
                         const nk = m * ny + nx;
 
                         if (newCost >= dist[nk]) {
@@ -112,7 +114,8 @@ const minimumObstacles1 = (grid) => {
                         return res;
                 }
 
-                const [y, x] = [0 | (k / m), k % m];
+                const y = 0 | (k / m);
+                const x = k % m;
 
                 for (let i = 0; i < 4; i++) {
                         const ny = y + d[i];
@@ -169,7 +172,8 @@ const minimumObstacles2 = (grid) => {
                         return cost;
                 }
 
-                const [y, x] = [0 | (k / m), k % m];
+                const y = 0 | (k / m);
+                const x = k % m;
 
                 for (let i = 0; i < 4; i++) {
                         const ny = y + d[i];
