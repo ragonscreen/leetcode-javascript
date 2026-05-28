@@ -50,15 +50,14 @@ const longestCommonPrefix = (arr1, arr2) => {
                 }
         }
 
-        let res = 0;
+        let max = 0;
 
         for (let i = 0; i < m; i++) {
                 let num = arr2[i];
 
-                while (num) {
+                while (num > max) {
                         if (set.has(num)) {
-                                const len = (0 | Math.log10(num)) + 1;
-                                res = Math.max(res, len);
+                                max = num;
                                 break;
                         }
 
@@ -66,7 +65,7 @@ const longestCommonPrefix = (arr1, arr2) => {
                 }
         }
 
-        return res;
+        return max ? (0 | Math.log10(max)) + 1 : 0;
 };
 
 export { longestCommonPrefix };
