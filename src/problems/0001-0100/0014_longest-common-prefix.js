@@ -20,79 +20,125 @@
  * Similar Problems:
  * - smallest-missing-integer-greater-than-sequential-prefix-sum (Easy)
  * - find-the-length-of-the-longest-common-prefix (Medium)
- * - longest-common-prefix-after-at-most-one-removal (Medium)
+ * - longest-common-prefix-after-at-most-one-removal (Medium) (Premium)
  * - longest-common-suffix-queries (Hard)
  */
 
-/**
- * Approach: Hash Set
- * Time Complexity: O(n * m)
- * Space Complexity: O(m)
- * `n` = length of `strs`, `m` = length of the first string in `strs`
- *
- * @param {string[]} strs
- * @return {string}
- */
-const longestCommonPrefix = (strs) => {
-        const set = new Set();
-
-        for (let i = 0; i <= strs[0].length; i++) {
-                set.add(strs[0].slice(0, i));
+class TrieNode {
+        constructor() {
+                this.children = {};
         }
-
-        let len = strs[0].length;
-
-        for (let i = 1; i < strs.length && len; i++) {
-                const s = strs[i];
-                len = Math.min(len, s.length);
-                const prefix = s.slice(0, len);
-
-                if (set.has(prefix)) {
-                        continue;
-                }
-
-                len--;
-                i = 0;
-        }
-
-        return strs[0].slice(0, len);
-};
+}
 
 /**
  * Approach: Vertical Scanning
  * Time Complexity: O(n * m)
  * Space Complexity: O(1)
- * `n` = length of `strs`, `m` = length of the shortest string in `strs`
+ * `n` = `strs.length`, `m` = `min(strs[i].length)`
+ *
+ * @param {string[]} strs
+ * @return {string}
+ */
+const longestCommonPrefix = (strs) => {
+        const str = strs[0];
+
+        for (let i = 0; i < str.length; i++) {
+                const c = str[i];
+
+                for (let j = 1; j < strs.length; j++) {
+                        if (strs[j][i] !== c) {
+                                return str.slice(0, i);
+                        }
+                }
+        }
+
+        return str;
+};
+
+/**
+ * Approach: Horizontal Scanning
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(1)
+ * `n` = `strs.length`, `m` = `min(strs[i].length)`
  *
  * @param {string[]} strs
  * @return {string}
  */
 const longestCommonPrefix1 = (strs) => {
-        let i = 0;
+        const n = strs.length;
+        let mnstr = strs[0];
 
-        while (true) {
-                const c = strs[0][i];
-                let found = true;
+        for (let i = 0; i < n; i++) {
+                const str = strs[i];
 
-                if (!c) {
-                        break;
+                if (str.length < mnstr.length) {
+                        mnstr = str;
                 }
-
-                for (const str of strs) {
-                        if (str[i] !== c) {
-                                found = false;
-                                break;
-                        }
-                }
-
-                if (!found) {
-                        break;
-                }
-
-                i++;
         }
 
-        return strs[0].slice(0, i);
+        let max = mnstr.length;
+
+        for (let i = 0; i < n; i++) {
+                const str = strs[i];
+                let len = 0;
+
+                while (len < max && str[len] === mnstr[len]) {
+                        len++;
+                }
+
+                max = len;
+        }
+
+        return mnstr.slice(0, max);
 };
 
-export { longestCommonPrefix, longestCommonPrefix1 };
+/**
+ * Approach: Trie
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(m)
+ * `n` = `strs.length`, `m` = `min(strs[i].length)`
+ *
+ * @param {string[]} strs
+ * @return {string}
+ */
+const longestCommonPrefix2 = (strs) => {
+        const n = strs.length;
+        let mnstr = strs[0];
+
+        for (let i = 0; i < n; i++) {
+                const str = strs[i];
+                mnstr = str.length < mnstr.length ? str : mnstr;
+        }
+
+        const root = new TrieNode();
+        let node0 = root;
+        let max = mnstr.length;
+
+        for (let j = 0; j < max; j++) {
+                const char = mnstr[j];
+                node0.children[char] = new TrieNode();
+                node0 = node0.children[char];
+        }
+
+        for (let i = 0; i < n; i++) {
+                const str = strs[i];
+                let node = root;
+                let len = 0;
+
+                for (; len < max; len++) {
+                        const char = str[len];
+
+                        if (!node.children[char]) {
+                                break;
+                        }
+
+                        node = node.children[char];
+                }
+
+                max = len;
+        }
+
+        return mnstr.slice(0, max);
+};
+
+export { longestCommonPrefix, longestCommonPrefix1, longestCommonPrefix2 };
