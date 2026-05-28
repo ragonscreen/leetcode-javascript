@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid/
  * Category: Algorithms
  * Difficulty: Hard
- * Date: 2026-05-07
+ * Date: 2026-05-07 (Updated: 2026-05-28)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -14,6 +14,8 @@
  * - Heap (Priority Queue) (topic_61050)
  * - Matrix (topic_61053)
  * - Shortest Path (topic_61076)
+ * - Senior Staff (position_senior-staff)
+ * - Weekly Contest 334 (contest_weekly-contest-334)
  *
  * Stats:
  * - Total Accepted: 88,536
@@ -49,12 +51,7 @@ const minimumTime = (grid) => {
         const dist = new Uint32Array(sz).fill(-1);
         dist[0] = 0;
         const minq = new MinPriorityQueue((e) => e[0], [[0, 0]]);
-        const d = [
-                [-1, 0],
-                [0, 1],
-                [1, 0],
-                [0, -1],
-        ];
+        const d = [-1, 0, 1, 0, -1];
 
         while (minq.size()) {
                 const [cost, k] = minq.dequeue();
@@ -68,9 +65,9 @@ const minimumTime = (grid) => {
                         return cost;
                 }
 
-                for (const [dy, dx] of d) {
-                        const ny = y + dy;
-                        const nx = x + dx;
+                for (let i = 0; i < 4; i++) {
+                        const ny = y + d[i];
+                        const nx = x + d[i + 1];
 
                         if (ny < 0 || ny >= n || nx < 0 || nx >= m) {
                                 continue;
