@@ -1,5 +1,9 @@
 import { describe, expect, test } from 'bun:test';
-import { minimumObstacles } from '../../../src/problems/2201-2300/2290_minimum-obstacle-removal-to-reach-corner.js';
+import {
+        minimumObstacles,
+        minimumObstacles1,
+        minimumObstacles2,
+} from '../../../src/problems/2201-2300/2290_minimum-obstacle-removal-to-reach-corner.js';
 
 const testcases = [
         {
@@ -25,5 +29,21 @@ describe('minimumObstacles', () => {
                 structuredClone(testcases),
         )('minimumObstacles($grid) -> $expected', ({ grid, expected }) => {
                 expect(minimumObstacles(grid)).toStrictEqual(expected);
+        });
+});
+
+describe('minimumObstacles1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minimumObstacles1($grid) -> $expected', ({ grid, expected }) => {
+                expect(minimumObstacles1(grid)).toStrictEqual(expected);
+        });
+});
+
+describe('minimumObstacles2', () => {
+        test.each(
+                structuredClone(testcases),
+        )('minimumObstacles2($grid) -> $expected', ({ grid, expected }) => {
+                expect(minimumObstacles2(grid)).toStrictEqual(expected);
         });
 });

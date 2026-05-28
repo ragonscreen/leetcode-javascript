@@ -29,7 +29,7 @@
 import { MinPriorityQueue } from '@datastructures-js/priority-queue';
 
 /**
- * Approach: 0-1 BFS
+ * Approach: 0-1 BFS [Deque]
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
  * `n` = `grid.length`, `m` = `grid[0].length`
@@ -44,8 +44,7 @@ const minimumObstacles = (grid) => {
         const d = [-1, 0, 1, 0, -1];
         const dq = new Uint32Array(sz * 2);
         let li = sz;
-        let ri = sz;
-        dq[ri++] = 0;
+        let ri = sz + 1;
         const dist = new Uint32Array(sz).fill(-1);
         dist[0] = 0;
 
@@ -71,15 +70,75 @@ const minimumObstacles = (grid) => {
 
                         dist[nk] = newCost;
 
-                        if (cost) {
-                                dq[ri++] = nk;
-                        } else {
+                        if (cost === 0) {
                                 dq[--li] = nk;
+                        } else {
+                                dq[ri++] = nk;
                         }
                 }
         }
 
         return dist.at(-1);
+};
+
+/**
+ * Approach: 0-1 BFS [Two Stacks]
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(n * m)
+ * `n` = `grid.length`, `m` = `grid[0].length`
+ *
+ * @param {number[][]} grid
+ * @return {number}
+ */
+const minimumObstacles1 = (grid) => {
+        const n = grid.length;
+        const m = grid[0].length;
+        const sz = n * m;
+        const d = [-1, 0, 1, 0, -1];
+        grid[0][0] = -1;
+        let q0 = [0];
+        let q1 = [];
+        let res = 0;
+
+        while (q0.length + q1.length) {
+                if (!q0.length) {
+                        res++;
+                        [q0, q1] = [q1, q0];
+                }
+
+                const k = q0.pop();
+
+                if (k === sz - 1) {
+                        return res;
+                }
+
+                const [y, x] = [0 | (k / m), k % m];
+
+                for (let i = 0; i < 4; i++) {
+                        const ny = y + d[i];
+                        const nx = x + d[i + 1];
+                        const nk = m * ny + nx;
+
+                        if (
+                                ny < 0 ||
+                                ny >= n ||
+                                nx < 0 ||
+                                nx >= m ||
+                                grid[ny][nx] === -1
+                        ) {
+                                continue;
+                        }
+
+                        const cost = grid[ny][nx];
+                        grid[ny][nx] = -1;
+
+                        if (cost === 0) {
+                                q0.push(nk);
+                        } else {
+                                q1.push(nk);
+                        }
+                }
+        }
 };
 
 /**
@@ -91,12 +150,10 @@ const minimumObstacles = (grid) => {
  * @param {number[][]} grid
  * @return {number}
  */
-const minimumObstacles1 = (grid) => {
+const minimumObstacles2 = (grid) => {
         const n = grid.length;
         const m = grid[0].length;
         const sz = n * m;
-        const p = (y, x) => m * y + x;
-        const u = (k) => [0 | (k / m), k % m];
         const d = [-1, 0, 1, 0, -1];
         const minq = new MinPriorityQueue((e) => e[0], [[0, 0]]);
         const dist = new Uint32Array(sz).fill(-1);
@@ -112,7 +169,7 @@ const minimumObstacles1 = (grid) => {
                         return cost;
                 }
 
-                const [y, x] = u(k);
+                const [y, x] = [0 | (k / m), k % m];
 
                 for (let i = 0; i < 4; i++) {
                         const ny = y + d[i];
@@ -123,7 +180,7 @@ const minimumObstacles1 = (grid) => {
                         }
 
                         const newCost = cost + grid[ny][nx];
-                        const nk = p(ny, nx);
+                        const nk = m * ny + nx;
 
                         if (dist[nk] > newCost) {
                                 dist[nk] = newCost;
@@ -133,4 +190,4 @@ const minimumObstacles1 = (grid) => {
         }
 };
 
-export { minimumObstacles, minimumObstacles1 };
+export { minimumObstacles, minimumObstacles1, minimumObstacles2 };
