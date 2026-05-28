@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/replace-the-substring-for-balanced-string/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-05-07
+ * Date: 2026-05-07 (Updated: 2026-05-28)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -20,15 +20,15 @@
 /**
  * Approach: Sliding Window [Optimal]
  * Time Complexity: O(n)
- * Space Complexity: O(22) = O(1)
+ * Space Complexity: O(20) = O(1)
  *
  * @param {string} s
  * @return {number}
  */
 const balancedString = (s) => {
-        const o = (c) => c.charCodeAt() - 'E'.charCodeAt();
+        const o = (c) => c.charCodeAt() - 69; // E
         const n = s.length;
-        const m = 22; // E - Z
+        const m = 20; // E - W
         const need = new Uint32Array(m);
 
         for (let i = 0; i < n; i++) {
@@ -38,7 +38,7 @@ const balancedString = (s) => {
         const k = n / 4;
 
         for (let i = 0; i < m; i++) {
-                need[i] = need[i] > k ? need[i] - k : 0;
+                need[i] = Math.max(0, need[i] - k);
         }
 
         const have = new Uint32Array(m);
@@ -60,12 +60,16 @@ const balancedString = (s) => {
                 cnt += have[vr] === need[vr];
 
                 if (cnt === m) {
-                        while (cnt === m) {
+                        while (true) {
                                 const vl = o(s[l++]);
-                                have[vl]--;
-                                cnt -= have[vl] === need[vl] - 1;
+                                const val = --have[vl];
+
+                                if (val === need[vl] - 1) {
+                                        break;
+                                }
                         }
 
+                        cnt--;
                         res = Math.min(res, r - l + 2);
                 }
         }
