@@ -28,6 +28,7 @@
  * Approach: Sliding Window + Greedy
  * Time Complexity: O(n)
  * Space Complexity: O(1)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @return {number}
