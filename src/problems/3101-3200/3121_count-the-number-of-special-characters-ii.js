@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/count-the-number-of-special-characters-ii/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-06-02
+ * Date: 2026-05-27 (Updated 2026-06-02)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
