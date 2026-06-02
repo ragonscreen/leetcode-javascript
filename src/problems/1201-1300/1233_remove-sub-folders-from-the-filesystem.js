@@ -29,7 +29,7 @@ class TrieNode {
 }
 
 /**
- * Approach: Sorting [I]
+ * Approach: Sorting [II]
  * Time Complexity: O(n * l lg n)
  * Space Complexity: O(1) auxiliary, O(n * l) total
  * `n` = `folder.length`, `l` = `max(folder[i].length)`
@@ -58,7 +58,7 @@ const removeSubfolders = (folder) => {
 };
 
 /**
- * Approach: Sorting [II]
+ * Approach: Sorting [I]
  * Time Complexity: O(n * l lg n)
  * Space Complexity: O(1) auxiliary, O(n * l) total
  * `n` = `folder.length`, `l` = `max(folder[i].length)`

@@ -63,7 +63,7 @@ const judgeSquareSum = (c) => {
 };
 
 /**
- * Approach: Math + Two Pointers [I]
+ * Approach: Math + Two Pointers [II]
  * Time Complexity: O(sqrt(N))
  * Space Complexity: O(1)
  * `N` = `c`
