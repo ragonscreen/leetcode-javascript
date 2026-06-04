@@ -26,9 +26,9 @@
 
 /**
  * Approach: DFS + BFS
- * Time Complexity: O(n * m)
- * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(n^2)
+ * `n` = `grid.length`
  *
  * @param {number[][]} grid
  * @return {number}
