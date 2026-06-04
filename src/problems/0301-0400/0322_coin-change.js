@@ -44,7 +44,7 @@ const coinChange = (coins, amount) => {
                 return 0;
         }
 
-        const v = new Uint16Array(amount + 1);
+        const v = new Uint8Array(amount + 1);
         v[amount] = 1;
         let q = [amount];
         let res = 1;
