@@ -4,8 +4,12 @@
  * Link: https://leetcode.com/problems/count-k-th-roots-in-a-range/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-05-17
+ * Date: 2026-05-17 (Updated: 2026-06-04)
  * Author: ragonscreen (https://github.com/ragonscreen/)
+ *
+ * Topics:
+ * - Senior (position_senior)
+ * - Weekly Contest 502 (contest_weekly-contest-502)
  *
  * Stats:
  * - Total Accepted: 17,169
@@ -14,8 +18,8 @@
  */
 
 /**
- * Approach: Binary Search
- * Time Complexity: O(lg l + lg r)
+ * Approach: Math
+ * Time Complexity: O(1)
  * Space Complexity: O(1)
  *
  * @param {number} l
@@ -24,6 +28,61 @@
  * @return {number}
  */
 const countKthRoots = (l, r, k) => {
+        const d = Number.EPSILON;
+        const cntl = Math.ceil(l ** (1 / k) - d);
+        const cntr = Math.floor(r ** (1 / k) + d);
+
+        return Math.max(0, cntr - cntl + 1);
+};
+
+/**
+ * Approach: Math
+ * Time Complexity: O(R^(1 / K))
+ * Space Complexity: O(1)
+ * `R` = `r`, `K` = `k`
+ *
+ * @param {number} l
+ * @param {number} r
+ * @param {number} k
+ * @return {number}
+ */
+const countKthRoots1 = (l, r, k) => {
+        if (k === 1) {
+                return r - l + 1;
+        }
+
+        let res = 0;
+        let i = 0;
+
+        while (true) {
+                const v = i ** k;
+
+                if (v > r) {
+                        break;
+                }
+
+                if (v >= l) {
+                        res++;
+                }
+
+                i++;
+        }
+
+        return res;
+};
+
+/**
+ * Approach: Binary Search
+ * Time Complexity: O(lg L + lg R)
+ * Space Complexity: O(1)
+ * `L` = `l`, `R` = `r`
+ *
+ * @param {number} l
+ * @param {number} r
+ * @param {number} k
+ * @return {number}
+ */
+const countKthRoots2 = (l, r, k) => {
         const kthRoot = (num) => {
                 if (num === 0) {
                         return 0;
@@ -61,4 +120,4 @@ const countKthRoots = (l, r, k) => {
         return res;
 };
 
-export { countKthRoots };
+export { countKthRoots, countKthRoots1, countKthRoots2 };

@@ -1,5 +1,9 @@
 import { describe, expect, test } from 'bun:test';
-import { countKthRoots } from '../../../src/problems/3901-4000/3932_count-k-th-roots-in-a-range.js';
+import {
+        countKthRoots,
+        countKthRoots1,
+        countKthRoots2,
+} from '../../../src/problems/3901-4000/3932_count-k-th-roots-in-a-range.js';
 
 const testcases = [
         { l: 1, r: 9, k: 3, expected: 2 },
@@ -13,6 +17,7 @@ const testcases = [
         { l: 10, r: 24, k: 2, expected: 1 },
         { l: 8, r: 26, k: 2, expected: 3 },
         { l: 9, r: 25, k: 2, expected: 3 },
+        { l: 30, r: 64, k: 3, expected: 1 },
 ];
 
 describe('countKthRoots', () => {
@@ -20,5 +25,31 @@ describe('countKthRoots', () => {
                 structuredClone(testcases),
         )('countKthRoots($l, $r, $k) -> $expected', ({ l, r, k, expected }) => {
                 expect(countKthRoots(l, r, k)).toStrictEqual(expected);
+        });
+});
+
+describe('countKthRoots1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('countKthRoots1($l, $r, $k) -> $expected', ({
+                l,
+                r,
+                k,
+                expected,
+        }) => {
+                expect(countKthRoots1(l, r, k)).toStrictEqual(expected);
+        });
+});
+
+describe('countKthRoots2', () => {
+        test.each(
+                structuredClone(testcases),
+        )('countKthRoots2($l, $r, $k) -> $expected', ({
+                l,
+                r,
+                k,
+                expected,
+        }) => {
+                expect(countKthRoots2(l, r, k)).toStrictEqual(expected);
         });
 });
