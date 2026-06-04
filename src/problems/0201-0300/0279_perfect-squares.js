@@ -40,13 +40,15 @@ const numSquares = (n) => {
                 return 1;
         }
 
+        let k = n;
+
         // n % 4 === 0
-        while ((n & 3) === 0) {
-                n >>= 2;
+        while ((k & 3) === 0) {
+                k >>= 2;
         }
 
         // n % 8 === 7
-        if ((n & 7) === 7) {
+        if ((k & 7) === 7) {
                 return 4;
         }
 
