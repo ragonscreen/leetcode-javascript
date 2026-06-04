@@ -1,7 +1,7 @@
 /**
- * 0542. 01 Matrix
+ * 1765. Map of Highest Peak
  *
- * Link: https://leetcode.com/problems/01-matrix/
+ * Link: https://leetcode.com/problems/map-of-highest-peak/
  * Category: Algorithms
  * Difficulty: Medium
  * Date: 2026-06-04
@@ -9,44 +9,38 @@
  *
  * Topics:
  * - Array (topic_5)
- * - Dynamic Programming (topic_13)
  * - Breadth-First Search (topic_22)
  * - Matrix (topic_61053)
- * - Principal (position_principal)
+ * - Senior Staff (position_senior-staff)
+ * - Biweekly Contest 46 (contest_biweekly-contest-46)
  *
  * Stats:
- * - Total Accepted: 916,450
- * - Total Submissions: 1,697,513
- * - Acceptance Rate: 54.0%
- *
- * Similar Problems:
- * - difference-between-ones-and-zeros-in-row-and-column (Medium)
- * - shortest-path-to-get-food (Medium) (Premium)
- * - minimum-operations-to-remove-adjacent-ones-in-matrix (Hard) (Premium)
+ * - Total Accepted: 163,703
+ * - Total Submissions: 215,796
+ * - Acceptance Rate: 75.9%
  */
 
 /**
  * Approach: BFS
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = `mat.length`, `m` = `mat[0].length`
+ * `n` = `isWater.length`, `m` = `isWater[0].length`
  *
- * @param {number[][]} mat
+ * @param {number[][]} isWater
  * @return {number[][]}
  */
-const updateMatrix = (mat) => {
-        // instead of moving from every one-cell towards closest zero-cell,
-        // move from each zero-cell towards one-cells
-        const n = mat.length;
-        const m = mat[0].length;
+const highestPeak = (isWater) => {
+        const n = isWater.length;
+        const m = isWater[0].length;
         let q = [];
 
         for (let y = 0; y < n; y++) {
                 for (let x = 0; x < m; x++) {
-                        if (mat[y][x] === 0) {
+                        if (isWater[y][x] === 1) {
                                 q.push(m * y + x);
+                                isWater[y][x] = 0;
                         } else {
-                                mat[y][x] = -1;
+                                isWater[y][x] = -1;
                         }
                 }
         }
@@ -71,12 +65,12 @@ const updateMatrix = (mat) => {
                                         ny >= n ||
                                         nx < 0 ||
                                         nx >= m ||
-                                        mat[ny][nx] !== -1
+                                        isWater[ny][nx] !== -1
                                 ) {
                                         continue;
                                 }
 
-                                mat[ny][nx] = dist;
+                                isWater[ny][nx] = dist;
                                 q2.push(m * ny + nx);
                         }
                 }
@@ -85,7 +79,7 @@ const updateMatrix = (mat) => {
                 dist++;
         }
 
-        return mat;
+        return isWater;
 };
 
-export { updateMatrix };
+export { highestPeak };
