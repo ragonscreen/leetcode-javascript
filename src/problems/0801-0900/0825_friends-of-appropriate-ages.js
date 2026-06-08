@@ -23,7 +23,7 @@
 
 /**
  * Approach: Difference Array
- * Time Complexity: O(n)
+ * Time Complexity: O(n + k)
  * Space Complexity: O(k)
  * `n` = `ages.length`, `k` = `max(ages[i])`
  *
