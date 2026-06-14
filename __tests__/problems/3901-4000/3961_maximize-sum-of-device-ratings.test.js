@@ -27,6 +27,14 @@ const testcases = [
                 units: [[5], [5], [1], [4], [4]],
                 expected: 19,
         },
+        {
+                units: [
+                        [1, 8, 9],
+                        [2, 4, 5],
+                        [3, 6, 7],
+                ],
+                expected: 15,
+        },
 ];
 
 describe('maxRatings', () => {
