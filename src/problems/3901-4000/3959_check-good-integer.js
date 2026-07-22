@@ -17,9 +17,10 @@
  */
 
 /**
- * Approach:
- * Time Complexity: O()
- * Space Complexity: O()
+ * Approach: Math
+ * Time Complexity: O(log N)
+ * Space Complexity: O(1)
+ * `N` = `n`
  *
  * @param {number} n
  * @return {boolean}
