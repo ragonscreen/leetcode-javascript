@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/maximum-building-height/
  * Category: Algorithms
  * Difficulty: Hard
- * Date: 2026-07-23
+ * Date: 2026-06-22
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
