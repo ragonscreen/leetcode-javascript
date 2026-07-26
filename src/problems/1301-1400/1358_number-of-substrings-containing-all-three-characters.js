@@ -23,7 +23,7 @@
  */
 
 /**
- * Approach: Sliding Window
+ * Approach: Simulation
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  *
@@ -31,6 +31,39 @@
  * @return {number}
  */
 const numberOfSubstrings = (s) => {
+        let res = 0;
+        let ai = -1;
+        let bi = -1;
+        let ci = -1;
+
+        for (let i = 0; i < s.length; i++) {
+                const c = s[i];
+
+                if (c === 'a') {
+                        ai = i;
+                } else if (c === 'b') {
+                        bi = i;
+                } else {
+                        ci = i;
+                }
+
+                if (ai > -1 && bi > -1 && ci > -1) {
+                        res += Math.min(ai, bi, ci) + 1;
+                }
+        }
+
+        return res;
+};
+
+/**
+ * Approach: Sliding Window
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ *
+ * @param {string} s
+ * @return {number}
+ */
+const numberOfSubstrings1 = (s) => {
         const map = { a: 0, b: 0, c: 0 };
         let res = 0;
 
@@ -50,4 +83,4 @@ const numberOfSubstrings = (s) => {
         return res;
 };
 
-export { numberOfSubstrings };
+export { numberOfSubstrings, numberOfSubstrings1 };
