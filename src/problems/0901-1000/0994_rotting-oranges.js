@@ -4,32 +4,33 @@
  * Link: https://leetcode.com/problems/rotting-oranges/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-04-14
+ * Date: 2026-04-14 (Updated: 2026-08-03)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
  * - Array (topic_5)
  * - Breadth-First Search (topic_22)
  * - Matrix (topic_61053)
+ * - Staff (position_staff)
+ * - Weekly Contest 124 (contest_weekly-contest-124)
  *
  * Stats:
- * - Total Accepted: 1,622,442
- * - Total Submissions: 2,775,296
- * - Acceptance Rate: 58.5%
+ * - Total Accepted: 1,778,563
+ * - Total Submissions: 3,004,524
+ * - Acceptance Rate: 59.2%
  *
  * Similar Problems:
  * - battleships-in-a-board (Medium)
  * - detonate-the-maximum-bombs (Medium)
- * - walls-and-gates (Medium)
+ * - walls-and-gates (Medium) (Premium)
  * - escape-the-spreading-fire (Hard)
  */
-
-import { Queue } from '@datastructures-js/queue';
 
 /**
  * Approach: BFS
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
+ * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
  * @return {number}
@@ -37,57 +38,62 @@ import { Queue } from '@datastructures-js/queue';
 const orangesRotting = (grid) => {
         const n = grid.length;
         const m = grid[0].length;
-        const q = new Queue();
-        let countFresh = 0;
+        const sz = n * m;
+        const p = (y, x) => m * y + x;
+        const d = [-1, 0, 1, 0, -1];
+        const q = new Uint8Array(sz);
+        let qe = 0;
+        let cnt = 0;
 
-        for (let r = 0; r < n; r++) {
-                for (let c = 0; c < m; c++) {
-                        const v = grid[r][c];
+        for (let y = 0; y < n; y++) {
+                for (let x = 0; x < m; x++) {
+                        const c = grid[y][x];
 
-                        if (v === 1) {
-                                countFresh++;
+                        if (c === 1) {
+                                cnt++;
                         }
 
-                        if (v === 2) {
-                                q.enqueue([r, c]);
+                        if (c === 2) {
+                                q[qe++] = p(y, x);
                         }
                 }
         }
 
-        if (!countFresh) {
+        if (!cnt) {
                 return 0;
         }
 
-        const dirs = [
-                [-1, 0],
-                [0, 1],
-                [1, 0],
-                [0, -1],
-        ];
+        let res = 0;
+        let qf = 0;
+        let nxt = qe;
 
-        let res = -1;
+        while (qf < qe) {
+                const k = q[qf++];
+                const y = 0 | (k / m);
+                const x = k % m;
 
-        while (q.size()) {
-                res++;
-                const size = q.size();
+                for (let di = 0; di < 4; di++) {
+                        const ny = y + d[di];
+                        const nx = x + d[di + 1];
 
-                for (let i = 0; i < size; i++) {
-                        const [y, x] = q.dequeue();
-
-                        for (const [dy, dx] of dirs) {
-                                const ny = y + dy;
-                                const nx = x + dx;
-
-                                if (grid[ny]?.[nx] === 1) {
-                                        q.enqueue([ny, nx]);
-                                        grid[ny][nx] = 2;
-                                        countFresh--;
-                                }
+                        if (ny < 0 || ny >= n || nx < 0 || nx >= m) {
+                                continue;
                         }
+
+                        if (grid[ny][nx] === 1) {
+                                q[qe++] = p(ny, nx);
+                                grid[ny][nx] = 2;
+                                cnt--;
+                        }
+                }
+
+                if (qf === nxt) {
+                        nxt = qe;
+                        res++;
                 }
         }
 
-        return countFresh ? -1 : res;
+        return cnt ? -1 : res - 1;
 };
 
 export { orangesRotting };
