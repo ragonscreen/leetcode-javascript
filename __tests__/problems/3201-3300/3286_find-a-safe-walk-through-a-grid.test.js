@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { findSafeWalk } from '../../../src/problems/3201-3300/3286_find-a-safe-walk-through-a-grid.js';
+import {
+        findSafeWalk,
+        findSafeWalk1,
+} from '../../../src/problems/3201-3300/3286_find-a-safe-walk-through-a-grid.js';
 
 const testcases = [
         {
@@ -30,6 +33,11 @@ const testcases = [
                 health: 5,
                 expected: true,
         },
+        {
+                grid: [[1, 1, 1, 1]],
+                health: 4,
+                expected: false,
+        },
 ];
 
 describe('findSafeWalk', () => {
@@ -41,5 +49,17 @@ describe('findSafeWalk', () => {
                 expected,
         }) => {
                 expect(findSafeWalk(grid, health)).toStrictEqual(expected);
+        });
+});
+
+describe('findSafeWalk1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('findSafeWalk1($grid, $health) -> $expected', ({
+                grid,
+                health,
+                expected,
+        }) => {
+                expect(findSafeWalk1(grid, health)).toStrictEqual(expected);
         });
 });

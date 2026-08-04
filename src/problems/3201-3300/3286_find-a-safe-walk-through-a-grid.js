@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/find-a-safe-walk-through-a-grid/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-05-26
+ * Date: 2026-05-26 (Updated: 2026-08-04)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -27,6 +27,70 @@
  */
 
 /**
+ * Approach: 0-1 BFS
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(n * m)
+ * `n` = `gird.length`, `m` = `grid[0].length`
+ *
+ * @param {number[][]} grid
+ * @param {number} health
+ * @return {boolean}
+ */
+const findSafeWalk = (grid, health) => {
+        if (health === grid[0][0]) {
+                return false;
+        }
+
+        const n = grid.length;
+        const m = grid[0].length;
+        const sz = n * m;
+        const d = [-1, 0, 1, 0, -1];
+        const dq = new Uint32Array(sz * 2);
+        const dist = new Uint32Array(sz).fill(-1);
+        dist[0] = grid[0][0];
+        let ql = sz;
+        let qr = sz + 1;
+
+        while (ql < qr) {
+                const k = dq[ql++];
+                const y = 0 | (k / m);
+                const x = k % m;
+                const dis = dist[k];
+
+                if (k === sz - 1 && dis < health) {
+                        return true;
+                }
+
+                for (let di = 0; di < 4; di++) {
+                        const ny = y + d[di];
+                        const nx = x + d[di + 1];
+
+                        if (ny < 0 || ny >= n || nx < 0 || nx >= m) {
+                                continue;
+                        }
+
+                        const nk = m * ny + nx;
+                        const cost = grid[ny][nx];
+                        const ncost = cost + dis;
+
+                        if (ncost >= dist[nk]) {
+                                continue;
+                        }
+
+                        dist[nk] = ncost;
+
+                        if (cost === 0) {
+                                dq[--ql] = nk;
+                        } else {
+                                dq[qr++] = nk;
+                        }
+                }
+        }
+
+        return dist.at(-1) < health;
+};
+
+/**
  * Approach: BFS
  * Time Complexity: O(n * m * K) [O(n * m * (n + m))]
  * Space Complexity: O(n * m * K) [O(n * m * (n + m))]
@@ -36,7 +100,7 @@
  * @param {number} health
  * @return {boolean}
  */
-const findSafeWalk = (grid, health) => {
+const findSafeWalk1 = (grid, health) => {
         health -= grid[0][0];
 
         if (health === 0) {
@@ -87,4 +151,4 @@ const findSafeWalk = (grid, health) => {
         return false;
 };
 
-export { findSafeWalk };
+export { findSafeWalk, findSafeWalk1 };
