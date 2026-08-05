@@ -30,7 +30,7 @@
  * Approach: 0-1 BFS
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = `gird.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
  * @param {number} health
