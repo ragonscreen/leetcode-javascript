@@ -45,7 +45,7 @@ const remainingMethods = (n, k, invocations) => {
 
         const ng = new Uint8Array(n);
         ng[k] = 1;
-        const q = [];
+        const q = new Uint32Array(n);
         let qf = 0;
         let qb = 0;
         q[qb++] = k;
