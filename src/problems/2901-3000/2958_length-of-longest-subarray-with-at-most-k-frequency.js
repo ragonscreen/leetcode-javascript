@@ -26,8 +26,8 @@
 /**
  * Approach: Sliding Window
  * Time Complexity: O(n)
- * Space Complexity: O(m)
- * `n` = `nums.length`, `m` = `max(nums[i])`
+ * Space Complexity: O(n)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @param {number} k
