@@ -31,7 +31,7 @@
  */
 const shortestBeautifulSubstring = (s, k) => {
         const n = s.length;
-        let res = '2';
+        let res = '2'; // lexicographically larger than every string with 1s and 0s
 
         for (let l = 0, r = 0, cnt = 0, mnLen = n + 1; r < n; r++) {
                 cnt += +s[r];
