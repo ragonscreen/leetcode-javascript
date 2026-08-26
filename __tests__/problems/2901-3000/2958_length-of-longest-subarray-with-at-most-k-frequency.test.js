@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { maxSubarrayLength } from '../../../src/problems/2901-3000/2958_length-of-longest-subarray-with-at-most-k-frequency.js';
+import {
+        maxSubarrayLength,
+        maxSubarrayLength1,
+} from '../../../src/problems/2901-3000/2958_length-of-longest-subarray-with-at-most-k-frequency.js';
 
 const testcases = [
         { nums: [1, 2, 3, 1, 2, 3, 1, 2], k: 2, expected: 6 },
@@ -17,5 +20,17 @@ describe('maxSubarrayLength', () => {
                 expected,
         }) => {
                 expect(maxSubarrayLength(nums, k)).toStrictEqual(expected);
+        });
+});
+
+describe('maxSubarrayLength1', () => {
+        test.each(
+                structuredClone(testcases),
+        )('maxSubarrayLength1($nums, $k) -> $expected', ({
+                nums,
+                k,
+                expected,
+        }) => {
+                expect(maxSubarrayLength1(nums, k)).toStrictEqual(expected);
         });
 });

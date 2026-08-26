@@ -24,10 +24,12 @@
  */
 
 /**
- * Approach: Sliding Window
+ * Approach: Sliding Window [II]
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  * `n` = `nums.length`
+ *
+ * Fewer `map` accesses compared to Sliding Window [I].
  *
  * @param {number[]} nums
  * @param {number} k
@@ -62,4 +64,32 @@ const maxSubarrayLength = (nums, k) => {
         return res;
 };
 
-export { maxSubarrayLength };
+/**
+ * Approach: Sliding Window [I]
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ * `n` = `nums.length`
+ *
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+const maxSubarrayLength1 = (nums, k) => {
+        const map = {};
+        let res = 0;
+
+        for (let l = 0, r = 0; r < nums.length; r++) {
+                const vr = nums[r];
+                map[vr] = (map[vr] || 0) + 1;
+
+                while (map[nums[r]] > k) {
+                        map[nums[l++]]--;
+                }
+
+                res = Math.max(res, r - l + 1);
+        }
+
+        return res;
+};
+
+export { maxSubarrayLength, maxSubarrayLength1 };
