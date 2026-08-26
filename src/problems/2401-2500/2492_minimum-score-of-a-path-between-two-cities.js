@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-08-05
+ * Date: 2026-08-05 (Updated: 2026-08-26)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -38,26 +38,26 @@
 const minScore = (n, roads) => {
         const g = new Array(n + 1);
 
-        for (let i = 0; i < roads.length; i++) {
-                const [u, v, dis] = roads[i];
+        for (const [u, v, w] of roads) {
                 g[u] ??= new Map();
-                g[u].set(v, dis);
+                g[u].set(v, w);
                 g[v] ??= new Map();
-                g[v].set(u, dis);
+                g[v].set(u, w);
         }
 
         const vis = new Uint8Array(n + 1);
         let res = Number.MAX_SAFE_INTEGER;
 
         const dfs = (u) => {
+                if (vis[u]) {
+                        return;
+                }
+
                 vis[u] = 1;
 
-                for (const [v, dis] of g[u]) {
-                        res = Math.min(res, dis);
-
-                        if (!vis[v]) {
-                                dfs(v);
-                        }
+                for (const [v, w] of g[u]) {
+                        res = Math.min(res, w);
+                        dfs(v);
                 }
         };
 
