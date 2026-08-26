@@ -4,18 +4,20 @@
  * Link: https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-04-08
+ * Date: 2026-04-08 (Updated: 2026-08-27)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
+ * - Staff (position_staff)
+ * - Biweekly Contest 119 (contest_biweekly-contest-119)
  *
  * Stats:
- * - Total Accepted: 191,595
- * - Total Submissions: 339,082
- * - Acceptance Rate: 56.5%
+ * - Total Accepted: 334,150
+ * - Total Submissions: 551,987
+ * - Acceptance Rate: 60.5%
  *
  * Similar Problems:
  * - longest-substring-with-at-least-k-repeating-characters (Medium)
@@ -25,7 +27,7 @@
  * Approach: Sliding Window
  * Time Complexity: O(n)
  * Space Complexity: O(m)
- * `n` = length of `nums`, `m` = number of unique values in `nums`
+ * `n` = `nums.length`, `m` = `max(nums[i])`
  *
  * @param {number[]} nums
  * @param {number} k
@@ -33,29 +35,25 @@
  */
 const maxSubarrayLength = (nums, k) => {
         const map = {};
-        let maxFreq = 0;
-        let maxElem = 0;
         let res = 0;
 
-        for (let l = 0, r = 0; r < nums.length; r++) {
-                const v = nums[r];
-                const f = (map[v] || 0) + 1;
-                map[v] = f;
+        for (let l = 0, r = 0, mxf = 0, mxv = 0; r < nums.length; r++) {
+                const vr = nums[r];
+                const frq = (map[vr] ?? 0) + 1;
+                map[vr] = frq;
 
-                if (f > maxFreq) {
-                        maxFreq = f;
-                        maxElem = v;
+                if (frq > mxf) {
+                        mxf = frq;
+                        mxv = vr;
                 }
 
-                while (maxFreq > k) {
-                        const vl = nums[l];
+                while (mxf > k) {
+                        const vl = nums[l++];
                         map[vl]--;
 
-                        if (vl === maxElem) {
-                                maxFreq--;
+                        if (vl === mxv) {
+                                mxf--;
                         }
-
-                        l++;
                 }
 
                 res = Math.max(res, r - l + 1);
