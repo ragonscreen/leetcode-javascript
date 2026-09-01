@@ -24,6 +24,7 @@
  * Approach: Greedy + Sorting
  * Time Complexity: O(n lg n)
  * Space Complexity: O(1) auxiliary, O(n) for sorting
+ * `n` = `arr.length`
  *
  * The key point is that operation 1 allows us to divide the array into any
  * number of parts. This means that we can divide the array into `n` parts and
