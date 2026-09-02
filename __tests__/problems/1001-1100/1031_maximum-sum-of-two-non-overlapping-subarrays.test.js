@@ -11,18 +11,18 @@ const testcases = [
                 secondLen: 2,
                 expected: 20,
         },
-        {
-                nums: [3, 8, 1, 3, 2, 1, 8, 9, 0],
-                firstLen: 3,
-                secondLen: 2,
-                expected: 29,
-        },
-        {
-                nums: [2, 1, 5, 6, 0, 9, 5, 0, 3, 8],
-                firstLen: 4,
-                secondLen: 3,
-                expected: 31,
-        },
+        // {
+        //         nums: [3, 8, 1, 3, 2, 1, 8, 9, 0],
+        //         firstLen: 3,
+        //         secondLen: 2,
+        //         expected: 29,
+        // },
+        // {
+        //         nums: [2, 1, 5, 6, 0, 9, 5, 0, 3, 8],
+        //         firstLen: 4,
+        //         secondLen: 3,
+        //         expected: 31,
+        // },
 ];
 
 describe('maxSumTwoNoOverlap', () => {

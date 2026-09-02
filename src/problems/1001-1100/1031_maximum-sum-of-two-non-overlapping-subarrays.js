@@ -21,6 +21,52 @@
  */
 
 /**
+ * Approach: Sliding Window + Dynamic Programming
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ * `n` = `nums.length`
+ *
+ * @param {number[]} nums
+ * @param {number} firstLen
+ * @param {number} secondLen
+ * @return {number}
+ */
+const maxSumTwoNoOverlap = (nums, firstLen, secondLen) => {
+        const sw = (len1, len2) => {
+                let lsum = 0;
+
+                for (let i = 0; i < len1; i++) {
+                        lsum += nums[i];
+                }
+
+                let rsum = 0;
+
+                for (let i = len1; i < len1 + len2; i++) {
+                        rsum += nums[i];
+                }
+
+                let mxLeft = lsum;
+                let mxTot = lsum + rsum;
+
+                for (
+                        let l = 1, r = len1, i = len1 + 1, j = len1 + len2;
+                        j < nums.length;
+                        l++, r++, i++, j++
+                ) {
+                        lsum = lsum + nums[r] - nums[l - 1];
+                        mxLeft = Math.max(mxLeft, lsum);
+
+                        rsum = rsum + nums[j] - nums[i - 1];
+                        mxTot = Math.max(mxTot, mxLeft + rsum);
+                }
+
+                return mxTot;
+        };
+
+        return Math.max(sw(firstLen, secondLen), sw(secondLen, firstLen));
+};
+
+/**
  * Approach: Prefix Sum + Sliding Window + Dynamic Programming
  * Time Complexity: O(n)
  * Space Complexity: O(n)
@@ -31,7 +77,7 @@
  * @param {number} secondLen
  * @return {number}
  */
-const maxSumTwoNoOverlap = (nums, firstLen, secondLen) => {
+const maxSumTwoNoOverlap1 = (nums, firstLen, secondLen) => {
         const n = nums.length;
         const p = new Uint32Array(n + 1);
 
@@ -72,7 +118,7 @@ const maxSumTwoNoOverlap = (nums, firstLen, secondLen) => {
  * @param {number} secondLen
  * @return {number}
  */
-const maxSumTwoNoOverlap1 = (nums, firstLen, secondLen) => {
+const maxSumTwoNoOverlap2 = (nums, firstLen, secondLen) => {
         const n = nums.length;
         const p = new Uint32Array(n + 1);
 
@@ -99,4 +145,4 @@ const maxSumTwoNoOverlap1 = (nums, firstLen, secondLen) => {
         return res;
 };
 
-export { maxSumTwoNoOverlap, maxSumTwoNoOverlap1 };
+export { maxSumTwoNoOverlap, maxSumTwoNoOverlap1, maxSumTwoNoOverlap2 };
