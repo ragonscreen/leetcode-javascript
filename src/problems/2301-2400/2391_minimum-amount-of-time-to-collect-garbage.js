@@ -24,7 +24,7 @@
  * Approach: Simulation
  * Time Complexity: O(n * k)
  * Space Complexity: O(1)
- * `n` = `garbage.length`, `k` = `sum(garbage[i].length)`
+ * `n` = `garbage.length`, `k` = `max(garbage[i].length)`
  *
  * @param {string[]} garbage
  * @param {number[]} travel
