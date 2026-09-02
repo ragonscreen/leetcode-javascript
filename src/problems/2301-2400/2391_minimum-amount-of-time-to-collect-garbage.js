@@ -33,12 +33,8 @@
 const garbageCollection = (garbage, travel) => {
         const n = garbage.length;
         let res = garbage[0].length;
-        let sum = 0;
-        let m = 0;
-        let p = 0;
-        let g = 0;
 
-        for (let i = n - 1; i > 0; i--) {
+        for (let i = n - 1, sum = 0, m = 0, p = 0, g = 0; i > 0; i--) {
                 const str = garbage[i];
 
                 // only check each string if we have not already seen all
