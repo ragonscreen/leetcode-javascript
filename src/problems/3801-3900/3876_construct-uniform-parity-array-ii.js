@@ -27,8 +27,8 @@
  *
  * The min value of the array cannot be reduced any further, and as such every
  * other value has to follow this value's parity. If the min value is odd, every
- * even number can be made odd. If the min value is even, no odd number can be
- * made even.
+ * even number can be made odd. If the min value is even, the smallest odd
+ * number cannot be made even.
  *
  * @param {number[]} nums1
  * @return {boolean}
