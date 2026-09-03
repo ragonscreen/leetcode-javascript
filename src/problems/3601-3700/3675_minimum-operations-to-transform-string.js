@@ -25,6 +25,10 @@
  * Space Complexity: O(1)
  * `n` = `s.length`
  *
+ * Since we can only move one step at a time, each successive character set is
+ * merged with the previous one during each move. Thus, the total number of
+ * moves is the number of steps taken for the smallest character to reach 'a'.
+ *
  * @param {string} s
  * @return {number}
  */

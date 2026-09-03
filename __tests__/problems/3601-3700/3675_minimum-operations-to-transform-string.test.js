@@ -4,6 +4,7 @@ import { minOperations } from '../../../src/problems/3601-3700/3675_minimum-oper
 const testcases = [
         { s: 'yz', expected: 2 },
         { s: 'a', expected: 0 },
+        { s: 'sdgfuwierbaoehqehkadhqahsdzzzxyqetubxzzz', expected: 25 },
 ];
 
 describe('minOperations', () => {
