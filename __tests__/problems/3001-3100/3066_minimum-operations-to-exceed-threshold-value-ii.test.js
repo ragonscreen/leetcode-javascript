@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minOperations } from '../../../src/problems/3001-3100/3066_minimum-operations-to-exceed-threshold-value-ii.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(minOperations(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(minOperations(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

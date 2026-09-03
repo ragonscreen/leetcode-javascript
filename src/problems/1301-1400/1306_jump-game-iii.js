@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
  *
  * Stats:
+ *
  * - Total Accepted: 300,504
  * - Total Submissions: 449,653
  * - Acceptance Rate: 66.8%
  *
  * Similar Problems:
+ *
  * - jump-game (Medium)
  * - jump-game-ii (Medium)
  * - jump-game-vii (Medium)
@@ -32,7 +35,7 @@
  *
  * @param {number[]} arr
  * @param {number} start
- * @return {boolean}
+ * @returns {boolean}
  */
 const canReach = (arr, start) => {
         const dfs = (i) => {
@@ -61,7 +64,7 @@ const canReach = (arr, start) => {
  *
  * @param {number[]} arr
  * @param {number} start
- * @return {boolean}
+ * @returns {boolean}
  */
 const canReach1 = (arr, start) => {
         const q = [start];

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countPairs } from '../../../src/problems/2101-2200/2183_count-array-pairs-divisible-by-k.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('countPairs', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countPairs($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(countPairs(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countPairs($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(countPairs(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

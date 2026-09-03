@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getCommon } from '../../../src/problems/2501-2600/2540_minimum-common-value.js';
 
 const testcases = [
@@ -7,13 +8,10 @@ const testcases = [
 ];
 
 describe('getCommon', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getCommon($nums1, $nums2) -> $expected', ({
-                nums1,
-                nums2,
-                expected,
-        }) => {
-                expect(getCommon(nums1, nums2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getCommon($nums1, $nums2) -> $expected',
+                ({ nums1, nums2, expected }) => {
+                        expect(getCommon(nums1, nums2)).toStrictEqual(expected);
+                },
+        );
 });

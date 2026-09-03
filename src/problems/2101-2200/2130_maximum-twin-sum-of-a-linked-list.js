@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Two Pointers (topic_9)
  * - Stack (topic_15)
@@ -15,11 +16,13 @@
  * - Biweekly Contest 69 (contest_biweekly-contest-69)
  *
  * Stats:
+ *
  * - Total Accepted: 531,019
  * - Total Submissions: 646,998
  * - Acceptance Rate: 82.1%
  *
  * Similar Problems:
+ *
  * - middle-of-the-linked-list (Easy)
  * - palindrome-linked-list (Easy)
  * - reverse-linked-list (Easy)
@@ -32,7 +35,7 @@
  * `n` = `head.length`
  *
  * @param {ListNode} head
- * @return {number}
+ * @returns {number}
  */
 const pairSum = (head) => {
         let slow = head;
@@ -73,7 +76,7 @@ const pairSum = (head) => {
  * `n` = `head.length`
  *
  * @param {ListNode} head
- * @return {number}
+ * @returns {number}
  */
 const pairSum1 = (head) => {
         const vals = [];

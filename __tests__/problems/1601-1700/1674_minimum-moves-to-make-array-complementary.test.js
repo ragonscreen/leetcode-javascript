@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minMoves } from '../../../src/problems/1601-1700/1674_minimum-moves-to-make-array-complementary.js';
 
 const testcases = [
@@ -14,13 +15,10 @@ const testcases = [
 ];
 
 describe('minMoves', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minMoves($nums, $limit) -> $expected', ({
-                nums,
-                limit,
-                expected,
-        }) => {
-                expect(minMoves(nums, limit)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minMoves($nums, $limit) -> $expected',
+                ({ nums, limit, expected }) => {
+                        expect(minMoves(nums, limit)).toStrictEqual(expected);
+                },
+        );
 });

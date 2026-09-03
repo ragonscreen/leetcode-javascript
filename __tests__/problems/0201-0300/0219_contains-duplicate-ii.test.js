@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { containsNearbyDuplicate } from '../../../src/problems/0201-0300/0219_contains-duplicate-ii.js';
 
 const testcases = [
@@ -8,15 +9,10 @@ const testcases = [
 ];
 
 describe('containsNearbyDuplicate', () => {
-        test.each(
-                testcases,
-        )('containsNearbyDuplicate($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(containsNearbyDuplicate(nums, k)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(testcases)(
+                'containsNearbyDuplicate($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(containsNearbyDuplicate(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

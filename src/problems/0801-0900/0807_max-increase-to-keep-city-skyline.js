@@ -1,5 +1,5 @@
 /**
- * 0807. Max Increase to Keep City Skyline
+ * 807. Max Increase to Keep City Skyline
  *
  * Link: https://leetcode.com/problems/max-increase-to-keep-city-skyline/
  * Category: Algorithms
@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 189,244
  * - Total Submissions: 219,003
  * - Acceptance Rate: 86.4%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const maxIncreaseKeepingSkyline = (grid) => {
         const n = grid.length;

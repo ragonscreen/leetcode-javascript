@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestOnes } from '../../../src/problems/1001-1100/1004_max-consecutive-ones-iii.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('longestOnes', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestOnes($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(longestOnes(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestOnes($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(longestOnes(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

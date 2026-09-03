@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         balancedString,
         balancedString1,
@@ -13,17 +14,19 @@ const testcases = [
 ];
 
 describe('balancedString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('balancedString($s) -> $expected', ({ s, expected }) => {
-                expect(balancedString(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'balancedString($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(balancedString(s)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('balancedString1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('balancedString1($s) -> $expected', ({ s, expected }) => {
-                expect(balancedString1(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'balancedString1($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(balancedString1(s)).toStrictEqual(expected);
+                },
+        );
 });

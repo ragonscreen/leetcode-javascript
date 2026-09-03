@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { threeSum } from '../../../src/problems/0001-0100/0015_3sum.js';
 import { arrDeepSort } from '../../utils/array.js';
 
@@ -21,10 +22,7 @@ const testcases = [
                 ],
         },
         {
-                nums: [
-                        2, -3, 0, -2, -5, -5, -4, 1, 2, -2, 2, 0, 2, -4, 5, 5,
-                        -10,
-                ],
+                nums: [2, -3, 0, -2, -5, -5, -4, 1, 2, -2, 2, 0, 2, -4, 5, 5, -10],
                 expected: [
                         [-10, 5, 5],
                         [-5, 0, 5],
@@ -37,12 +35,10 @@ const testcases = [
 ];
 
 describe('threeSum', () => {
-        test.each(structuredClone(testcases))('threeSum($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(arrDeepSort(threeSum(nums))).toStrictEqual(
-                        arrDeepSort(expected),
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'threeSum($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(arrDeepSort(threeSum(nums))).toStrictEqual(arrDeepSort(expected));
+                },
+        );
 });

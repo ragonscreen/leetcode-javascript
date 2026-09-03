@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
@@ -16,6 +17,7 @@
  * - Biweekly Contest 108 (contest_biweekly-contest-108)
  *
  * Stats:
+ *
  * - Total Accepted: 26,460
  * - Total Submissions: 50,929
  * - Acceptance Rate: 52.0%
@@ -30,7 +32,7 @@
  * @param {number[]} nums
  * @param {number[]} moveFrom
  * @param {number[]} moveTo
- * @return {number[]}
+ * @returns {number[]}
  */
 const relocateMarbles = (nums, moveFrom, moveTo) => {
         const set = new Set(nums);

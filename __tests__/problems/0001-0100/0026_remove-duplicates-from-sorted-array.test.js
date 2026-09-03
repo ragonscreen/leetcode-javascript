@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { removeDuplicates } from '../../../src/problems/0001-0100/0026_remove-duplicates-from-sorted-array.js';
 
 const testcases = [
@@ -11,11 +12,12 @@ const testcases = [
 ];
 
 describe('removeDuplicates', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeDuplicates($nums) -> $expected', ({ nums, expected }) => {
-                const k = removeDuplicates(nums);
-                expect(k).toStrictEqual(expected.len);
-                expect(nums.slice(0, k)).toContainAllValues(expected.nums);
-        });
+        test.each(structuredClone(testcases))(
+                'removeDuplicates($nums) -> $expected',
+                ({ nums, expected }) => {
+                        const k = removeDuplicates(nums);
+                        expect(k).toStrictEqual(expected.len);
+                        expect(nums.slice(0, k)).toContainAllValues(expected.nums);
+                },
+        );
 });

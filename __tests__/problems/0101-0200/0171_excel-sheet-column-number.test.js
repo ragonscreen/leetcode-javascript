@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { titleToNumber } from '../../../src/problems/0101-0200/0171_excel-sheet-column-number.js';
 
 const testcases = [
@@ -11,12 +12,10 @@ const testcases = [
 ];
 
 describe('titleToNumber', () => {
-        test.each(
-                structuredClone(testcases),
-        )('titleToNumber($columnTitle) -> $expected', ({
-                columnTitle,
-                expected,
-        }) => {
-                expect(titleToNumber(columnTitle)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'titleToNumber($columnTitle) -> $expected',
+                ({ columnTitle, expected }) => {
+                        expect(titleToNumber(columnTitle)).toStrictEqual(expected);
+                },
+        );
 });

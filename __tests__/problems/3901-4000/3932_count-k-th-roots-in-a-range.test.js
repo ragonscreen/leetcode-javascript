@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         countKthRoots,
         countKthRoots1,
@@ -21,35 +22,28 @@ const testcases = [
 ];
 
 describe('countKthRoots', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countKthRoots($l, $r, $k) -> $expected', ({ l, r, k, expected }) => {
-                expect(countKthRoots(l, r, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countKthRoots($l, $r, $k) -> $expected',
+                ({ l, r, k, expected }) => {
+                        expect(countKthRoots(l, r, k)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countKthRoots1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countKthRoots1($l, $r, $k) -> $expected', ({
-                l,
-                r,
-                k,
-                expected,
-        }) => {
-                expect(countKthRoots1(l, r, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countKthRoots1($l, $r, $k) -> $expected',
+                ({ l, r, k, expected }) => {
+                        expect(countKthRoots1(l, r, k)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countKthRoots2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countKthRoots2($l, $r, $k) -> $expected', ({
-                l,
-                r,
-                k,
-                expected,
-        }) => {
-                expect(countKthRoots2(l, r, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countKthRoots2($l, $r, $k) -> $expected',
+                ({ l, r, k, expected }) => {
+                        expect(countKthRoots2(l, r, k)).toStrictEqual(expected);
+                },
+        );
 });

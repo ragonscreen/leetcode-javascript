@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { predictTheWinner } from '../../../src/problems/0401-0500/0486_predict-the-winner.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('predictTheWinner', () => {
-        test.each(
-                structuredClone(testcases),
-        )('predictTheWinner($nums) -> $expected', ({ nums, expected }) => {
-                expect(predictTheWinner(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'predictTheWinner($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(predictTheWinner(nums)).toStrictEqual(expected);
+                },
+        );
 });

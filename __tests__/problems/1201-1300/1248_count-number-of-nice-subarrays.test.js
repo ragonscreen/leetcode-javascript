@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numberOfSubarrays } from '../../../src/problems/1201-1300/1248_count-number-of-nice-subarrays.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('numberOfSubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numberOfSubarrays($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(numberOfSubarrays(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numberOfSubarrays($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(numberOfSubarrays(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

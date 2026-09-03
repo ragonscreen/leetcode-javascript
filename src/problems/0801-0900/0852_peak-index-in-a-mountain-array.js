@@ -1,5 +1,5 @@
 /**
- * 0852. Peak Index in a Mountain Array
+ * 852. Peak Index in a Mountain Array
  *
  * Link: https://leetcode.com/problems/peak-index-in-a-mountain-array/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 1,196,107
  * - Total Submissions: 1,789,033
  * - Acceptance Rate: 66.9%
  *
  * Similar Problems:
+ *
  * - find-peak-element (Medium)
  * - find-in-mountain-array (Hard)
  * - minimum-number-of-removals-to-make-mountain-array (Hard)
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} arr
- * @return {number}
+ * @returns {number}
  */
 const peakIndexInMountainArray = (arr) => {
         let l = 0;

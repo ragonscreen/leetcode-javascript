@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { containsCycle } from '../../../src/problems/1501-1600/1559_detect-cycles-in-2d-grid.js';
 
 const testcases = [
@@ -57,9 +58,10 @@ const testcases = [
 ];
 
 describe('containsCycle', () => {
-        test.each(
-                structuredClone(testcases),
-        )('containsCycle($grid) -> $expected', ({ grid, expected }) => {
-                expect(containsCycle(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'containsCycle($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(containsCycle(grid)).toStrictEqual(expected);
+                },
+        );
 });

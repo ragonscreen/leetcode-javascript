@@ -1,5 +1,5 @@
 /**
- * 0009. Palindrome Number
+ * 9. Palindrome Number
  *
  * Link: https://leetcode.com/problems/palindrome-number/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 7,880,570
  * - Total Submissions: 13,058,812
  * - Acceptance Rate: 60.3%
  *
  * Similar Problems:
+ *
  * - count-symmetric-integers (Easy)
  * - palindrome-linked-list (Easy)
  * - find-palindrome-with-fixed-length (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} x
- * @return {boolean}
+ * @returns {boolean}
  */
 const isPalindrome = (x) => {
         let rev = 0;
@@ -50,7 +53,7 @@ const isPalindrome = (x) => {
  * Space Complexity: O(1)
  *
  * @param {number} x
- * @return {boolean}
+ * @returns {boolean}
  */
 const isPalindrome1 = (x) => {
         if (x < 0) {
@@ -79,7 +82,7 @@ const isPalindrome1 = (x) => {
  * Space Complexity: O(log n)
  *
  * @param {number} x
- * @return {boolean}
+ * @returns {boolean}
  */
 const isPalindrome2 = (x) => {
         if (x < 0) {

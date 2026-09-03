@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  * - Mid Level (position_mid-level)
  * - Biweekly Contest 44 (contest_biweekly-contest-44)
  *
  * Stats:
+ *
  * - Total Accepted: 902,386
  * - Total Submissions: 1,066,130
  * - Acceptance Rate: 84.6%
@@ -26,7 +28,7 @@
  * `n` = `gain.length`
  *
  * @param {number[]} gain
- * @return {number}
+ * @returns {number}
  */
 const largestAltitude = (gain) => {
         let res = 0;

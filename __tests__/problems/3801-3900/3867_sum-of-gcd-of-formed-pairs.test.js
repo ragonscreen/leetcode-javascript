@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { gcdSum } from '../../../src/problems/3801-3900/3867_sum-of-gcd-of-formed-pairs.js';
 
 const testcases = [
@@ -8,10 +9,10 @@ const testcases = [
 ];
 
 describe('gcdSum', () => {
-        test.each(structuredClone(testcases))('gcdSum($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(gcdSum(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'gcdSum($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(gcdSum(nums)).toStrictEqual(expected);
+                },
+        );
 });

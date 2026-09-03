@@ -1,5 +1,5 @@
 /**
- * 0081. Search in Rotated Sorted Array II
+ * 81. Search in Rotated Sorted Array II
  *
  * Link: https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 1,215,670
  * - Total Submissions: 3,049,231
  * - Acceptance Rate: 39.9%
  *
  * Similar Problems:
+ *
  * - search-in-rotated-sorted-array (Medium)
  */
 
@@ -27,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {boolean}
+ * @returns {boolean}
  */
 const search = (nums, target) => {
         let l = 0;

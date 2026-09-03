@@ -1,5 +1,5 @@
 /**
- * 0058. Length of Last Word
+ * 58. Length of Last Word
  *
  * Link: https://leetcode.com/problems/length-of-last-word/
  * Category: Algorithms
@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 3,378,129
  * - Total Submissions: 5,761,946
  * - Acceptance Rate: 58.6%
@@ -22,7 +24,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const lengthOfLastWord = (s) => {
         let i = s.length - 1;

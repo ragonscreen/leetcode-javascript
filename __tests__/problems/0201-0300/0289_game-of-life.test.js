@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { gameOfLife } from '../../../src/problems/0201-0300/0289_game-of-life.js';
 
 const testcases = [
@@ -29,10 +30,11 @@ const testcases = [
 ];
 
 describe('gameOfLife', () => {
-        test.each(
-                structuredClone(testcases),
-        )('gameOfLife($board) -> $expected', ({ board, expected }) => {
-                expect(gameOfLife(board)).toBeNil();
-                expect(board).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'gameOfLife($board) -> $expected',
+                ({ board, expected }) => {
+                        expect(gameOfLife(board)).toBeNil();
+                        expect(board).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         maxTotal,
         maxTotal1,
@@ -11,17 +12,19 @@ const testcases = [
 ];
 
 describe('maxTotal', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxTotal($nums, $s) -> $expected', ({ nums, s, expected }) => {
-                expect(maxTotal(nums, s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxTotal($nums, $s) -> $expected',
+                ({ nums, s, expected }) => {
+                        expect(maxTotal(nums, s)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('maxTotal1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxTotal1($nums, $s) -> $expected', ({ nums, s, expected }) => {
-                expect(maxTotal1(nums, s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxTotal1($nums, $s) -> $expected',
+                ({ nums, s, expected }) => {
+                        expect(maxTotal1(nums, s)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { mostFrequentEven } from '../../../src/problems/2401-2500/2404_most-frequent-even-element.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('mostFrequentEven', () => {
-        test.each(
-                structuredClone(testcases),
-        )('mostFrequentEven($nums) -> $expected', ({ nums, expected }) => {
-                expect(mostFrequentEven(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'mostFrequentEven($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(mostFrequentEven(nums)).toStrictEqual(expected);
+                },
+        );
 });

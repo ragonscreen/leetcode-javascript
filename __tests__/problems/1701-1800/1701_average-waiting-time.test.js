@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { averageWaitingTime } from '../../../src/problems/1701-1800/1701_average-waiting-time.js';
 
 const testcases = [
@@ -22,12 +23,10 @@ const testcases = [
 ];
 
 describe('averageWaitingTime', () => {
-        test.each(
-                structuredClone(testcases),
-        )('averageWaitingTime($customers) -> $expected', ({
-                customers,
-                expected,
-        }) => {
-                expect(averageWaitingTime(customers)).toBeCloseTo(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'averageWaitingTime($customers) -> $expected',
+                ({ customers, expected }) => {
+                        expect(averageWaitingTime(customers)).toBeCloseTo(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { subarraysWithKDistinct } from '../../../src/problems/0901-1000/0992_subarrays-with-k-different-integers.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('subarraysWithKDistinct', () => {
-        test.each(
-                structuredClone(testcases),
-        )('subarraysWithKDistinct($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(subarraysWithKDistinct(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'subarraysWithKDistinct($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(subarraysWithKDistinct(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

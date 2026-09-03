@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { search } from '../../../src/problems/0701-0800/0704_binary-search.js';
 
 const testcases = [
@@ -7,13 +8,10 @@ const testcases = [
 ];
 
 describe('search', () => {
-        test.each(
-                structuredClone(testcases),
-        )('search($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(search(nums, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'search($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(search(nums, target)).toStrictEqual(expected);
+                },
+        );
 });

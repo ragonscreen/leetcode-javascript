@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 31,814
  * - Total Submissions: 56,170
  * - Acceptance Rate: 56.6%
  *
  * Similar Problems:
+ *
  * - zero-array-transformation-ii (Medium)
  * - zero-array-transformation-iii (Medium)
  */
@@ -30,7 +33,7 @@
  *
  * @param {number[]} nums
  * @param {number} limit
- * @return {number}
+ * @returns {number}
  */
 const minMoves = (nums, limit) => {
         const n = nums.length;

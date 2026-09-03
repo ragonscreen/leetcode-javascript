@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { smallestRange } from '../../../src/problems/0601-0700/0632_smallest-range-covering-elements-from-k-lists.js';
 
 const testcases = [
@@ -32,9 +33,10 @@ const testcases = [
 ];
 
 describe('smallestRange', () => {
-        test.each(
-                structuredClone(testcases),
-        )('smallestRange($nums) -> $expected', ({ nums, expected }) => {
-                expect(smallestRange(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'smallestRange($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(smallestRange(nums)).toStrictEqual(expected);
+                },
+        );
 });

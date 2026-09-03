@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxVowels } from '../../../src/problems/1401-1500/1456_maximum-number-of-vowels-in-a-substring-of-given-length.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('maxVowels', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxVowels($s, $k) -> $expected', ({ s, k, expected }) => {
-                expect(maxVowels(s, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxVowels($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(maxVowels(s, k)).toStrictEqual(expected);
+                },
+        );
 });

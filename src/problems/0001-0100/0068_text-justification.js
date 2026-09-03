@@ -1,5 +1,5 @@
 /**
- * 0068. Text Justification
+ * 68. Text Justification
  *
  * Link: https://leetcode.com/problems/text-justification/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 636,794
  * - Total Submissions: 1,258,362
  * - Acceptance Rate: 50.6%
  *
  * Similar Problems:
+ *
  * - divide-a-string-into-groups-of-size-k (Easy)
  * - rearrange-spaces-between-words (Easy)
  * - split-message-based-on-limit (Hard)
@@ -31,7 +34,7 @@
  *
  * @param {string[]} words
  * @param {number} maxWidth
- * @return {string[]}
+ * @returns {string[]}
  */
 const fullJustify = (words, maxWidth) => {
         const lines = [];

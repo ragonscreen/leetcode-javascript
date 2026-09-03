@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sorting (topic_61049)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 90,085
  * - Total Submissions: 104,793
  * - Acceptance Rate: 86.0%
  *
  * Similar Problems:
+ *
  * - sort-the-people (Easy)
  * - custom-sort-string (Medium)
  * - sort-threats-by-severity-and-exploitability (Medium)
@@ -31,7 +34,7 @@
  *
  * @param {number[][]} score
  * @param {number} k
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const sortTheStudents = (score, k) => score.sort((a, b) => b[k] - a[k]);
 

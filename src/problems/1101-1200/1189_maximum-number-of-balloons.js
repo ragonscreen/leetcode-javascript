@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Counting (topic_61062)
@@ -15,6 +16,7 @@
  * - Weekly Contest 154 (contest_weekly-contest-154)
  *
  * Stats:
+ *
  * - Total Accepted: 498,331
  * - Total Submissions: 776,131
  * - Acceptance Rate: 64.2%
@@ -27,7 +29,7 @@
  * `n` = `text.length`
  *
  * @param {string} text
- * @return {number}
+ * @returns {number}
  */
 const maxNumberOfBalloons = (text) => {
         const cnt = new Uint32Array(26);

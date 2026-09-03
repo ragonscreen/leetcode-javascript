@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 15,884
  * - Total Submissions: 25,995
  * - Acceptance Rate: 61.1%
  *
  * Similar Problems:
+ *
  * - maximum-points-you-can-obtain-from-cards (Medium)
  * - maximum-score-from-performing-multiplication-operations (Hard)
  */
@@ -31,7 +34,7 @@
  * `n` = length of `values`, `m` = length of `values[i]`
  *
  * @param {number[][]} values
- * @return {number}
+ * @returns {number}
  */
 const maxSpending = (values) => {
         const n = values.length;
@@ -74,7 +77,7 @@ const maxSpending = (values) => {
  * `n` = length of `values`, `m` = length of `values[i]`
  *
  * @param {number[][]} values
- * @return {number}
+ * @returns {number}
  */
 const maxSpending1 = (values) => {
         const n = values.length;

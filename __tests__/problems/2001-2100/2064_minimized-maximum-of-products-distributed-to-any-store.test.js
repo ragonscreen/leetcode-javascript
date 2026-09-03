@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimizedMaximum } from '../../../src/problems/2001-2100/2064_minimized-maximum-of-products-distributed-to-any-store.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('minimizedMaximum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimizedMaximum($n, $quantities) -> $expected', ({
-                n,
-                quantities,
-                expected,
-        }) => {
-                expect(minimizedMaximum(n, quantities)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimizedMaximum($n, $quantities) -> $expected',
+                ({ n, quantities, expected }) => {
+                        expect(minimizedMaximum(n, quantities)).toStrictEqual(expected);
+                },
+        );
 });

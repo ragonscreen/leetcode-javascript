@@ -1,5 +1,5 @@
 /**
- * 0448. Find All Numbers Disappeared in an Array
+ * 448. Find All Numbers Disappeared in an Array
  *
  * Link: https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  *
  * Stats:
+ *
  * - Total Accepted: 1,342,242
  * - Total Submissions: 2,101,808
  * - Acceptance Rate: 63.9%
  *
  * Similar Problems:
+ *
  * - append-k-integers-with-minimal-sum (Medium)
  * - find-all-duplicates-in-an-array (Medium)
  * - find-unique-binary-string (Medium)
@@ -32,7 +35,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const findDisappearedNumbers = (nums) => {
         for (const num of nums) {
@@ -62,7 +65,7 @@ const findDisappearedNumbers = (nums) => {
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const findDisappearedNumbers1 = (nums) => {
         for (const num of nums) {

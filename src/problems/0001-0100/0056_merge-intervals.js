@@ -1,5 +1,5 @@
 /**
- * 0056. Merge Intervals
+ * 56. Merge Intervals
  *
  * Link: https://leetcode.com/problems/merge-intervals/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 3,881,903
  * - Total Submissions: 7,557,054
  * - Acceptance Rate: 51.4%
  *
  * Similar Problems:
+ *
  * - determine-if-two-events-have-conflict (Easy)
  * - meeting-rooms (Easy)
  * - points-that-intersect-with-cars (Easy)
@@ -43,7 +46,7 @@
  * Space Complexity: O(1) auxiliary, O(n) for sorting, O(n) total
  *
  * @param {number[][]} intervals
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const merge = (intervals) => {
         intervals.sort((a, b) => a[0] - b[0]);

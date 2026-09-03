@@ -1,5 +1,5 @@
 /**
- * 0169. Majority Element
+ * 169. Majority Element
  *
  * Link: https://leetcode.com/problems/majority-element/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Divide and Conquer (topic_12)
@@ -15,11 +16,13 @@
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 5,317,779
  * - Total Submissions: 8,037,950
  * - Acceptance Rate: 66.2%
  *
  * Similar Problems:
+ *
  * - check-if-a-number-is-majority-element-in-a-sorted-array (Easy)
  * - find-valid-pair-of-adjacent-digits-in-string (Easy)
  * - minimum-operations-to-exceed-threshold-value-i (Easy)
@@ -35,7 +38,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const majorityElement = (nums) => {
         while (true) {
@@ -60,7 +63,7 @@ const majorityElement = (nums) => {
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const majorityElement1 = (nums) => {
         let frq = 0;
@@ -86,7 +89,7 @@ const majorityElement1 = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const majorityElement2 = (nums) => {
         const map = {};

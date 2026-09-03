@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minMoves,
         minMoves1,
@@ -39,25 +40,19 @@ const testcases = [
 ];
 
 describe('minMoves', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minMoves($classroom, $energy) -> $expected', ({
-                classroom,
-                energy,
-                expected,
-        }) => {
-                expect(minMoves(classroom, energy)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minMoves($classroom, $energy) -> $expected',
+                ({ classroom, energy, expected }) => {
+                        expect(minMoves(classroom, energy)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minMoves1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minMoves1($classroom, $energy) -> $expected', ({
-                classroom,
-                energy,
-                expected,
-        }) => {
-                expect(minMoves1(classroom, energy)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minMoves1($classroom, $energy) -> $expected',
+                ({ classroom, energy, expected }) => {
+                        expect(minMoves1(classroom, energy)).toStrictEqual(expected);
+                },
+        );
 });

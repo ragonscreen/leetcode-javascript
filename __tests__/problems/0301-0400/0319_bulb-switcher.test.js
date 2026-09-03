@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { bulbSwitch } from '../../../src/problems/0301-0400/0319_bulb-switcher.js';
 
 const testcases = [
@@ -10,10 +11,7 @@ const testcases = [
 ];
 
 describe('bulbSwitch', () => {
-        test.each(structuredClone(testcases))('bulbSwitch($n) -> $expected', ({
-                n,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('bulbSwitch($n) -> $expected', ({ n, expected }) => {
                 expect(bulbSwitch(n)).toStrictEqual(expected);
         });
 });

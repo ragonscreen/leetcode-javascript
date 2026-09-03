@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { remainingMethods } from '../../../src/problems/3301-3400/3310_remove-methods-from-project.js';
 
 const testcases = [
@@ -59,22 +60,16 @@ const testcases = [
 ];
 
 describe('remainingMethods', () => {
-        test.each(
-                structuredClone(testcases),
-        )('remainingMethods($n, $k, $invocations) -> $expected', ({
-                n,
-                k,
-                invocations,
-                expected,
-        }) => {
-                const received = Array.from(
-                        remainingMethods(n, k, invocations),
-                );
+        test.each(structuredClone(testcases))(
+                'remainingMethods($n, $k, $invocations) -> $expected',
+                ({ n, k, invocations, expected }) => {
+                        const received = Array.from(remainingMethods(n, k, invocations));
 
-                if (expected.length) {
-                        expect(received).toContainAllValues(expected);
-                } else {
-                        expect(received).toStrictEqual(expected);
-                }
-        });
+                        if (expected.length) {
+                                expect(received).toContainAllValues(expected);
+                        } else {
+                                expect(received).toStrictEqual(expected);
+                        }
+                },
+        );
 });

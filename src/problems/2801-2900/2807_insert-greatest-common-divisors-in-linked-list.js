@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Math (topic_8)
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 296,194
  * - Total Submissions: 324,150
  * - Acceptance Rate: 91.4%
  *
  * Similar Problems:
+ *
  * - reverse-linked-list (Easy)
  */
 
@@ -30,7 +33,7 @@ import { ListNode } from '../../data-structures/linked-list/LinkedListNode.js';
  * `n` = number of nodes in `head`, `k` = maximum value of a node in `head`
  *
  * @param {ListNode} head
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const insertGreatestCommonDivisors = (head) => {
         const g = (a, b) => (b ? g(b, a % b) : a);

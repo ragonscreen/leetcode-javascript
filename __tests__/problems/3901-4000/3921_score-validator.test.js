@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { scoreValidator } from '../../../src/problems/3901-4000/3921_score-validator.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('scoreValidator', () => {
-        test.each(
-                structuredClone(testcases),
-        )('scoreValidator($events) -> $expected', ({ events, expected }) => {
-                expect(scoreValidator(events)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'scoreValidator($events) -> $expected',
+                ({ events, expected }) => {
+                        expect(scoreValidator(events)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 161,444
  * - Total Submissions: 301,061
  * - Acceptance Rate: 53.6%
  *
  * Similar Problems:
+ *
  * - maximum-population-year (Easy)
  * - describe-the-painting (Medium)
  * - range-addition (Medium)
@@ -35,7 +38,7 @@
  *
  * @param {string} s
  * @param {number[][]} shifts
- * @return {string}
+ * @returns {string}
  */
 const shiftingLetters = (s, shifts) => {
         const n = s.length;
@@ -56,9 +59,7 @@ const shiftingLetters = (s, shifts) => {
 
         for (let i = 0; i < n; i++) {
                 cnt += (diff[i] % 26) + 26;
-                res += String.fromCharCode(
-                        ((s[i].charCodeAt() - a + cnt) % 26) + a,
-                );
+                res += String.fromCharCode(((s[i].charCodeAt() - a + cnt) % 26) + a);
         }
 
         return res;

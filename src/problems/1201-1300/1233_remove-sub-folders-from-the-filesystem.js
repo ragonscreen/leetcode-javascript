@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Depth-First Search (topic_21)
@@ -16,6 +17,7 @@
  * - Weekly Contest 159 (contest_weekly-contest-159)
  *
  * Stats:
+ *
  * - Total Accepted: 266,536
  * - Total Submissions: 339,137
  * - Acceptance Rate: 78.6%
@@ -35,7 +37,7 @@ class TrieNode {
  * `n` = `folder.length`, `l` = `max(folder[i].length)`
  *
  * @param {string[]} folder
- * @return {string[]}
+ * @returns {string[]}
  */
 const removeSubfolders = (folder) => {
         folder.sort();
@@ -64,7 +66,7 @@ const removeSubfolders = (folder) => {
  * `n` = `folder.length`, `l` = `max(folder[i].length)`
  *
  * @param {string[]} folder
- * @return {string[]}
+ * @returns {string[]}
  */
 const removeSubfolders1 = (folder) => {
         const cmp = (s, t) => {
@@ -102,7 +104,7 @@ const removeSubfolders1 = (folder) => {
  * `n` = `folder.length`, `l` = `max(folder[i].length)`
  *
  * @param {string[]} folder
- * @return {string[]}
+ * @returns {string[]}
  */
 const removeSubfolders2 = (folder) => {
         const n = folder.length;

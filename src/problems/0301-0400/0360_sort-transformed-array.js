@@ -1,5 +1,5 @@
 /**
- * 0360. Sort Transformed Array
+ * 360. Sort Transformed Array
  *
  * Link: https://leetcode.com/problems/sort-transformed-array/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 76,255
  * - Total Submissions: 131,498
  * - Acceptance Rate: 58.0%
  *
  * Similar Problems:
+ *
  * - squares-of-a-sorted-array (Easy)
  * - minimum-time-to-repair-cars (Medium)
  */
@@ -32,7 +35,7 @@
  * @param {number} a
  * @param {number} b
  * @param {number} c
- * @return {number[]}
+ * @returns {number[]}
  */
 const sortTransformedArray = (nums, a, b, c) => {
         const f = (x) => a * x ** 2 + b * x + c;
@@ -82,7 +85,7 @@ const sortTransformedArray = (nums, a, b, c) => {
  * @param {number} a
  * @param {number} b
  * @param {number} c
- * @return {number[]}
+ * @returns {number[]}
  */
 const sortTransformedArray1 = (nums, a, b, c) => {
         const f = (x) => a * x ** 2 + b * x + c;

@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Senior (position_senior)
  * - Biweekly Contest 183 (contest_biweekly-contest-183)
  *
  * Stats:
+ *
  * - Total Accepted: 19,067
  * - Total Submissions: 40,712
  * - Acceptance Rate: 46.8%
  *
  * Similar Problems:
+ *
  * - minimum-operations-to-make-array-modulo-alternating-ii (Hard) (Premium)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (nums, k) => {
         const n = nums.length;
@@ -95,7 +98,7 @@ const minOperations = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minOperations1 = (nums, k) => {
         let res = Number.MAX_SAFE_INTEGER;
@@ -110,9 +113,7 @@ const minOperations1 = (nums, k) => {
 
                         for (let i = 0; i < nums.length; i++) {
                                 const rem = nums[i] % k;
-                                const dist = Math.abs(
-                                        i % 2 ? x - rem : y - rem,
-                                );
+                                const dist = Math.abs(i % 2 ? x - rem : y - rem);
                                 sum += Math.min(dist, k - dist);
                         }
 

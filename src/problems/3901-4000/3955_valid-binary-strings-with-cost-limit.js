@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Senior (position_senior)
  * - Weekly Contest 505 (contest_weekly-contest-505)
  *
  * Stats:
+ *
  * - Total Accepted: 27,403
  * - Total Submissions: 34,930
  * - Acceptance Rate: 78.5%
@@ -25,7 +27,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {string[]}
+ * @returns {string[]}
  */
 const generateValidStrings = (n, k) => {
         const res = [];

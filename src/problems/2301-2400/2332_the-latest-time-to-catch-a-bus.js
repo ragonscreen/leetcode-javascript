@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 35,778
  * - Total Submissions: 119,104
  * - Acceptance Rate: 30.0%
  *
  * Similar Problems:
+ *
  * - maximum-matching-of-players-with-trainers (Medium)
  * - minimum-speed-to-arrive-on-time (Medium)
  * - rearranging-fruits (Hard)
@@ -34,7 +37,7 @@
  * @param {number[]} buses
  * @param {number[]} passengers
  * @param {number} capacity
- * @return {number}
+ * @returns {number}
  */
 const latestTimeCatchTheBus = (buses, passengers, capacity) => {
         buses.sort((a, b) => a - b);

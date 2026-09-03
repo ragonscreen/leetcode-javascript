@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Brainteaser (topic_32)
@@ -16,6 +17,7 @@
  * - Weekly Contest 487 (contest_weekly-contest-487)
  *
  * Stats:
+ *
  * - Total Accepted: 32,333
  * - Total Submissions: 79,574
  * - Acceptance Rate: 40.6%
@@ -27,7 +29,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const finalElement = (nums) => Math.max(nums[0], nums.at(-1));
 

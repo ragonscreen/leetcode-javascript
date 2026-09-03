@@ -1,5 +1,5 @@
 /**
- * 0026. Remove Duplicates from Sorted Array
+ * 26. Remove Duplicates from Sorted Array
  *
  * Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  *
  * Stats:
+ *
  * - Total Accepted: 7,600,858
  * - Total Submissions: 12,183,480
  * - Acceptance Rate: 62.4%
  *
  * Similar Problems:
+ *
  * - apply-operations-to-an-array (Easy)
  * - remove-element (Easy)
  * - remove-duplicates-from-sorted-array-ii (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const removeDuplicates = (nums) => {
         let slow = 1;

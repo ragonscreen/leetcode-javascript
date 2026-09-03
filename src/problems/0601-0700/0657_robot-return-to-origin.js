@@ -1,5 +1,5 @@
 /**
- * 0657. Robot Return to Origin
+ * 657. Robot Return to Origin
  *
  * Link: https://leetcode.com/problems/robot-return-to-origin/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 658,327
  * - Total Submissions: 843,801
  * - Acceptance Rate: 78.0%
  *
  * Similar Problems:
+ *
  * - furthest-point-from-origin (Easy)
  * - execution-of-all-suffix-instructions-staying-in-a-grid (Medium)
  * - number-of-provinces (Medium)
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} moves
- * @return {boolean}
+ * @returns {boolean}
  */
 const judgeCircle = (moves) => {
         const map = {

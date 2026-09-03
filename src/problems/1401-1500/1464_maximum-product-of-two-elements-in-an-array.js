@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sorting (topic_61049)
  * - Heap (Priority Queue) (topic_61050)
@@ -15,6 +16,7 @@
  * - Weekly Contest 191 (contest_weekly-contest-191)
  *
  * Stats:
+ *
  * - Total Accepted: 700,191
  * - Total Submissions: 824,126
  * - Acceptance Rate: 85.0%
@@ -27,7 +29,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxProduct = (nums) => {
         let mx1 = -1;

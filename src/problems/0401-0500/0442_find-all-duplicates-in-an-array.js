@@ -1,5 +1,5 @@
 /**
- * 0442. Find All Duplicates in an Array
+ * 442. Find All Duplicates in an Array
  *
  * Link: https://leetcode.com/problems/find-all-duplicates-in-an-array/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 1,021,460
  * - Total Submissions: 1,329,339
  * - Acceptance Rate: 76.8%
  *
  * Similar Problems:
+ *
  * - find-all-numbers-disappeared-in-an-array (Easy)
  * - the-two-sneaky-numbers-of-digitville (Easy)
  * - sum-of-distances (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const findDuplicates = (nums) => {
         const res = [];

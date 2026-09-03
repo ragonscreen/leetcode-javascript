@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Biweekly Contest 184 (contest_biweekly-contest-184)
  *
  * Stats:
+ *
  * - Total Accepted: 18,008
  * - Total Submissions: 33,267
  * - Acceptance Rate: 54.1%
@@ -25,7 +27,7 @@
  * @param {number} n
  * @param {number} brightness
  * @param {number[][]} intervals
- * @return {number}
+ * @returns {number}
  */
 const minEnergy = (n, brightness, intervals) => {
         intervals.sort((a, b) => a[0] - b[0]);

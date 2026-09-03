@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { validSequence } from '../../../src/problems/3301-3400/3302_find-the-lexicographically-smallest-valid-sequence.js';
 
 const testcases = [
@@ -12,15 +13,10 @@ const testcases = [
 ];
 
 describe('validSequence', () => {
-        test.each(
-                structuredClone(testcases),
-        )('validSequence($word1, $word2) -> $expected', ({
-                word1,
-                word2,
-                expected,
-        }) => {
-                expect(Array.from(validSequence(word1, word2))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'validSequence($word1, $word2) -> $expected',
+                ({ word1, word2, expected }) => {
+                        expect(Array.from(validSequence(word1, word2))).toStrictEqual(expected);
+                },
+        );
 });

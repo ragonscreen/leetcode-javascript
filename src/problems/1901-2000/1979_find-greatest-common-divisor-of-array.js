@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Number Theory (topic_61067)
@@ -17,11 +18,13 @@
  * - Weekly Contest 255 (contest_weekly-contest-255)
  *
  * Stats:
+ *
  * - Total Accepted: 412,848
  * - Total Submissions: 494,425
  * - Acceptance Rate: 83.5%
  *
  * Similar Problems:
+ *
  * - greatest-common-divisor-of-strings (Easy)
  * - maximum-subarray-with-equal-products (Easy)
  * - smallest-even-multiple (Easy)
@@ -38,7 +41,7 @@
  * `k` = `min(nums[i])`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const findGCD = (nums) => {
         const gcd = (a, b) => (a ? gcd(b % a, a) : b);

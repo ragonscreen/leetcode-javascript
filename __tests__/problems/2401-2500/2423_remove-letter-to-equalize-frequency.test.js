@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { equalFrequency } from '../../../src/problems/2401-2500/2423_remove-letter-to-equalize-frequency.js';
 
 const testcases = [
@@ -23,9 +24,10 @@ const testcases = [
 ];
 
 describe('equalFrequency', () => {
-        test.each(
-                structuredClone(testcases),
-        )('equalFrequency($word) -> $expected', ({ word, expected }) => {
-                expect(equalFrequency(word)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'equalFrequency($word) -> $expected',
+                ({ word, expected }) => {
+                        expect(equalFrequency(word)).toStrictEqual(expected);
+                },
+        );
 });

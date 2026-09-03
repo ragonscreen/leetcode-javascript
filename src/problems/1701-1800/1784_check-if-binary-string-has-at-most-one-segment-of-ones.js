@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 187,344
  * - Total Submissions: 382,437
  * - Acceptance Rate: 49.0%
  *
  * Similar Problems:
+ *
  * - longer-contiguous-segments-of-ones-than-zeros (Easy)
  */
 
@@ -25,7 +28,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 const checkOnesSegment = (s) => !s.includes('01');
 

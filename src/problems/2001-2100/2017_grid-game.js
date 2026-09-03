@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 139,426
  * - Total Submissions: 229,095
  * - Acceptance Rate: 60.9%
  *
  * Similar Problems:
+ *
  * - minimum-penalty-for-a-shop (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const gridGame = (grid) => {
         const n = grid[0].length;
@@ -55,7 +58,7 @@ const gridGame = (grid) => {
  * Space Complexity: O(n)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const gridGame1 = (grid) => {
         const n = grid[0].length;

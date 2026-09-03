@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { applyOperations } from '../../../src/problems/2401-2500/2460_apply-operations-to-an-array.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('applyOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('applyOperations($nums) -> $expected', ({ nums, expected }) => {
-                expect(applyOperations(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'applyOperations($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(applyOperations(nums)).toStrictEqual(expected);
+                },
+        );
 });

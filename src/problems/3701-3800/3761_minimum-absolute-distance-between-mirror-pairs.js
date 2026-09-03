@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 65,620
  * - Total Submissions: 117,315
  * - Acceptance Rate: 55.9%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minMirrorPairDistance = (nums) => {
         const r = (num) => {

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numOfSubarrays } from '../../../src/problems/1301-1400/1343_number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.js';
 
 const testcases = [
@@ -12,16 +13,10 @@ const testcases = [
 ];
 
 describe('numOfSubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numOfSubarrays($arr, $k, $threshold) -> $expected', ({
-                arr,
-                k,
-                threshold,
-                expected,
-        }) => {
-                expect(numOfSubarrays(arr, k, threshold)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'numOfSubarrays($arr, $k, $threshold) -> $expected',
+                ({ arr, k, threshold, expected }) => {
+                        expect(numOfSubarrays(arr, k, threshold)).toStrictEqual(expected);
+                },
+        );
 });

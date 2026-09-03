@@ -1,5 +1,5 @@
 /**
- * 0367. Valid Perfect Square
+ * 367. Valid Perfect Square
  *
  * Link: https://leetcode.com/problems/valid-perfect-square/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 924,333
  * - Total Submissions: 2,059,685
  * - Acceptance Rate: 44.9%
  *
  * Similar Problems:
+ *
  * - sqrtx (Easy)
  * - sum-of-square-numbers (Medium)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} num
- * @return {boolean}
+ * @returns {boolean}
  */
 const isPerfectSquare = (num) => {
         let ok = 1;

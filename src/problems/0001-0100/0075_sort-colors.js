@@ -1,5 +1,5 @@
 /**
- * 0075. Sort Colors
+ * 75. Sort Colors
  *
  * Link: https://leetcode.com/problems/sort-colors/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 3,675,783
  * - Total Submissions: 5,295,334
  * - Acceptance Rate: 69.4%
  *
  * Similar Problems:
+ *
  * - sort-list (Medium)
  * - wiggle-sort (Medium)
  * - wiggle-sort-ii (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {void}
+ * @returns {void}
  */
 const sortColors = (nums) => {
         for (let i = 0, l = 0, r = nums.length - 1; i <= r; i++) {
@@ -50,7 +53,7 @@ const sortColors = (nums) => {
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {void}
+ * @returns {void}
  */
 const sortColors1 = (nums) => {
         const arr = [0, 0, 0];
@@ -75,7 +78,7 @@ const sortColors1 = (nums) => {
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {void}
+ * @returns {void}
  */
 const sortColors2 = (nums) => {
         for (let i = 1; i < nums.length; i++) {

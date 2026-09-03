@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Linked List (topic_7)
  * - Stack (topic_15)
@@ -16,6 +17,7 @@
  * - Weekly Contest 130 (contest_weekly-contest-130)
  *
  * Stats:
+ *
  * - Total Accepted: 227,589
  * - Total Submissions: 353,722
  * - Acceptance Rate: 64.3%
@@ -28,7 +30,7 @@
  * `n` = `head.length`
  *
  * @param {ListNode} head
- * @return {number[]}
+ * @returns {number[]}
  */
 const nextLargerNodes = (head) => {
         const stack = [];

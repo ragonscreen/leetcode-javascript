@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { sumGame } from '../../../src/problems/1901-2000/1927_sum-game.js';
 
 const testcases = [
@@ -8,10 +9,7 @@ const testcases = [
 ];
 
 describe('sumGame', () => {
-        test.each(structuredClone(testcases))('sumGame($num) -> $expected', ({
-                num,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('sumGame($num) -> $expected', ({ num, expected }) => {
                 expect(sumGame(num)).toStrictEqual(expected);
         });
 });

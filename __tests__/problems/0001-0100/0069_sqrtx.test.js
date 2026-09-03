@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { mySqrt, mySqrt1 } from '../../../src/problems/0001-0100/0069_sqrtx.js';
 
 const testcases = [
@@ -13,19 +14,13 @@ const testcases = [
 ];
 
 describe('mySqrt', () => {
-        test.each(structuredClone(testcases))('mySqrt($x) -> $expected', ({
-                x,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('mySqrt($x) -> $expected', ({ x, expected }) => {
                 expect(mySqrt(x)).toStrictEqual(expected);
         });
 });
 
 describe('mySqrt1', () => {
-        test.each(structuredClone(testcases))('mySqrt1($x) -> $expected', ({
-                x,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('mySqrt1($x) -> $expected', ({ x, expected }) => {
                 expect(mySqrt1(x)).toStrictEqual(expected);
         });
 });

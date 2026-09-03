@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Dynamic Programming (topic_13)
@@ -15,11 +16,13 @@
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 169,515
  * - Total Submissions: 333,006
  * - Acceptance Rate: 50.9%
  *
  * Similar Problems:
+ *
  * - minimum-absolute-difference (Easy)
  * - minimum-difference-between-largest-and-smallest-value-in-three-moves (Medium)
  */
@@ -32,7 +35,7 @@
  *
  * @param {number[]} nums
  * @param {number} p
- * @return {number}
+ * @returns {number}
  */
 const minimizeMax = (nums, p) => {
         nums.sort((a, b) => a - b);

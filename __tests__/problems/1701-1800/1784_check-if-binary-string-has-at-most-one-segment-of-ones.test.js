@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { checkOnesSegment } from '../../../src/problems/1701-1800/1784_check-if-binary-string-has-at-most-one-segment-of-ones.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('checkOnesSegment', () => {
-        test.each(
-                structuredClone(testcases),
-        )('checkOnesSegment($s) -> $expected', ({ s, expected }) => {
-                expect(checkOnesSegment(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'checkOnesSegment($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(checkOnesSegment(s)).toStrictEqual(expected);
+                },
+        );
 });

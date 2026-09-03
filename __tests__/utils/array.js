@@ -8,9 +8,7 @@ const arrDeepSort = (arr, type = 'number', descending = false) => {
 
                         if (!(Array.isArray(a) || Array.isArray(b))) {
                                 if (type === 'string') {
-                                        return descending
-                                                ? b.localeCompare(a)
-                                                : a.localeCompare(b);
+                                        return descending ? b.localeCompare(a) : a.localeCompare(b);
                                 }
 
                                 return descending ? b - a : a - b;

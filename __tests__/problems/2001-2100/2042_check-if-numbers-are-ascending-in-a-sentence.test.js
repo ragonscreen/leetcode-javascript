@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         areNumbersAscending,
         areNumbersAscending1,
@@ -20,25 +21,28 @@ const testcases = [
 ];
 
 describe('areNumbersAscending', () => {
-        test.each(
-                structuredClone(testcases),
-        )('areNumbersAscending($s) -> $expected', ({ s, expected }) => {
-                expect(areNumbersAscending(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'areNumbersAscending($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(areNumbersAscending(s)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('areNumbersAscending1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('areNumbersAscending1($s) -> $expected', ({ s, expected }) => {
-                expect(areNumbersAscending1(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'areNumbersAscending1($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(areNumbersAscending1(s)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('areNumbersAscending2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('areNumbersAscending2($s) -> $expected', ({ s, expected }) => {
-                expect(areNumbersAscending2(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'areNumbersAscending2($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(areNumbersAscending2(s)).toStrictEqual(expected);
+                },
+        );
 });

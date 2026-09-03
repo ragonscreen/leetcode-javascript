@@ -1,5 +1,5 @@
 /**
- * 0487. Max Consecutive Ones II
+ * 487. Max Consecutive Ones II
  *
  * Link: https://leetcode.com/problems/max-consecutive-ones-ii/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 183,813
  * - Total Submissions: 353,454
  * - Acceptance Rate: 52.0%
  *
  * Similar Problems:
+ *
  * - max-consecutive-ones (Easy)
  * - all-divisions-with-the-highest-score-of-a-binary-array (Medium)
  * - max-consecutive-ones-iii (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const findMaxConsecutiveOnes = (nums) => {
         let res = 0;

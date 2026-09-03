@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestConsecutive } from '../../../src/problems/0101-0200/0128_longest-consecutive-sequence.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('longestConsecutive', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestConsecutive($nums) -> $expected', ({ nums, expected }) => {
-                expect(longestConsecutive(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestConsecutive($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(longestConsecutive(nums)).toStrictEqual(expected);
+                },
+        );
 });

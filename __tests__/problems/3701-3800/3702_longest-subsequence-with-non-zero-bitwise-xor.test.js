@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestSubsequence } from '../../../src/problems/3701-3800/3702_longest-subsequence-with-non-zero-bitwise-xor.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('longestSubsequence', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestSubsequence($nums) -> $expected', ({ nums, expected }) => {
-                expect(longestSubsequence(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestSubsequence($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(longestSubsequence(nums)).toStrictEqual(expected);
+                },
+        );
 });

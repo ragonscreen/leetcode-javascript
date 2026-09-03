@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { pivotArray } from '../../../src/problems/2101-2200/2161_partition-array-according-to-given-pivot.js';
 
 const testcases = [
@@ -11,15 +12,10 @@ const testcases = [
 ];
 
 describe('pivotArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('pivotArray($nums, $pivot) -> $expected', ({
-                nums,
-                pivot,
-                expected,
-        }) => {
-                expect(Array.from(pivotArray(nums, pivot))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'pivotArray($nums, $pivot) -> $expected',
+                ({ nums, pivot, expected }) => {
+                        expect(Array.from(pivotArray(nums, pivot))).toStrictEqual(expected);
+                },
+        );
 });

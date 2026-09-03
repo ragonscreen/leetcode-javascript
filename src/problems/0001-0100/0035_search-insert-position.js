@@ -1,5 +1,5 @@
 /**
- * 0035. Search Insert Position
+ * 35. Search Insert Position
  *
  * Link: https://leetcode.com/problems/search-insert-position/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 4,646,520
  * - Total Submissions: 9,119,477
  * - Acceptance Rate: 51.0%
  *
  * Similar Problems:
+ *
  * - first-bad-version (Easy)
  * - minimum-operations-to-exceed-threshold-value-i (Easy)
  */
@@ -28,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const searchInsert = (nums, target) => {
         let l = 0;

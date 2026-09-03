@@ -1,8 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import {
-        myAtoi,
-        myAtoi1,
-} from '../../../src/problems/0001-0100/0008_string-to-integer-atoi.js';
+
+import { myAtoi, myAtoi1 } from '../../../src/problems/0001-0100/0008_string-to-integer-atoi.js';
 import { normaliseNegZero } from '../../utils/number.js';
 
 const testcases = [
@@ -19,19 +17,13 @@ const testcases = [
 ];
 
 describe('myAtoi', () => {
-        test.each(structuredClone(testcases))('myAtoi($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('myAtoi($s) -> $expected', ({ s, expected }) => {
                 expect(normaliseNegZero(myAtoi(s))).toStrictEqual(expected);
         });
 });
 
 describe('myAtoi1', () => {
-        test.each(structuredClone(testcases))('myAtoi1($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('myAtoi1($s) -> $expected', ({ s, expected }) => {
                 expect(normaliseNegZero(myAtoi1(s))).toStrictEqual(expected);
         });
 });

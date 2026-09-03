@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         arrangeCoins,
         arrangeCoins1,
@@ -10,17 +11,19 @@ const testcases = [
 ];
 
 describe('arrangeCoins', () => {
-        test.each(
-                structuredClone(testcases),
-        )('arrangeCoins($n) -> $expected', ({ n, expected }) => {
-                expect(arrangeCoins(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'arrangeCoins($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(arrangeCoins(n)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('arrangeCoins1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('arrangeCoins1($n) -> $expected', ({ n, expected }) => {
-                expect(arrangeCoins1(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'arrangeCoins1($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(arrangeCoins1(n)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimizedStringLength } from '../../../src/problems/2701-2800/2716_minimize-string-length.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minimizedStringLength', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimizedStringLength($s) -> $expected', ({ s, expected }) => {
-                expect(minimizedStringLength(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimizedStringLength($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(minimizedStringLength(s)).toStrictEqual(expected);
+                },
+        );
 });

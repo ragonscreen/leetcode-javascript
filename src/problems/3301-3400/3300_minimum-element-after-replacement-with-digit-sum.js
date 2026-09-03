@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Mid Level (position_mid-level)
  * - Biweekly Contest 140 (contest_biweekly-contest-140)
  *
  * Stats:
+ *
  * - Total Accepted: 120,843
  * - Total Submissions: 137,150
  * - Acceptance Rate: 88.1%
  *
  * Similar Problems:
+ *
  * - sum-of-digits-of-string-after-convert (Easy)
  */
 
@@ -29,7 +32,7 @@
  * `n` = `nums.length`, `k` = `max(nums[i])`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minElement = (nums) => {
         let res = Number.MAX_SAFE_INTEGER;

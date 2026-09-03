@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 208,435
  * - Total Submissions: 435,811
  * - Acceptance Rate: 47.8%
  *
  * Similar Problems:
+ *
  * - find-k-closest-elements (Medium)
  */
 
@@ -25,7 +28,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const findClosestNumber = (nums) => {
         let minDiff = Math.abs(nums[0]);

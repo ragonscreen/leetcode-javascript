@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { largestRectangleArea } from '../../../src/problems/0001-0100/0084_largest-rectangle-in-histogram.js';
 
 const testcases = [
@@ -7,12 +8,10 @@ const testcases = [
 ];
 
 describe('largestRectangleArea', () => {
-        test.each(
-                structuredClone(testcases),
-        )('largestRectangleArea($heights) -> $expected', ({
-                heights,
-                expected,
-        }) => {
-                expect(largestRectangleArea(heights)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'largestRectangleArea($heights) -> $expected',
+                ({ heights, expected }) => {
+                        expect(largestRectangleArea(heights)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Binary Search (topic_11)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 86,773
  * - Total Submissions: 166,639
  * - Acceptance Rate: 52.1%
  *
  * Similar Problems:
+ *
  * - continuous-subarray-sum (Medium)
  * - longest-repeating-character-replacement (Medium)
  * - moving-stones-until-consecutive-ii (Medium)
@@ -32,7 +35,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (nums) => {
         const n = nums.length;

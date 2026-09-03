@@ -1,5 +1,5 @@
 /**
- * 0451. Sort Characters By Frequency
+ * 451. Sort Characters By Frequency
  *
  * Link: https://leetcode.com/problems/sort-characters-by-frequency/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sorting (topic_61049)
@@ -16,11 +17,13 @@
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 1,085,501
  * - Total Submissions: 1,444,358
  * - Acceptance Rate: 75.2%
  *
  * Similar Problems:
+ *
  * - count-pairs-of-similar-strings (Easy)
  * - first-unique-character-in-a-string (Easy)
  * - maximum-number-of-pairs-in-array (Easy)
@@ -37,7 +40,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const frequencySort = (s) => {
         const map = {};

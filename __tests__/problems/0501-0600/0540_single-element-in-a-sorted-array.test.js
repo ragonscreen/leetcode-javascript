@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { singleNonDuplicate } from '../../../src/problems/0501-0600/0540_single-element-in-a-sorted-array.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('singleNonDuplicate', () => {
-        test.each(
-                structuredClone(testcases),
-        )('singleNonDuplicate($nums) -> $expected', ({ nums, expected }) => {
-                expect(singleNonDuplicate(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'singleNonDuplicate($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(singleNonDuplicate(nums)).toStrictEqual(expected);
+                },
+        );
 });

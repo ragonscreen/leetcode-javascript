@@ -1,5 +1,5 @@
 /**
- * 0162. Find Peak Element
+ * 162. Find Peak Element
  *
  * Link: https://leetcode.com/problems/find-peak-element/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 2,373,537
  * - Total Submissions: 5,065,247
  * - Acceptance Rate: 46.9%
  *
  * Similar Problems:
+ *
  * - count-hills-and-valleys-in-an-array (Easy)
  * - find-the-peaks (Easy)
  * - find-a-peak-element-ii (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const findPeakElement = (nums) => {
         let l = 0;
@@ -55,7 +58,7 @@ const findPeakElement = (nums) => {
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const findPeakElement1 = (nums) => {
         const min = Number.MIN_SAFE_INTEGER;

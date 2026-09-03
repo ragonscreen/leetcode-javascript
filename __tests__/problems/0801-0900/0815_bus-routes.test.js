@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numBusesToDestination } from '../../../src/problems/0801-0900/0815_bus-routes.js';
 
 const testcases = [
@@ -53,16 +54,12 @@ const testcases = [
 ];
 
 describe('numBusesToDestination', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numBusesToDestination($routes, $source, $target) -> $expected', ({
-                routes,
-                source,
-                target,
-                expected,
-        }) => {
-                expect(
-                        numBusesToDestination(routes, source, target),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numBusesToDestination($routes, $source, $target) -> $expected',
+                ({ routes, source, target, expected }) => {
+                        expect(numBusesToDestination(routes, source, target)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

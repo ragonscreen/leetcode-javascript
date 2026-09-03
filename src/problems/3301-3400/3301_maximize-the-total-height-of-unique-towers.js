@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 34,832
  * - Total Submissions: 93,145
  * - Acceptance Rate: 37.4%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} maximumHeight
- * @return {number}
+ * @returns {number}
  */
 const maximumTotalSum = (maximumHeight) => {
         maximumHeight.sort((a, b) => b - a);

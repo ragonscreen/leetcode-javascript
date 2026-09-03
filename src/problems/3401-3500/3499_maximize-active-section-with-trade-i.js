@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Enumeration (topic_61066)
  * - Senior (position_senior)
  * - Biweekly Contest 153 (contest_biweekly-contest-153)
  *
  * Stats:
+ *
  * - Total Accepted: 112,864
  * - Total Submissions: 185,141
  * - Acceptance Rate: 61.0%
@@ -26,7 +28,7 @@
  * `n` = `s.length`
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const maxActiveSectionsAfterTrade = (s) => {
         const n = s.length;

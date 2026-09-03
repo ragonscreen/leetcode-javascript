@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { moveZeroes } from '../../../src/problems/0201-0300/0283_move-zeroes.js';
 
 const testcases = [
@@ -7,10 +8,11 @@ const testcases = [
 ];
 
 describe('moveZeroes', () => {
-        test.each(
-                structuredClone(testcases),
-        )('moveZeroes($nums) -> $expected', ({ nums, expected }) => {
-                expect(moveZeroes(nums)).toBeNil();
-                expect(nums).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'moveZeroes($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(moveZeroes(nums)).toBeNil();
+                        expect(nums).toStrictEqual(expected);
+                },
+        );
 });

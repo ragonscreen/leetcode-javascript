@@ -1,5 +1,5 @@
 /**
- * 0881. Boats to Save People
+ * 881. Boats to Save People
  *
  * Link: https://leetcode.com/problems/boats-to-save-people/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 555,034
  * - Total Submissions: 902,428
  * - Acceptance Rate: 61.5%
@@ -27,7 +29,7 @@
  *
  * @param {number[]} people
  * @param {number} limit
- * @return {number}
+ * @returns {number}
  */
 const numRescueBoats = (people, limit) => {
         const maxWeight = Math.max(...people);
@@ -78,7 +80,7 @@ const numRescueBoats = (people, limit) => {
  *
  * @param {number[]} people
  * @param {number} limit
- * @return {number}
+ * @returns {number}
  */
 const numRescueBoats1 = (people, limit) => {
         const nums = people.sort((a, b) => a - b);
@@ -110,7 +112,7 @@ const numRescueBoats1 = (people, limit) => {
  *
  * @param {number[]} people
  * @param {number} limit
- * @return {number}
+ * @returns {number}
  */
 const numRescueBoats2 = (people, limit) => {
         const nums = people.sort((a, b) => b - a);

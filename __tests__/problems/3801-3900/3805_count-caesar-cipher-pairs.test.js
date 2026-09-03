@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countPairs } from '../../../src/problems/3801-3900/3805_count-caesar-cipher-pairs.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('countPairs', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countPairs($words) -> $expected', ({ words, expected }) => {
-                expect(countPairs(words)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countPairs($words) -> $expected',
+                ({ words, expected }) => {
+                        expect(countPairs(words)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minimumObstacles,
         minimumObstacles1,
@@ -25,25 +26,28 @@ const testcases = [
 ];
 
 describe('minimumObstacles', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumObstacles($grid) -> $expected', ({ grid, expected }) => {
-                expect(minimumObstacles(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumObstacles($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(minimumObstacles(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minimumObstacles1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumObstacles1($grid) -> $expected', ({ grid, expected }) => {
-                expect(minimumObstacles1(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumObstacles1($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(minimumObstacles1(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minimumObstacles2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumObstacles2($grid) -> $expected', ({ grid, expected }) => {
-                expect(minimumObstacles2(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumObstacles2($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(minimumObstacles2(grid)).toStrictEqual(expected);
+                },
+        );
 });

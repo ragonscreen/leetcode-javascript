@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumBeauty } from '../../../src/problems/2701-2800/2779_maximum-beauty-of-an-array-after-applying-operation.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('maximumBeauty', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumBeauty($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(maximumBeauty(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumBeauty($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(maximumBeauty(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

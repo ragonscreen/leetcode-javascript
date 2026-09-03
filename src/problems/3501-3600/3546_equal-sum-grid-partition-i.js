@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Enumeration (topic_61066)
@@ -16,6 +17,7 @@
  * - Weekly Contest 449 (contest_weekly-contest-449)
  *
  * Stats:
+ *
  * - Total Accepted: 133,202
  * - Total Submissions: 252,056
  * - Acceptance Rate: 52.8%
@@ -28,15 +30,12 @@
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
- * @return {boolean}
+ * @returns {boolean}
  */
 const canPartitionGrid = (grid) => {
         const n = grid.length;
         const m = grid[0].length;
-        const tot = grid.reduce(
-                (t, c) => t + c.reduce((tt, cc) => tt + cc, 0),
-                0,
-        );
+        const tot = grid.reduce((t, c) => t + c.reduce((tt, cc) => tt + cc, 0), 0);
         let sum = 0;
 
         for (let y = 0; y < n - 1; y++) {
@@ -71,7 +70,7 @@ const canPartitionGrid = (grid) => {
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
- * @return {boolean}
+ * @returns {boolean}
  */
 const canPartitionGrid1 = (grid) => {
         const n = grid.length;

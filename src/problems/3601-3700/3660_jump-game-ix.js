@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 38,747
  * - Total Submissions: 107,410
  * - Acceptance Rate: 36.1%
@@ -25,7 +27,7 @@ import { Queue } from '@datastructures-js/queue';
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const maxValue = (nums) => {
         const n = nums.length;
@@ -62,7 +64,7 @@ const maxValue = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const maxValue1 = (nums) => {
         const n = nums.length;
@@ -104,7 +106,7 @@ const maxValue1 = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const maxValue2 = (nums) => {
         const n = nums.length;

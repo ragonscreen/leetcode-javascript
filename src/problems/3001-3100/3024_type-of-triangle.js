@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 218,355
  * - Total Submissions: 495,358
  * - Acceptance Rate: 44.1%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {string}
+ * @returns {string}
  */
 const triangleType = (nums) => {
         const [a, b, c] = nums;

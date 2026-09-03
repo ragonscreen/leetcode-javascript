@@ -1,5 +1,5 @@
 /**
- * 0060. Permutation Sequence
+ * 60. Permutation Sequence
  *
  * Link: https://leetcode.com/problems/permutation-sequence/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 571,874
  * - Total Submissions: 1,083,882
  * - Acceptance Rate: 52.8%
  *
  * Similar Problems:
+ *
  * - next-permutation (Medium)
  * - permutations (Medium)
  */
@@ -28,7 +31,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {string}
+ * @returns {string}
  */
 const getPermutation = (n, k) => {
         const memo = [1];

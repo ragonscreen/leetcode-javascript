@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countCollisions } from '../../../src/problems/2201-2300/2211_count-collisions-on-a-road.js';
 
 const testcases = [
@@ -8,12 +9,10 @@ const testcases = [
 ];
 
 describe('countCollisions', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countCollisions($directions) -> $expected', ({
-                directions,
-                expected,
-        }) => {
-                expect(countCollisions(directions)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countCollisions($directions) -> $expected',
+                ({ directions, expected }) => {
+                        expect(countCollisions(directions)).toStrictEqual(expected);
+                },
+        );
 });

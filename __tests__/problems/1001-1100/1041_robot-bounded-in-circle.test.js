@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { isRobotBounded } from '../../../src/problems/1001-1100/1041_robot-bounded-in-circle.js';
 
 const testcases = [
@@ -13,12 +14,10 @@ const testcases = [
 ];
 
 describe('isRobotBounded', () => {
-        test.each(
-                structuredClone(testcases),
-        )('isRobotBounded($instructions) -> $expected', ({
-                instructions,
-                expected,
-        }) => {
-                expect(isRobotBounded(instructions)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isRobotBounded($instructions) -> $expected',
+                ({ instructions, expected }) => {
+                        expect(isRobotBounded(instructions)).toStrictEqual(expected);
+                },
+        );
 });

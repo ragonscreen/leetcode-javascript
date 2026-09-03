@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         maxDistance,
         maxDistance1,
@@ -11,25 +12,19 @@ const testcases = [
 ];
 
 describe('maxDistance', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxDistance($nums1, $nums2) -> $expected', ({
-                nums1,
-                nums2,
-                expected,
-        }) => {
-                expect(maxDistance(nums1, nums2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxDistance($nums1, $nums2) -> $expected',
+                ({ nums1, nums2, expected }) => {
+                        expect(maxDistance(nums1, nums2)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('maxDistance1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxDistance1($nums1, $nums2) -> $expected', ({
-                nums1,
-                nums2,
-                expected,
-        }) => {
-                expect(maxDistance1(nums1, nums2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxDistance1($nums1, $nums2) -> $expected',
+                ({ nums1, nums2, expected }) => {
+                        expect(maxDistance1(nums1, nums2)).toStrictEqual(expected);
+                },
+        );
 });

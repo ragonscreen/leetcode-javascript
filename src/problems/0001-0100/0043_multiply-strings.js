@@ -1,5 +1,5 @@
 /**
- * 0043. Multiply Strings
+ * 43. Multiply Strings
  *
  * Link: https://leetcode.com/problems/multiply-strings/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 1,133,582
  * - Total Submissions: 2,591,480
  * - Acceptance Rate: 43.7%
  *
  * Similar Problems:
+ *
  * - add-binary (Easy)
  * - add-strings (Easy)
  * - plus-one (Easy)
@@ -32,7 +35,7 @@
  *
  * @param {string} num1
  * @param {string} num2
- * @return {string}
+ * @returns {string}
  */
 const multiply = (num1, num2) => {
         let max;

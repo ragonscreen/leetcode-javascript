@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minEatingSpeed } from '../../../src/problems/0801-0900/0875_koko-eating-bananas.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('minEatingSpeed', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minEatingSpeed($piles, $h) -> $expected', ({
-                piles,
-                h,
-                expected,
-        }) => {
-                expect(minEatingSpeed(piles, h)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minEatingSpeed($piles, $h) -> $expected',
+                ({ piles, h, expected }) => {
+                        expect(minEatingSpeed(piles, h)).toStrictEqual(expected);
+                },
+        );
 });

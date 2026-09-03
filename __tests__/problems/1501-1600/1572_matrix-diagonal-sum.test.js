@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { diagonalSum } from '../../../src/problems/1501-1600/1572_matrix-diagonal-sum.js';
 
 const testcases = [
@@ -23,9 +24,10 @@ const testcases = [
 ];
 
 describe('diagonalSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('diagonalSum($mat) -> $expected', ({ mat, expected }) => {
-                expect(diagonalSum(mat)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'diagonalSum($mat) -> $expected',
+                ({ mat, expected }) => {
+                        expect(diagonalSum(mat)).toStrictEqual(expected);
+                },
+        );
 });

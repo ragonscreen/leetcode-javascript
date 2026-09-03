@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         countCompleteComponents,
         countCompleteComponents1,
@@ -29,29 +30,19 @@ const testcases = [
 ];
 
 describe('countCompleteComponents', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countCompleteComponents($n, $edges) -> $expected', ({
-                n,
-                edges,
-                expected,
-        }) => {
-                expect(countCompleteComponents(n, edges)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countCompleteComponents($n, $edges) -> $expected',
+                ({ n, edges, expected }) => {
+                        expect(countCompleteComponents(n, edges)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countCompleteComponents1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countCompleteComponents1($n, $edges) -> $expected', ({
-                n,
-                edges,
-                expected,
-        }) => {
-                expect(countCompleteComponents1(n, edges)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countCompleteComponents1($n, $edges) -> $expected',
+                ({ n, edges, expected }) => {
+                        expect(countCompleteComponents1(n, edges)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         arrayStringsAreEqual,
         arrayStringsAreEqual1,
@@ -13,29 +14,19 @@ const testcases = [
 ];
 
 describe('arrayStringsAreEqual', () => {
-        test.each(
-                structuredClone(testcases),
-        )('arrayStringsAreEqual($word1, $word2) -> $expected', ({
-                word1,
-                word2,
-                expected,
-        }) => {
-                expect(arrayStringsAreEqual(word1, word2)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'arrayStringsAreEqual($word1, $word2) -> $expected',
+                ({ word1, word2, expected }) => {
+                        expect(arrayStringsAreEqual(word1, word2)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('arrayStringsAreEqual1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('arrayStringsAreEqual1($word1, $word2) -> $expected', ({
-                word1,
-                word2,
-                expected,
-        }) => {
-                expect(arrayStringsAreEqual1(word1, word2)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'arrayStringsAreEqual1($word1, $word2) -> $expected',
+                ({ word1, word2, expected }) => {
+                        expect(arrayStringsAreEqual1(word1, word2)).toStrictEqual(expected);
+                },
+        );
 });

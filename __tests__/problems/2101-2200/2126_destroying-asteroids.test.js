@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { asteroidsDestroyed } from '../../../src/problems/2101-2200/2126_destroying-asteroids.js';
 
 const testcases = [
@@ -7,15 +8,10 @@ const testcases = [
 ];
 
 describe('asteroidsDestroyed', () => {
-        test.each(
-                structuredClone(testcases),
-        )('asteroidsDestroyed($mass, $asteroids) -> $expected', ({
-                mass,
-                asteroids,
-                expected,
-        }) => {
-                expect(asteroidsDestroyed(mass, asteroids)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'asteroidsDestroyed($mass, $asteroids) -> $expected',
+                ({ mass, asteroids, expected }) => {
+                        expect(asteroidsDestroyed(mass, asteroids)).toStrictEqual(expected);
+                },
+        );
 });

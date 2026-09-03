@@ -1,5 +1,5 @@
 /**
- * 0279. Perfect Squares
+ * 279. Perfect Squares
  *
  * Link: https://leetcode.com/problems/perfect-squares/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
  * - Breadth-First Search (topic_22)
  *
  * Stats:
+ *
  * - Total Accepted: 1,066,076
  * - Total Submissions: 1,884,631
  * - Acceptance Rate: 56.6%
  *
  * Similar Problems:
+ *
  * - count-primes (Medium)
  * - ugly-number-ii (Medium)
  * - ways-to-express-an-integer-as-sum-of-powers (Medium)
@@ -30,7 +33,7 @@
  * `N` = `n`
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const numSquares = (n) => {
         const a = Math.sqrt(n);
@@ -71,7 +74,7 @@ const numSquares = (n) => {
  * `N` = `n`
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const numSquares1 = (n) => {
         const a = Math.sqrt(n);

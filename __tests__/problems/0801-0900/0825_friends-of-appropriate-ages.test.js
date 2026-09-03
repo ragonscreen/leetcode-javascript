@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numFriendRequests } from '../../../src/problems/0801-0900/0825_friends-of-appropriate-ages.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('numFriendRequests', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numFriendRequests($ages) -> $expected', ({ ages, expected }) => {
-                expect(numFriendRequests(ages)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numFriendRequests($ages) -> $expected',
+                ({ ages, expected }) => {
+                        expect(numFriendRequests(ages)).toStrictEqual(expected);
+                },
+        );
 });

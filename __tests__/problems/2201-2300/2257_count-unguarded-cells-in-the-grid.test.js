@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countUnguarded } from '../../../src/problems/2201-2300/2257_count-unguarded-cells-in-the-grid.js';
 
 const testcases = [
@@ -32,17 +33,10 @@ const testcases = [
 ];
 
 describe('countUnguarded', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countUnguarded($m, $n, $guards, $walls) -> $expected', ({
-                m,
-                n,
-                guards,
-                walls,
-                expected,
-        }) => {
-                expect(countUnguarded(m, n, guards, walls)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countUnguarded($m, $n, $guards, $walls) -> $expected',
+                ({ m, n, guards, walls, expected }) => {
+                        expect(countUnguarded(m, n, guards, walls)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 136,874
  * - Total Submissions: 198,596
  * - Acceptance Rate: 68.9%
  *
  * Similar Problems:
+ *
  * - maximum-difference-between-increasing-elements (Easy)
  * - replace-elements-with-greatest-element-on-right-side (Easy)
  * - maximum-distance-between-a-pair-of-values (Medium)
@@ -28,16 +31,13 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} colors
- * @return {number}
+ * @returns {number}
  */
 const maxDistance = (colors) => {
         const n = colors.length;
 
         for (let i = 0; i < n; i++) {
-                if (
-                        colors[n - 1 - i] !== colors[0] ||
-                        colors[i] !== colors[n - 1]
-                ) {
+                if (colors[n - 1 - i] !== colors[0] || colors[i] !== colors[n - 1]) {
                         return n - 1 - i;
                 }
         }
@@ -51,7 +51,7 @@ const maxDistance = (colors) => {
  * Space Complexity: O(1)
  *
  * @param {number[]} colors
- * @return {number}
+ * @returns {number}
  */
 const maxDistance1 = (colors) => {
         const n = colors.length;

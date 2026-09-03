@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 34,342
  * - Total Submissions: 179,474
  * - Acceptance Rate: 19.1%
@@ -23,7 +25,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const smallestBalancedIndex = (nums) => {
         const n = nums.length;

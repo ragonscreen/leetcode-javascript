@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Simulation (topic_61055)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 176 (contest_biweekly-contest-176)
  *
  * Stats:
+ *
  * - Total Accepted: 77,858
  * - Total Submissions: 87,733
  * - Acceptance Rate: 88.7%
@@ -28,7 +30,7 @@
  *
  * @param {string[]} words
  * @param {number[]} weights
- * @return {string}
+ * @returns {string}
  */
 const mapWordWeights = (words, weights) => {
         let res = '';

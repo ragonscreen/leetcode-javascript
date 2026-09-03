@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { singleNumber } from '../../../src/problems/0101-0200/0136_single-number.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('singleNumber', () => {
-        test.each(
-                structuredClone(testcases),
-        )('singleNumber($nums) -> $expected', ({ nums, expected }) => {
-                expect(singleNumber(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'singleNumber($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(singleNumber(nums)).toStrictEqual(expected);
+                },
+        );
 });

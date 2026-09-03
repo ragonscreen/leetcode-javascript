@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { constructProductMatrix } from '../../../src/problems/2901-3000/2906_construct-product-matrix.js';
 
 const testcases = [
@@ -48,12 +49,10 @@ const testcases = [
 ];
 
 describe('constructProductMatrix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('constructProductMatrix($grid) -> $expected', ({
-                grid,
-                expected,
-        }) => {
-                expect(constructProductMatrix(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'constructProductMatrix($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(constructProductMatrix(grid)).toStrictEqual(expected);
+                },
+        );
 });

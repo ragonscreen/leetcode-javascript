@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { replaceNonCoprimes } from '../../../src/problems/2101-2200/2197_replace-non-coprime-numbers-in-array.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('replaceNonCoprimes', () => {
-        test.each(
-                structuredClone(testcases),
-        )('replaceNonCoprimes($nums) -> $expected', ({ nums, expected }) => {
-                expect(replaceNonCoprimes(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'replaceNonCoprimes($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(replaceNonCoprimes(nums)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0778. Swim in Rising Water
+ * 778. Swim in Rising Water
  *
  * Link: https://leetcode.com/problems/swim-in-rising-water/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Depth-First Search (topic_21)
@@ -17,11 +18,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 374,718
  * - Total Submissions: 553,208
  * - Acceptance Rate: 67.7%
  *
  * Similar Problems:
+ *
  * - path-with-minimum-effort (Medium)
  */
 
@@ -34,7 +37,7 @@ import { Queue } from '@datastructures-js/queue';
  * Space Complexity: O(n^2)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const swimInWater = (grid) => {
         const n = grid.length;
@@ -71,13 +74,12 @@ const swimInWater = (grid) => {
 };
 
 /**
- * Approach: Binary Search + BFS
- * Time Complexity: O(n^2 log (max - min))
- * Space Complexity: O(n^2)
- * `n` = length of `grid`, `max` = maximum value of `grid[i][j]`, `min` = minimum value of `grid[i][j]`
+ * Approach: Binary Search + BFS Time Complexity: O(n^2 log (max - min)) Space Complexity: O(n^2)
+ * `n` = length of `grid`, `max` = maximum value of `grid[i][j]`, `min` = minimum value of
+ * `grid[i][j]`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const swimInWater1 = (grid) => {
         const n = grid.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { frequencySort } from '../../../src/problems/0401-0500/0451_sort-characters-by-frequency.js';
 
 const testcases = [
@@ -12,9 +13,10 @@ const testcases = [
 ];
 
 describe('frequencySort', () => {
-        test.each(
-                structuredClone(testcases),
-        )('frequencySort($s) -> $expected', ({ s, expected }) => {
-                expect(frequencySort(s)).toBeOneOf(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'frequencySort($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(frequencySort(s)).toBeOneOf(expected);
+                },
+        );
 });

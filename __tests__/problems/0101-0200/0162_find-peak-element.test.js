@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findPeakElement,
         findPeakElement1,
@@ -10,17 +11,19 @@ const testcases = [
 ];
 
 describe('findPeakElement', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findPeakElement($nums) -> $expected', ({ nums, expected }) => {
-                expect(findPeakElement(nums)).toBeOneOf(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findPeakElement($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findPeakElement(nums)).toBeOneOf(expected);
+                },
+        );
 });
 
 describe('findPeakElement1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findPeakElement1($nums) -> $expected', ({ nums, expected }) => {
-                expect(findPeakElement1(nums)).toBeOneOf(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findPeakElement1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findPeakElement1(nums)).toBeOneOf(expected);
+                },
+        );
 });

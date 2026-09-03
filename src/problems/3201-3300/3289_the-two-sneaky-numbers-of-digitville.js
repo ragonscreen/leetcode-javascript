@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 250,028
  * - Total Submissions: 278,221
  * - Acceptance Rate: 89.9%
  *
  * Similar Problems:
+ *
  * - find-all-duplicates-in-an-array (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const getSneakyNumbers = (nums) => {
         const n = nums.length;

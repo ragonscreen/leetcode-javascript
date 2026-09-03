@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getSneakyNumbers } from '../../../src/problems/3201-3300/3289_the-two-sneaky-numbers-of-digitville.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('getSneakyNumbers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getSneakyNumbers($nums) -> $expected', ({ nums, expected }) => {
-                expect(getSneakyNumbers(nums)).toContainAllValues(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getSneakyNumbers($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(getSneakyNumbers(nums)).toContainAllValues(expected);
+                },
+        );
 });

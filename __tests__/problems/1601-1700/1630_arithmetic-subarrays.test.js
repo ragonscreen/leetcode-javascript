@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { checkArithmeticSubarrays } from '../../../src/problems/1601-1700/1630_arithmetic-subarrays.js';
 
 const testcases = [
@@ -17,16 +18,10 @@ const testcases = [
 ];
 
 describe('checkArithmeticSubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('checkArithmeticSubarrays($nums, $l, $r) -> $expected', ({
-                nums,
-                l,
-                r,
-                expected,
-        }) => {
-                expect(checkArithmeticSubarrays(nums, l, r)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'checkArithmeticSubarrays($nums, $l, $r) -> $expected',
+                ({ nums, l, r, expected }) => {
+                        expect(checkArithmeticSubarrays(nums, l, r)).toStrictEqual(expected);
+                },
+        );
 });

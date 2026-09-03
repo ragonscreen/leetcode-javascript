@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
@@ -15,11 +16,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 62,024
  * - Total Submissions: 107,048
  * - Acceptance Rate: 57.9%
  *
  * Similar Problems:
+ *
  * - check-if-there-is-a-valid-parentheses-string-path (Hard)
  */
 
@@ -32,7 +35,7 @@ import { Queue } from '@datastructures-js/queue';
  * `n` = length of `grid`, `m` = length of `grid[0]`
  *
  * @param {number[][]} grid
- * @return {boolean}
+ * @returns {boolean}
  */
 const hasValidPath = (grid) => {
         const n = grid.length;
@@ -93,9 +96,7 @@ const hasValidPath = (grid) => {
 
                         // each street can take from the opposite
                         // directions that it can send to
-                        const valid = links[grid[ny][nx]].some(
-                                (e) => op[e] === newDir,
-                        );
+                        const valid = links[grid[ny][nx]].some((e) => op[e] === newDir);
 
                         if (valid && !visited[ny][nx]) {
                                 q.enqueue([ny, nx]);

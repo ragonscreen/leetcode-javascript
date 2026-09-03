@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 23,339
  * - Total Submissions: 41,683
  * - Acceptance Rate: 56.0%
@@ -19,7 +20,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const findValidElements = (nums) => {
         const n = nums.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxDistance } from '../../../src/problems/1101-1200/1162_as-far-from-land-as-possible.js';
 
 const testcases = [
@@ -31,9 +32,10 @@ const testcases = [
 ];
 
 describe('maxDistance', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxDistance($grid) -> $expected', ({ grid, expected }) => {
-                expect(maxDistance(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxDistance($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(maxDistance(grid)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countFairPairs } from '../../../src/problems/2501-2600/2563_count-the-number-of-fair-pairs.js';
 
 const testcases = [
@@ -7,16 +8,10 @@ const testcases = [
 ];
 
 describe('countFairPairs', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countFairPairs($nums, $lower, $upper) -> $expected', ({
-                nums,
-                lower,
-                upper,
-                expected,
-        }) => {
-                expect(countFairPairs(nums, lower, upper)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countFairPairs($nums, $lower, $upper) -> $expected',
+                ({ nums, lower, upper, expected }) => {
+                        expect(countFairPairs(nums, lower, upper)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0189. Rotate Array
+ * 189. Rotate Array
  *
  * Link: https://leetcode.com/problems/rotate-array/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Two Pointers (topic_9)
  *
  * Stats:
+ *
  * - Total Accepted: 3,831,550
  * - Total Submissions: 8,592,937
  * - Acceptance Rate: 44.6%
  *
  * Similar Problems:
+ *
  * - make-k-subarray-sums-equal (Medium)
  * - maximum-number-of-matching-indices-after-right-shifts (Medium)
  * - reverse-words-in-a-string-ii (Medium)
@@ -31,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {void}
+ * @returns {void}
  */
 const rotate = (nums, k) => {
         const n = nums.length;
@@ -63,7 +66,7 @@ const rotate = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {void}
+ * @returns {void}
  */
 const rotate1 = (nums, k) => {
         const rev = (start, end) => {
@@ -91,7 +94,7 @@ const rotate1 = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {void}
+ * @returns {void}
  */
 const rotate2 = (nums, k) => {
         const set = new Set();

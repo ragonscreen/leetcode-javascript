@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minMirrorPairDistance } from '../../../src/problems/3701-3800/3761_minimum-absolute-distance-between-mirror-pairs.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('minMirrorPairDistance', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minMirrorPairDistance($nums) -> $expected', ({ nums, expected }) => {
-                expect(minMirrorPairDistance(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minMirrorPairDistance($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minMirrorPairDistance(nums)).toStrictEqual(expected);
+                },
+        );
 });

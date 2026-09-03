@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         canPartitionGrid,
         canPartitionGrid1,
@@ -26,17 +27,19 @@ const testcases = [
 ];
 
 describe('canPartitionGrid', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canPartitionGrid($grid) -> $expected', ({ grid, expected }) => {
-                expect(canPartitionGrid(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canPartitionGrid($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(canPartitionGrid(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('canPartitionGrid1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canPartitionGrid1($grid) -> $expected', ({ grid, expected }) => {
-                expect(canPartitionGrid1(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canPartitionGrid1($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(canPartitionGrid1(grid)).toStrictEqual(expected);
+                },
+        );
 });

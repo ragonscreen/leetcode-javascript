@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { canPlaceFlowers } from '../../../src/problems/0601-0700/0605_can-place-flowers.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('canPlaceFlowers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canPlaceFlowers($flowerbed, $n) -> $expected', ({
-                flowerbed,
-                n,
-                expected,
-        }) => {
-                expect(canPlaceFlowers(flowerbed, n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canPlaceFlowers($flowerbed, $n) -> $expected',
+                ({ flowerbed, n, expected }) => {
+                        expect(canPlaceFlowers(flowerbed, n)).toStrictEqual(expected);
+                },
+        );
 });

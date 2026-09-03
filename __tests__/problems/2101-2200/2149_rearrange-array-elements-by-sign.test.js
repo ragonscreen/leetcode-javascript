@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { rearrangeArray } from '../../../src/problems/2101-2200/2149_rearrange-array-elements-by-sign.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('rearrangeArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rearrangeArray($nums) -> $expected', ({ nums, expected }) => {
-                expect(rearrangeArray(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rearrangeArray($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(rearrangeArray(nums)).toStrictEqual(expected);
+                },
+        );
 });

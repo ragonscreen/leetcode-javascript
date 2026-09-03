@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { closeStrings } from '../../../src/problems/1601-1700/1657_determine-if-two-strings-are-close.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('closeStrings', () => {
-        test.each(
-                structuredClone(testcases),
-        )('closeStrings($word1, $word2) -> $expected', ({
-                word1,
-                word2,
-                expected,
-        }) => {
-                expect(closeStrings(word1, word2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'closeStrings($word1, $word2) -> $expected',
+                ({ word1, word2, expected }) => {
+                        expect(closeStrings(word1, word2)).toStrictEqual(expected);
+                },
+        );
 });

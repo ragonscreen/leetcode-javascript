@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { sortJumbled } from '../../../src/problems/2101-2200/2191_sort-the-jumbled-numbers.js';
 
 const testcases = [
@@ -20,13 +21,10 @@ const testcases = [
 ];
 
 describe('sortJumbled', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sortJumbled($mapping, $nums) -> $expected', ({
-                mapping,
-                nums,
-                expected,
-        }) => {
-                expect(sortJumbled(mapping, nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sortJumbled($mapping, $nums) -> $expected',
+                ({ mapping, nums, expected }) => {
+                        expect(sortJumbled(mapping, nums)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { reverseString } from '../../../src/problems/0301-0400/0344_reverse-string.js';
 
 const testcases = [
@@ -10,10 +11,11 @@ const testcases = [
 ];
 
 describe('reverseString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('reverseString($s) -> $expected', ({ s, expected }) => {
-                expect(reverseString(s)).toBeNil();
-                expect(s).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'reverseString($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(reverseString(s)).toBeNil();
+                        expect(s).toStrictEqual(expected);
+                },
+        );
 });

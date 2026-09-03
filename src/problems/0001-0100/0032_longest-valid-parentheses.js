@@ -1,5 +1,5 @@
 /**
- * 0032. Longest Valid Parentheses
+ * 32. Longest Valid Parentheses
  *
  * Link: https://leetcode.com/problems/longest-valid-parentheses/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Dynamic Programming (topic_13)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 1,090,554
  * - Total Submissions: 2,832,450
  * - Acceptance Rate: 38.5%
  *
  * Similar Problems:
+ *
  * - valid-parentheses (Easy)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const longestValidParentheses = (s) => {
         const stack = [['start', 0]];

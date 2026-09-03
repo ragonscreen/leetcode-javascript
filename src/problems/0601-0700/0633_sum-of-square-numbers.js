@@ -1,5 +1,5 @@
 /**
- * 0633. Sum of Square Numbers
+ * 633. Sum of Square Numbers
  *
  * Link: https://leetcode.com/problems/sum-of-square-numbers/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  * - Mid Level (position_mid-level)
  *
  * Stats:
+ *
  * - Total Accepted: 446,152
  * - Total Submissions: 1,210,160
  * - Acceptance Rate: 36.9%
  *
  * Similar Problems:
+ *
  * - sum-of-squares-of-special-elements (Easy)
  * - valid-perfect-square (Easy)
  */
@@ -30,7 +33,7 @@
  * `N` = `c`
  *
  * @param {number} c
- * @return {boolean}
+ * @returns {boolean}
  */
 const judgeSquareSum = (c) => {
         if (c <= 1) {
@@ -69,7 +72,7 @@ const judgeSquareSum = (c) => {
  * `N` = `c`
  *
  * @param {number} c
- * @return {boolean}
+ * @returns {boolean}
  */
 const judgeSquareSum1 = (c) => {
         if (c <= 1) {
@@ -112,7 +115,7 @@ const judgeSquareSum1 = (c) => {
  * `N` = `c`
  *
  * @param {number} c
- * @return {boolean}
+ * @returns {boolean}
  */
 const judgeSquareSum2 = (c) => {
         if (c <= 1) {
@@ -146,7 +149,7 @@ const judgeSquareSum2 = (c) => {
  * `N` = `c`
  *
  * @param {number} c
- * @return {boolean}
+ * @returns {boolean}
  */
 const judgeSquareSum3 = (c) => {
         const cdt = Math.sqrt(c);

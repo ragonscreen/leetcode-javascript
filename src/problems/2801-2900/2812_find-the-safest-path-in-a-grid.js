@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Breadth-First Search (topic_22)
@@ -18,11 +19,13 @@
  * - Weekly Contest 357 (contest_weekly-contest-357)
  *
  * Stats:
+ *
  * - Total Accepted: 204,868
  * - Total Submissions: 357,469
  * - Acceptance Rate: 57.3%
  *
  * Similar Problems:
+ *
  * - path-with-minimum-effort (Medium)
  */
 
@@ -33,7 +36,7 @@
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const maximumSafenessFactor = (grid) => {
         const n = grid.length;

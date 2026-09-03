@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Mid Level (position_mid-level)
  * - Weekly Contest 503 (contest_weekly-contest-503)
  *
  * Stats:
+ *
  * - Total Accepted: 42,472
  * - Total Submissions: 57,887
  * - Acceptance Rate: 73.4%
@@ -25,7 +27,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const limitOccurrences = (nums, k) => {
         let l = 0;
@@ -49,7 +51,7 @@ const limitOccurrences = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const limitOccurrences1 = (nums, k) => {
         const res = [];

@@ -1,5 +1,5 @@
 /**
- * 0209. Minimum Size Subarray Sum
+ * 209. Minimum Size Subarray Sum
  *
  * Link: https://leetcode.com/problems/minimum-size-subarray-sum/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Sliding Window (topic_55821)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 1,815,145
  * - Total Submissions: 3,544,621
  * - Acceptance Rate: 51.2%
  *
  * Similar Problems:
+ *
  * - minimum-positive-sum-subarray (Easy)
  * - shortest-subarray-with-or-at-least-k-i (Easy)
  * - k-radius-subarray-averages (Medium)
@@ -36,7 +39,7 @@
  *
  * @param {number} target
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minSubArrayLen = (target, nums) => {
         const n = nums.length;

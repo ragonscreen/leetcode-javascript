@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minWastedSpace,
         minWastedSpace1,
@@ -35,27 +36,19 @@ const testcases = [
 ];
 
 describe('minWastedSpace', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minWastedSpace($packages, $boxes) -> $expected', ({
-                packages,
-                boxes,
-                expected,
-        }) => {
-                expect(minWastedSpace(packages, boxes)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minWastedSpace($packages, $boxes) -> $expected',
+                ({ packages, boxes, expected }) => {
+                        expect(minWastedSpace(packages, boxes)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minWastedSpace1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minWastedSpace1($packages, $boxes) -> $expected', ({
-                packages,
-                boxes,
-                expected,
-        }) => {
-                expect(minWastedSpace1(packages, boxes)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'minWastedSpace1($packages, $boxes) -> $expected',
+                ({ packages, boxes, expected }) => {
+                        expect(minWastedSpace1(packages, boxes)).toStrictEqual(expected);
+                },
+        );
 });

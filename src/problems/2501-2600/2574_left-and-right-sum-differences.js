@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 334 (contest_weekly-contest-334)
  *
  * Stats:
+ *
  * - Total Accepted: 319,479
  * - Total Submissions: 357,411
  * - Acceptance Rate: 89.4%
  *
  * Similar Problems:
+ *
  * - find-pivot-index (Easy)
  * - find-the-distinct-difference-array (Easy)
  * - find-the-middle-index-in-array (Easy)
@@ -32,7 +35,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const leftRightDifference = (nums) => {
         const n = nums.length;

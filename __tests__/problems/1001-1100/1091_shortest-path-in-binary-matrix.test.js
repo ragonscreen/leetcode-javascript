@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { shortestPathBinaryMatrix } from '../../../src/problems/1001-1100/1091_shortest-path-in-binary-matrix.js';
 
 const testcases = [
@@ -38,12 +39,10 @@ const testcases = [
 ];
 
 describe('shortestPathBinaryMatrix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('shortestPathBinaryMatrix($grid) -> $expected', ({
-                grid,
-                expected,
-        }) => {
-                expect(shortestPathBinaryMatrix(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'shortestPathBinaryMatrix($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(shortestPathBinaryMatrix(grid)).toStrictEqual(expected);
+                },
+        );
 });

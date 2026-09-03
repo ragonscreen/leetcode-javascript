@@ -1,5 +1,5 @@
 /**
- * 0410. Split Array Largest Sum
+ * 410. Split Array Largest Sum
  *
  * Link: https://leetcode.com/problems/split-array-largest-sum/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Dynamic Programming (topic_13)
@@ -15,11 +16,13 @@
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 622,192
  * - Total Submissions: 1,034,490
  * - Acceptance Rate: 60.1%
  *
  * Similar Problems:
+ *
  * - distribute-elements-into-two-arrays-i (Easy)
  * - capacity-to-ship-packages-within-d-days (Medium)
  * - fair-distribution-of-cookies (Medium)
@@ -39,7 +42,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const splitArray = (nums, k) => {
         const isValidSplit = (total) => {

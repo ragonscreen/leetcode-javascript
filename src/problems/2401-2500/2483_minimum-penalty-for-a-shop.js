@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 234,637
  * - Total Submissions: 329,413
  * - Acceptance Rate: 71.2%
  *
  * Similar Problems:
+ *
  * - grid-game (Medium)
  * - minimum-amount-of-damage-dealt-to-bob (Hard)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} customers
- * @return {number}
+ * @returns {number}
  */
 const bestClosingTime = (customers) => {
         let max = 0;

@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 47,285
  * - Total Submissions: 79,224
  * - Acceptance Rate: 59.7%
  *
  * Similar Problems:
+ *
  * - find-all-numbers-disappeared-in-an-array (Easy)
  * - maximum-number-of-integers-to-choose-from-a-range-i (Medium)
  * - maximum-number-of-integers-to-choose-from-a-range-ii (Medium)
@@ -31,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number[][]} operations
- * @return {number[]}
+ * @returns {number[]}
  */
 const arrayChange = (nums, operations) => {
         const map = new Map();

@@ -1,5 +1,5 @@
 /**
- * 0011. Container With Most Water
+ * 11. Container With Most Water
  *
  * Link: https://leetcode.com/problems/container-with-most-water/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 5,155,103
  * - Total Submissions: 8,644,492
  * - Acceptance Rate: 59.6%
  *
  * Similar Problems:
+ *
  * - house-robber-iv (Medium)
  * - maximum-tastiness-of-candy-basket (Medium)
  * - trapping-rain-water (Hard)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} height
- * @return {number}
+ * @returns {number}
  */
 const maxArea = (height) => {
         let max = 0;

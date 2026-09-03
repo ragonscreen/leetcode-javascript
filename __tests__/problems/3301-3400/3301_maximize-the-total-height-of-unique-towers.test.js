@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumTotalSum } from '../../../src/problems/3301-3400/3301_maximize-the-total-height-of-unique-towers.js';
 
 const testcases = [
@@ -8,12 +9,10 @@ const testcases = [
 ];
 
 describe('maximumTotalSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumTotalSum($maximumHeight) -> $expected', ({
-                maximumHeight,
-                expected,
-        }) => {
-                expect(maximumTotalSum(maximumHeight)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumTotalSum($maximumHeight) -> $expected',
+                ({ maximumHeight, expected }) => {
+                        expect(maximumTotalSum(maximumHeight)).toStrictEqual(expected);
+                },
+        );
 });

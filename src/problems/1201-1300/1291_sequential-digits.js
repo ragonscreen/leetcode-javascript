@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Enumeration (topic_61066)
  * - Staff (position_staff)
  * - Weekly Contest 167 (contest_weekly-contest-167)
  *
  * Stats:
+ *
  * - Total Accepted: 236,145
  * - Total Submissions: 361,255
  * - Acceptance Rate: 65.4%
@@ -25,14 +27,13 @@
  *
  * @param {number} low
  * @param {number} high
- * @return {number[]}
+ * @returns {number[]}
  */
 const sequentialDigits = (low, high) => {
         const nums = [
-                12, 23, 34, 45, 56, 67, 78, 89, 123, 234, 345, 456, 567, 678,
-                789, 1234, 2345, 3456, 4567, 5678, 6789, 12_345, 23_456, 34_567,
-                45_678, 56_789, 123_456, 234_567, 345_678, 456_789, 1_234_567,
-                2_345_678, 3_456_789, 12_345_678, 23_456_789, 123_456_789,
+                12, 23, 34, 45, 56, 67, 78, 89, 123, 234, 345, 456, 567, 678, 789, 1234, 2345, 3456,
+                4567, 5678, 6789, 12_345, 23_456, 34_567, 45_678, 56_789, 123_456, 234_567, 345_678,
+                456_789, 1_234_567, 2_345_678, 3_456_789, 12_345_678, 23_456_789, 123_456_789,
         ];
 
         let l = 0;

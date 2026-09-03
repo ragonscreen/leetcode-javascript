@@ -1,5 +1,5 @@
 /**
- * 0171. Excel Sheet Column Number
+ * 171. Excel Sheet Column Number
  *
  * Link: https://leetcode.com/problems/excel-sheet-column-number/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 890,628
  * - Total Submissions: 1,321,510
  * - Acceptance Rate: 67.4%
  *
  * Similar Problems:
+ *
  * - cells-in-a-range-on-an-excel-sheet (Easy)
  * - excel-sheet-column-title (Easy)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} columnTitle
- * @return {number}
+ * @returns {number}
  */
 const titleToNumber = (columnTitle) => {
         const n = columnTitle.length;

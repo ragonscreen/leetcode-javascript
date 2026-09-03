@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minGenerations } from '../../../src/problems/3901-4000/3923_minimum-generations-to-target-point.js';
 
 const testcases = [
@@ -132,13 +133,10 @@ const testcases = [
 ];
 
 describe('minGenerations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minGenerations($points, $target) -> $expected', ({
-                points,
-                target,
-                expected,
-        }) => {
-                expect(minGenerations(points, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minGenerations($points, $target) -> $expected',
+                ({ points, target, expected }) => {
+                        expect(minGenerations(points, target)).toStrictEqual(expected);
+                },
+        );
 });

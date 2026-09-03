@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { reorderList } from '../../../src/problems/0101-0200/0143_reorder-list.js';
 import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
@@ -13,11 +14,12 @@ const testcases = [
 ];
 
 describe('reorderList', () => {
-        test.each(
-                structuredClone(testcases),
-        )('reorderList($head) -> $expected', ({ head, expected }) => {
-                const list = arrayToList(head);
-                expect(reorderList(list)).toBeNil();
-                expect(listToArray(list)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'reorderList($head) -> $expected',
+                ({ head, expected }) => {
+                        const list = arrayToList(head);
+                        expect(reorderList(list)).toBeNil();
+                        expect(listToArray(list)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0916. Word Subsets
+ * 916. Word Subsets
  *
  * Link: https://leetcode.com/problems/word-subsets/
  * Category: Algorithms
@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 265,809
  * - Total Submissions: 475,372
  * - Acceptance Rate: 55.9%
@@ -27,7 +29,7 @@
  *
  * @param {string[]} words1
  * @param {string[]} words2
- * @return {string[]}
+ * @returns {string[]}
  */
 const wordSubsets = (words1, words2) => {
         const maxCnt = new Int8Array(26);
@@ -75,13 +77,13 @@ const wordSubsets = (words1, words2) => {
  *
  * @param {string[]} words1
  * @param {string[]} words2
- * @return {string[]}
+ * @returns {string[]}
  */
 const wordSubsets1 = (words1, words2) => {
         const n = words1.length;
         const p = [
-                2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
-                61, 67, 71, 73, 79, 83, 89, 97, 101,
+                2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,
+                83, 89, 97, 101,
         ];
         const map = new Array(n);
         const a = 'a'.charCodeAt();

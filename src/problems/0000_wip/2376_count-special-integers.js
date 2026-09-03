@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 17,525
  * - Total Submissions: 41,321
  * - Acceptance Rate: 42.4%
  *
  * Similar Problems:
+ *
  * - count-numbers-with-unique-digits (Medium)
  * - k-th-smallest-in-lexicographical-order (Hard)
  */
@@ -29,7 +32,7 @@ import { debug } from '../../utils/utils.js';
  * Space Complexity: O()
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const countSpecialNumbers = (n) => {
         const map = new Array(9);

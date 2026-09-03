@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Bit Manipulation (topic_19)
@@ -17,6 +18,7 @@
  * - Weekly Contest 452 (contest_weekly-contest-452)
  *
  * Stats:
+ *
  * - Total Accepted: 34,203
  * - Total Submissions: 71,441
  * - Acceptance Rate: 47.9%
@@ -31,7 +33,7 @@
  *
  * @param {string[]} classroom
  * @param {number} energy
- * @return {number}
+ * @returns {number}
  */
 const minMoves = (classroom, energy) => {
         const n = classroom.length;
@@ -149,7 +151,7 @@ const minMoves = (classroom, energy) => {
  *
  * @param {string[]} classroom
  * @param {number} energy
- * @return {number}
+ * @returns {number}
  */
 const minMoves1 = (classroom, energy) => {
         const n = classroom.length;

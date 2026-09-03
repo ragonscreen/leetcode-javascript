@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minEnergy } from '../../../src/problems/3901-4000/3951_minimum-energy-to-maintain-brightness.js';
 
 const testcases = [
@@ -24,16 +25,10 @@ const testcases = [
 ];
 
 describe('minEnergy', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minEnergy($n, $brightness, $intervals) -> $expected', ({
-                n,
-                brightness,
-                intervals,
-                expected,
-        }) => {
-                expect(minEnergy(n, brightness, intervals)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'minEnergy($n, $brightness, $intervals) -> $expected',
+                ({ n, brightness, intervals, expected }) => {
+                        expect(minEnergy(n, brightness, intervals)).toStrictEqual(expected);
+                },
+        );
 });

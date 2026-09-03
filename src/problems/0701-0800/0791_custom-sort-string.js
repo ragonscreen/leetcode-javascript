@@ -1,5 +1,5 @@
 /**
- * 0791. Custom Sort String
+ * 791. Custom Sort String
  *
  * Link: https://leetcode.com/problems/custom-sort-string/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 577,692
  * - Total Submissions: 799,178
  * - Acceptance Rate: 72.3%
  *
  * Similar Problems:
+ *
  * - sort-the-students-by-their-kth-score (Medium)
  */
 
@@ -29,7 +32,7 @@
  *
  * @param {string} order
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const customSortString = (order, s) => {
         const map = new Array(26).fill(0);
@@ -66,7 +69,7 @@ const customSortString = (order, s) => {
  *
  * @param {string} order
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const customSortString1 = (order, s) => {
         const map = {};

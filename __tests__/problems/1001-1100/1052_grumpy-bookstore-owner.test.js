@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxSatisfied } from '../../../src/problems/1001-1100/1052_grumpy-bookstore-owner.js';
 
 const testcases = [
@@ -30,16 +31,10 @@ const testcases = [
 ];
 
 describe('maxSatisfied', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSatisfied($customers, $grumpy, $minutes) -> $expected', ({
-                customers,
-                grumpy,
-                minutes,
-                expected,
-        }) => {
-                expect(maxSatisfied(customers, grumpy, minutes)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'maxSatisfied($customers, $grumpy, $minutes) -> $expected',
+                ({ customers, grumpy, minutes, expected }) => {
+                        expect(maxSatisfied(customers, grumpy, minutes)).toStrictEqual(expected);
+                },
+        );
 });

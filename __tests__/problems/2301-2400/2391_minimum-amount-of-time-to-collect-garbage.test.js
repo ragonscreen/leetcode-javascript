@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { garbageCollection } from '../../../src/problems/2301-2400/2391_minimum-amount-of-time-to-collect-garbage.js';
 
 const testcases = [
@@ -7,15 +8,10 @@ const testcases = [
 ];
 
 describe('garbageCollection', () => {
-        test.each(
-                structuredClone(testcases),
-        )('garbageCollection($garbage, $travel) -> $expected', ({
-                garbage,
-                travel,
-                expected,
-        }) => {
-                expect(garbageCollection(garbage, travel)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'garbageCollection($garbage, $travel) -> $expected',
+                ({ garbage, travel, expected }) => {
+                        expect(garbageCollection(garbage, travel)).toStrictEqual(expected);
+                },
+        );
 });

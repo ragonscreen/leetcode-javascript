@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Greedy (topic_17)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 125,126
  * - Total Submissions: 186,462
  * - Acceptance Rate: 67.1%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const maxOperations = (s) => {
         const n = s.length;

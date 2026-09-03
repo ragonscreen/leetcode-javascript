@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumEffort } from '../../../src/problems/1601-1700/1665_minimum-initial-energy-to-finish-tasks.js';
 
 const testcases = [
@@ -34,9 +35,10 @@ const testcases = [
 ];
 
 describe('minimumEffort', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumEffort($tasks) -> $expected', ({ tasks, expected }) => {
-                expect(minimumEffort(tasks)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumEffort($tasks) -> $expected',
+                ({ tasks, expected }) => {
+                        expect(minimumEffort(tasks)).toStrictEqual(expected);
+                },
+        );
 });

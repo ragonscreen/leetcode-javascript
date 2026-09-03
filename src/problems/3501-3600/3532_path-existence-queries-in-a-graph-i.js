@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Binary Search (topic_11)
@@ -17,6 +18,7 @@
  * - Weekly Contest 447 (contest_weekly-contest-447)
  *
  * Stats:
+ *
  * - Total Accepted: 117,794
  * - Total Submissions: 167,638
  * - Acceptance Rate: 70.3%
@@ -32,7 +34,7 @@
  * @param {number[]} nums
  * @param {number} maxDiff
  * @param {number[][]} queries
- * @return {boolean[]}
+ * @returns {boolean[]}
  */
 const pathExistenceQueries = (n, nums, maxDiff, queries) => {
         const p = new Uint32Array(n);

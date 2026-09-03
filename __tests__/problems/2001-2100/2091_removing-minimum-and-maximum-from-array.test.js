@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumDeletions } from '../../../src/problems/2001-2100/2091_removing-minimum-and-maximum-from-array.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minimumDeletions', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumDeletions($nums) -> $expected', ({ nums, expected }) => {
-                expect(minimumDeletions(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumDeletions($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minimumDeletions(nums)).toStrictEqual(expected);
+                },
+        );
 });

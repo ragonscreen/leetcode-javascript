@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 63,163
  * - Total Submissions: 96,119
  * - Acceptance Rate: 65.7%
  *
  * Similar Problems:
+ *
  * - robot-return-to-origin (Easy)
  */
 
@@ -26,7 +29,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} moves
- * @return {number}
+ * @returns {number}
  */
 const furthestDistanceFromOrigin = (moves) => {
         let pos = 0;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { rob } from '../../../src/problems/0201-0300/0213_house-robber-ii.js';
 
 const testcases = [
@@ -8,10 +9,7 @@ const testcases = [
 ];
 
 describe('rob', () => {
-        test.each(structuredClone(testcases))('rob($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('rob($nums) -> $expected', ({ nums, expected }) => {
                 expect(rob(nums)).toStrictEqual(expected);
         });
 });

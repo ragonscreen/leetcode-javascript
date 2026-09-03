@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { orangesRotting } from '../../../src/problems/0901-1000/0994_rotting-oranges.js';
 
 const testcases = [
@@ -23,9 +24,10 @@ const testcases = [
 ];
 
 describe('orangesRotting', () => {
-        test.each(
-                structuredClone(testcases),
-        )('orangesRotting($grid) -> $expected', ({ grid, expected }) => {
-                expect(orangesRotting(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'orangesRotting($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(orangesRotting(grid)).toStrictEqual(expected);
+                },
+        );
 });

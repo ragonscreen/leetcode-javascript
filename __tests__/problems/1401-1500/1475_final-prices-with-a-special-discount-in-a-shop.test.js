@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { finalPrices } from '../../../src/problems/1401-1500/1475_final-prices-with-a-special-discount-in-a-shop.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('finalPrices', () => {
-        test.each(
-                structuredClone(testcases),
-        )('finalPrices($prices) -> $expected', ({ prices, expected }) => {
-                expect(finalPrices(prices)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'finalPrices($prices) -> $expected',
+                ({ prices, expected }) => {
+                        expect(finalPrices(prices)).toStrictEqual(expected);
+                },
+        );
 });

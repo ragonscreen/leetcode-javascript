@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numMovesStones } from '../../../src/problems/1001-1100/1033_moving-stones-until-consecutive.js';
 
 const testcases = [
@@ -10,14 +11,10 @@ const testcases = [
 ];
 
 describe('numMovesStones', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numMovesStones($a, $b, $c) -> $expected', ({
-                a,
-                b,
-                c,
-                expected,
-        }) => {
-                expect(numMovesStones(a, b, c)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numMovesStones($a, $b, $c) -> $expected',
+                ({ a, b, c, expected }) => {
+                        expect(numMovesStones(a, b, c)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 243,205
  * - Total Submissions: 365,662
  * - Acceptance Rate: 66.5%
  *
  * Similar Problems:
+ *
  * - count-words-obtained-after-adding-a-letter (Medium)
  */
 
@@ -29,7 +32,7 @@
  * @param {string} s
  * @param {number} x
  * @param {number} y
- * @return {number}
+ * @returns {number}
  */
 const maximumGain = (s, x, y) => {
         const s1 = [];

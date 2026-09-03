@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minWindow,
         minWindow1,
@@ -22,17 +23,19 @@ const testcases = [
 ];
 
 describe('minWindow', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minWindow($s, $t) -> $expected', ({ s, t, expected }) => {
-                expect(minWindow(s, t)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minWindow($s, $t) -> $expected',
+                ({ s, t, expected }) => {
+                        expect(minWindow(s, t)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minWindow1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minWindow1($s, $t) -> $expected', ({ s, t, expected }) => {
-                expect(minWindow1(s, t)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minWindow1($s, $t) -> $expected',
+                ({ s, t, expected }) => {
+                        expect(minWindow1(s, t)).toStrictEqual(expected);
+                },
+        );
 });

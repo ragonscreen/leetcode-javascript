@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getAverages } from '../../../src/problems/2001-2100/2090_k-radius-subarray-averages.js';
 
 const testcases = [
@@ -12,9 +13,10 @@ const testcases = [
 ];
 
 describe('getAverages', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getAverages($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(getAverages(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getAverages($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(getAverages(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

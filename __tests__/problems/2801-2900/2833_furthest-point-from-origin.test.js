@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { furthestDistanceFromOrigin } from '../../../src/problems/2801-2900/2833_furthest-point-from-origin.js';
 
 const testcases = [
@@ -8,14 +9,10 @@ const testcases = [
 ];
 
 describe('furthestDistanceFromOrigin', () => {
-        test.each(
-                structuredClone(testcases),
-        )('furthestDistanceFromOrigin($moves) -> $expected', ({
-                moves,
-                expected,
-        }) => {
-                expect(furthestDistanceFromOrigin(moves)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'furthestDistanceFromOrigin($moves) -> $expected',
+                ({ moves, expected }) => {
+                        expect(furthestDistanceFromOrigin(moves)).toStrictEqual(expected);
+                },
+        );
 });

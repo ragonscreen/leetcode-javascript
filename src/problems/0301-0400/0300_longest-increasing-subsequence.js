@@ -1,5 +1,5 @@
 /**
- * 0300. Longest Increasing Subsequence
+ * 300. Longest Increasing Subsequence
  *
  * Link: https://leetcode.com/problems/longest-increasing-subsequence/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 2,632,346
  * - Total Submissions: 4,432,466
  * - Acceptance Rate: 59.4%
  *
  * Similar Problems:
+ *
  * - find-the-maximum-length-of-a-good-subsequence-i (Medium)
  * - find-the-maximum-length-of-valid-subsequence-i (Medium)
  * - find-the-maximum-length-of-valid-subsequence-ii (Medium)
@@ -42,7 +45,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const lengthOfLIS = (nums) => {
         const n = nums.length;

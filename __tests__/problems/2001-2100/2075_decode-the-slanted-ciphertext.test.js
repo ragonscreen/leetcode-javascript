@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { decodeCiphertext } from '../../../src/problems/2001-2100/2075_decode-the-slanted-ciphertext.js';
 
 const testcases = [
@@ -13,15 +14,10 @@ const testcases = [
 ];
 
 describe('decodeCiphertext', () => {
-        test.each(
-                structuredClone(testcases),
-        )('decodeCiphertext($encodedText, $rows) -> $expected', ({
-                encodedText,
-                rows,
-                expected,
-        }) => {
-                expect(decodeCiphertext(encodedText, rows)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'decodeCiphertext($encodedText, $rows) -> $expected',
+                ({ encodedText, rows, expected }) => {
+                        expect(decodeCiphertext(encodedText, rows)).toStrictEqual(expected);
+                },
+        );
 });

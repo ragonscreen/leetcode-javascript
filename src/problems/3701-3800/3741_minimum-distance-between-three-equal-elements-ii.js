@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  *
  * Stats:
+ *
  * - Total Accepted: 34,535
  * - Total Submissions: 51,630
  * - Acceptance Rate: 66.9%
@@ -23,7 +25,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minimumDistance = (nums) => {
         const n = nums.length;

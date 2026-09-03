@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Design (topic_25)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 50,012
  * - Total Submissions: 133,618
  * - Acceptance Rate: 37.4%
  *
  * Similar Problems:
+ *
  * - walking-robot-simulation (Medium)
  */
 
@@ -51,7 +54,7 @@ class Robot {
          * Space Complexity: O(1)
          *
          * @param {number} num
-         * @return {void}
+         * @returns {void}
          */
         step(num) {
                 let dist = num % (2 * (this.width + this.height) - 4);
@@ -107,7 +110,7 @@ class Robot {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {number[]}
+         * @returns {number[]}
          */
         getPos() {
                 return [this.x, this.y];
@@ -117,7 +120,7 @@ class Robot {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {string}
+         * @returns {string}
          */
         getDir() {
                 return this.dirs[this.dir][2];

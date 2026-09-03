@@ -1,5 +1,5 @@
 /**
- * 0023. Merge k Sorted Lists
+ * 23. Merge k Sorted Lists
  *
  * Link: https://leetcode.com/problems/merge-k-sorted-lists/
  * Category: Algorithms
@@ -8,23 +8,27 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Divide and Conquer (topic_12)
  * - Heap (Priority Queue) (topic_61050)
  * - Merge Sort (topic_61051)
  *
  * Stats:
+ *
  * - Total Accepted: 2,959,907
  * - Total Submissions: 4,989,834
  * - Acceptance Rate: 59.3%
  *
  * Similar Problems:
+ *
  * - merge-two-sorted-lists (Easy)
  * - smallest-subarrays-with-maximum-bitwise-or (Medium)
  * - ugly-number-ii (Medium)
  */
 
 import { MinPriorityQueue } from '@datastructures-js/priority-queue';
+
 import { ListNode } from '../../data-structures/linked-list/LinkedListNode.js';
 
 /**
@@ -34,7 +38,7 @@ import { ListNode } from '../../data-structures/linked-list/LinkedListNode.js';
  * `k` = total number of nodes across all lists in `lists`
  *
  * @param {ListNode[]} lists
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const mergeKLists = (lists) => {
         const nodes = [];
@@ -65,7 +69,7 @@ const mergeKLists = (lists) => {
  * `n` = length of `lists`, `k` = total number of nodes across all lists in `lists`
  *
  * @param {ListNode[]} lists
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const mergeKLists1 = (lists) => {
         const pq = new MinPriorityQueue((e) => e.val);
@@ -100,7 +104,7 @@ const mergeKLists1 = (lists) => {
  * `n` = length of `lists`, `k` = total number of nodes across all lists in `lists`
  *
  * @param {ListNode[]} lists
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const mergeKLists2 = (lists) => {
         const res = new ListNode();

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 18,014
  * - Total Submissions: 39,646
  * - Acceptance Rate: 45.4%
@@ -22,7 +23,7 @@
  *
  * @param {string[]} chunks
  * @param {string[]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const countWordOccurrences = (chunks, queries) => {
         const n = chunks.length;
@@ -83,7 +84,7 @@ const countWordOccurrences = (chunks, queries) => {
  *
  * @param {string[]} chunks
  * @param {string[]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const countWordOccurrences1 = (chunks, queries) => {
         const a = chunks.join('').split(/\s|-{2,}/g);

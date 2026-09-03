@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { isZeroArray } from '../../../src/problems/3301-3400/3355_zero-array-transformation-i.js';
 
 const testcases = [
@@ -14,13 +15,10 @@ const testcases = [
 ];
 
 describe('isZeroArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('isZeroArray($nums, $queries) -> $expected', ({
-                nums,
-                queries,
-                expected,
-        }) => {
-                expect(isZeroArray(nums, queries)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isZeroArray($nums, $queries) -> $expected',
+                ({ nums, queries, expected }) => {
+                        expect(isZeroArray(nums, queries)).toStrictEqual(expected);
+                },
+        );
 });

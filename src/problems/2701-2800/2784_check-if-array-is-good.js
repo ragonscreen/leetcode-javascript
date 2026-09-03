@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 98,746
  * - Total Submissions: 186,291
  * - Acceptance Rate: 53.0%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const isGood = (nums) => {
         const n = nums.length;
@@ -67,7 +69,7 @@ const isGood = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const isGood1 = (nums) => {
         const n = nums.length;
@@ -102,7 +104,7 @@ const isGood1 = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const isGood2 = (nums) => {
         const n = nums.length;

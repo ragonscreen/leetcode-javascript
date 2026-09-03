@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numSubarrayProductLessThanK } from '../../../src/problems/0701-0800/0713_subarray-product-less-than-k.js';
 
 const testcases = [
@@ -7,15 +8,10 @@ const testcases = [
 ];
 
 describe('numSubarrayProductLessThanK', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numSubarrayProductLessThanK($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(numSubarrayProductLessThanK(nums, k)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'numSubarrayProductLessThanK($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(numSubarrayProductLessThanK(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

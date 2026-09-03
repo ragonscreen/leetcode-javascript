@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numOfStrings } from '../../../src/problems/1901-2000/1967_number-of-strings-that-appear-as-substrings-in-word.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('numOfStrings', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numOfStrings($patterns, $word) -> $expected', ({
-                patterns,
-                word,
-                expected,
-        }) => {
-                expect(numOfStrings(patterns, word)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numOfStrings($patterns, $word) -> $expected',
+                ({ patterns, word, expected }) => {
+                        expect(numOfStrings(patterns, word)).toStrictEqual(expected);
+                },
+        );
 });

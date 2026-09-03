@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { splitArray } from '../../../src/problems/0401-0500/0410_split-array-largest-sum.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('splitArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('splitArray($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(splitArray(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'splitArray($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(splitArray(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

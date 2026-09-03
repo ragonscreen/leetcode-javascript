@@ -1,5 +1,5 @@
 /**
- * 0012. Integer to Roman
+ * 12. Integer to Roman
  *
  * Link: https://leetcode.com/problems/integer-to-roman/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Math (topic_8)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 2,079,337
  * - Total Submissions: 2,945,797
  * - Acceptance Rate: 70.6%
  *
  * Similar Problems:
+ *
  * - roman-to-integer (Easy)
  * - integer-to-english-words (Hard)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} num
- * @return {string}
+ * @returns {string}
  */
 const intToRoman = (num) => {
         const map = [

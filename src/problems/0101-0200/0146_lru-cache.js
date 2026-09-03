@@ -1,5 +1,5 @@
 /**
- * 0146. LRU Cache
+ * 146. LRU Cache
  *
  * Link: https://leetcode.com/problems/lru-cache/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Linked List (topic_7)
  * - Design (topic_25)
  * - Doubly-Linked List (topic_61058)
  *
  * Stats:
+ *
  * - Total Accepted: 2,595,918
  * - Total Submissions: 5,487,220
  * - Acceptance Rate: 47.3%
  *
  * Similar Problems:
+ *
  * - design-compressed-string-iterator (Easy)
  * - design-most-recently-used-queue (Medium)
  * - design-in-memory-file-system (Hard)
@@ -45,7 +48,7 @@ class LRUCache {
          * Space Complexity: O(1)
          *
          * @param {number} key
-         * @return {number}
+         * @returns {number}
          */
         get(key) {
                 if (!this.cache.has(key)) {
@@ -65,7 +68,7 @@ class LRUCache {
          *
          * @param {number} key
          * @param {number} value
-         * @return {void}
+         * @returns {void}
          */
         put(key, value) {
                 if (this.cache.has(key)) {

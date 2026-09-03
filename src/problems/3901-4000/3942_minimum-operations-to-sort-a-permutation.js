@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Staff (position_staff)
  * - Weekly Contest 503 (contest_weekly-contest-503)
  *
  * Stats:
+ *
  * - Total Accepted: 13,278
  * - Total Submissions: 49,846
  * - Acceptance Rate: 26.6%
@@ -24,7 +26,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (nums) => {
         const n = nums.length;

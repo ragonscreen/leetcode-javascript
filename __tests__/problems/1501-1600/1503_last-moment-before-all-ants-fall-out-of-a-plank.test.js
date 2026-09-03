@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getLastMoment } from '../../../src/problems/1501-1600/1503_last-moment-before-all-ants-fall-out-of-a-plank.js';
 
 const testcases = [
@@ -9,14 +10,10 @@ const testcases = [
 ];
 
 describe('getLastMoment', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getLastMoment($n, $left, $right) -> $expected', ({
-                n,
-                left,
-                right,
-                expected,
-        }) => {
-                expect(getLastMoment(n, left, right)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getLastMoment($n, $left, $right) -> $expected',
+                ({ n, left, right, expected }) => {
+                        expect(getLastMoment(n, left, right)).toStrictEqual(expected);
+                },
+        );
 });

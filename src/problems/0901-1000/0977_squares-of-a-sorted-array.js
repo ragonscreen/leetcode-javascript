@@ -1,5 +1,5 @@
 /**
- * 0977. Squares of a Sorted Array
+ * 977. Squares of a Sorted Array
  *
  * Link: https://leetcode.com/problems/squares-of-a-sorted-array/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 2,571,399
  * - Total Submissions: 3,491,725
  * - Acceptance Rate: 73.6%
  *
  * Similar Problems:
+ *
  * - merge-sorted-array (Easy)
  * - sort-transformed-array (Medium)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const sortedSquares = (nums) => {
         const n = nums.length;

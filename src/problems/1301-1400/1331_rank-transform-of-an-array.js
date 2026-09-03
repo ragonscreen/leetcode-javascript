@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Biweekly Contest 18 (contest_biweekly-contest-18)
  *
  * Stats:
+ *
  * - Total Accepted: 462,842
  * - Total Submissions: 625,644
  * - Acceptance Rate: 74.0%
  *
  * Similar Problems:
+ *
  * - find-target-indices-after-sorting-array (Easy)
  * - rank-transform-of-a-matrix (Hard)
  */
@@ -31,7 +34,7 @@
  * `n` = `arr.length`
  *
  * @param {number[]} arr
- * @return {number[]}
+ * @returns {number[]}
  */
 const arrayRankTransform = (arr) => {
         const n = arr.length;
@@ -67,7 +70,7 @@ const arrayRankTransform = (arr) => {
  * `n` = `arr.length`
  *
  * @param {number[]} arr
- * @return {number[]}
+ * @returns {number[]}
  */
 const arrayRankTransform1 = (arr) => {
         const n = arr.length;

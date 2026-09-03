@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 105,580
  * - Total Submissions: 157,337
  * - Acceptance Rate: 67.1%
  *
  * Similar Problems:
+ *
  * - zero-array-transformation-ii (Medium)
  * - zero-array-transformation-iii (Medium)
  */
@@ -28,7 +31,7 @@
  *
  * @param {number[][]} bookings
  * @param {number} n
- * @return {number[]}
+ * @returns {number[]}
  */
 const corpFlightBookings = (bookings, n) => {
         const diff = new Int32Array(n);

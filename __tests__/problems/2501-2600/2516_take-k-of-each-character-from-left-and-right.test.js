@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { takeCharacters } from '../../../src/problems/2501-2600/2516_take-k-of-each-character-from-left-and-right.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('takeCharacters', () => {
-        test.each(
-                structuredClone(testcases),
-        )('takeCharacters($s, $k) -> $expected', ({ s, k, expected }) => {
-                expect(takeCharacters(s, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'takeCharacters($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(takeCharacters(s, k)).toStrictEqual(expected);
+                },
+        );
 });

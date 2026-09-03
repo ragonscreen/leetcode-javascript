@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxTotalValue } from '../../../src/problems/3601-3700/3691_maximum-total-subarray-value-ii.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('maxTotalValue', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxTotalValue($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(maxTotalValue(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxTotalValue($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(maxTotalValue(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

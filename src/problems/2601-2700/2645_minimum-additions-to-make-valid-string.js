@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Dynamic Programming (topic_13)
  * - Stack (topic_15)
@@ -16,11 +17,13 @@
  * - Weekly Contest 341 (contest_weekly-contest-341)
  *
  * Stats:
+ *
  * - Total Accepted: 40,013
  * - Total Submissions: 77,830
  * - Acceptance Rate: 51.4%
  *
  * Similar Problems:
+ *
  * - merge-strings-alternately (Easy)
  */
 
@@ -31,7 +34,7 @@
  * `n` = `word.length`
  *
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
 const addMinimum = (word) => {
         const x = 'abc';
@@ -85,7 +88,7 @@ const addMinimum = (word) => {
  * `n` = `word.length`
  *
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
 const addMinimum1 = (word) => {
         const x = 'abc';

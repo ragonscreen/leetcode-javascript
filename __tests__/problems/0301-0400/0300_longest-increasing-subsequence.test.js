@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { lengthOfLIS } from '../../../src/problems/0301-0400/0300_longest-increasing-subsequence.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('lengthOfLIS', () => {
-        test.each(
-                structuredClone(testcases),
-        )('lengthOfLIS($nums) -> $expected', ({ nums, expected }) => {
-                expect(lengthOfLIS(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'lengthOfLIS($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(lengthOfLIS(nums)).toStrictEqual(expected);
+                },
+        );
 });

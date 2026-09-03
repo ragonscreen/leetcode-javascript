@@ -1,5 +1,5 @@
 /**
- * 0334. Increasing Triplet Subsequence
+ * 334. Increasing Triplet Subsequence
  *
  * Link: https://leetcode.com/problems/increasing-triplet-subsequence/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 936,186
  * - Total Submissions: 2,377,010
  * - Acceptance Rate: 39.4%
  *
  * Similar Problems:
+ *
  * - count-special-quadruplets (Easy)
  * - longest-increasing-subsequence (Medium)
  * - count-good-triplets-in-an-array (Hard)
@@ -30,7 +33,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const increasingTriplet = (nums) => {
         const INF = Number.MAX_SAFE_INTEGER;
@@ -61,7 +64,7 @@ const increasingTriplet = (nums) => {
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const increasingTriplet1 = (nums) => {
         const INF = Number.MAX_SAFE_INTEGER;
@@ -108,7 +111,7 @@ const increasingTriplet1 = (nums) => {
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const increasingTriplet2 = (nums) => {
         const INF = Number.MAX_SAFE_INTEGER;

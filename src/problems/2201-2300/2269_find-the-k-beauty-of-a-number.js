@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 89,747
  * - Total Submissions: 142,118
  * - Acceptance Rate: 63.1%
@@ -25,7 +27,7 @@
  *
  * @param {number} num
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const divisorSubstrings = (num, k) => {
         const digits = Math.floor(Math.log10(num) + 1);

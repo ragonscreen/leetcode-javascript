@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         judgeSquareSum,
         judgeSquareSum1,
@@ -16,33 +17,37 @@ const testcases = [
 ];
 
 describe('judgeSquareSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('judgeSquareSum($c) -> $expected', ({ c, expected }) => {
-                expect(judgeSquareSum(c)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'judgeSquareSum($c) -> $expected',
+                ({ c, expected }) => {
+                        expect(judgeSquareSum(c)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('judgeSquareSum1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('judgeSquareSum1($c) -> $expected', ({ c, expected }) => {
-                expect(judgeSquareSum1(c)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'judgeSquareSum1($c) -> $expected',
+                ({ c, expected }) => {
+                        expect(judgeSquareSum1(c)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('judgeSquareSum2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('judgeSquareSum2($c) -> $expected', ({ c, expected }) => {
-                expect(judgeSquareSum2(c)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'judgeSquareSum2($c) -> $expected',
+                ({ c, expected }) => {
+                        expect(judgeSquareSum2(c)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('judgeSquareSum3', () => {
-        test.each(
-                structuredClone(testcases),
-        )('judgeSquareSum3($c) -> $expected', ({ c, expected }) => {
-                expect(judgeSquareSum3(c)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'judgeSquareSum3($c) -> $expected',
+                ({ c, expected }) => {
+                        expect(judgeSquareSum3(c)).toStrictEqual(expected);
+                },
+        );
 });

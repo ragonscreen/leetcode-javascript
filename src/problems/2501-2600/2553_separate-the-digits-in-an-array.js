@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 219,818
  * - Total Submissions: 256,297
  * - Acceptance Rate: 85.8%
  *
  * Similar Problems:
+ *
  * - alternating-digit-sum (Easy)
  * - count-integers-with-even-digit-sum (Easy)
  */
@@ -29,7 +32,7 @@
  * `k` = total number of digits across `nums`
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const separateDigits = (nums) => {
         const res = [];
@@ -57,7 +60,7 @@ const separateDigits = (nums) => {
  * `k` = total number of digits across `nums`
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 // biome-ignore format: one-liner
 const separateDigits1 = (nums) => nums.flatMap((e) => [...String(e)]).map(Number);

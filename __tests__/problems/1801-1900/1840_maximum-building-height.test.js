@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxBuilding } from '../../../src/problems/1801-1900/1840_maximum-building-height.js';
 
 const testcases = [
@@ -266,13 +267,10 @@ const testcases = [
 ];
 
 describe('maxBuilding', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxBuilding($n, $restrictions) -> $expected', ({
-                n,
-                restrictions,
-                expected,
-        }) => {
-                expect(maxBuilding(n, restrictions)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxBuilding($n, $restrictions) -> $expected',
+                ({ n, restrictions, expected }) => {
+                        expect(maxBuilding(n, restrictions)).toStrictEqual(expected);
+                },
+        );
 });

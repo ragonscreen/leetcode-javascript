@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Breadth-First Search (topic_22)
@@ -16,11 +17,13 @@
  * - Weekly Contest 150 (contest_weekly-contest-150)
  *
  * Stats:
+ *
  * - Total Accepted: 187,036
  * - Total Submissions: 357,599
  * - Acceptance Rate: 52.3%
  *
  * Similar Problems:
+ *
  * - k-highest-ranked-items-within-a-price-range (Medium)
  * - maximum-manhattan-distance-after-k-changes (Medium)
  * - shortest-distance-from-all-buildings (Hard) (Premium)
@@ -33,7 +36,7 @@
  * `n` = `grid.length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const maxDistance = (grid) => {
         const n = grid.length;
@@ -72,13 +75,7 @@ const maxDistance = (grid) => {
                                 const ny = y + d[i];
                                 const nx = x + d[i + 1];
 
-                                if (
-                                        ny < 0 ||
-                                        ny >= n ||
-                                        nx < 0 ||
-                                        nx >= n ||
-                                        grid[ny][nx] !== -1
-                                ) {
+                                if (ny < 0 || ny >= n || nx < 0 || nx >= n || grid[ny][nx] !== -1) {
                                         continue;
                                 }
 

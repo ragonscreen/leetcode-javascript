@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 155,593
  * - Total Submissions: 259,460
  * - Acceptance Rate: 60.0%
  *
  * Similar Problems:
+ *
  * - map-sum-pairs (Medium)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number[]} mapping
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const sortJumbled = (mapping, nums) => {
         const n = nums.length;

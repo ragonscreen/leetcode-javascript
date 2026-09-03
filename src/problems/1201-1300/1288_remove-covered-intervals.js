@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sorting (topic_61049)
  * - Senior (position_senior)
  * - Biweekly Contest 15 (contest_biweekly-contest-15)
  *
  * Stats:
+ *
  * - Total Accepted: 265,631
  * - Total Submissions: 441,665
  * - Acceptance Rate: 60.1%
@@ -26,7 +28,7 @@
  * `n` = `intervals.length`
  *
  * @param {number[][]} intervals
- * @return {number}
+ * @returns {number}
  */
 const removeCoveredIntervals = (intervals) => {
         intervals.sort((a, b) => a[0] - b[0] || b[1] - a[1]);

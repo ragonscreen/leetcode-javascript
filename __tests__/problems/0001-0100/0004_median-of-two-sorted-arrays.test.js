@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findMedianSortedArrays } from '../../../src/problems/0001-0100/0004_median-of-two-sorted-arrays.js';
 
 const testcases = [
@@ -9,15 +10,10 @@ const testcases = [
 ];
 
 describe('findMedianSortedArrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findMedianSortedArrays($nums1, $nums2) -> $expected', ({
-                nums1,
-                nums2,
-                expected,
-        }) => {
-                expect(findMedianSortedArrays(nums1, nums2)).toBeCloseTo(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'findMedianSortedArrays($nums1, $nums2) -> $expected',
+                ({ nums1, nums2, expected }) => {
+                        expect(findMedianSortedArrays(nums1, nums2)).toBeCloseTo(expected);
+                },
+        );
 });

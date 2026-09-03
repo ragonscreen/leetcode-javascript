@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumCount } from '../../../src/problems/2501-2600/2529_maximum-count-of-positive-integer-and-negative-integer.js';
 
 const testcases = [
@@ -36,9 +37,10 @@ const testcases = [
 ];
 
 describe('maximumCount', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumCount($nums) -> $expected', ({ nums, expected }) => {
-                expect(maximumCount(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumCount($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maximumCount(nums)).toStrictEqual(expected);
+                },
+        );
 });

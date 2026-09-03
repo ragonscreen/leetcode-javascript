@@ -1,5 +1,5 @@
 /**
- * 0752. Open the Lock
+ * 752. Open the Lock
  *
  * Link: https://leetcode.com/problems/open-the-lock/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Breadth-First Search (topic_22)
  *
  * Stats:
+ *
  * - Total Accepted: 405,462
  * - Total Submissions: 661,802
  * - Acceptance Rate: 61.3%
  *
  * Similar Problems:
+ *
  * - reachable-nodes-with-restrictions (Medium)
  */
 
@@ -32,7 +35,7 @@ import { Queue } from '@datastructures-js/queue';
  *
  * @param {string[]} deadends
  * @param {string} target
- * @return {number}
+ * @returns {number}
  */
 const openLock = (deadends, target) => {
         const visited = new Set(deadends);

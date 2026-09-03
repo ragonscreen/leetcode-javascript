@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 41,796
  * - Total Submissions: 155,506
  * - Acceptance Rate: 26.9%
  *
  * Similar Problems:
+ *
  * - find-all-numbers-disappeared-in-an-array (Easy)
  * - kth-missing-positive-number (Easy)
  * - maximum-number-of-integers-to-choose-from-a-range-i (Medium)
@@ -33,7 +36,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minimalKSum = (nums, k) => {
         const set = new Set(nums);
@@ -61,7 +64,7 @@ const minimalKSum = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minimalKSum1 = (nums, k) => {
         nums.sort((a, b) => a - b);
@@ -102,7 +105,7 @@ const minimalKSum1 = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minimalKSum2 = (nums, k) => {
         const set = new Set(nums);
@@ -131,7 +134,7 @@ const minimalKSum2 = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minimalKSum3 = (nums, k) => {
         let max = 0;

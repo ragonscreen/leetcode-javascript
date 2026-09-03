@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 78,709
  * - Total Submissions: 99,674
  * - Acceptance Rate: 79.0%
  *
  * Similar Problems:
+ *
  * - remove-all-adjacent-duplicates-in-string (Easy)
  * - remove-all-adjacent-duplicates-in-string-ii (Medium)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minimizedStringLength = (s) => {
         const set = new Set();

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxScore } from '../../../src/problems/1401-1500/1423_maximum-points-you-can-obtain-from-cards.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('maxScore', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxScore($cardPoints, $k) -> $expected', ({
-                cardPoints,
-                k,
-                expected,
-        }) => {
-                expect(maxScore(cardPoints, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxScore($cardPoints, $k) -> $expected',
+                ({ cardPoints, k, expected }) => {
+                        expect(maxScore(cardPoints, k)).toStrictEqual(expected);
+                },
+        );
 });

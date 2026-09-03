@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Simulation (topic_61055)
@@ -15,11 +16,13 @@
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 45,473
  * - Total Submissions: 84,439
  * - Acceptance Rate: 53.9%
  *
  * Similar Problems:
+ *
  * - left-and-right-sum-differences (Easy)
  */
 
@@ -31,7 +34,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const valueAfterKSeconds = (n, k) => {
         const nums = new Uint32Array(n).fill(1);

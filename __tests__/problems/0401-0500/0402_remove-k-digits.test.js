@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { removeKdigits } from '../../../src/problems/0401-0500/0402_remove-k-digits.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('removeKdigits', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeKdigits($num, $k) -> $expected', ({ num, k, expected }) => {
-                expect(removeKdigits(num, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeKdigits($num, $k) -> $expected',
+                ({ num, k, expected }) => {
+                        expect(removeKdigits(num, k)).toStrictEqual(expected);
+                },
+        );
 });

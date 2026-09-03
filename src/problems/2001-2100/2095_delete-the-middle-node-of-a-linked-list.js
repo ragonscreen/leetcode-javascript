@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Two Pointers (topic_9)
  * - Senior (position_senior)
  * - Weekly Contest 270 (contest_weekly-contest-270)
  *
  * Stats:
+ *
  * - Total Accepted: 1,059,299
  * - Total Submissions: 1,750,115
  * - Acceptance Rate: 60.5%
  *
  * Similar Problems:
+ *
  * - middle-of-the-linked-list (Easy)
  * - remove-linked-list-elements (Easy)
  * - remove-nth-node-from-end-of-list (Medium)
@@ -32,7 +35,7 @@
  * `n` = `head.length`
  *
  * @param {ListNode} head
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const deleteMiddle = (head) => {
         if (!head.next) {

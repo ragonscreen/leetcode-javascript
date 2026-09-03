@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { colorTheArray } from '../../../src/problems/2601-2700/2672_number-of-adjacent-elements-with-the-same-color.js';
 
 const testcases = [
@@ -17,15 +18,10 @@ const testcases = [
 ];
 
 describe('colorTheArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('colorTheArray($n, $queries) -> $expected', ({
-                n,
-                queries,
-                expected,
-        }) => {
-                expect(Array.from(colorTheArray(n, queries))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'colorTheArray($n, $queries) -> $expected',
+                ({ n, queries, expected }) => {
+                        expect(Array.from(colorTheArray(n, queries))).toStrictEqual(expected);
+                },
+        );
 });

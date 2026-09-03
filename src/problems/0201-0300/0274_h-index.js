@@ -1,5 +1,5 @@
 /**
- * 0274. H-Index
+ * 274. H-Index
  *
  * Link: https://leetcode.com/problems/h-index/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sorting (topic_61049)
  * - Counting Sort (topic_61072)
  *
  * Stats:
+ *
  * - Total Accepted: 869,608
  * - Total Submissions: 2,101,670
  * - Acceptance Rate: 41.4%
  *
  * Similar Problems:
+ *
  * - h-index-ii (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} citations
- * @return {number}
+ * @returns {number}
  */
 const hIndex = (citations) => {
         const n = citations.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { decodeString } from '../../../src/problems/0301-0400/0394_decode-string.js';
 
 const testcases = [
@@ -22,9 +23,10 @@ const testcases = [
 ];
 
 describe('decodeString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('decodeString($s) -> $expected', ({ s, expected }) => {
-                expect(decodeString(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'decodeString($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(decodeString(s)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0074. Search a 2D Matrix
+ * 74. Search a 2D Matrix
  *
  * Link: https://leetcode.com/problems/search-a-2d-matrix/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 2,839,746
  * - Total Submissions: 5,285,487
  * - Acceptance Rate: 53.7%
  *
  * Similar Problems:
+ *
  * - search-a-2d-matrix-ii (Medium)
  * - split-message-based-on-limit (Hard)
  */
@@ -30,7 +33,7 @@
  *
  * @param {number[][]} matrix
  * @param {number} target
- * @return {boolean}
+ * @returns {boolean}
  */
 const searchMatrix = (matrix, target) => {
         const n = matrix.length;

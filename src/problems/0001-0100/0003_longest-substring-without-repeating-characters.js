@@ -1,5 +1,5 @@
 /**
- * 0003. Longest Substring Without Repeating Characters
+ * 3. Longest Substring Without Repeating Characters
  *
  * Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 9,125,970
  * - Total Submissions: 23,630,274
  * - Acceptance Rate: 38.6%
  *
  * Similar Problems:
+ *
  * - count-complete-subarrays-in-an-array (Medium)
  * - find-longest-special-substring-that-occurs-thrice-i (Medium)
  * - find-longest-special-substring-that-occurs-thrice-ii (Medium)
@@ -38,7 +41,7 @@
  * `n` = length of `s`, `m` = number of unique characters in `s`
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const lengthOfLongestSubstring = (s) => {
         // ascii values 32 to 126 are available

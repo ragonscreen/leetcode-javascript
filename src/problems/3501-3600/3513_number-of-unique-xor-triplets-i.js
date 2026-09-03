@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Bit Manipulation (topic_19)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 154 (contest_biweekly-contest-154)
  *
  * Stats:
+ *
  * - Total Accepted: 62,983
  * - Total Submissions: 126,013
  * - Acceptance Rate: 50.0%
@@ -26,7 +28,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const uniqueXorTriplets = (nums) => {
         const n = nums.length;

@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 49,988
  * - Total Submissions: 73,802
  * - Acceptance Rate: 67.7%
@@ -22,7 +24,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {string} number
- * @return {string}
+ * @returns {string}
  */
 const reformatNumber = (number) => {
         const n = number.length;

@@ -1,5 +1,5 @@
 /**
- * 0895. Maximum Frequency Stack
+ * 895. Maximum Frequency Stack
  *
  * Link: https://leetcode.com/problems/maximum-frequency-stack/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Stack (topic_15)
  * - Design (topic_25)
  * - Ordered Set (topic_61070)
  *
  * Stats:
+ *
  * - Total Accepted: 223,548
  * - Total Submissions: 335,139
  * - Acceptance Rate: 66.7%
@@ -37,7 +39,7 @@ class FreqStack {
          * Space Complexity: O()
          *
          * @param {number} val
-         * @return {void}
+         * @returns {void}
          */
         push(val) {}
 
@@ -45,7 +47,7 @@ class FreqStack {
          * Time Complexity: O()
          * Space Complexity: O()
          *
-         * @return {number}
+         * @returns {number}
          */
         pop() {}
 }

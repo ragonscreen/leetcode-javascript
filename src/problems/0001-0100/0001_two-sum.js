@@ -1,5 +1,5 @@
 /**
- * 0001. Two Sum
+ * 1. Two Sum
  *
  * Link: https://leetcode.com/problems/two-sum/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Junior (position_junior)
  *
  * Stats:
+ *
  * - Total Accepted: 20,988,975
  * - Total Submissions: 36,715,356
  * - Acceptance Rate: 57.2%
  *
  * Similar Problems:
+ *
  * - check-distances-between-same-letters (Easy)
  * - count-number-of-pairs-with-absolute-difference-k (Easy)
  * - count-pairs-whose-sum-is-less-than-target (Easy)
@@ -49,7 +52,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number[]}
+ * @returns {number[]}
  */
 const twoSum = (nums, target) => {
         const map = new Map();
@@ -77,7 +80,7 @@ const twoSum = (nums, target) => {
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number[]}
+ * @returns {number[]}
  */
 const twoSum1 = (nums, target) => {
         const n = nums.length;

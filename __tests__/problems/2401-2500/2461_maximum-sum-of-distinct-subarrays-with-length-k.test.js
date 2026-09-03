@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumSubarraySum } from '../../../src/problems/2401-2500/2461_maximum-sum-of-distinct-subarrays-with-length-k.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('maximumSubarraySum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumSubarraySum($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(maximumSubarraySum(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumSubarraySum($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(maximumSubarraySum(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

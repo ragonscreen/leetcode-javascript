@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countSpecialNumbers } from '../../../src/problems/0000_wip/2376_count-special-integers.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe.skip('countSpecialNumbers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countSpecialNumbers($n) -> $expected', ({ n, expected }) => {
-                expect(countSpecialNumbers(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countSpecialNumbers($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(countSpecialNumbers(n)).toStrictEqual(expected);
+                },
+        );
 });

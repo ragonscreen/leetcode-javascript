@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 382,783
  * - Total Submissions: 772,865
  * - Acceptance Rate: 49.5%
  *
  * Similar Problems:
+ *
  * - longest-subsequence-with-limited-sum (Easy)
  * - maximum-matching-of-players-with-trainers (Medium)
  * - most-profit-assigning-work (Medium)
@@ -33,7 +36,7 @@
  * @param {number[]} spells
  * @param {number[]} potions
  * @param {number} success
- * @return {number[]}
+ * @returns {number[]}
  */
 const successfulPairs = (spells, potions, success) => {
         const maxPotion = Math.max(...potions);
@@ -70,7 +73,7 @@ const successfulPairs = (spells, potions, success) => {
  * @param {number[]} spells
  * @param {number[]} potions
  * @param {number} success
- * @return {number[]}
+ * @returns {number[]}
  */
 const successfulPairs1 = (spells, potions, success) => {
         potions.sort((a, b) => a - b);

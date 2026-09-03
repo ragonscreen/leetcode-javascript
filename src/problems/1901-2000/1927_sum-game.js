@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Greedy (topic_17)
@@ -16,6 +17,7 @@
  * - Biweekly Contest 56 (contest_biweekly-contest-56)
  *
  * Stats:
+ *
  * - Total Accepted: 110,388
  * - Total Submissions: 174,719
  * - Acceptance Rate: 63.2%
@@ -28,7 +30,7 @@
  * `n` = `num.length`
  *
  * @param {string} num
- * @return {boolean}
+ * @returns {boolean}
  */
 const sumGame = (num) => {
         const n = num.length;

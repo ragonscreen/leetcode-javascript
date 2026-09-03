@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 61,850
  * - Total Submissions: 118,097
  * - Acceptance Rate: 52.4%
  *
  * Similar Problems:
+ *
  * - number-of-steps-to-reduce-a-number-to-zero (Easy)
  * - number-of-steps-to-reduce-a-number-in-binary-representation-to-one (Medium)
  */
@@ -29,7 +32,7 @@
  *
  * @param {number} target
  * @param {number} maxDoubles
- * @return {number}
+ * @returns {number}
  */
 const minMoves = (target, maxDoubles) => {
         let res = 0;

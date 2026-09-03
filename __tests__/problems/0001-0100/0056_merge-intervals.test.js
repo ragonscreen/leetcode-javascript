@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { merge } from '../../../src/problems/0001-0100/0056_merge-intervals.js';
 
 const testcases = [
@@ -68,9 +69,10 @@ const testcases = [
 ];
 
 describe('merge', () => {
-        test.each(
-                structuredClone(testcases),
-        )('merge($intervals) -> $expected', ({ intervals, expected }) => {
-                expect(merge(intervals)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'merge($intervals) -> $expected',
+                ({ intervals, expected }) => {
+                        expect(merge(intervals)).toStrictEqual(expected);
+                },
+        );
 });

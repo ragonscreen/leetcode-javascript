@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 220,258
  * - Total Submissions: 301,450
  * - Acceptance Rate: 73.1%
  *
  * Similar Problems:
+ *
  * - average-height-of-buildings-in-each-segment (Medium)
  */
 
@@ -26,7 +29,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[][]} customers
- * @return {number}
+ * @returns {number}
  */
 const averageWaitingTime = (customers) => {
         let res = 0;

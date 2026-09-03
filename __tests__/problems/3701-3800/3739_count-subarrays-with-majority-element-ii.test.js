@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countMajoritySubarrays } from '../../../src/problems/3701-3800/3739_count-subarrays-with-majority-element-ii.js';
 
 const testcases = [
@@ -8,15 +9,10 @@ const testcases = [
 ];
 
 describe('countMajoritySubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countMajoritySubarrays($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(countMajoritySubarrays(nums, target)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countMajoritySubarrays($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(countMajoritySubarrays(nums, target)).toStrictEqual(expected);
+                },
+        );
 });

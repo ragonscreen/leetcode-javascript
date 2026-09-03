@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { productExceptSelf } from '../../../src/problems/0201-0300/0238_product-of-array-except-self.js';
 import { normaliseNegZero } from '../../utils/number.js';
 
@@ -8,11 +9,12 @@ const testcases = [
 ];
 
 describe('productExceptSelf', () => {
-        test.each(
-                structuredClone(testcases),
-        )('productExceptSelf($nums) -> $expected', ({ nums, expected }) => {
-                expect(
-                        productExceptSelf(nums).map(normaliseNegZero),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'productExceptSelf($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(productExceptSelf(nums).map(normaliseNegZero)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

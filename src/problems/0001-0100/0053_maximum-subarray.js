@@ -1,5 +1,5 @@
 /**
- * 0053. Maximum Subarray
+ * 53. Maximum Subarray
  *
  * Link: https://leetcode.com/problems/maximum-subarray/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Divide and Conquer (topic_12)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 6,124,333
  * - Total Submissions: 11,489,132
  * - Acceptance Rate: 53.3%
  *
  * Similar Problems:
+ *
  * - best-time-to-buy-and-sell-stock (Easy)
  * - degree-of-an-array (Easy)
  * - k-items-with-the-maximum-sum (Easy)
@@ -40,7 +43,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxSubArray = (nums) => {
         let res = nums[0];

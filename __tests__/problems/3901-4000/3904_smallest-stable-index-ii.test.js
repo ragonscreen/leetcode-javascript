@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { firstStableIndex } from '../../../src/problems/3901-4000/3904_smallest-stable-index-ii.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('firstStableIndex', () => {
-        test.each(
-                structuredClone(testcases),
-        )('firstStableIndex($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(firstStableIndex(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'firstStableIndex($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(firstStableIndex(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

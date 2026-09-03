@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 132,325
  * - Total Submissions: 273,061
  * - Acceptance Rate: 48.5%
@@ -26,7 +28,7 @@
  *
  * @param {string} sentence1
  * @param {string} sentence2
- * @return {boolean}
+ * @returns {boolean}
  */
 const areSentencesSimilar = (sentence1, sentence2) => {
         const a1 = sentence1.split(' ');

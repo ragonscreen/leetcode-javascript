@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 29,004
  * - Total Submissions: 39,724
  * - Acceptance Rate: 73.0%
@@ -19,7 +20,7 @@
  * Space Complexity: O(1)
  *
  * @param {string[]} events
- * @return {number[]}
+ * @returns {number[]}
  */
 const scoreValidator = (events) => {
         let scr = 0;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { distance } from '../../../src/problems/2601-2700/2615_sum-of-distances.js';
 
 const testcases = [
@@ -7,10 +8,10 @@ const testcases = [
 ];
 
 describe('distance', () => {
-        test.each(structuredClone(testcases))('distance($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(Array.from(distance(nums))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'distance($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(Array.from(distance(nums))).toStrictEqual(expected);
+                },
+        );
 });

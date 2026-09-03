@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { eatenApples } from '../../../src/problems/1701-1800/1705_maximum-number-of-eaten-apples.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('eatenApples', () => {
-        test.each(
-                structuredClone(testcases),
-        )('eatenApples($apples, $days) -> $expected', ({
-                apples,
-                days,
-                expected,
-        }) => {
-                expect(eatenApples(apples, days)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'eatenApples($apples, $days) -> $expected',
+                ({ apples, days, expected }) => {
+                        expect(eatenApples(apples, days)).toStrictEqual(expected);
+                },
+        );
 });

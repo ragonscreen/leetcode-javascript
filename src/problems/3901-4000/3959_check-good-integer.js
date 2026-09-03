@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Weekly Contest 506 (contest_weekly-contest-506)
  *
  * Stats:
+ *
  * - Total Accepted: 28,388
  * - Total Submissions: 34,300
  * - Acceptance Rate: 82.8%
@@ -23,7 +25,7 @@
  * `N` = `n`
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const checkGoodInteger = (n) => {
         let sum = 0;

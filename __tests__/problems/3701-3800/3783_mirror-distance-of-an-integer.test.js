@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { mirrorDistance } from '../../../src/problems/3701-3800/3783_mirror-distance-of-an-integer.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('mirrorDistance', () => {
-        test.each(
-                structuredClone(testcases),
-        )('mirrorDistance($n) -> $expected', ({ n, expected }) => {
-                expect(mirrorDistance(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'mirrorDistance($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(mirrorDistance(n)).toStrictEqual(expected);
+                },
+        );
 });

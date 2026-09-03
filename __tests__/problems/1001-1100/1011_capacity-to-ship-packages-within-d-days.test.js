@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { shipWithinDays } from '../../../src/problems/1001-1100/1011_capacity-to-ship-packages-within-d-days.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('shipWithinDays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('shipWithinDays($weights, $days) -> $expected', ({
-                weights,
-                days,
-                expected,
-        }) => {
-                expect(shipWithinDays(weights, days)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'shipWithinDays($weights, $days) -> $expected',
+                ({ weights, days, expected }) => {
+                        expect(shipWithinDays(weights, days)).toStrictEqual(expected);
+                },
+        );
 });

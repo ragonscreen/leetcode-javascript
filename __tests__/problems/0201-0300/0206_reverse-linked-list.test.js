@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { reverseList } from '../../../src/problems/0201-0300/0206_reverse-linked-list.js';
 import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
@@ -9,11 +10,10 @@ const testcases = [
 ];
 
 describe('reverseList', () => {
-        test.each(
-                structuredClone(testcases),
-        )('reverseList($head) -> $expected', ({ head, expected }) => {
-                expect(
-                        listToArray(reverseList(arrayToList(head))),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'reverseList($head) -> $expected',
+                ({ head, expected }) => {
+                        expect(listToArray(reverseList(arrayToList(head)))).toStrictEqual(expected);
+                },
+        );
 });

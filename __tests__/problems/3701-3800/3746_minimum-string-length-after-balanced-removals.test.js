@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minLengthAfterRemovals } from '../../../src/problems/3701-3800/3746_minimum-string-length-after-balanced-removals.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minLengthAfterRemovals', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minLengthAfterRemovals($s) -> $expected', ({ s, expected }) => {
-                expect(minLengthAfterRemovals(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minLengthAfterRemovals($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(minLengthAfterRemovals(s)).toStrictEqual(expected);
+                },
+        );
 });

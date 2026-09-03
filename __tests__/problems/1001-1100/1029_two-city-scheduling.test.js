@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { twoCitySchedCost } from '../../../src/problems/1001-1100/1029_two-city-scheduling.js';
 
 const testcases = [
@@ -38,9 +39,10 @@ const testcases = [
 ];
 
 describe('twoCitySchedCost', () => {
-        test.each(
-                structuredClone(testcases),
-        )('twoCitySchedCost($costs) -> $expected', ({ costs, expected }) => {
-                expect(twoCitySchedCost(costs)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'twoCitySchedCost($costs) -> $expected',
+                ({ costs, expected }) => {
+                        expect(twoCitySchedCost(costs)).toStrictEqual(expected);
+                },
+        );
 });

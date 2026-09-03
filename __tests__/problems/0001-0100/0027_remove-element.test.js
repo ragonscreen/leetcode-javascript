@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { removeElement } from '../../../src/problems/0001-0100/0027_remove-element.js';
 
 const testcases = [
@@ -11,15 +12,12 @@ const testcases = [
 ];
 
 describe('removeElement', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeElement($nums, $val) -> $expected', ({
-                nums,
-                val,
-                expected,
-        }) => {
-                const k = removeElement(nums, val);
-                expect(k).toStrictEqual(expected.len);
-                expect(nums.slice(0, k)).toStrictEqual(expected.nums);
-        });
+        test.each(structuredClone(testcases))(
+                'removeElement($nums, $val) -> $expected',
+                ({ nums, val, expected }) => {
+                        const k = removeElement(nums, val);
+                        expect(k).toStrictEqual(expected.len);
+                        expect(nums.slice(0, k)).toStrictEqual(expected.nums);
+                },
+        );
 });

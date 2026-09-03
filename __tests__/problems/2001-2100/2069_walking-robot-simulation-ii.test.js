@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { Robot } from '../../../src/problems/2001-2100/2069_walking-robot-simulation-ii.js';
 
 describe('Robot', () => {

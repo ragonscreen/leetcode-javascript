@@ -1,5 +1,5 @@
 /**
- * 0502. IPO
+ * 502. IPO
  *
  * Link: https://leetcode.com/problems/ipo/
  * Category: Algorithms
@@ -8,25 +8,25 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  * - Heap (Priority Queue) (topic_61050)
  *
  * Stats:
+ *
  * - Total Accepted: 314,154
  * - Total Submissions: 587,987
  * - Acceptance Rate: 53.4%
  *
  * Similar Problems:
+ *
  * - maximum-subsequence-score (Medium)
  * - maximum-elegance-of-a-k-length-subsequence (Hard)
  */
 
-import {
-        MaxPriorityQueue,
-        PriorityQueue,
-} from '@datastructures-js/priority-queue';
+import { MaxPriorityQueue, PriorityQueue } from '@datastructures-js/priority-queue';
 
 /**
  * Approach: Priority Queue [Optimal]
@@ -38,7 +38,7 @@ import {
  * @param {number} w
  * @param {number[]} profits
  * @param {number[]} capital
- * @return {number}
+ * @returns {number}
  */
 const findMaximizedCapital = (k, w, profits, capital) => {
         const n = profits.length;
@@ -75,7 +75,7 @@ const findMaximizedCapital = (k, w, profits, capital) => {
  * @param {number} w
  * @param {number[]} profits
  * @param {number[]} capital
- * @return {number}
+ * @returns {number}
  */
 const findMaximizedCapital1 = (k, w, profits, capital) => {
         const n = profits.length;
@@ -117,7 +117,7 @@ const findMaximizedCapital1 = (k, w, profits, capital) => {
  * @param {number} w
  * @param {number[]} profits
  * @param {number[]} capital
- * @return {number}
+ * @returns {number}
  */
 const findMaximizedCapital2 = (k, w, profits, capital) => {
         const n = profits.length;

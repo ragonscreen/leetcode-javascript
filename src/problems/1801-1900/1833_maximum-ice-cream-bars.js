@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
@@ -16,6 +17,7 @@
  * - Weekly Contest 237 (contest_weekly-contest-237)
  *
  * Stats:
+ *
  * - Total Accepted: 338,935
  * - Total Submissions: 438,864
  * - Acceptance Rate: 77.2%
@@ -29,7 +31,7 @@
  *
  * @param {number[]} costs
  * @param {number} coins
- * @return {number}
+ * @returns {number}
  */
 const maxIceCream = (costs, coins) => {
         const mx = Math.max(...costs) + 1;

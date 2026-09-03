@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 150,740
  * - Total Submissions: 239,093
  * - Acceptance Rate: 63.0%
  *
  * Similar Problems:
+ *
  * - capacity-to-ship-packages-within-d-days (Medium)
  * - find-the-smallest-divisor-given-a-threshold (Medium)
  * - koko-eating-bananas (Medium)
@@ -36,7 +39,7 @@
  *
  * @param {number} n
  * @param {number[]} quantities
- * @return {number}
+ * @returns {number}
  */
 const minimizedMaximum = (n, quantities) => {
         const isValid = (quantity) => {

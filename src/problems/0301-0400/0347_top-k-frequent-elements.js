@@ -1,5 +1,5 @@
 /**
- * 0347. Top K Frequent Elements
+ * 347. Top K Frequent Elements
  *
  * Link: https://leetcode.com/problems/top-k-frequent-elements/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Divide and Conquer (topic_12)
@@ -18,11 +19,13 @@
  * - Quickselect (topic_61069)
  *
  * Stats:
+ *
  * - Total Accepted: 3,452,903
  * - Total Submissions: 5,232,446
  * - Acceptance Rate: 66.0%
  *
  * Similar Problems:
+ *
  * - linked-list-frequency (Easy)
  * - most-frequent-even-element (Easy)
  * - k-closest-points-to-origin (Medium)
@@ -42,7 +45,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const topKFrequent = (nums, k) => {
         const counts = new Map();

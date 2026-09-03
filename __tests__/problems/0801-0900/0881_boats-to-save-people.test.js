@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         numRescueBoats,
         numRescueBoats1,
@@ -12,37 +13,28 @@ const testcases = [
 ];
 
 describe('numRescueBoats', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numRescueBoats($people, $limit) -> $expected', ({
-                people,
-                limit,
-                expected,
-        }) => {
-                expect(numRescueBoats(people, limit)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numRescueBoats($people, $limit) -> $expected',
+                ({ people, limit, expected }) => {
+                        expect(numRescueBoats(people, limit)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('numRescueBoats1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numRescueBoats1($people, $limit) -> $expected', ({
-                people,
-                limit,
-                expected,
-        }) => {
-                expect(numRescueBoats1(people, limit)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numRescueBoats1($people, $limit) -> $expected',
+                ({ people, limit, expected }) => {
+                        expect(numRescueBoats1(people, limit)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('numRescueBoats2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numRescueBoats2($people, $limit) -> $expected', ({
-                people,
-                limit,
-                expected,
-        }) => {
-                expect(numRescueBoats2(people, limit)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numRescueBoats2($people, $limit) -> $expected',
+                ({ people, limit, expected }) => {
+                        expect(numRescueBoats2(people, limit)).toStrictEqual(expected);
+                },
+        );
 });

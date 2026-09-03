@@ -1,5 +1,5 @@
 /**
- * 0073. Set Matrix Zeroes
+ * 73. Set Matrix Zeroes
  *
  * Link: https://leetcode.com/problems/set-matrix-zeroes/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 2,551,559
  * - Total Submissions: 4,068,091
  * - Acceptance Rate: 62.7%
  *
  * Similar Problems:
+ *
  * - game-of-life (Medium)
  * - number-of-laser-beams-in-a-bank (Medium)
  * - remove-all-ones-with-row-and-column-flips-ii (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1) auxiliary, O(m + n) total
  *
  * @param {number[][]} matrix
- * @return {void}
+ * @returns {void}
  */
 const setZeroes = (matrix) => {
         const n = matrix.length;
@@ -88,7 +91,7 @@ const setZeroes = (matrix) => {
  * Space Complexity: O(m + n)
  *
  * @param {number[][]} matrix
- * @return {void}
+ * @returns {void}
  */
 const setZeroes1 = (matrix) => {
         const n = matrix.length;

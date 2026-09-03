@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { carFleet } from '../../../src/problems/0801-0900/0853_car-fleet.js';
 
 const testcases = [
@@ -13,16 +14,10 @@ const testcases = [
 ];
 
 describe('carFleet', () => {
-        test.each(
-                testcases,
-        )('carFleet($target, $position, $speed) -> $expected', ({
-                target,
-                position,
-                speed,
-                expected,
-        }) => {
-                expect(carFleet(target, position, speed)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(testcases)(
+                'carFleet($target, $position, $speed) -> $expected',
+                ({ target, position, speed, expected }) => {
+                        expect(carFleet(target, position, speed)).toStrictEqual(expected);
+                },
+        );
 });

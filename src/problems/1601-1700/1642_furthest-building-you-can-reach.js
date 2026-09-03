@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Heap (Priority Queue) (topic_61050)
@@ -15,11 +16,13 @@
  * - Weekly Contest 213 (contest_weekly-contest-213)
  *
  * Stats:
+ *
  * - Total Accepted: 280,213
  * - Total Submissions: 548,134
  * - Acceptance Rate: 51.1%
  *
  * Similar Problems:
+ *
  * - make-the-prefix-sum-non-negative (Medium) (Premium)
  * - find-building-where-alice-and-bob-can-meet (Hard)
  */
@@ -35,7 +38,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * @param {number[]} heights
  * @param {number} bricks
  * @param {number} ladders
- * @return {number}
+ * @returns {number}
  */
 const furthestBuilding = (heights, bricks, ladders) => {
         const n = heights.length;

@@ -8,23 +8,34 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Enumeration (topic_61066)
  *
  * Stats:
+ *
  * - Total Accepted: 22,478
  * - Total Submissions: 53,385
  * - Acceptance Rate: 42.1%
  *
  * Similar Problems:
+ *
  * - search-a-2d-matrix (Medium)
  * - sentence-screen-fitting (Medium)
  * - text-justification (Hard)
  */
-/** biome-ignore-all lint/nursery/noExcessiveLinesPerFile: <explanation> */
-/** biome-ignore-all lint/correctness/noUnusedVariables: <explanation> */
-/** biome-ignore-all lint/suspicious/noConsole: <explanation> */
-/** biome-ignore-all lint/style/useConst: <explanation> */
+/**
+ * biome-ignore-all lint/nursery/noExcessiveLinesPerFile: <explanation>
+ */
+/**
+ * biome-ignore-all lint/correctness/noUnusedVariables: <explanation>
+ */
+/**
+ * biome-ignore-all lint/suspicious/noConsole: <explanation>
+ */
+/**
+ * biome-ignore-all lint/style/useConst: <explanation>
+ */
 
 /**
  * Approach:
@@ -33,7 +44,7 @@
  *
  * @param {string} message
  * @param {number} limit
- * @return {string[]}
+ * @returns {string[]}
  */
 const splitMessage = (message, limit) => {
         const map = new Map();

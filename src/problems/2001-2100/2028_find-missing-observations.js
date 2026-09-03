@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 174,971
  * - Total Submissions: 305,020
  * - Acceptance Rate: 57.4%
  *
  * Similar Problems:
+ *
  * - number-of-dice-rolls-with-target-sum (Medium)
  * - dice-roll-simulation (Hard)
  */
@@ -31,7 +34,7 @@
  * @param {number[]} rolls
  * @param {number} mean
  * @param {number} n
- * @return {number[]}
+ * @returns {number[]}
  */
 const missingRolls = (rolls, mean, n) => {
         const m = rolls.length;

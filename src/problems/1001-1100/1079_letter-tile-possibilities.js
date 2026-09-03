@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Backtracking (topic_14)
@@ -16,6 +17,7 @@
  * - Weekly Contest 140 (contest_weekly-contest-140)
  *
  * Stats:
+ *
  * - Total Accepted: 258,387
  * - Total Submissions: 309,315
  * - Acceptance Rate: 83.5%
@@ -28,7 +30,7 @@
  * `n` = `tiles.length`
  *
  * @param {string} tiles
- * @return {number}
+ * @returns {number}
  */
 const numTilePossibilities = (tiles) => {
         const n = tiles.length;

@@ -1,5 +1,5 @@
 /**
- * 0273. Integer to English Words
+ * 273. Integer to English Words
  *
  * Link: https://leetcode.com/problems/integer-to-english-words/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 586,319
  * - Total Submissions: 1,673,450
  * - Acceptance Rate: 35.0%
  *
  * Similar Problems:
+ *
  * - integer-to-roman (Medium)
  */
 
@@ -28,7 +31,7 @@
  * `N` = `num`
  *
  * @param {number} num
- * @return {string}
+ * @returns {string}
  */
 const numberToWords = (num) => {
         if (num === 0) {

@@ -1,5 +1,5 @@
 /**
- * 0018. 4Sum
+ * 18. 4Sum
  *
  * Link: https://leetcode.com/problems/4sum/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 1,629,064
  * - Total Submissions: 4,055,068
  * - Acceptance Rate: 40.2%
  *
  * Similar Problems:
+ *
  * - count-special-quadruplets (Easy)
  * - two-sum (Easy)
  * - 3sum (Medium)
@@ -31,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const fourSum = (nums, target) => {
         nums.sort((a, b) => a - b);
@@ -66,17 +69,11 @@ const fourSum = (nums, target) => {
                                 } else {
                                         res.push([a, b, nums[l++], nums[r--]]);
 
-                                        while (
-                                                l < r &&
-                                                nums[l] === nums[l - 1]
-                                        ) {
+                                        while (l < r && nums[l] === nums[l - 1]) {
                                                 l++;
                                         }
 
-                                        while (
-                                                l < r &&
-                                                nums[r] === nums[r + 1]
-                                        ) {
+                                        while (l < r && nums[r] === nums[r + 1]) {
                                                 r--;
                                         }
                                 }

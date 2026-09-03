@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Depth-First Search (topic_21)
@@ -17,11 +18,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 455,149
  * - Total Submissions: 721,856
  * - Acceptance Rate: 63.1%
  *
  * Similar Problems:
+ *
  * - find-the-safest-path-in-a-grid (Medium)
  * - path-with-maximum-minimum-value (Medium)
  * - swim-in-rising-water (Hard)
@@ -36,7 +39,7 @@ import { Queue } from '@datastructures-js/queue';
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} heights
- * @return {number}
+ * @returns {number}
  */
 const minimumEffortPath = (heights) => {
         const n = heights.length;
@@ -72,9 +75,7 @@ const minimumEffortPath = (heights) => {
                         if (ny > -1 && ny < n && nx > -1 && nx < m) {
                                 const newEffort = Math.max(
                                         effort,
-                                        Math.abs(
-                                                heights[y][x] - heights[ny][nx],
-                                        ),
+                                        Math.abs(heights[y][x] - heights[ny][nx]),
                                 );
 
                                 if (newEffort < bestEfforts[ny][nx]) {
@@ -93,7 +94,7 @@ const minimumEffortPath = (heights) => {
  * `n` = length of `grid`, `m` = length of `grid[i]`, `max` = maximum value of `grid[i][j]`
  *
  * @param {number[][]} heights
- * @return {number}
+ * @returns {number}
  */
 const minimumEffortPath1 = (heights) => {
         const n = heights.length;
@@ -121,10 +122,7 @@ const minimumEffortPath1 = (heights) => {
                                 const nx = x + dx;
 
                                 if (
-                                        Math.abs(
-                                                heights[ny]?.[nx] -
-                                                        heights[y][x],
-                                        ) <= e &&
+                                        Math.abs(heights[ny]?.[nx] - heights[y][x]) <= e &&
                                         !visited[ny][nx]
                                 ) {
                                         q.enqueue([ny, nx]);

@@ -1,5 +1,5 @@
 /**
- * 0187. Repeated DNA Sequences
+ * 187. Repeated DNA Sequences
  *
  * Link: https://leetcode.com/problems/repeated-dna-sequences/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Bit Manipulation (topic_19)
@@ -16,6 +17,7 @@
  * - Hash Function (topic_61065)
  *
  * Stats:
+ *
  * - Total Accepted: 529,534
  * - Total Submissions: 995,445
  * - Acceptance Rate: 53.2%
@@ -27,7 +29,7 @@
  * Space Complexity: O(n - 10) = O(n)
  *
  * @param {string} s
- * @return {string[]}
+ * @returns {string[]}
  */
 const findRepeatedDnaSequences = (s) => {
         const frq = new Map();
@@ -61,7 +63,7 @@ const findRepeatedDnaSequences = (s) => {
  * Space Complexity: O(n - 10) = O(n)
  *
  * @param {string} s
- * @return {string[]}
+ * @returns {string[]}
  */
 const findRepeatedDnaSequences1 = (s) => {
         const set = new Set();

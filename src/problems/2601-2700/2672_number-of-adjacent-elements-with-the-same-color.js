@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 33,542
  * - Total Submissions: 56,438
  * - Acceptance Rate: 59.4%
@@ -24,7 +26,7 @@
  *
  * @param {number} n
  * @param {number[][]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const colorTheArray = (n, queries) => {
         const q = queries.length;

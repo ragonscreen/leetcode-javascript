@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numberOfBeams } from '../../../src/problems/2101-2200/2125_number-of-laser-beams-in-a-bank.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('numberOfBeams', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numberOfBeams($bank) -> $expected', ({ bank, expected }) => {
-                expect(numberOfBeams(bank)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numberOfBeams($bank) -> $expected',
+                ({ bank, expected }) => {
+                        expect(numberOfBeams(bank)).toStrictEqual(expected);
+                },
+        );
 });

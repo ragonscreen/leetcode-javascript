@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { areSentencesSimilar } from '../../../src/problems/1801-1900/1813_sentence-similarity-iii.js';
 
 const testcases = [
@@ -18,15 +19,10 @@ const testcases = [
 ];
 
 describe('areSentencesSimilar', () => {
-        test.each(
-                structuredClone(testcases),
-        )('areSentencesSimilar($sentence1, $sentence2) -> $expected', ({
-                sentence1,
-                sentence2,
-                expected,
-        }) => {
-                expect(areSentencesSimilar(sentence1, sentence2)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'areSentencesSimilar($sentence1, $sentence2) -> $expected',
+                ({ sentence1, sentence2, expected }) => {
+                        expect(areSentencesSimilar(sentence1, sentence2)).toStrictEqual(expected);
+                },
+        );
 });

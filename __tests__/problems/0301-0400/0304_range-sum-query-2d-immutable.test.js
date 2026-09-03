@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { NumMatrix } from '../../../src/problems/0301-0400/0304_range-sum-query-2d-immutable.js';
 
 describe('NumMatrix', () => {

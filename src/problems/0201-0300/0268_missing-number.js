@@ -1,5 +1,5 @@
 /**
- * 0268. Missing Number
+ * 268. Missing Number
  *
  * Link: https://leetcode.com/problems/missing-number/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
@@ -16,11 +17,13 @@
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 3,789,664
  * - Total Submissions: 5,282,474
  * - Acceptance Rate: 71.7%
  *
  * Similar Problems:
+ *
  * - find-the-largest-almost-missing-integer (Easy)
  * - single-number (Easy)
  * - find-the-duplicate-number (Medium)
@@ -35,7 +38,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const missingNumber = (nums) => {
         let expectedXor = 0;
@@ -59,7 +62,7 @@ const missingNumber = (nums) => {
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const missingNumber1 = (nums) => {
         const n = nums.length;
@@ -79,7 +82,7 @@ const missingNumber1 = (nums) => {
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const missingNumber2 = (nums) => {
         for (const n of nums) {
@@ -107,7 +110,7 @@ const missingNumber2 = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const missingNumber3 = (nums) => {
         const arr = new Array(nums.length + 1);

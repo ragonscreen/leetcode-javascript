@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { validateStackSequences } from '../../../src/problems/0901-1000/0946_validate-stack-sequences.js';
 
 const testcases = [
@@ -8,15 +9,10 @@ const testcases = [
 ];
 
 describe('validateStackSequences', () => {
-        test.each(
-                structuredClone(testcases),
-        )('validateStackSequences($pushed, $popped) -> $expected', ({
-                pushed,
-                popped,
-                expected,
-        }) => {
-                expect(validateStackSequences(pushed, popped)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'validateStackSequences($pushed, $popped) -> $expected',
+                ({ pushed, popped, expected }) => {
+                        expect(validateStackSequences(pushed, popped)).toStrictEqual(expected);
+                },
+        );
 });

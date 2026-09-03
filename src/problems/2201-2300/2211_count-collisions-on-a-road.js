@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 127,266
  * - Total Submissions: 219,165
  * - Acceptance Rate: 58.1%
  *
  * Similar Problems:
+ *
  * - asteroid-collision (Medium)
  * - car-fleet (Medium)
  * - last-moment-before-all-ants-fall-out-of-a-plank (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} directions
- * @return {number}
+ * @returns {number}
  */
 const countCollisions = (directions) => {
         let res = 0;

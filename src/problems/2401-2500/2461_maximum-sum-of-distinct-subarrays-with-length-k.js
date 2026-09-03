@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 261,790
  * - Total Submissions: 610,148
  * - Acceptance Rate: 42.9%
  *
  * Similar Problems:
+ *
  * - count-the-number-of-good-subarrays (Medium)
  * - find-the-power-of-k-size-subarrays-i (Medium)
  * - find-the-power-of-k-size-subarrays-ii (Medium)
@@ -34,7 +37,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maximumSubarraySum = (nums, k) => {
         const map = new Map();

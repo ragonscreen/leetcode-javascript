@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Binary Search (topic_11)
@@ -15,11 +16,13 @@
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 168,970
  * - Total Submissions: 248,577
  * - Acceptance Rate: 68.0%
  *
  * Similar Problems:
+ *
  * - find-all-numbers-disappeared-in-an-array (Easy)
  * - append-k-integers-with-minimal-sum (Medium)
  * - maximum-number-of-integers-to-choose-from-a-range-ii (Medium)
@@ -36,7 +39,7 @@
  * @param {number[]} banned
  * @param {number} n
  * @param {number} maxSum
- * @return {number}
+ * @returns {number}
  */
 const maxCount = (banned, n, maxSum) => {
         const set = new Set(banned);

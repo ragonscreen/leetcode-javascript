@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Weekly Contest 274 (contest_weekly-contest-274)
  *
  * Stats:
+ *
  * - Total Accepted: 173,424
  * - Total Submissions: 290,169
  * - Acceptance Rate: 59.8%
  *
  * Similar Problems:
+ *
  * - asteroid-collision (Medium)
  */
 
@@ -30,7 +33,7 @@
  *
  * @param {number} mass
  * @param {number[]} asteroids
- * @return {boolean}
+ * @returns {boolean}
  */
 const asteroidsDestroyed = (mass, asteroids) => {
         asteroids.sort((a, b) => a - b);

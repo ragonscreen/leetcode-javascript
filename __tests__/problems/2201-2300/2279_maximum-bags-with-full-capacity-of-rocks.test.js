@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumBags } from '../../../src/problems/2201-2300/2279_maximum-bags-with-full-capacity-of-rocks.js';
 
 const testcases = [
@@ -17,16 +18,12 @@ const testcases = [
 ];
 
 describe('maximumBags', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumBags($capacity, $rocks, $additionalRocks) -> $expected', ({
-                capacity,
-                rocks,
-                additionalRocks,
-                expected,
-        }) => {
-                expect(
-                        maximumBags(capacity, rocks, additionalRocks),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumBags($capacity, $rocks, $additionalRocks) -> $expected',
+                ({ capacity, rocks, additionalRocks, expected }) => {
+                        expect(maximumBags(capacity, rocks, additionalRocks)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

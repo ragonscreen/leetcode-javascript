@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Greedy (topic_17)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 198,885
  * - Total Submissions: 320,258
  * - Acceptance Rate: 62.1%
@@ -25,7 +27,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (nums) => {
         const map = new Map();

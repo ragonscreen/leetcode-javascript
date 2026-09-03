@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 113,575
  * - Total Submissions: 144,664
  * - Acceptance Rate: 78.5%
@@ -22,7 +24,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number} n
- * @return {string}
+ * @returns {string}
  */
 const generateTheString = (n) => 'a'.repeat(n - 1) + (n % 2 ? 'a' : 'b');
 

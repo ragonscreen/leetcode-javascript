@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         gcdOfOddEvenSums,
         gcdOfOddEvenSums1,
@@ -10,17 +11,19 @@ const testcases = [
 ];
 
 describe('gcdOfOddEvenSums', () => {
-        test.each(
-                structuredClone(testcases),
-        )('gcdOfOddEvenSums($n) -> $expected', ({ n, expected }) => {
-                expect(gcdOfOddEvenSums(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'gcdOfOddEvenSums($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(gcdOfOddEvenSums(n)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('gcdOfOddEvenSums1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('gcdOfOddEvenSums1($n) -> $expected', ({ n, expected }) => {
-                expect(gcdOfOddEvenSums1(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'gcdOfOddEvenSums1($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(gcdOfOddEvenSums1(n)).toStrictEqual(expected);
+                },
+        );
 });

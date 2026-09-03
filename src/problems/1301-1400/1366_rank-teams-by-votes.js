@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
@@ -15,11 +16,13 @@
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 102,461
  * - Total Submissions: 170,588
  * - Acceptance Rate: 60.1%
  *
  * Similar Problems:
+ *
  * - online-election (Medium)
  */
 
@@ -29,7 +32,7 @@
  * Space Complexity: O(m * 26) = O(26 * 26) = O(1)
  *
  * @param {string[]} votes
- * @return {string}
+ * @returns {string}
  */
 const rankTeams = (votes) => {
         const m = votes[0].length;

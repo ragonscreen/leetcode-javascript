@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 823,605
  * - Total Submissions: 973,986
  * - Acceptance Rate: 84.6%
  *
  * Similar Problems:
+ *
  * - largest-number-after-digit-swaps-by-parity (Easy)
  * - sort-array-by-parity-ii (Easy)
  * - partition-array-according-to-given-pivot (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const rearrangeArray = (nums) => {
         const res = new Array(nums.length);

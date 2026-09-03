@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Simulation (topic_61055)
@@ -15,11 +16,13 @@
  * - Weekly Contest 158 (contest_weekly-contest-158)
  *
  * Stats:
+ *
  * - Total Accepted: 51,912
  * - Total Submissions: 71,372
  * - Acceptance Rate: 72.7%
  *
  * Similar Problems:
+ *
  * - minimum-moves-to-capture-the-queen (Medium)
  */
 
@@ -30,7 +33,7 @@
  *
  * @param {number[][]} queens
  * @param {number[]} king
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const queensAttacktheKing = (queens, king) => {
         const n = 8;

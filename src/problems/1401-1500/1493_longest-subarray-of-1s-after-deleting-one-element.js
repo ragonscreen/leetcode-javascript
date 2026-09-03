@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 633,312
  * - Total Submissions: 890,536
  * - Acceptance Rate: 71.1%
  *
  * Similar Problems:
+ *
  * - max-consecutive-ones-iii (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const longestSubarray = (nums) => {
         let res = 0;

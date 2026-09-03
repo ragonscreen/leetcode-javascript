@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
@@ -19,11 +20,13 @@
  * - Weekly Contest 147 (contest_weekly-contest-147)
  *
  * Stats:
+ *
  * - Total Accepted: 287,526
  * - Total Submissions: 379,771
  * - Acceptance Rate: 75.7%
  *
  * Similar Problems:
+ *
  * - stone-game-ix (Medium)
  * - stone-game-vi (Medium)
  * - stone-game-vii (Medium)
@@ -38,7 +41,7 @@
  * `n` = `piles.length`
  *
  * @param {number[]} piles
- * @return {number}
+ * @returns {number}
  */
 const stoneGameII = (piles) => {
         const n = piles.length;
@@ -48,10 +51,7 @@ const stoneGameII = (piles) => {
                 p[i] = piles[i] + p[i + 1];
         }
 
-        const memo = Array.from(
-                { length: n + 1 },
-                () => new Uint32Array(n + 1),
-        );
+        const memo = Array.from({ length: n + 1 }, () => new Uint32Array(n + 1));
 
         const rec = (i, m) => {
                 // take all piles if possible
@@ -90,19 +90,17 @@ const stoneGameII = (piles) => {
  * The recursive function calculates the difference between scores of A and B.
  * To find A we need to do some basic algebra:
  *
- *    tot + diff = (A + B) + (A - B)
+ * tot + diff = (A + B) + (A - B)
  * => tot + diff = 2A
  * => A = (tot + diff) / 2
  *
  * @param {number[]} piles
- * @return {number}
+ * @returns {number}
  */
 const stoneGameII1 = (piles) => {
         const n = piles.length;
         const NINF = -(10 ** 6 + 1); // constraint
-        const memo = Array.from({ length: n + 1 }, () =>
-                new Int32Array(n + 1).fill(NINF),
-        );
+        const memo = Array.from({ length: n + 1 }, () => new Int32Array(n + 1).fill(NINF));
 
         const rec = (i, m) => {
                 if (i === n) {

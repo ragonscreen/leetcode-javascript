@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numIdenticalPairs } from '../../../src/problems/1501-1600/1512_number-of-good-pairs.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('numIdenticalPairs', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numIdenticalPairs($nums) -> $expected', ({ nums, expected }) => {
-                expect(numIdenticalPairs(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numIdenticalPairs($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(numIdenticalPairs(nums)).toStrictEqual(expected);
+                },
+        );
 });

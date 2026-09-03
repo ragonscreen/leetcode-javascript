@@ -1,5 +1,5 @@
 /**
- * 0994. Rotting Oranges
+ * 994. Rotting Oranges
  *
  * Link: https://leetcode.com/problems/rotting-oranges/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Breadth-First Search (topic_22)
  * - Matrix (topic_61053)
@@ -15,11 +16,13 @@
  * - Weekly Contest 124 (contest_weekly-contest-124)
  *
  * Stats:
+ *
  * - Total Accepted: 1,778,563
  * - Total Submissions: 3,004,524
  * - Acceptance Rate: 59.2%
  *
  * Similar Problems:
+ *
  * - battleships-in-a-board (Medium)
  * - detonate-the-maximum-bombs (Medium)
  * - walls-and-gates (Medium) (Premium)
@@ -33,7 +36,7 @@
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const orangesRotting = (grid) => {
         const n = grid.length;

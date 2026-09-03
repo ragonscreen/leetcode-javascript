@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { bestTower } from '../../../src/problems/3801-3900/3809_best-reachable-tower.js';
 
 const testcases = [
@@ -34,16 +35,10 @@ const testcases = [
 ];
 
 describe('bestTower', () => {
-        test.each(
-                structuredClone(testcases),
-        )('bestTower($towers, $center, $radius) -> $expected', ({
-                towers,
-                center,
-                radius,
-                expected,
-        }) => {
-                expect(bestTower(towers, center, radius)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'bestTower($towers, $center, $radius) -> $expected',
+                ({ towers, center, radius, expected }) => {
+                        expect(bestTower(towers, center, radius)).toStrictEqual(expected);
+                },
+        );
 });

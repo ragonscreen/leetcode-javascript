@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Backtracking (topic_14)
  *
  * Stats:
+ *
  * - Total Accepted: 409,343
  * - Total Submissions: 503,987
  * - Acceptance Rate: 81.2%
  *
  * Similar Problems:
+ *
  * - find-all-numbers-disappeared-in-an-array (Easy)
  * - missing-number (Easy)
  * - random-pick-with-blacklist (Hard)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {string[]} nums
- * @return {string}
+ * @returns {string}
  */
 const findDifferentBinaryString = (nums) => {
         let str = '';

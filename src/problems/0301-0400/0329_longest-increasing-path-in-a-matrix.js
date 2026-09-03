@@ -1,5 +1,5 @@
 /**
- * 0329. Longest Increasing Path in a Matrix
+ * 329. Longest Increasing Path in a Matrix
  *
  * Link: https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Depth-First Search (topic_21)
@@ -18,11 +19,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 719,374
  * - Total Submissions: 1,270,766
  * - Acceptance Rate: 56.6%
  *
  * Similar Problems:
+ *
  * - number-of-increasing-paths-in-a-grid (Hard)
  */
 
@@ -32,7 +35,7 @@
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} matrix
- * @return {number}
+ * @returns {number}
  */
 const longestIncreasingPath = (matrix) => {
         const n = matrix.length;

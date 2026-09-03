@@ -1,5 +1,5 @@
 /**
- * 0127. Word Ladder
+ * 127. Word Ladder
  *
  * Link: https://leetcode.com/problems/word-ladder/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Breadth-First Search (topic_22)
  *
  * Stats:
+ *
  * - Total Accepted: 1,617,143
  * - Total Submissions: 3,560,852
  * - Acceptance Rate: 45.4%
  *
  * Similar Problems:
+ *
  * - minimum-genetic-mutation (Medium)
  * - words-within-two-edits-of-dictionary (Medium)
  * - word-ladder-ii (Hard)
@@ -35,7 +38,7 @@ import { Queue } from '@datastructures-js/queue';
  * @param {string} beginWord
  * @param {string} endWord
  * @param {string[]} wordList
- * @return {number}
+ * @returns {number}
  */
 const ladderLength = (beginWord, endWord, wordList) => {
         wordList.push(beginWord);
@@ -114,7 +117,7 @@ const ladderLength = (beginWord, endWord, wordList) => {
  * @param {string} beginWord
  * @param {string} endWord
  * @param {string[]} wordList
- * @return {number}
+ * @returns {number}
  */
 const ladderLength1 = (beginWord, endWord, wordList) => {
         wordList.push(beginWord);
@@ -189,7 +192,7 @@ const ladderLength1 = (beginWord, endWord, wordList) => {
  * @param {string} beginWord
  * @param {string} endWord
  * @param {string[]} wordList
- * @return {number}
+ * @returns {number}
  */
 const ladderLength2 = (beginWord, endWord, wordList) => {
         const abc = 'qwertyuiopasdfghjklzxcvbnm';
@@ -252,7 +255,7 @@ const ladderLength2 = (beginWord, endWord, wordList) => {
  * @param {string} beginWord
  * @param {string} endWord
  * @param {string[]} wordList
- * @return {number}
+ * @returns {number}
  */
 const ladderLength3 = (beginWord, endWord, wordList) => {
         wordList.push(beginWord);

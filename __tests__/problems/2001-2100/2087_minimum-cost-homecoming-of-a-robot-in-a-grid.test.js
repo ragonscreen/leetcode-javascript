@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minCost,
         minCost1,
@@ -23,49 +24,34 @@ const testcases = [
 ];
 
 describe('minCost', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minCost($startPos, $homePos, $rowCosts, $colCosts) -> $expected', ({
-                startPos,
-                homePos,
-                rowCosts,
-                colCosts,
-                expected,
-        }) => {
-                expect(
-                        minCost(startPos, homePos, rowCosts, colCosts),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minCost($startPos, $homePos, $rowCosts, $colCosts) -> $expected',
+                ({ startPos, homePos, rowCosts, colCosts, expected }) => {
+                        expect(minCost(startPos, homePos, rowCosts, colCosts)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe('minCost1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minCost1($startPos, $homePos, $rowCosts, $colCosts) -> $expected', ({
-                startPos,
-                homePos,
-                rowCosts,
-                colCosts,
-                expected,
-        }) => {
-                expect(
-                        minCost1(startPos, homePos, rowCosts, colCosts),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minCost1($startPos, $homePos, $rowCosts, $colCosts) -> $expected',
+                ({ startPos, homePos, rowCosts, colCosts, expected }) => {
+                        expect(minCost1(startPos, homePos, rowCosts, colCosts)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe('minCost2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minCost2($startPos, $homePos, $rowCosts, $colCosts) -> $expected', ({
-                startPos,
-                homePos,
-                rowCosts,
-                colCosts,
-                expected,
-        }) => {
-                expect(
-                        minCost2(startPos, homePos, rowCosts, colCosts),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minCost2($startPos, $homePos, $rowCosts, $colCosts) -> $expected',
+                ({ startPos, homePos, rowCosts, colCosts, expected }) => {
+                        expect(minCost2(startPos, homePos, rowCosts, colCosts)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

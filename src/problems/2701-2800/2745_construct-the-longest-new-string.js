@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
  * - Greedy (topic_17)
  * - Brainteaser (topic_32)
  *
  * Stats:
+ *
  * - Total Accepted: 26,928
  * - Total Submissions: 49,183
  * - Acceptance Rate: 54.8%
@@ -27,7 +29,7 @@
  * @param {number} x
  * @param {number} y
  * @param {number} z
- * @return {number}
+ * @returns {number}
  */
 const longestString = (x, y, z) => {
         const k = Math.min(x, y);

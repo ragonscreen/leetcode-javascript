@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Tree (topic_20)
  * - Depth-First Search (topic_21)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 157 (contest_biweekly-contest-157)
  *
  * Stats:
+ *
  * - Total Accepted: 35,688
  * - Total Submissions: 59,312
  * - Acceptance Rate: 60.2%
@@ -27,7 +29,7 @@
  * `n` = `edges.length`
  *
  * @param {number[][]} edges
- * @return {number}
+ * @returns {number}
  */
 const assignEdgeWeights = (edges) => {
         const mod = 1e9 + 7;

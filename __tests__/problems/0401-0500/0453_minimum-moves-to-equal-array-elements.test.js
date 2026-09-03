@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minMoves } from '../../../src/problems/0401-0500/0453_minimum-moves-to-equal-array-elements.js';
 
 const testcases = [
@@ -7,10 +8,10 @@ const testcases = [
 ];
 
 describe('minMoves', () => {
-        test.each(structuredClone(testcases))('minMoves($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(minMoves(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minMoves($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minMoves(nums)).toStrictEqual(expected);
+                },
+        );
 });

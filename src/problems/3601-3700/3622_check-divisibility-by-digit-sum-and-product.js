@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 459 (contest_weekly-contest-459)
  *
  * Stats:
+ *
  * - Total Accepted: 222,559
  * - Total Submissions: 298,411
  * - Acceptance Rate: 74.6%
@@ -25,7 +27,7 @@
  * `N` = `n`
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const checkDivisibility = (n) => {
         let x = n;

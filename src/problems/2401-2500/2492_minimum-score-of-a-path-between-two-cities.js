@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
  * - Union-Find (topic_23)
@@ -16,11 +17,13 @@
  * - Weekly Contest 322 (contest_weekly-contest-322)
  *
  * Stats:
+ *
  * - Total Accepted: 206,520
  * - Total Submissions: 311,770
  * - Acceptance Rate: 66.2%
  *
  * Similar Problems:
+ *
  * - checking-existence-of-edge-length-limited-paths (Hard)
  * - checking-existence-of-edge-length-limited-paths-ii (Hard) (Premium)
  */
@@ -33,7 +36,7 @@
  *
  * @param {number} n
  * @param {number[][]} roads
- * @return {number}
+ * @returns {number}
  */
 const minScore = (n, roads) => {
         const g = new Array(n + 1);

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minOperations } from '../../../src/problems/2001-2100/2009_minimum-number-of-operations-to-make-array-continuous.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($nums) -> $expected', ({ nums, expected }) => {
-                expect(minOperations(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minOperations(nums)).toStrictEqual(expected);
+                },
+        );
 });

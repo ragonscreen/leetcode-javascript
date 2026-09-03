@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
@@ -15,11 +16,13 @@
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 59,324
  * - Total Submissions: 112,927
  * - Acceptance Rate: 52.5%
  *
  * Similar Problems:
+ *
  * - number-of-good-pairs (Easy)
  * - count-nice-pairs-in-an-array (Medium)
  * - replace-non-coprime-numbers-in-array (Hard)
@@ -31,7 +34,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[][]} rectangles
- * @return {number}
+ * @returns {number}
  */
 const interchangeableRectangles = (rectangles) => {
         const map = new Map();

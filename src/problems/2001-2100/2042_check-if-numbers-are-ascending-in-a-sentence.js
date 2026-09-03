@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 86,065
  * - Total Submissions: 117,849
  * - Acceptance Rate: 73.0%
  *
  * Similar Problems:
+ *
  * - check-if-all-as-appears-before-all-bs (Easy)
  * - sorting-the-sentence (Easy)
  * - string-to-integer-atoi (Medium)
@@ -27,7 +30,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 const areNumbersAscending = (s) => {
         const arr = s.split(' ');
@@ -57,7 +60,7 @@ const areNumbersAscending = (s) => {
  * `n` = length of `s`, `m` = length of longest number in `s`
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 const areNumbersAscending1 = (s) => {
         const n = s.length;
@@ -94,9 +97,15 @@ const areNumbersAscending1 = (s) => {
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 // biome-ignore format: one-liner
-const areNumbersAscending2 = (s) => Boolean(s.split(' ').filter(Number).reduce((t, c) => t === false || Number(c) <= t ? false : Number(c), 0));
+const areNumbersAscending2 = (s) =>
+        Boolean(
+                s
+                        .split(' ')
+                        .filter(Number)
+                        .reduce((t, c) => (t === false || Number(c) <= t ? false : Number(c)), 0),
+        );
 
 export { areNumbersAscending, areNumbersAscending1, areNumbersAscending2 };

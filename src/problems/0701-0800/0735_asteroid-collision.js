@@ -1,5 +1,5 @@
 /**
- * 0735. Asteroid Collision
+ * 735. Asteroid Collision
  *
  * Link: https://leetcode.com/problems/asteroid-collision/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 988,510
  * - Total Submissions: 2,088,870
  * - Acceptance Rate: 47.3%
  *
  * Similar Problems:
+ *
  * - can-place-flowers (Easy)
  * - count-collisions-on-a-road (Medium)
  * - destroying-asteroids (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} asteroids
- * @return {number[]}
+ * @returns {number[]}
  */
 const asteroidCollision = (asteroids) => {
         const stack = [];

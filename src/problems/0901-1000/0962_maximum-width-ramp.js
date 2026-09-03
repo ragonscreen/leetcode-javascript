@@ -1,5 +1,5 @@
 /**
- * 0962. Maximum Width Ramp
+ * 962. Maximum Width Ramp
  *
  * Link: https://leetcode.com/problems/maximum-width-ramp/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Stack (topic_15)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 205,762
  * - Total Submissions: 368,282
  * - Acceptance Rate: 55.9%
@@ -25,7 +27,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxWidthRamp = (nums) => {
         const n = nums.length;

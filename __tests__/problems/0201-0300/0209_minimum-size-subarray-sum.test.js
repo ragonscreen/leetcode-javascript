@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minSubArrayLen } from '../../../src/problems/0201-0300/0209_minimum-size-subarray-sum.js';
 
 const testcases = [
@@ -11,13 +12,10 @@ const testcases = [
 ];
 
 describe('minSubArrayLen', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minSubArrayLen($target, $nums) -> $expected', ({
-                target,
-                nums,
-                expected,
-        }) => {
-                expect(minSubArrayLen(target, nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minSubArrayLen($target, $nums) -> $expected',
+                ({ target, nums, expected }) => {
+                        expect(minSubArrayLen(target, nums)).toStrictEqual(expected);
+                },
+        );
 });

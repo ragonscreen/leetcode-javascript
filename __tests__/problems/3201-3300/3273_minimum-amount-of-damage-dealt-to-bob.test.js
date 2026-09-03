@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minDamage } from '../../../src/problems/3201-3300/3273_minimum-amount-of-damage-dealt-to-bob.js';
 
 const testcases = [
@@ -13,16 +14,10 @@ const testcases = [
 ];
 
 describe('minDamage', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minDamage($power, $damage, $health) -> $expected', ({
-                power,
-                damage,
-                health,
-                expected,
-        }) => {
-                expect(minDamage(power, damage, health)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'minDamage($power, $damage, $health) -> $expected',
+                ({ power, damage, health, expected }) => {
+                        expect(minDamage(power, damage, health)).toStrictEqual(expected);
+                },
+        );
 });

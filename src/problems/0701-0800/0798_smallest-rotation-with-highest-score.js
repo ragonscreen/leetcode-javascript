@@ -1,5 +1,5 @@
 /**
- * 0798. Smallest Rotation with Highest Score
+ * 798. Smallest Rotation with Highest Score
  *
  * Link: https://leetcode.com/problems/smallest-rotation-with-highest-score/
  * Category: Algorithms
@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 18,458
  * - Total Submissions: 34,477
  * - Acceptance Rate: 53.5%
@@ -23,7 +25,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const bestRotation = (nums) => {
         const n = nums.length;

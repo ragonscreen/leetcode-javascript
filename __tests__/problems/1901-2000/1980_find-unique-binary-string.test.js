@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findDifferentBinaryString } from '../../../src/problems/1901-2000/1980_find-unique-binary-string.js';
 
 const testcases = [
@@ -28,12 +29,10 @@ const testcases = [
 ];
 
 describe('findDifferentBinaryString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findDifferentBinaryString($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(findDifferentBinaryString(nums)).toBeOneOf(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findDifferentBinaryString($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findDifferentBinaryString(nums)).toBeOneOf(expected);
+                },
+        );
 });

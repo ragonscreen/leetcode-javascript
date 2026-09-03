@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { backspaceCompare } from '../../../src/problems/0801-0900/0844_backspace-string-compare.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('backspaceCompare', () => {
-        test.each(
-                structuredClone(testcases),
-        )('backspaceCompare($s, $t) -> $expected', ({ s, t, expected }) => {
-                expect(backspaceCompare(s, t)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'backspaceCompare($s, $t) -> $expected',
+                ({ s, t, expected }) => {
+                        expect(backspaceCompare(s, t)).toStrictEqual(expected);
+                },
+        );
 });

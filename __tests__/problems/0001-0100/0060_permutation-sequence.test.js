@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getPermutation } from '../../../src/problems/0001-0100/0060_permutation-sequence.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('getPermutation', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getPermutation($n, $k) -> $expected', ({ n, k, expected }) => {
-                expect(getPermutation(n, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getPermutation($n, $k) -> $expected',
+                ({ n, k, expected }) => {
+                        expect(getPermutation(n, k)).toStrictEqual(expected);
+                },
+        );
 });

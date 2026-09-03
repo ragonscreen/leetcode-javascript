@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 235,363
  * - Total Submissions: 367,849
  * - Acceptance Rate: 64.0%
@@ -26,7 +28,7 @@
  * @param {number[]} customers
  * @param {number[]} grumpy
  * @param {number} minutes
- * @return {number}
+ * @returns {number}
  */
 const maxSatisfied = (customers, grumpy, minutes) => {
         const n = customers.length;

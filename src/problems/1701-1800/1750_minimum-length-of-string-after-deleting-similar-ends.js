@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 187,568
  * - Total Submissions: 334,652
  * - Acceptance Rate: 56.0%
@@ -23,7 +25,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minimumLength = (s) => {
         let l = 0;

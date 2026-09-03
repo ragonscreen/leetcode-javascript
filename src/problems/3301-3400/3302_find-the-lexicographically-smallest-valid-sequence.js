@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  * - Dynamic Programming (topic_13)
@@ -16,11 +17,13 @@
  * - Biweekly Contest 140 (contest_biweekly-contest-140)
  *
  * Stats:
+ *
  * - Total Accepted: 82,119
  * - Total Submissions: 142,174
  * - Acceptance Rate: 57.8%
  *
  * Similar Problems:
+ *
  * - smallest-k-length-subsequence-with-occurrences-of-a-letter (Hard)
  */
 
@@ -32,7 +35,7 @@
  *
  * @param {string} word1
  * @param {string} word2
- * @return {number[]}
+ * @returns {number[]}
  */
 const validSequence = (word1, word2) => {
         const n = word1.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minCost } from '../../../src/problems/1501-1600/1578_minimum-time-to-make-rope-colorful.js';
 
 const testcases = [
@@ -13,13 +14,10 @@ const testcases = [
 ];
 
 describe('minCost', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minCost($colors, $neededTime) -> $expected', ({
-                colors,
-                neededTime,
-                expected,
-        }) => {
-                expect(minCost(colors, neededTime)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minCost($colors, $neededTime) -> $expected',
+                ({ colors, neededTime, expected }) => {
+                        expect(minCost(colors, neededTime)).toStrictEqual(expected);
+                },
+        );
 });

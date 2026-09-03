@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 53,871
  * - Total Submissions: 75,933
  * - Acceptance Rate: 70.9%
@@ -26,7 +28,7 @@
  *
  * @param {string} s1
  * @param {string} s2
- * @return {boolean}
+ * @returns {boolean}
  */
 const checkIfCanBreak = (s1, s2) => {
         const x = [...s1].sort((a, b) => a.charCodeAt() - b.charCodeAt());

@@ -1,5 +1,5 @@
 /**
- * 0875. Koko Eating Bananas
+ * 875. Koko Eating Bananas
  *
  * Link: https://leetcode.com/problems/koko-eating-bananas/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 1,536,640
  * - Total Submissions: 3,082,892
  * - Acceptance Rate: 49.8%
  *
  * Similar Problems:
+ *
  * - frog-jump-ii (Medium)
  * - maximum-candies-allocated-to-k-children (Medium)
  * - minimized-maximum-of-products-distributed-to-any-store (Medium)
@@ -32,7 +35,7 @@
  *
  * @param {number[]} piles
  * @param {number} h
- * @return {number}
+ * @returns {number}
  */
 const minEatingSpeed = (piles, h) => {
         let l = 1;

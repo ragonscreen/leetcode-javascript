@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 88,641
  * - Total Submissions: 144,797
  * - Acceptance Rate: 61.2%
  *
  * Similar Problems:
+ *
  * - minimum-swaps-to-group-all-1s-together-ii (Medium)
  * - time-needed-to-rearrange-a-binary-string (Medium)
  * - minimum-adjacent-swaps-for-k-consecutive-ones (Hard)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} data
- * @return {number}
+ * @returns {number}
  */
 const minSwaps = (nums) => {
         const n = nums.length;

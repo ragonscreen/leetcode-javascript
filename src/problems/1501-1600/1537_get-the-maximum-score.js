@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Dynamic Programming (topic_13)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 36,281
  * - Total Submissions: 88,479
  * - Acceptance Rate: 41.0%
  *
  * Similar Problems:
+ *
  * - maximum-score-of-a-node-sequence (Hard)
  */
 
@@ -30,7 +33,7 @@
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
- * @return {number}
+ * @returns {number}
  */
 const maxSum = (nums1, nums2) => {
         const n = nums1.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumGain } from '../../../src/problems/1701-1800/1717_maximum-score-from-removing-substrings.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('maximumGain', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumGain($s, $x, $y) -> $expected', ({ s, x, y, expected }) => {
-                expect(maximumGain(s, x, y)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumGain($s, $x, $y) -> $expected',
+                ({ s, x, y, expected }) => {
+                        expect(maximumGain(s, x, y)).toStrictEqual(expected);
+                },
+        );
 });

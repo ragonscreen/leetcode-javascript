@@ -1,5 +1,5 @@
 /**
- * 0239. Sliding Window Maximum
+ * 239. Sliding Window Maximum
  *
  * Link: https://leetcode.com/problems/sliding-window-maximum/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Queue (topic_34)
  * - Sliding Window (topic_55821)
@@ -15,11 +16,13 @@
  * - Monotonic Queue (topic_61071)
  *
  * Stats:
+ *
  * - Total Accepted: 1,622,072
  * - Total Submissions: 3,343,119
  * - Acceptance Rate: 48.5%
  *
  * Similar Problems:
+ *
  * - jump-game-vi (Medium)
  * - longest-substring-with-at-most-two-distinct-characters (Medium)
  * - maximal-score-after-applying-k-operations (Medium)
@@ -34,15 +37,13 @@
  * NOTES:
  * Use Heap/Monotonic Queue?
  *
- *
- *
  * Approach:
  * Time Complexity: O()
  * Space Complexity: O()
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const maxSlidingWindow = (nums, k) => {};
 

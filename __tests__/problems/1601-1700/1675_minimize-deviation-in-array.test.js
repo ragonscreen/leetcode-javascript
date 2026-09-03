@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumDeviation } from '../../../src/problems/1601-1700/1675_minimize-deviation-in-array.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('minimumDeviation', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumDeviation($nums) -> $expected', ({ nums, expected }) => {
-                expect(minimumDeviation(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumDeviation($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minimumDeviation(nums)).toStrictEqual(expected);
+                },
+        );
 });

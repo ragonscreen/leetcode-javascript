@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Bit Manipulation (topic_19)
@@ -16,6 +17,7 @@
  * - Biweekly Contest 154 (contest_biweekly-contest-154)
  *
  * Stats:
+ *
  * - Total Accepted: 96,996
  * - Total Submissions: 183,298
  * - Acceptance Rate: 52.9%
@@ -28,7 +30,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const uniqueXorTriplets = (nums) => {
         const set = Uint16Array.from(new Set(nums));

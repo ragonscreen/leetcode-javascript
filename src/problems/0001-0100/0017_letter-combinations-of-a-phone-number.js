@@ -1,5 +1,5 @@
 /**
- * 0017. Letter Combinations of a Phone Number
+ * 17. Letter Combinations of a Phone Number
  *
  * Link: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Backtracking (topic_14)
  *
  * Stats:
+ *
  * - Total Accepted: 2,993,406
  * - Total Submissions: 4,544,768
  * - Acceptance Rate: 65.9%
  *
  * Similar Problems:
+ *
  * - binary-watch (Easy)
  * - minimum-number-of-pushes-to-type-word-i (Easy)
  * - combination-sum (Medium)
@@ -32,7 +35,7 @@
  * Space Complexity: O(4^n) auxiliary, O(4^n * n) total
  *
  * @param {string} digits
- * @return {string[]}
+ * @returns {string[]}
  */
 const letterCombinations = (digits) => {
         const map = [

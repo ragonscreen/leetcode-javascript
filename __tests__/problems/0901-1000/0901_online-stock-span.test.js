@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { StockSpanner } from '../../../src/problems/0901-1000/0901_online-stock-span.js';
 
 describe('StockSpanner', () => {

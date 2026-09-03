@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestValidParentheses } from '../../../src/problems/0001-0100/0032_longest-valid-parentheses.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('longestValidParentheses', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestValidParentheses($s) -> $expected', ({ s, expected }) => {
-                expect(longestValidParentheses(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestValidParentheses($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(longestValidParentheses(s)).toStrictEqual(expected);
+                },
+        );
 });

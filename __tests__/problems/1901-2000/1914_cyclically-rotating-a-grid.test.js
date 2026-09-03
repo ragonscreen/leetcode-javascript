@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         rotateGrid,
         rotateGrid1,
@@ -34,17 +35,19 @@ const testcases = [
 ];
 
 describe('rotateGrid', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rotateGrid($grid, $k) -> $expected', ({ grid, k, expected }) => {
-                expect(rotateGrid(grid, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rotateGrid($grid, $k) -> $expected',
+                ({ grid, k, expected }) => {
+                        expect(rotateGrid(grid, k)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('rotateGrid1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rotateGrid1($grid, $k) -> $expected', ({ grid, k, expected }) => {
-                expect(rotateGrid1(grid, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rotateGrid1($grid, $k) -> $expected',
+                ({ grid, k, expected }) => {
+                        expect(rotateGrid1(grid, k)).toStrictEqual(expected);
+                },
+        );
 });

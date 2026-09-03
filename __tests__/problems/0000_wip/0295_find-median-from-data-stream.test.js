@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { MedianFinder } from '../../../src/problems/0000_wip/0295_find-median-from-data-stream.js';
 
 describe.skip('MedianFinder', () => {

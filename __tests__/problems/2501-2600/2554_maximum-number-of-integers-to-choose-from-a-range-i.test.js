@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxCount } from '../../../src/problems/2501-2600/2554_maximum-number-of-integers-to-choose-from-a-range-i.js';
 
 const testcases = [
@@ -8,14 +9,10 @@ const testcases = [
 ];
 
 describe('maxCount', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxCount($banned, $n, $maxSum) -> $expected', ({
-                banned,
-                n,
-                maxSum,
-                expected,
-        }) => {
-                expect(maxCount(banned, n, maxSum)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxCount($banned, $n, $maxSum) -> $expected',
+                ({ banned, n, maxSum, expected }) => {
+                        expect(maxCount(banned, n, maxSum)).toStrictEqual(expected);
+                },
+        );
 });

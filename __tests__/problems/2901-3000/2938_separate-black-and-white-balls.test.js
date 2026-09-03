@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumSteps } from '../../../src/problems/2901-3000/2938_separate-black-and-white-balls.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minimumSteps', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumSteps($s) -> $expected', ({ s, expected }) => {
-                expect(minimumSteps(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumSteps($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(minimumSteps(s)).toStrictEqual(expected);
+                },
+        );
 });

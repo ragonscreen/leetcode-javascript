@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxProduct } from '../../../src/problems/0101-0200/0152_maximum-product-subarray.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('maxProduct', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxProduct($nums) -> $expected', ({ nums, expected }) => {
-                expect(maxProduct(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxProduct($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxProduct(nums)).toStrictEqual(expected);
+                },
+        );
 });

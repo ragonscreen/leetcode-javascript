@@ -1,5 +1,5 @@
 /**
- * 0303. Range Sum Query - Immutable
+ * 303. Range Sum Query - Immutable
  *
  * Link: https://leetcode.com/problems/range-sum-query-immutable/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Design (topic_25)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 895,205
  * - Total Submissions: 1,250,046
  * - Acceptance Rate: 71.6%
  *
  * Similar Problems:
+ *
  * - sum-of-variable-length-subarrays (Easy)
  * - maximum-size-subarray-sum-equals-k (Medium)
  * - range-sum-query-2d-immutable (Medium)
@@ -50,7 +53,7 @@ class NumArray {
          *
          * @param {number} left
          * @param {number} right
-         * @return {number}
+         * @returns {number}
          */
         sumRange = (left, right) => this.pre[right] - (this.pre[left - 1] ?? 0);
 }

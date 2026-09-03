@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 24,893
  * - Total Submissions: 63,685
  * - Acceptance Rate: 39.1%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const largestPrime = (n) => {
         const SIEVE = new Uint32Array(n + 1).fill(1);

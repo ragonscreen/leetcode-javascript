@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 521,241
  * - Total Submissions: 905,029
  * - Acceptance Rate: 57.6%
  *
  * Similar Problems:
+ *
  * - minimum-recolors-to-get-k-consecutive-black-blocks (Easy)
  * - removing-minimum-and-maximum-from-array (Medium)
  * - maximum-score-from-performing-multiplication-operations (Hard)
@@ -31,7 +34,7 @@
  *
  * @param {number[]} cardPoints
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxScore = (cardPoints, k) => {
         const n = cardPoints.length;

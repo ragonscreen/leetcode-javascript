@@ -1,5 +1,5 @@
 /**
- * 0172. Factorial Trailing Zeroes
+ * 172. Factorial Trailing Zeroes
  *
  * Link: https://leetcode.com/problems/factorial-trailing-zeroes/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 662,331
  * - Total Submissions: 1,423,781
  * - Acceptance Rate: 46.5%
  *
  * Similar Problems:
+ *
  * - maximum-trailing-zeros-in-a-cornered-path (Medium)
  * - abbreviating-the-product-of-a-range (Hard)
  * - number-of-digit-one (Hard)
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const trailingZeroes = (n) => {
         let res = 0;

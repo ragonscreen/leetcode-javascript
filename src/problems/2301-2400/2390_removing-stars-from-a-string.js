@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 610,242
  * - Total Submissions: 771,979
  * - Acceptance Rate: 79.0%
  *
  * Similar Problems:
+ *
  * - backspace-string-compare (Easy)
  * - remove-all-adjacent-duplicates-in-string (Easy)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const removeStars = (s) => {
         const res = [];
@@ -59,7 +62,7 @@ const removeStars = (s) => {
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const removeStars1 = (s) => {
         const stack = [];

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numberToWords } from '../../../src/problems/0201-0300/0273_integer-to-english-words.js';
 
 const testcases = [
@@ -61,9 +62,10 @@ const testcases = [
 ];
 
 describe('numberToWords', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numberToWords($num) -> $expected', ({ num, expected }) => {
-                expect(numberToWords(num)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numberToWords($num) -> $expected',
+                ({ num, expected }) => {
+                        expect(numberToWords(num)).toStrictEqual(expected);
+                },
+        );
 });

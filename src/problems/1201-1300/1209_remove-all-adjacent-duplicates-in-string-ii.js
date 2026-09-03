@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 416,928
  * - Total Submissions: 683,149
  * - Acceptance Rate: 61.0%
  *
  * Similar Problems:
+ *
  * - minimize-string-length (Easy)
  * - remove-all-adjacent-duplicates-in-string (Easy)
  * - replace-non-coprime-numbers-in-array (Hard)
@@ -29,7 +32,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {string}
+ * @returns {string}
  */
 const removeDuplicates = (s, k) => {
         const stackChar = [];

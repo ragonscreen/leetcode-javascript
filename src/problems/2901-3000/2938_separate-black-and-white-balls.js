@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 181,828
  * - Total Submissions: 284,480
  * - Acceptance Rate: 63.9%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minimumSteps = (s) => {
         const n = s.length;

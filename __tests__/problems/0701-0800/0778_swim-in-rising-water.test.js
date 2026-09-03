@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         swimInWater,
         swimInWater1,
@@ -25,17 +26,19 @@ const testcases = [
 ];
 
 describe('swimInWater', () => {
-        test.each(
-                structuredClone(testcases),
-        )('swimInWater($grid) -> $expected', ({ grid, expected }) => {
-                expect(swimInWater(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'swimInWater($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(swimInWater(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('swimInWater1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('swimInWater1($grid) -> $expected', ({ grid, expected }) => {
-                expect(swimInWater1(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'swimInWater1($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(swimInWater1(grid)).toStrictEqual(expected);
+                },
+        );
 });

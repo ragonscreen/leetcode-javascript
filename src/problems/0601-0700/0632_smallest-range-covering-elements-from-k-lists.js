@@ -1,5 +1,5 @@
 /**
- * 0632. Smallest Range Covering Elements from K Lists
+ * 632. Smallest Range Covering Elements from K Lists
  *
  * Link: https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Greedy (topic_17)
@@ -16,11 +17,13 @@
  * - Heap (Priority Queue) (topic_61050)
  *
  * Stats:
+ *
  * - Total Accepted: 241,360
  * - Total Submissions: 344,280
  * - Acceptance Rate: 70.1%
  *
  * Similar Problems:
+ *
  * - minimum-window-substring (Hard)
  */
 
@@ -32,7 +35,7 @@
  * `k` = absolute difference between the max and min number in `nums[i]`
  *
  * @param {number[][]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const smallestRange = (nums) => {
         const n = nums.length;

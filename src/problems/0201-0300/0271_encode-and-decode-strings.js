@@ -1,5 +1,5 @@
 /**
- * 0271. Encode and Decode Strings
+ * 271. Encode and Decode Strings
  *
  * Link: https://leetcode.com/problems/encode-and-decode-strings/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Design (topic_25)
  *
  * Stats:
+ *
  * - Total Accepted: 300,299
  * - Total Submissions: 585,585
  * - Acceptance Rate: 51.3%
  *
  * Similar Problems:
+ *
  * - count-binary-substrings (Easy)
  * - count-and-say (Medium)
  * - string-compression (Medium)
@@ -56,7 +59,7 @@ class Solution {
         decode(str) {
                 const res = [];
 
-                for (let r = 0; r < str.length; ) {
+                for (let r = 0; r < str.length;) {
                         let l = r;
 
                         while (str[r] !== '.') {

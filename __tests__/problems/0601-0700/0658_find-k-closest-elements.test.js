@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findClosestElements,
         findClosestElements1,
@@ -24,27 +25,19 @@ const testcases = [
 ];
 
 describe('findClosestElements', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findClosestElements($arr, $k, $x) -> $expected', ({
-                arr,
-                k,
-                x,
-                expected,
-        }) => {
-                expect(findClosestElements(arr, k, x)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findClosestElements($arr, $k, $x) -> $expected',
+                ({ arr, k, x, expected }) => {
+                        expect(findClosestElements(arr, k, x)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findClosestElements1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findClosestElements1($arr, $k, $x) -> $expected', ({
-                arr,
-                k,
-                x,
-                expected,
-        }) => {
-                expect(findClosestElements1(arr, k, x)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findClosestElements1($arr, $k, $x) -> $expected',
+                ({ arr, k, x, expected }) => {
+                        expect(findClosestElements1(arr, k, x)).toStrictEqual(expected);
+                },
+        );
 });

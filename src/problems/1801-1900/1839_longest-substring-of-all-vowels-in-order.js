@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  * - Staff (position_staff)
  * - Weekly Contest 238 (contest_weekly-contest-238)
  *
  * Stats:
+ *
  * - Total Accepted: 47,680
  * - Total Submissions: 91,799
  * - Acceptance Rate: 51.9%
  *
  * Similar Problems:
+ *
  * - count-vowel-substrings-of-a-string (Easy)
  * - count-of-substrings-containing-every-vowel-and-k-consonants-i (Medium)
  * - count-of-substrings-containing-every-vowel-and-k-consonants-ii (Medium)
@@ -32,7 +35,7 @@
  * `n` = `word.length`
  *
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
 const longestBeautifulSubstring = (word) => {
         let res = 0;

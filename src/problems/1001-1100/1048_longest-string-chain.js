@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Two Pointers (topic_9)
@@ -18,6 +19,7 @@
  * - Weekly Contest 137 (contest_weekly-contest-137)
  *
  * Stats:
+ *
  * - Total Accepted: 530,639
  * - Total Submissions: 841,403
  * - Acceptance Rate: 63.1%
@@ -30,7 +32,7 @@
  * `n` = `words.length`, `l` = `max(words[i].length)`
  *
  * @param {string[]} words
- * @return {number}
+ * @returns {number}
  */
 const longestStrChain = (words) => {
         const check = (s, t) => {

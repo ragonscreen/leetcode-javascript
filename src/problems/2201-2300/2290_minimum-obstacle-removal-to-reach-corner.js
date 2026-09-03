@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Breadth-First Search (topic_22)
  * - Graph Theory (topic_24)
@@ -18,11 +19,13 @@
  * - Weekly Contest 295 (contest_weekly-contest-295)
  *
  * Stats:
+ *
  * - Total Accepted: 124,439
  * - Total Submissions: 176,093
  * - Acceptance Rate: 70.7%
  *
  * Similar Problems:
+ *
  * - shortest-path-in-a-grid-with-obstacles-elimination (Hard)
  */
 
@@ -35,7 +38,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const minimumObstacles = (grid) => {
         const n = grid.length;
@@ -90,7 +93,7 @@ const minimumObstacles = (grid) => {
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const minimumObstacles1 = (grid) => {
         const n = grid.length;
@@ -122,13 +125,7 @@ const minimumObstacles1 = (grid) => {
                         const nx = x + d[i + 1];
                         const nk = m * ny + nx;
 
-                        if (
-                                ny < 0 ||
-                                ny >= n ||
-                                nx < 0 ||
-                                nx >= m ||
-                                grid[ny][nx] === -1
-                        ) {
+                        if (ny < 0 || ny >= n || nx < 0 || nx >= m || grid[ny][nx] === -1) {
                                 continue;
                         }
 
@@ -151,7 +148,7 @@ const minimumObstacles1 = (grid) => {
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const minimumObstacles2 = (grid) => {
         const n = grid.length;

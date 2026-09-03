@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Sorting (topic_61049)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 179,520
  * - Total Submissions: 259,459
  * - Acceptance Rate: 69.2%
  *
  * Similar Problems:
+ *
  * - minimum-moves-to-equal-array-elements-ii (Medium)
  */
 
@@ -29,7 +32,7 @@
  *
  * @param {number[][]} grid
  * @param {number} x
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (grid, x) => {
         const n = grid.length;

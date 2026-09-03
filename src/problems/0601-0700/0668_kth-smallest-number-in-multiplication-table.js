@@ -1,5 +1,5 @@
 /**
- * 0668. Kth Smallest Number in Multiplication Table
+ * 668. Kth Smallest Number in Multiplication Table
  *
  * Link: https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 85,035
  * - Total Submissions: 157,409
  * - Acceptance Rate: 54.0%
  *
  * Similar Problems:
+ *
  * - k-th-smallest-prime-fraction (Medium)
  * - kth-smallest-element-in-a-sorted-matrix (Medium)
  * - find-k-th-smallest-pair-distance (Hard)
@@ -32,7 +35,7 @@
  * @param {number} m
  * @param {number} n
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const findKthNumber = (m, n, k) => {
         const check = (num) => {
@@ -73,7 +76,7 @@ const findKthNumber = (m, n, k) => {
  * @param {number} m
  * @param {number} n
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const findKthNumber1 = (m, n, k) => {
         const check = (num) => {

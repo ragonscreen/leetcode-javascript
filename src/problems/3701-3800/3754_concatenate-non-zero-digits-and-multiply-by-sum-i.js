@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 477 (contest_weekly-contest-477)
  *
  * Stats:
+ *
  * - Total Accepted: 193,538
  * - Total Submissions: 292,523
  * - Acceptance Rate: 66.2%
@@ -25,7 +27,7 @@
  * `N` = `n`
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const sumAndMultiply = (n) => {
         let x = 0;

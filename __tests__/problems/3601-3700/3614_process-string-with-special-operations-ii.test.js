@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { processStr } from '../../../src/problems/3601-3700/3614_process-string-with-special-operations-ii.js';
 
 const testcases = [
@@ -22,9 +23,10 @@ const testcases = [
 ];
 
 describe('processStr', () => {
-        test.each(
-                structuredClone(testcases),
-        )('processStr($s, $k) -> $expected', ({ s, k, expected }) => {
-                expect(processStr(s, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'processStr($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(processStr(s, k)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0322. Coin Change
+ * 322. Coin Change
  *
  * Link: https://leetcode.com/problems/coin-change/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Breadth-First Search (topic_22)
  *
  * Stats:
+ *
  * - Total Accepted: 2,887,017
  * - Total Submissions: 5,954,086
  * - Acceptance Rate: 48.5%
  *
  * Similar Problems:
+ *
  * - minimum-number-of-operations-to-convert-time (Easy)
  * - inverse-coin-change (Medium)
  * - length-of-the-longest-subsequence-that-sums-to-target (Medium)
@@ -37,7 +40,7 @@
  *
  * @param {number[]} coins
  * @param {number} amount
- * @return {number}
+ * @returns {number}
  */
 const coinChange = (coins, amount) => {
         if (amount === 0) {

@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Mid Level (position_mid-level)
  * - Weekly Contest 505 (contest_weekly-contest-505)
  *
  * Stats:
+ *
  * - Total Accepted: 35,167
  * - Total Submissions: 59,724
  * - Acceptance Rate: 58.9%
@@ -25,7 +27,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const sumOfGoodIntegers = (n, k) => {
         const l = Math.max(1, n - k);

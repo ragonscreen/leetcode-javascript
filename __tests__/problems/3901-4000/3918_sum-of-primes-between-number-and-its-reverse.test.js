@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { sumOfPrimesInRange } from '../../../src/problems/3901-4000/3918_sum-of-primes-between-number-and-its-reverse.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('sumOfPrimesInRange', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sumOfPrimesInRange($n) -> $expected', ({ n, expected }) => {
-                expect(sumOfPrimesInRange(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sumOfPrimesInRange($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(sumOfPrimesInRange(n)).toStrictEqual(expected);
+                },
+        );
 });

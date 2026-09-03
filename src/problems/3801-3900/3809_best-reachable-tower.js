@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Senior (position_senior)
  * - Biweekly Contest 174 (contest_biweekly-contest-174)
  *
  * Stats:
+ *
  * - Total Accepted: 32,023
  * - Total Submissions: 57,246
  * - Acceptance Rate: 55.9%
@@ -27,7 +29,7 @@
  * @param {number[][]} towers
  * @param {number[]} center
  * @param {number} radius
- * @return {number[]}
+ * @returns {number[]}
  */
 const bestTower = (towers, center, radius) => {
         const n = towers.length;

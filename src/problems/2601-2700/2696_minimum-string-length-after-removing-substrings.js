@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 247,328
  * - Total Submissions: 320,497
  * - Acceptance Rate: 77.2%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minLength = (s) => {
         const map = {

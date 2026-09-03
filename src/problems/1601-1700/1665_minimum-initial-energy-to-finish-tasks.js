@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 90,899
  * - Total Submissions: 119,370
  * - Acceptance Rate: 76.1%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1) auxiliary, O(n) for sorting
  *
  * @param {number[][]} tasks
- * @return {number}
+ * @returns {number}
  */
 const minimumEffort = (tasks) => {
         // we want to save the most amount of energy possible after each task

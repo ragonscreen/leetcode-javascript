@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxStrength } from '../../../src/problems/2701-2800/2708_maximum-strength-of-a-group.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('maxStrength', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxStrength($nums) -> $expected', ({ nums, expected }) => {
-                expect(maxStrength(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxStrength($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxStrength(nums)).toStrictEqual(expected);
+                },
+        );
 });

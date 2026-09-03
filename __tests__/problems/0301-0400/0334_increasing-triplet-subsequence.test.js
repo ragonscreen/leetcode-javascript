@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         increasingTriplet,
         increasingTriplet1,
@@ -13,25 +14,28 @@ const testcases = [
 ];
 
 describe('increasingTriplet', () => {
-        test.each(
-                structuredClone(testcases),
-        )('increasingTriplet($nums) -> $expected', ({ nums, expected }) => {
-                expect(increasingTriplet(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'increasingTriplet($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(increasingTriplet(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('increasingTriplet1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('increasingTriplet1($nums) -> $expected', ({ nums, expected }) => {
-                expect(increasingTriplet1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'increasingTriplet1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(increasingTriplet1(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('increasingTriplet2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('increasingTriplet2($nums) -> $expected', ({ nums, expected }) => {
-                expect(increasingTriplet2(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'increasingTriplet2($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(increasingTriplet2(nums)).toStrictEqual(expected);
+                },
+        );
 });

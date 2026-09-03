@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 599,590
  * - Total Submissions: 1,052,076
  * - Acceptance Rate: 57.0%
  *
  * Similar Problems:
+ *
  * - two-sum (Easy)
  * - count-good-meals (Medium)
  * - divide-players-into-teams-of-equal-skill (Medium)
@@ -31,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxOperations = (nums, k) => {
         const map = new Map();
@@ -59,7 +62,7 @@ const maxOperations = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxOperations1 = (nums, k) => {
         nums.sort((a, b) => a - b);

@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Bit Manipulation (topic_19)
  * - Senior (position_senior)
  * - Weekly Contest 470 (contest_weekly-contest-470)
  *
  * Stats:
+ *
  * - Total Accepted: 138,399
  * - Total Submissions: 249,563
  * - Acceptance Rate: 55.5%
@@ -26,7 +28,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const longestSubsequence = (nums) => {
         const n = nums.length;

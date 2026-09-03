@@ -1,5 +1,5 @@
 /**
- * 0643. Maximum Average Subarray I
+ * 643. Maximum Average Subarray I
  *
  * Link: https://leetcode.com/problems/maximum-average-subarray-i/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 1,145,397
  * - Total Submissions: 2,421,048
  * - Acceptance Rate: 47.3%
  *
  * Similar Problems:
+ *
  * - k-radius-subarray-averages (Medium)
  * - maximum-average-subarray-ii (Hard)
  */
@@ -28,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const findMaxAverage = (nums, k) => {
         let sum = 0;

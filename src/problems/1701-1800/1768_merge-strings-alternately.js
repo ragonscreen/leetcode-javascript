@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 2,010,950
  * - Total Submissions: 2,449,592
  * - Acceptance Rate: 82.1%
  *
  * Similar Problems:
+ *
  * - minimum-additions-to-make-valid-string (Medium)
  * - zigzag-iterator (Medium)
  */
@@ -29,7 +32,7 @@
  *
  * @param {string} word1
  * @param {string} word2
- * @return {string}
+ * @returns {string}
  */
 const mergeAlternately = (word1, word2) => {
         const res = [];

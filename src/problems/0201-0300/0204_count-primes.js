@@ -1,5 +1,5 @@
 /**
- * 0204. Count Primes
+ * 204. Count Primes
  *
  * Link: https://leetcode.com/problems/count-primes/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Enumeration (topic_61066)
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 1,259,270
  * - Total Submissions: 3,502,769
  * - Acceptance Rate: 36.0%
  *
  * Similar Problems:
+ *
  * - number-of-common-factors (Easy)
  * - ugly-number (Easy)
  * - find-the-count-of-numbers-which-are-not-special (Medium)
@@ -33,7 +36,7 @@
  * Space Complexity: O(n)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const countPrimes = (n) => {
         const sieve = new Array(n).fill(1);

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxWidthRamp } from '../../../src/problems/0901-1000/0962_maximum-width-ramp.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('maxWidthRamp', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxWidthRamp($nums) -> $expected', ({ nums, expected }) => {
-                expect(maxWidthRamp(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxWidthRamp($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxWidthRamp(nums)).toStrictEqual(expected);
+                },
+        );
 });

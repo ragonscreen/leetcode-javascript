@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getHappyString } from '../../../src/problems/1401-1500/1415_the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.js';
 
 const testcases = [
@@ -12,9 +13,10 @@ const testcases = [
 ];
 
 describe('getHappyString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getHappyString($n, $k) -> $expected', ({ n, k, expected }) => {
-                expect(getHappyString(n, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getHappyString($n, $k) -> $expected',
+                ({ n, k, expected }) => {
+                        expect(getHappyString(n, k)).toStrictEqual(expected);
+                },
+        );
 });

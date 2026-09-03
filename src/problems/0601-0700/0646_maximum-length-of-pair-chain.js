@@ -1,5 +1,5 @@
 /**
- * 0646. Maximum Length of Pair Chain
+ * 646. Maximum Length of Pair Chain
  *
  * Link: https://leetcode.com/problems/maximum-length-of-pair-chain/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Greedy (topic_17)
@@ -15,11 +16,13 @@
  * - Senior Staff (position_senior-staff)
  *
  * Stats:
+ *
  * - Total Accepted: 318,785
  * - Total Submissions: 515,515
  * - Acceptance Rate: 61.8%
  *
  * Similar Problems:
+ *
  * - longest-increasing-subsequence (Medium)
  * - longest-non-decreasing-subarray-from-two-arrays (Medium)
  * - non-decreasing-subsequences (Medium)
@@ -32,7 +35,7 @@
  * `n` = `pairs.length`
  *
  * @param {number[][]} pairs
- * @return {number}
+ * @returns {number}
  */
 const findLongestChain = (pairs) => {
         pairs.sort((a, b) => a[1] - b[1]);
@@ -58,7 +61,7 @@ const findLongestChain = (pairs) => {
  * `n` = `pairs.length`
  *
  * @param {number[][]} pairs
- * @return {number}
+ * @returns {number}
  */
 const findLongestChain1 = (pairs) => {
         pairs.sort((a, b) => a[0] - b[0]);

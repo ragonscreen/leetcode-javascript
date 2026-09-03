@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Biweekly Contest 121 (contest_biweekly-contest-121)
  *
  * Stats:
+ *
  * - Total Accepted: 188,860
  * - Total Submissions: 377,402
  * - Acceptance Rate: 50.0%
  *
  * Similar Problems:
+ *
  * - longest-common-prefix (Easy)
  * - next-greater-element-i (Easy)
  * - first-missing-positive (Hard)
@@ -32,7 +35,7 @@
  * `n` = `nums.length`, `k` = `max(nums[i])`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const missingInteger = (nums) => {
         const n = nums.length;

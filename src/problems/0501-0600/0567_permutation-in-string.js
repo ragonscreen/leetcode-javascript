@@ -1,5 +1,5 @@
 /**
- * 0567. Permutation in String
+ * 567. Permutation in String
  *
  * Link: https://leetcode.com/problems/permutation-in-string/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Two Pointers (topic_9)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 1,446,649
  * - Total Submissions: 2,981,192
  * - Acceptance Rate: 48.5%
  *
  * Similar Problems:
+ *
  * - find-all-anagrams-in-a-string (Medium)
  * - minimum-window-substring (Hard)
  */
@@ -31,7 +34,7 @@
  *
  * @param {string} s1
  * @param {string} s2
- * @return {boolean}
+ * @returns {boolean}
  */
 const checkInclusion = (s1, s2) => {
         const k1 = new Array(26).fill(0);
@@ -80,7 +83,7 @@ const checkInclusion = (s1, s2) => {
  *
  * @param {string} s1
  * @param {string} s2
- * @return {boolean}
+ * @returns {boolean}
  */
 const checkInclusion1 = (s1, s2) => {
         const key = new Array(26).fill(0);

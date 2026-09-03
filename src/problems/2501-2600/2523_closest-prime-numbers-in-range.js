@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 190,079
  * - Total Submissions: 367,495
  * - Acceptance Rate: 51.7%
  *
  * Similar Problems:
+ *
  * - count-ways-to-make-array-with-product (Hard)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number} left
  * @param {number} right
- * @return {number[]}
+ * @returns {number[]}
  */
 const closestPrimes = (left, right) => {
         const SIEVE = new Uint32Array(right + 1).fill(1);

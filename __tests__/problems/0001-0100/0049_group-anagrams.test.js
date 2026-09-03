@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { groupAnagrams } from '../../../src/problems/0001-0100/0049_group-anagrams.js';
 import { arrDeepSort } from '../../utils/array.js';
 
@@ -16,11 +17,12 @@ const testcases = [
 ];
 
 describe('groupAnagrams', () => {
-        test.each(
-                structuredClone(testcases),
-        )('groupAnagrams($strs) -> $expected', ({ strs, expected }) => {
-                expect(
-                        arrDeepSort(groupAnagrams(strs), 'string'),
-                ).toStrictEqual(arrDeepSort(expected, 'string'));
-        });
+        test.each(structuredClone(testcases))(
+                'groupAnagrams($strs) -> $expected',
+                ({ strs, expected }) => {
+                        expect(arrDeepSort(groupAnagrams(strs), 'string')).toStrictEqual(
+                                arrDeepSort(expected, 'string'),
+                        );
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minMoves } from '../../../src/problems/2101-2200/2139_minimum-moves-to-reach-target-score.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('minMoves', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minMoves($target, $maxDoubles) -> $expected', ({
-                target,
-                maxDoubles,
-                expected,
-        }) => {
-                expect(minMoves(target, maxDoubles)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minMoves($target, $maxDoubles) -> $expected',
+                ({ target, maxDoubles, expected }) => {
+                        expect(minMoves(target, maxDoubles)).toStrictEqual(expected);
+                },
+        );
 });

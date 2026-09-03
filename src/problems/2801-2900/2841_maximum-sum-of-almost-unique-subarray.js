@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 35,952
  * - Total Submissions: 87,447
  * - Acceptance Rate: 41.1%
@@ -26,7 +28,7 @@
  * @param {number[]} nums
  * @param {number} m
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxSum = (nums, m, k) => {
         const map = new Map();

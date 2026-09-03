@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { equalSubstring } from '../../../src/problems/1201-1300/1208_get-equal-substrings-within-budget.js';
 
 const testcases = [
@@ -8,14 +9,10 @@ const testcases = [
 ];
 
 describe('equalSubstring', () => {
-        test.each(
-                structuredClone(testcases),
-        )('equalSubstring($s, $t, $maxCost) -> $expected', ({
-                s,
-                t,
-                maxCost,
-                expected,
-        }) => {
-                expect(equalSubstring(s, t, maxCost)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'equalSubstring($s, $t, $maxCost) -> $expected',
+                ({ s, t, maxCost, expected }) => {
+                        expect(equalSubstring(s, t, maxCost)).toStrictEqual(expected);
+                },
+        );
 });

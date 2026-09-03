@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 205,474
  * - Total Submissions: 411,908
  * - Acceptance Rate: 49.9%
  *
  * Similar Problems:
+ *
  * - koko-eating-bananas (Medium)
  * - maximize-happiness-of-selected-children (Medium)
  * - maximum-number-of-removable-characters (Medium)
@@ -35,7 +38,7 @@
  *
  * @param {number[]} candies
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maximumCandies = (candies, k) => {
         const check = (val) => {

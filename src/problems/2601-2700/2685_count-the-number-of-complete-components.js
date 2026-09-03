@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
  * - Union-Find (topic_23)
@@ -16,11 +17,13 @@
  * - Weekly Contest 345 (contest_weekly-contest-345)
  *
  * Stats:
+ *
  * - Total Accepted: 254,919
  * - Total Submissions: 315,403
  * - Acceptance Rate: 80.8%
  *
  * Similar Problems:
+ *
  * - number-of-connected-components-in-an-undirected-graph (Medium) (Premium)
  */
 
@@ -32,7 +35,7 @@
  *
  * @param {number} n
  * @param {number[][]} edges
- * @return {number}
+ * @returns {number}
  */
 const countCompleteComponents = (n, edges) => {
         const g = new Array(n);
@@ -89,7 +92,7 @@ const countCompleteComponents = (n, edges) => {
  *
  * @param {number} n
  * @param {number[][]} edges
- * @return {number}
+ * @returns {number}
  */
 const countCompleteComponents1 = (n, edges) => {
         const g = new Array(n);

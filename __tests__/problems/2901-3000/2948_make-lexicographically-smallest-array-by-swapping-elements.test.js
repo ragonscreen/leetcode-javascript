@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { lexicographicallySmallestArray } from '../../../src/problems/2901-3000/2948_make-lexicographically-smallest-array-by-swapping-elements.js';
 
 const testcases = [
@@ -13,15 +14,12 @@ const testcases = [
 ];
 
 describe('lexicographicallySmallestArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('lexicographicallySmallestArray($nums, $limit) -> $expected', ({
-                nums,
-                limit,
-                expected,
-        }) => {
-                expect(
-                        Array.from(lexicographicallySmallestArray(nums, limit)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'lexicographicallySmallestArray($nums, $limit) -> $expected',
+                ({ nums, limit, expected }) => {
+                        expect(
+                                Array.from(lexicographicallySmallestArray(nums, limit)),
+                        ).toStrictEqual(expected);
+                },
+        );
 });

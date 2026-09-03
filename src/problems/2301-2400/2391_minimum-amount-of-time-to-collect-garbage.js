@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Prefix Sum (topic_61068)
@@ -15,6 +16,7 @@
  * - Weekly Contest 308 (contest_weekly-contest-308)
  *
  * Stats:
+ *
  * - Total Accepted: 159,401
  * - Total Submissions: 187,422
  * - Acceptance Rate: 85.0%
@@ -28,7 +30,7 @@
  *
  * @param {string[]} garbage
  * @param {number[]} travel
- * @return {number}
+ * @returns {number}
  */
 const garbageCollection = (garbage, travel) => {
         const n = garbage.length;

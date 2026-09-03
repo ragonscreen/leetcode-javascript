@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findLongestChain,
         findLongestChain1,
@@ -24,17 +25,19 @@ const testcases = [
 ];
 
 describe('findLongestChain', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findLongestChain($pairs) -> $expected', ({ pairs, expected }) => {
-                expect(findLongestChain(pairs)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findLongestChain($pairs) -> $expected',
+                ({ pairs, expected }) => {
+                        expect(findLongestChain(pairs)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findLongestChain1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findLongestChain1($pairs) -> $expected', ({ pairs, expected }) => {
-                expect(findLongestChain1(pairs)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findLongestChain1($pairs) -> $expected',
+                ({ pairs, expected }) => {
+                        expect(findLongestChain1(pairs)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { pivotIndex } from '../../../src/problems/0701-0800/0724_find-pivot-index.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('pivotIndex', () => {
-        test.each(
-                structuredClone(testcases),
-        )('pivotIndex($nums) -> $expected', ({ nums, expected }) => {
-                expect(pivotIndex(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'pivotIndex($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(pivotIndex(nums)).toStrictEqual(expected);
+                },
+        );
 });

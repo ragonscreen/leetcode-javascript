@@ -1,5 +1,5 @@
 /**
- * 0042. Trapping Rain Water
+ * 42. Trapping Rain Water
  *
  * Link: https://leetcode.com/problems/trapping-rain-water/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Dynamic Programming (topic_13)
@@ -15,11 +16,13 @@
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 3,431,568
  * - Total Submissions: 5,128,100
  * - Acceptance Rate: 66.9%
  *
  * Similar Problems:
+ *
  * - container-with-most-water (Medium)
  * - maximum-value-of-an-ordered-triplet-ii (Medium)
  * - pour-water (Medium)
@@ -33,7 +36,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} height
- * @return {number}
+ * @returns {number}
  */
 const trap = (height) => {
         const n = height.length;

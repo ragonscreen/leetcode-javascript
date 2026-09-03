@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { check } from '../../../src/problems/1701-1800/1752_check-if-array-is-sorted-and-rotated.js';
 
 const testcases = [
@@ -8,10 +9,7 @@ const testcases = [
 ];
 
 describe('check', () => {
-        test.each(structuredClone(testcases))('check($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('check($nums) -> $expected', ({ nums, expected }) => {
                 expect(check(nums)).toStrictEqual(expected);
         });
 });

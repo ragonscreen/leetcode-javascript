@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 35,504
  * - Total Submissions: 38,604
  * - Acceptance Rate: 92.0%
@@ -19,7 +20,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const concatWithReverse = (nums) => {
         const n = nums.length;

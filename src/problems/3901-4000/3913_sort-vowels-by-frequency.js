@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 16,139
  * - Total Submissions: 26,272
  * - Acceptance Rate: 61.4%
@@ -19,7 +20,7 @@
  * Space Complexity: O(5) = O(1) auxiliary, O(n) total
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const sortVowels = (s) => {
         const n = s.length;
@@ -28,13 +29,7 @@ const sortVowels = (s) => {
         for (let i = 0; i < n; i++) {
                 const c = s[i];
 
-                if (
-                        c === 'a' ||
-                        c === 'e' ||
-                        c === 'i' ||
-                        c === 'o' ||
-                        c === 'u'
-                ) {
+                if (c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u') {
                         map.set(c, (map.get(c) || 0) + 1);
                 }
         }
@@ -46,13 +41,7 @@ const sortVowels = (s) => {
         for (let i = 0; i < n; i++) {
                 const c = s[i];
 
-                if (
-                        c === 'a' ||
-                        c === 'e' ||
-                        c === 'i' ||
-                        c === 'o' ||
-                        c === 'u'
-                ) {
+                if (c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u') {
                         res += entries[idx][0];
                         entries[idx][1]--;
 

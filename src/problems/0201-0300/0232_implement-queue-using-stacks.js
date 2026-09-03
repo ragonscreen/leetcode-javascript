@@ -1,5 +1,5 @@
 /**
- * 0232. Implement Queue using Stacks
+ * 232. Implement Queue using Stacks
  *
  * Link: https://leetcode.com/problems/implement-queue-using-stacks/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Stack (topic_15)
  * - Design (topic_25)
  * - Queue (topic_34)
  *
  * Stats:
+ *
  * - Total Accepted: 1,450,104
  * - Total Submissions: 2,086,683
  * - Acceptance Rate: 69.5%
  *
  * Similar Problems:
+ *
  * - implement-stack-using-queues (Easy)
  */
 
@@ -39,7 +42,7 @@ class MyQueue {
          * Space Complexity: O(1)
          *
          * @param {number} x
-         * @return {void}
+         * @returns {void}
          */
         push(x) {
                 this.stack1.push(x);
@@ -49,7 +52,7 @@ class MyQueue {
          * Time Complexity: O(1) amortised
          * Space Complexity: O(n)
          *
-         * @return {number}
+         * @returns {number}
          */
         pop() {
                 if (!this.stack2.length) {
@@ -65,7 +68,7 @@ class MyQueue {
          * Time Complexity: O(1) amortised
          * Space Complexity: O(n)
          *
-         * @return {number}
+         * @returns {number}
          */
         peek() {
                 if (!this.stack2.length) {
@@ -81,7 +84,7 @@ class MyQueue {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         empty() {
                 return !(this.stack1.length || this.stack2.length);
@@ -105,7 +108,7 @@ class MyQueue1 {
          * Time Complexity: O(1) amortised
          * Space Complexity: O(n)
          *
-         * @return {void}
+         * @returns {void}
          */
         _reset() {
                 if (this.offset === Math.floor(this.elements.length / 2)) {
@@ -124,7 +127,7 @@ class MyQueue1 {
          * Space Complexity: O(1)
          *
          * @param {number} x
-         * @return {void}
+         * @returns {void}
          */
         push(x) {
                 this.elements.push(x);
@@ -134,7 +137,7 @@ class MyQueue1 {
          * Time Complexity: O(1) amortised
          * Space Complexity: O(n)
          *
-         * @return {number}
+         * @returns {number}
          */
         pop() {
                 if (this.empty()) {
@@ -151,7 +154,7 @@ class MyQueue1 {
          * Time Complexity: O(1) amortised
          * Space Complexity: O(n)
          *
-         * @return {number}
+         * @returns {number}
          */
         peek() {
                 return this.elements[this.offset];
@@ -161,7 +164,7 @@ class MyQueue1 {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         empty() {
                 return !this.elements.length;

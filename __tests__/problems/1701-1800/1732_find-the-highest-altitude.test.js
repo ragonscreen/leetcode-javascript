@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { largestAltitude } from '../../../src/problems/1701-1800/1732_find-the-highest-altitude.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('largestAltitude', () => {
-        test.each(
-                structuredClone(testcases),
-        )('largestAltitude($gain) -> $expected', ({ gain, expected }) => {
-                expect(largestAltitude(gain)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'largestAltitude($gain) -> $expected',
+                ({ gain, expected }) => {
+                        expect(largestAltitude(gain)).toStrictEqual(expected);
+                },
+        );
 });

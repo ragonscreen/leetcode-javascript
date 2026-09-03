@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestIncreasingPath } from '../../../src/problems/0301-0400/0329_longest-increasing-path-in-a-matrix.js';
 
 const testcases = [
@@ -59,12 +60,10 @@ const testcases = [
 ];
 
 describe('longestIncreasingPath', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestIncreasingPath($matrix) -> $expected', ({
-                matrix,
-                expected,
-        }) => {
-                expect(longestIncreasingPath(matrix)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestIncreasingPath($matrix) -> $expected',
+                ({ matrix, expected }) => {
+                        expect(longestIncreasingPath(matrix)).toStrictEqual(expected);
+                },
+        );
 });

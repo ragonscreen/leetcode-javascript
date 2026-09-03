@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 50,339
  * - Total Submissions: 129,562
  * - Acceptance Rate: 38.9%
  *
  * Similar Problems:
+ *
  * - best-poker-hand (Easy)
  * - find-winner-on-a-tic-tac-toe-game (Easy)
  * - fizz-buzz (Easy)
@@ -30,7 +33,7 @@
  * @param {number} width
  * @param {number} height
  * @param {number} mass
- * @return {string}
+ * @returns {string}
  */
 const categorizeBox = (length, width, height, mass) => {
         const volume = length * width * height;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { isHappy } from '../../../src/problems/0201-0300/0202_happy-number.js';
 
 const testcases = [
@@ -11,10 +12,7 @@ const testcases = [
 ];
 
 describe('isHappy', () => {
-        test.each(structuredClone(testcases))('isHappy($n) -> $expected', ({
-                n,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('isHappy($n) -> $expected', ({ n, expected }) => {
                 expect(isHappy(n)).toStrictEqual(expected);
         });
 });

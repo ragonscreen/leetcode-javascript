@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Senior (position_senior)
  * - Weekly Contest 468 (contest_weekly-contest-468)
  *
  * Stats:
+ *
  * - Total Accepted: 88,218
  * - Total Submissions: 128,700
  * - Acceptance Rate: 68.5%
@@ -27,7 +29,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxTotalValue = (nums, k) => {
         let mx = nums[0];
@@ -50,7 +52,7 @@ const maxTotalValue = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxTotalValue1 = (nums, k) => (Math.max(...nums) - Math.min(...nums)) * k;
 

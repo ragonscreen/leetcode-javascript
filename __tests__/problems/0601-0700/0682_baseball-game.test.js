@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { calPoints } from '../../../src/problems/0601-0700/0682_baseball-game.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('calPoints', () => {
-        test.each(
-                structuredClone(testcases),
-        )('calPoints($operations) -> $expected', ({ operations, expected }) => {
-                expect(calPoints(operations)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'calPoints($operations) -> $expected',
+                ({ operations, expected }) => {
+                        expect(calPoints(operations)).toStrictEqual(expected);
+                },
+        );
 });

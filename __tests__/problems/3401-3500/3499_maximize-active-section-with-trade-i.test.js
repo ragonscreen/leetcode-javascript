@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxActiveSectionsAfterTrade } from '../../../src/problems/3401-3500/3499_maximize-active-section-with-trade-i.js';
 
 const testcases = [
@@ -13,9 +14,10 @@ const testcases = [
 ];
 
 describe('maxActiveSectionsAfterTrade', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxActiveSectionsAfterTrade($s) -> $expected', ({ s, expected }) => {
-                expect(maxActiveSectionsAfterTrade(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxActiveSectionsAfterTrade($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(maxActiveSectionsAfterTrade(s)).toStrictEqual(expected);
+                },
+        );
 });

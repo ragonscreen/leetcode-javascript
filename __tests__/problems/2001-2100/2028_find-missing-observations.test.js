@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { missingRolls } from '../../../src/problems/2001-2100/2028_find-missing-observations.js';
 
 const testcases = [
@@ -8,23 +9,20 @@ const testcases = [
 ];
 
 describe('missingRolls', () => {
-        test.each(
-                structuredClone(testcases),
-        )('missingRolls($rolls, $mean, $n) -> $expected', ({
-                rolls,
-                mean,
-                n,
-        }) => {
-                const m = rolls.length;
-                const received = missingRolls(rolls, mean, n);
-                const nsum = received.reduce((t, c) => t + c, 0);
-                const msum = rolls.reduce((t, c) => t + c, 0);
-                const rem = mean * (n + m) - msum;
+        test.each(structuredClone(testcases))(
+                'missingRolls($rolls, $mean, $n) -> $expected',
+                ({ rolls, mean, n }) => {
+                        const m = rolls.length;
+                        const received = missingRolls(rolls, mean, n);
+                        const nsum = received.reduce((t, c) => t + c, 0);
+                        const msum = rolls.reduce((t, c) => t + c, 0);
+                        const rem = mean * (n + m) - msum;
 
-                if (rem > 6 * n || rem < n) {
-                        expect(received).toStrictEqual([]);
-                } else {
-                        expect((nsum + msum) / (n + m)).toStrictEqual(mean);
-                }
-        });
+                        if (rem > 6 * n || rem < n) {
+                                expect(received).toStrictEqual([]);
+                        } else {
+                                expect((nsum + msum) / (n + m)).toStrictEqual(mean);
+                        }
+                },
+        );
 });

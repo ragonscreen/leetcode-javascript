@@ -1,16 +1,12 @@
 import { describe, expect, test } from 'bun:test';
+
 import { groupStrings } from '../../../src/problems/0201-0300/0249_group-shifted-strings.js';
 import { arrDeepSort } from '../../utils/array.js';
 
 const testcases = [
         {
                 strings: ['abc', 'bcd', 'acef', 'xyz', 'az', 'ba', 'a', 'z'],
-                expected: [
-                        ['acef'],
-                        ['az', 'ba'],
-                        ['abc', 'bcd', 'xyz'],
-                        ['a', 'z'],
-                ],
+                expected: [['acef'], ['az', 'ba'], ['abc', 'bcd', 'xyz'], ['a', 'z']],
         },
         { strings: ['a'], expected: [['a']] },
         {
@@ -59,10 +55,7 @@ const testcases = [
                 expected: [
                         ['js', 'nw'],
                         ['fpbnsbrkbcyzdmmmoisaa', 'rbnzendwnoklpyyyauemm'],
-                        [
-                                'cpjtwqcdwbldwwrryuclcngw',
-                                'huoybvhibgqibbwwdzhqhslb',
-                        ],
+                        ['cpjtwqcdwbldwwrryuclcngw', 'huoybvhibgqibbwwdzhqhslb'],
                         ['a', 'l', 'i', 'd'],
                         ['fnuqwejouqzrif', 'aiplrzejplumda'],
                         ['qcpr', 'eqdf'],
@@ -84,11 +77,12 @@ const testcases = [
 ];
 
 describe('groupStrings', () => {
-        test.each(
-                structuredClone(testcases),
-        )('groupStrings($strings) -> $expected', ({ strings, expected }) => {
-                expect(
-                        arrDeepSort(groupStrings(strings), 'string'),
-                ).toStrictEqual(arrDeepSort(expected, 'string'));
-        });
+        test.each(structuredClone(testcases))(
+                'groupStrings($strings) -> $expected',
+                ({ strings, expected }) => {
+                        expect(arrDeepSort(groupStrings(strings), 'string')).toStrictEqual(
+                                arrDeepSort(expected, 'string'),
+                        );
+                },
+        );
 });

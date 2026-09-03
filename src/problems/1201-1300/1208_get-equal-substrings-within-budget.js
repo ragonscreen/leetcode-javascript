@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Binary Search (topic_11)
  * - Sliding Window (topic_55821)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 199,594
  * - Total Submissions: 335,104
  * - Acceptance Rate: 59.6%
  *
  * Similar Problems:
+ *
  * - longest-nice-subarray (Medium)
  */
 
@@ -30,7 +33,7 @@
  * @param {string} s
  * @param {string} t
  * @param {number} maxCost
- * @return {number}
+ * @returns {number}
  */
 const equalSubstring = (s, t, maxCost) => {
         let cost = 0;

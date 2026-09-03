@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { TimeMap } from '../../../src/problems/0901-1000/0981_time-based-key-value-store.js';
 
 describe('TimeMap', () => {

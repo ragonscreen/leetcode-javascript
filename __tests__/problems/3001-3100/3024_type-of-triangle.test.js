@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { triangleType } from '../../../src/problems/3001-3100/3024_type-of-triangle.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('triangleType', () => {
-        test.each(
-                structuredClone(testcases),
-        )('triangleType($nums) -> $expected', ({ nums, expected }) => {
-                expect(triangleType(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'triangleType($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(triangleType(nums)).toStrictEqual(expected);
+                },
+        );
 });

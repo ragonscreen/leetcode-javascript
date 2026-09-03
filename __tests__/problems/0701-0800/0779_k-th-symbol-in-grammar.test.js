@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { kthGrammar } from '../../../src/problems/0701-0800/0779_k-th-symbol-in-grammar.js';
 
 const testcases = [
@@ -13,9 +14,10 @@ const testcases = [
 ];
 
 describe('kthGrammar', () => {
-        test.each(
-                structuredClone(testcases),
-        )('kthGrammar($n, $k) -> $expected', ({ n, k, expected }) => {
-                expect(kthGrammar(n, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'kthGrammar($n, $k) -> $expected',
+                ({ n, k, expected }) => {
+                        expect(kthGrammar(n, k)).toStrictEqual(expected);
+                },
+        );
 });

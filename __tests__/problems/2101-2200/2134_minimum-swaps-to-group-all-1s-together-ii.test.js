@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minSwaps } from '../../../src/problems/2101-2200/2134_minimum-swaps-to-group-all-1s-together-ii.js';
 
 const testcases = [
@@ -14,10 +15,10 @@ const testcases = [
 ];
 
 describe('minSwaps', () => {
-        test.each(structuredClone(testcases))('minSwaps($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(minSwaps(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minSwaps($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minSwaps(nums)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 120,353
  * - Total Submissions: 204,441
  * - Acceptance Rate: 58.9%
@@ -23,7 +25,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxIncreasingSubarrays = (nums) => {
         let res = 0;
@@ -50,7 +52,7 @@ const maxIncreasingSubarrays = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxIncreasingSubarrays1 = (nums) => {
         const n = nums.length;

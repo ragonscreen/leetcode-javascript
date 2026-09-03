@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { colorBorder } from '../../../src/problems/1001-1100/1034_coloring-a-border.js';
 
 const testcases = [
@@ -46,17 +47,10 @@ const testcases = [
 ];
 
 describe('colorBorder', () => {
-        test.each(
-                structuredClone(testcases),
-        )('colorBorder($grid, $row, $col, $color) -> $expected', ({
-                grid,
-                row,
-                col,
-                color,
-                expected,
-        }) => {
-                expect(colorBorder(grid, row, col, color)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'colorBorder($grid, $row, $col, $color) -> $expected',
+                ({ grid, row, col, color, expected }) => {
+                        expect(colorBorder(grid, row, col, color)).toStrictEqual(expected);
+                },
+        );
 });

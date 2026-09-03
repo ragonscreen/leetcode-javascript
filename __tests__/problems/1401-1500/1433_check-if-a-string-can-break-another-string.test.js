@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { checkIfCanBreak } from '../../../src/problems/1401-1500/1433_check-if-a-string-can-break-another-string.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('checkIfCanBreak', () => {
-        test.each(
-                structuredClone(testcases),
-        )('checkIfCanBreak($s1, $s2) -> $expected', ({ s1, s2, expected }) => {
-                expect(checkIfCanBreak(s1, s2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'checkIfCanBreak($s1, $s2) -> $expected',
+                ({ s1, s2, expected }) => {
+                        expect(checkIfCanBreak(s1, s2)).toStrictEqual(expected);
+                },
+        );
 });

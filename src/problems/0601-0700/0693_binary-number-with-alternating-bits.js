@@ -1,5 +1,5 @@
 /**
- * 0693. Binary Number with Alternating Bits
+ * 693. Binary Number with Alternating Bits
  *
  * Link: https://leetcode.com/problems/binary-number-with-alternating-bits/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Bit Manipulation (topic_19)
  *
  * Stats:
+ *
  * - Total Accepted: 301,114
  * - Total Submissions: 431,034
  * - Acceptance Rate: 69.9%
  *
  * Similar Problems:
+ *
  * - number-of-1-bits (Easy)
  */
 
@@ -25,7 +28,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const hasAlternatingBits = (n) => {
         return (n & (n << 1)) === 0 && (n & (n >> 2)) === n >> 2;
@@ -37,7 +40,7 @@ const hasAlternatingBits = (n) => {
  * Space Complexity: O(log n)
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const hasAlternatingBits1 = (n) => {
         const s = n.toString(2);

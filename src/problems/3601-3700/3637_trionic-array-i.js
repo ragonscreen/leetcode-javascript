@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 193,471
  * - Total Submissions: 390,586
  * - Acceptance Rate: 49.5%
@@ -22,7 +24,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const isTrionic = (nums) => {
         const n = nums.length;

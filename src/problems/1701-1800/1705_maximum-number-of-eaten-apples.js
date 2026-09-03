@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Heap (Priority Queue) (topic_61050)
@@ -15,6 +16,7 @@
  * - Weekly Contest 221 (contest_weekly-contest-221)
  *
  * Stats:
+ *
  * - Total Accepted: 36,108
  * - Total Submissions: 81,744
  * - Acceptance Rate: 44.2%
@@ -30,7 +32,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  *
  * @param {number[]} apples
  * @param {number[]} days
- * @return {number}
+ * @returns {number}
  */
 const eatenApples = (apples, days) => {
         const n = apples.length;

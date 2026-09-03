@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Sorting (topic_61049)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 117,930
  * - Total Submissions: 210,283
  * - Acceptance Rate: 56.1%
  *
  * Similar Problems:
+ *
  * - asteroid-collision (Medium)
  */
 
@@ -30,7 +33,7 @@
  * @param {number[]} positions
  * @param {number[]} healths
  * @param {string} directions
- * @return {number[]}
+ * @returns {number[]}
  */
 const survivedRobotsHealths = (positions, healths, directions) => {
         const n = positions.length;
@@ -50,12 +53,7 @@ const survivedRobotsHealths = (positions, healths, directions) => {
                 while (stack.length) {
                         const top = stack.at(-1);
 
-                        if (
-                                !(
-                                        directions[top] === 'R' &&
-                                        directions[idx] === 'L'
-                                )
-                        ) {
+                        if (!(directions[top] === 'R' && directions[idx] === 'L')) {
                                 break;
                         }
 
@@ -107,7 +105,7 @@ const survivedRobotsHealths = (positions, healths, directions) => {
  * @param {number[]} positions
  * @param {number[]} healths
  * @param {string} directions
- * @return {number[]}
+ * @returns {number[]}
  */
 const survivedRobotsHealths1 = (positions, healths, directions) => {
         const n = positions.length;

@@ -1,5 +1,5 @@
 /**
- * 0495. Teemo Attacking
+ * 495. Teemo Attacking
  *
  * Link: https://leetcode.com/problems/teemo-attacking/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 217,612
  * - Total Submissions: 378,139
  * - Acceptance Rate: 57.5%
  *
  * Similar Problems:
+ *
  * - can-place-flowers (Easy)
  * - dota2-senate (Medium)
  * - merge-intervals (Medium)
@@ -29,7 +32,7 @@
  *
  * @param {number[]} timeSeries
  * @param {number} duration
- * @return {number}
+ * @returns {number}
  */
 const findPoisonedDuration = (timeSeries, duration) => {
         let res = 0;

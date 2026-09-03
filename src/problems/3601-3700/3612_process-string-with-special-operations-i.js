@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Simulation (topic_61055)
  * - Senior (position_senior)
  * - Weekly Contest 458 (contest_weekly-contest-458)
  *
  * Stats:
+ *
  * - Total Accepted: 190,871
  * - Total Submissions: 267,137
  * - Acceptance Rate: 71.5%
@@ -26,7 +28,7 @@
  * `n` = `s.length`
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const processStr = (s) => {
         let res = '';

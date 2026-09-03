@@ -1,5 +1,5 @@
 /**
- * 0815. Bus Routes
+ * 815. Bus Routes
  *
  * Link: https://leetcode.com/problems/bus-routes/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Breadth-First Search (topic_22)
  *
  * Stats:
+ *
  * - Total Accepted: 289,508
  * - Total Submissions: 612,364
  * - Acceptance Rate: 47.3%
  *
  * Similar Problems:
+ *
  * - minimum-costs-using-the-train-line (Hard)
  */
 
@@ -32,7 +35,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * @param {number[][]} routes
  * @param {number} source
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const numBusesToDestination = (routes, source, target) => {
         if (source === target) {

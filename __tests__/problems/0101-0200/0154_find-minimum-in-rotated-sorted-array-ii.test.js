@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findMin } from '../../../src/problems/0101-0200/0154_find-minimum-in-rotated-sorted-array-ii.js';
 
 const testcases = [
@@ -8,10 +9,10 @@ const testcases = [
 ];
 
 describe('findMin', () => {
-        test.each(structuredClone(testcases))('findMin($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(findMin(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findMin($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findMin(nums)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { jump } from '../../../src/problems/0001-0100/0045_jump-game-ii.js';
 
 const testcases = [
@@ -10,10 +11,7 @@ const testcases = [
 ];
 
 describe('jump', () => {
-        test.each(structuredClone(testcases))('jump($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('jump($nums) -> $expected', ({ nums, expected }) => {
                 expect(jump(nums)).toStrictEqual(expected);
         });
 });

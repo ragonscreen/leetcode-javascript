@@ -1,5 +1,5 @@
 /**
- * 0055. Jump Game
+ * 55. Jump Game
  *
  * Link: https://leetcode.com/problems/jump-game/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 3,158,356
  * - Total Submissions: 7,755,842
  * - Acceptance Rate: 40.7%
  *
  * Similar Problems:
+ *
  * - jump-game-ii (Medium)
  * - jump-game-iii (Medium)
  * - jump-game-vii (Medium)
@@ -32,7 +35,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const canJump = (nums) => {
         const n = nums.length;

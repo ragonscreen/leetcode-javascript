@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { stoneGameVIII } from '../../../src/problems/1801-1900/1872_stone-game-viii.js';
 
 const testcases = [
@@ -7,21 +8,20 @@ const testcases = [
         { stones: [-10, -12], expected: -22 },
         {
                 stones: [
-                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                 ],
                 expected: 0,
         },
 ];
 
 describe('stoneGameVIII', () => {
-        test.each(
-                structuredClone(testcases),
-        )('stoneGameVIII($stones) -> $expected', ({ stones, expected }) => {
-                expect(stoneGameVIII(stones)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'stoneGameVIII($stones) -> $expected',
+                ({ stones, expected }) => {
+                        expect(stoneGameVIII(stones)).toStrictEqual(expected);
+                },
+        );
 });

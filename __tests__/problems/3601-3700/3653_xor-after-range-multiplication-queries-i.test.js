@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { xorAfterQueries } from '../../../src/problems/3601-3700/3653_xor-after-range-multiplication-queries-i.js';
 
 const testcases = [
@@ -14,13 +15,10 @@ const testcases = [
 ];
 
 describe('xorAfterQueries', () => {
-        test.each(
-                structuredClone(testcases),
-        )('xorAfterQueries($nums, $queries) -> $expected', ({
-                nums,
-                queries,
-                expected,
-        }) => {
-                expect(xorAfterQueries(nums, queries)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'xorAfterQueries($nums, $queries) -> $expected',
+                ({ nums, queries, expected }) => {
+                        expect(xorAfterQueries(nums, queries)).toStrictEqual(expected);
+                },
+        );
 });

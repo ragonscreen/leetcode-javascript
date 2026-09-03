@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         mergeTwoLists,
         mergeTwoLists1,
@@ -14,39 +15,23 @@ const testcases = [
 ];
 
 describe('mergeTwoLists', () => {
-        test.each(
-                structuredClone(testcases),
-        )('mergeTwoLists($list1, $list2) -> $expected', ({
-                list1,
-                list2,
-                expected,
-        }) => {
-                expect(
-                        listToArray(
-                                mergeTwoLists(
-                                        arrayToList(list1),
-                                        arrayToList(list2),
-                                ),
-                        ),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'mergeTwoLists($list1, $list2) -> $expected',
+                ({ list1, list2, expected }) => {
+                        expect(
+                                listToArray(mergeTwoLists(arrayToList(list1), arrayToList(list2))),
+                        ).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('mergeTwoLists1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('mergeTwoLists1($list1, $list2) -> $expected', ({
-                list1,
-                list2,
-                expected,
-        }) => {
-                expect(
-                        listToArray(
-                                mergeTwoLists1(
-                                        arrayToList(list1),
-                                        arrayToList(list2),
-                                ),
-                        ),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'mergeTwoLists1($list1, $list2) -> $expected',
+                ({ list1, list2, expected }) => {
+                        expect(
+                                listToArray(mergeTwoLists1(arrayToList(list1), arrayToList(list2))),
+                        ).toStrictEqual(expected);
+                },
+        );
 });

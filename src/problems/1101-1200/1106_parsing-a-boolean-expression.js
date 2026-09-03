@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 146,884
  * - Total Submissions: 210,384
  * - Acceptance Rate: 69.8%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} expression
- * @return {boolean}
+ * @returns {boolean}
  */
 const parseBoolExpr = (expression) => {
         const stack = [];

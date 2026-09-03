@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxIceCream } from '../../../src/problems/1801-1900/1833_maximum-ice-cream-bars.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('maxIceCream', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxIceCream($costs, $coins) -> $expected', ({
-                costs,
-                coins,
-                expected,
-        }) => {
-                expect(maxIceCream(costs, coins)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxIceCream($costs, $coins) -> $expected',
+                ({ costs, coins, expected }) => {
+                        expect(maxIceCream(costs, coins)).toStrictEqual(expected);
+                },
+        );
 });

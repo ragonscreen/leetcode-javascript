@@ -1,5 +1,5 @@
 /**
- * 0841. Keys and Rooms
+ * 841. Keys and Rooms
  *
  * Link: https://leetcode.com/problems/keys-and-rooms/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
  * - Graph Theory (topic_24)
@@ -15,11 +16,13 @@
  * - Weekly Contest 86 (contest_weekly-contest-86)
  *
  * Stats:
+ *
  * - Total Accepted: 698,744
  * - Total Submissions: 921,837
  * - Acceptance Rate: 75.8%
  *
  * Similar Problems:
+ *
  * - graph-valid-tree (Medium) (Premium)
  */
 
@@ -30,7 +33,7 @@
  * `n` = `rooms.length`, `k` = `sum(rooms[i].length)`
  *
  * @param {number[][]} rooms
- * @return {boolean}
+ * @returns {boolean}
  */
 const canVisitAllRooms = (rooms) => {
         const n = rooms.length;

@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 249,569
  * - Total Submissions: 376,803
  * - Acceptance Rate: 66.2%
  *
  * Similar Problems:
+ *
  * - array-partition (Easy)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minimumDifference = (nums, k) => {
         nums.sort((a, b) => a - b);

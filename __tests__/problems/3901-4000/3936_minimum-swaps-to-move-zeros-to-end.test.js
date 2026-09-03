@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumSwaps } from '../../../src/problems/3901-4000/3936_minimum-swaps-to-move-zeros-to-end.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minimumSwaps', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumSwaps($nums) -> $expected', ({ nums, expected }) => {
-                expect(minimumSwaps(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumSwaps($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minimumSwaps(nums)).toStrictEqual(expected);
+                },
+        );
 });

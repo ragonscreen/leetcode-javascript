@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 104,065
  * - Total Submissions: 201,077
  * - Acceptance Rate: 51.8%
  *
  * Similar Problems:
+ *
  * - product-of-array-except-self (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1) auxiliary, O(n * m) total
  *
  * @param {number[][]} grid
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const constructProductMatrix = (grid) => {
         const n = grid.length;

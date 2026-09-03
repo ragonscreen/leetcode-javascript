@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 175,797
  * - Total Submissions: 315,454
  * - Acceptance Rate: 55.7%
  *
  * Similar Problems:
+ *
  * - subsequence-of-size-k-with-the-largest-even-sum (Medium)
  */
 
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} arr
- * @return {number}
+ * @returns {number}
  */
 const numOfSubarrays = (arr) => {
         const n = arr.length;

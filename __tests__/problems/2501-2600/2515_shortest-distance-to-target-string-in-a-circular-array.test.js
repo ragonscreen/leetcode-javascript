@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { closestTarget } from '../../../src/problems/2501-2600/2515_shortest-distance-to-target-string-in-a-circular-array.js';
 
 const testcases = [
@@ -40,16 +41,10 @@ const testcases = [
 ];
 
 describe('closestTarget', () => {
-        test.each(
-                structuredClone(testcases),
-        )('closestTarget($words, $target, $startIndex) -> $expected', ({
-                words,
-                target,
-                startIndex,
-                expected,
-        }) => {
-                expect(closestTarget(words, target, startIndex)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'closestTarget($words, $target, $startIndex) -> $expected',
+                ({ words, target, startIndex, expected }) => {
+                        expect(closestTarget(words, target, startIndex)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { relocateMarbles } from '../../../src/problems/2701-2800/2766_relocate-marbles.js';
 
 const testcases = [
@@ -12,16 +13,12 @@ const testcases = [
 ];
 
 describe('relocateMarbles', () => {
-        test.each(
-                structuredClone(testcases),
-        )('relocateMarbles($nums, $moveFrom, $moveTo) -> $expected', ({
-                nums,
-                moveFrom,
-                moveTo,
-                expected,
-        }) => {
-                expect(
-                        Array.from(relocateMarbles(nums, moveFrom, moveTo)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'relocateMarbles($nums, $moveFrom, $moveTo) -> $expected',
+                ({ nums, moveFrom, moveTo, expected }) => {
+                        expect(Array.from(relocateMarbles(nums, moveFrom, moveTo))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

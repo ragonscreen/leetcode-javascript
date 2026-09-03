@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumPushes } from '../../../src/problems/3001-3100/3016_minimum-number-of-pushes-to-type-word-ii.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minimumPushes', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumPushes($word) -> $expected', ({ word, expected }) => {
-                expect(minimumPushes(word)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumPushes($word) -> $expected',
+                ({ word, expected }) => {
+                        expect(minimumPushes(word)).toStrictEqual(expected);
+                },
+        );
 });

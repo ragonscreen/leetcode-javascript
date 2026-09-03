@@ -1,5 +1,5 @@
 /**
- * 0013. Roman to Integer
+ * 13. Roman to Integer
  *
  * Link: https://leetcode.com/problems/roman-to-integer/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Math (topic_8)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 5,730,127
  * - Total Submissions: 8,634,977
  * - Acceptance Rate: 66.4%
  *
  * Similar Problems:
+ *
  * - integer-to-roman (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const romanToInt = (s) => {
         const map = {
@@ -57,7 +60,7 @@ const romanToInt = (s) => {
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const romanToInt1 = (s) => {
         const map = {

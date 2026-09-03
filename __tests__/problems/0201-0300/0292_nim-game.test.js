@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { canWinNim } from '../../../src/problems/0201-0300/0292_nim-game.js';
 
 const testcases = [
@@ -8,10 +9,7 @@ const testcases = [
 ];
 
 describe('canWinNim', () => {
-        test.each(structuredClone(testcases))('canWinNim($n) -> $expected', ({
-                n,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('canWinNim($n) -> $expected', ({ n, expected }) => {
                 expect(canWinNim(n)).toStrictEqual(expected);
         });
 });

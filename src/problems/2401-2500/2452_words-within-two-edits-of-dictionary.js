@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Trie (topic_27)
  *
  * Stats:
+ *
  * - Total Accepted: 29,643
  * - Total Submissions: 47,912
  * - Acceptance Rate: 61.9%
  *
  * Similar Problems:
+ *
  * - word-ladder (Hard)
  */
 
@@ -29,7 +32,7 @@
  *
  * @param {string[]} queries
  * @param {string[]} dictionary
- * @return {string[]}
+ * @returns {string[]}
  */
 const twoEditWords = (queries, dictionary) => {
         const res = [];

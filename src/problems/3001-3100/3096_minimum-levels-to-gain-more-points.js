@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 27,716
  * - Total Submissions: 68,772
  * - Acceptance Rate: 40.3%
  *
  * Similar Problems:
+ *
  * - minimum-rounds-to-complete-all-tasks (Medium)
  */
 
@@ -26,7 +29,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} possible
- * @return {number}
+ * @returns {number}
  */
 const minimumLevels = (possible) => {
         const n = possible.length;
@@ -57,7 +60,7 @@ const minimumLevels = (possible) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} possible
- * @return {number}
+ * @returns {number}
  */
 const minimumLevels1 = (possible) => {
         const n = possible.length;
@@ -89,7 +92,7 @@ const minimumLevels1 = (possible) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} possible
- * @return {number}
+ * @returns {number}
  */
 const minimumLevels2 = (possible) => {
         const n = possible.length;

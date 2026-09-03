@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 36,432
  * - Total Submissions: 49,427
  * - Acceptance Rate: 73.7%
@@ -24,7 +26,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const firstStableIndex = (nums, k) => {
         const n = nums.length;

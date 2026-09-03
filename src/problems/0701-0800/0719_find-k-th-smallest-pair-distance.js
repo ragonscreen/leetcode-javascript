@@ -1,5 +1,5 @@
 /**
- * 0719. Find K-th Smallest Pair Distance
+ * 719. Find K-th Smallest Pair Distance
  *
  * Link: https://leetcode.com/problems/find-k-th-smallest-pair-distance/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 212,489
  * - Total Submissions: 457,181
  * - Acceptance Rate: 46.5%
  *
  * Similar Problems:
+ *
  * - find-k-closest-elements (Medium)
  * - find-k-pairs-with-smallest-sums (Medium)
  * - k-th-smallest-prime-fraction (Medium)
@@ -36,7 +39,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const smallestDistancePair = (nums, k) => {
         nums.sort((a, b) => a - b);
@@ -84,7 +87,7 @@ const smallestDistancePair = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const smallestDistancePair1 = (nums, k) => {
         nums.sort((a, b) => a - b);

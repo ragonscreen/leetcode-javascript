@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 49,978
  * - Total Submissions: 98,532
  * - Acceptance Rate: 50.7%
  *
  * Similar Problems:
+ *
  * - design-neighbor-sum-service (Easy)
  * - wiggle-sort (Medium)
  * - wiggle-sort-ii (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const rearrangeArray = (nums) => {
         nums.sort((a, b) => a - b);

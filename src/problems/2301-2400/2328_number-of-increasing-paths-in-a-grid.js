@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Depth-First Search (topic_21)
@@ -18,11 +19,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 83,315
  * - Total Submissions: 145,258
  * - Acceptance Rate: 57.4%
  *
  * Similar Problems:
+ *
  * - all-paths-from-source-to-target (Medium)
  * - longest-increasing-path-in-a-matrix (Hard)
  * - maximum-strictly-increasing-cells-in-a-matrix (Hard)
@@ -34,7 +37,7 @@
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const countPaths = (grid) => {
         const MOD = 1e9 + 7;

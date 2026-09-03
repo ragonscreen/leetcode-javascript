@@ -1,5 +1,5 @@
 /**
- * 0054. Spiral Matrix
+ * 54. Spiral Matrix
  *
  * Link: https://leetcode.com/problems/spiral-matrix/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 2,364,576
  * - Total Submissions: 4,181,522
  * - Acceptance Rate: 56.5%
  *
  * Similar Problems:
+ *
  * - spiral-matrix-ii (Medium)
  * - spiral-matrix-iii (Medium)
  * - spiral-matrix-iv (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1) auxiliary, O(n * m) total
  *
  * @param {number[][]} matrix
- * @return {number[]}
+ * @returns {number[]}
  */
 const spiralOrder = (matrix) => {
         const n = matrix.length;

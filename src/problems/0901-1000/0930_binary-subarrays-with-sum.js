@@ -1,5 +1,5 @@
 /**
- * 0930. Binary Subarrays With Sum
+ * 930. Binary Subarrays With Sum
  *
  * Link: https://leetcode.com/problems/binary-subarrays-with-sum/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 510,448
  * - Total Submissions: 744,217
  * - Acceptance Rate: 68.6%
  *
  * Similar Problems:
+ *
  * - find-all-possible-stable-binary-arrays-i (Medium)
  * - ways-to-split-array-into-good-subarrays (Medium)
  * - count-subarrays-with-score-less-than-k (Hard)
@@ -32,7 +35,7 @@
  *
  * @param {number[]} nums
  * @param {number} goal
- * @return {number}
+ * @returns {number}
  */
 const numSubarraysWithSum = (nums, goal) => {
         let res = 0;

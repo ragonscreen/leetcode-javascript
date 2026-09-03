@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minElement } from '../../../src/problems/3301-3400/3300_minimum-element-after-replacement-with-digit-sum.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minElement', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minElement($nums) -> $expected', ({ nums, expected }) => {
-                expect(minElement(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minElement($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minElement(nums)).toStrictEqual(expected);
+                },
+        );
 });

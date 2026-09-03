@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Weekly Contest 212 (contest_weekly-contest-212)
  *
  * Stats:
+ *
  * - Total Accepted: 158,374
  * - Total Submissions: 189,108
  * - Acceptance Rate: 83.7%
  *
  * Similar Problems:
+ *
  * - can-make-arithmetic-progression-from-sequence (Easy)
  * - arithmetic-slices (Medium)
  */
@@ -33,7 +36,7 @@
  * @param {number[]} nums
  * @param {number[]} l
  * @param {number[]} r
- * @return {boolean[]}
+ * @returns {boolean[]}
  */
 const checkArithmeticSubarrays = (nums, l, r) => {
         const check = (li, ri) => {

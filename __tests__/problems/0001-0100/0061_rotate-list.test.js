@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { rotateRight } from '../../../src/problems/0001-0100/0061_rotate-list.js';
 import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
@@ -8,11 +9,12 @@ const testcases = [
 ];
 
 describe('rotateRight', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rotateRight($head, $k) -> $expected', ({ head, k, expected }) => {
-                expect(
-                        listToArray(rotateRight(arrayToList(head), k)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rotateRight($head, $k) -> $expected',
+                ({ head, k, expected }) => {
+                        expect(listToArray(rotateRight(arrayToList(head), k))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

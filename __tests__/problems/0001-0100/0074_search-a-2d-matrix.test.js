@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { searchMatrix } from '../../../src/problems/0001-0100/0074_search-a-2d-matrix.js';
 
 const testcases = [
@@ -43,13 +44,10 @@ const testcases = [
 ];
 
 describe('searchMatrix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('searchMatrix($matrix, $target) -> $expected', ({
-                matrix,
-                target,
-                expected,
-        }) => {
-                expect(searchMatrix(matrix, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'searchMatrix($matrix, $target) -> $expected',
+                ({ matrix, target, expected }) => {
+                        expect(searchMatrix(matrix, target)).toStrictEqual(expected);
+                },
+        );
 });

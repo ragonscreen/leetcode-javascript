@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         majorityElement,
         majorityElement1,
@@ -11,17 +12,19 @@ const testcases = [
 ];
 
 describe('majorityElement', () => {
-        test.each(
-                structuredClone(testcases),
-        )('majorityElement($nums) -> $expected', ({ nums, expected }) => {
-                expect(majorityElement(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'majorityElement($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(majorityElement(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('majorityElement1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('majorityElement1($nums) -> $expected', ({ nums, expected }) => {
-                expect(majorityElement1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'majorityElement1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(majorityElement1(nums)).toStrictEqual(expected);
+                },
+        );
 });

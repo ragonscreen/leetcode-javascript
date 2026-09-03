@@ -1,5 +1,5 @@
 /**
- * 0724. Find Pivot Index
+ * 724. Find Pivot Index
  *
  * Link: https://leetcode.com/problems/find-pivot-index/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 1,630,061
  * - Total Submissions: 2,617,833
  * - Acceptance Rate: 62.3%
  *
  * Similar Problems:
+ *
  * - find-the-middle-index-in-array (Easy)
  * - left-and-right-sum-differences (Easy)
  * - maximum-sum-score-of-array (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const pivotIndex = (nums) => {
         const n = nums.length;
@@ -62,7 +65,7 @@ const pivotIndex = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const pivotIndex1 = (nums) => {
         const n = nums.length;
@@ -94,7 +97,7 @@ const pivotIndex1 = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const pivotIndex2 = (nums) => {
         const pre = new Array(nums.length);

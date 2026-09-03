@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Union-Find (topic_23)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Weekly Contest 373 (contest_weekly-contest-373)
  *
  * Stats:
+ *
  * - Total Accepted: 175,900
  * - Total Submissions: 264,567
  * - Acceptance Rate: 66.5%
  *
  * Similar Problems:
+ *
  * - minimize-hamming-distance-after-swap-operations (Medium)
  * - smallest-string-with-swaps (Medium)
  */
@@ -32,7 +35,7 @@
  *
  * @param {number[]} nums
  * @param {number} limit
- * @return {number[]}
+ * @returns {number[]}
  */
 const lexicographicallySmallestArray = (nums, limit) => {
         const n = nums.length;

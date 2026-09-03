@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getConcatenation } from '../../../src/problems/1901-2000/1929_concatenation-of-array.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('getConcatenation', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getConcatenation($nums) -> $expected', ({ nums, expected }) => {
-                expect(getConcatenation(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getConcatenation($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(getConcatenation(nums)).toStrictEqual(expected);
+                },
+        );
 });

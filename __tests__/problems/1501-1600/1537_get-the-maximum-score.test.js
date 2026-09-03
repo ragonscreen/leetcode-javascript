@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxSum } from '../../../src/problems/1501-1600/1537_get-the-maximum-score.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('maxSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSum($nums1, $nums2) -> $expected', ({
-                nums1,
-                nums2,
-                expected,
-        }) => {
-                expect(maxSum(nums1, nums2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSum($nums1, $nums2) -> $expected',
+                ({ nums1, nums2, expected }) => {
+                        expect(maxSum(nums1, nums2)).toStrictEqual(expected);
+                },
+        );
 });

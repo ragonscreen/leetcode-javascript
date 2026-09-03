@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 447,899
  * - Total Submissions: 608,372
  * - Acceptance Rate: 73.6%
  *
  * Similar Problems:
+ *
  * - vowels-of-all-substrings (Medium)
  * - count-complete-substrings (Hard)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const numberOfSubstrings = (s) => {
         let res = 0;
@@ -61,7 +64,7 @@ const numberOfSubstrings = (s) => {
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const numberOfSubstrings1 = (s) => {
         const map = { a: 0, b: 0, c: 0 };

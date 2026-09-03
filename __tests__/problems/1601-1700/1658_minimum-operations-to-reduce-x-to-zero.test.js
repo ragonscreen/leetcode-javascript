@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minOperations } from '../../../src/problems/1601-1700/1658_minimum-operations-to-reduce-x-to-zero.js';
 
 const testcases = [
@@ -8,8 +9,8 @@ const testcases = [
         { nums: [1, 1, 1], x: 5, expected: -1 },
         {
                 nums: [
-                        8828, 9581, 49, 9818, 9974, 9869, 9991, 10_000, 10_000,
-                        10_000, 9999, 9993, 9904, 8819, 1231, 6309,
+                        8828, 9581, 49, 9818, 9974, 9869, 9991, 10_000, 10_000, 10_000, 9999, 9993,
+                        9904, 8819, 1231, 6309,
                 ],
                 x: 134_365,
                 expected: 16,
@@ -17,9 +18,10 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($nums, $x) -> $expected', ({ nums, x, expected }) => {
-                expect(minOperations(nums, x)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($nums, $x) -> $expected',
+                ({ nums, x, expected }) => {
+                        expect(minOperations(nums, x)).toStrictEqual(expected);
+                },
+        );
 });

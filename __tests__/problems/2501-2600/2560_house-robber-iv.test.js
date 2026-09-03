@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minCapability } from '../../../src/problems/2501-2600/2560_house-robber-iv.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('minCapability', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minCapability($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(minCapability(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minCapability($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(minCapability(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

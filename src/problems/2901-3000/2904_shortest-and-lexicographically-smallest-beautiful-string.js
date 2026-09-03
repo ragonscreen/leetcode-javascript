@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  * - Senior (position_senior)
  * - Weekly Contest 367 (contest_weekly-contest-367)
  *
  * Stats:
+ *
  * - Total Accepted: 92,374
  * - Total Submissions: 168,987
  * - Acceptance Rate: 54.7%
@@ -27,7 +29,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {string}
+ * @returns {string}
  */
 const shortestBeautifulSubstring = (s, k) => {
         const n = s.length;

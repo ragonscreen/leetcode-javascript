@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 69,039
  * - Total Submissions: 118,315
  * - Acceptance Rate: 58.4%
  *
  * Similar Problems:
+ *
  * - defuse-the-bomb (Easy)
  */
 
@@ -28,7 +31,7 @@
  * @param {string[]} words
  * @param {string} target
  * @param {number} startIndex
- * @return {number}
+ * @returns {number}
  */
 const closestTarget = (words, target, startIndex) => {
         const n = words.length;

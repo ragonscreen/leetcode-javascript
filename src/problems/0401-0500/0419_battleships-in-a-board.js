@@ -1,5 +1,5 @@
 /**
- * 0419. Battleships in a Board
+ * 419. Battleships in a Board
  *
  * Link: https://leetcode.com/problems/battleships-in-a-board/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 286,687
  * - Total Submissions: 369,699
  * - Acceptance Rate: 77.5%
  *
  * Similar Problems:
+ *
  * - max-area-of-island (Medium)
  * - number-of-islands (Medium)
  * - rotting-oranges (Medium)
@@ -31,7 +34,7 @@
  * `n` = `board.length`, `m` = `board[0].length`
  *
  * @param {character[][]} board
- * @return {number}
+ * @returns {number}
  */
 const countBattleships = (board) => {
         const n = board.length;
@@ -61,7 +64,7 @@ const countBattleships = (board) => {
  * `n` = `board.length`, `m` = `board[0].length`
  *
  * @param {character[][]} board
- * @return {number}
+ * @returns {number}
  */
 const countBattleships1 = (board) => {
         const n = board.length;

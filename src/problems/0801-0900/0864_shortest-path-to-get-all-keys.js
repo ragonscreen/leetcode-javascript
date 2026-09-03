@@ -1,5 +1,5 @@
 /**
- * 0864. Shortest Path to Get All Keys
+ * 864. Shortest Path to Get All Keys
  *
  * Link: https://leetcode.com/problems/shortest-path-to-get-all-keys/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Bit Manipulation (topic_19)
  * - Breadth-First Search (topic_22)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 95,416
  * - Total Submissions: 175,081
  * - Acceptance Rate: 54.5%
@@ -28,7 +30,7 @@ import { Queue } from '@datastructures-js/queue';
  * `n` = length of `grid`, `m` = length of `grid[0]`, `k` = number of keys in `grid`
  *
  * @param {string[]} grid
- * @return {number}
+ * @returns {number}
  */
 const shortestPathAllKeys = (grid) => {
         const n = grid.length;

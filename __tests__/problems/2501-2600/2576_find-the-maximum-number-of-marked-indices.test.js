@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxNumOfMarkedIndices } from '../../../src/problems/2501-2600/2576_find-the-maximum-number-of-marked-indices.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('maxNumOfMarkedIndices', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxNumOfMarkedIndices($nums) -> $expected', ({ nums, expected }) => {
-                expect(maxNumOfMarkedIndices(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxNumOfMarkedIndices($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxNumOfMarkedIndices(nums)).toStrictEqual(expected);
+                },
+        );
 });

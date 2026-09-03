@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Staff (position_staff)
  * - Biweekly Contest 19 (contest_biweekly-contest-19)
  *
  * Stats:
+ *
  * - Total Accepted: 272,251
  * - Total Submissions: 390,761
  * - Acceptance Rate: 69.7%
@@ -25,7 +27,7 @@
  *
  * @param {number} hour
  * @param {number} minutes
- * @return {number}
+ * @returns {number}
  */
 const angleClock = (hour, minutes) => {
         const d = Math.abs(hour * 30 - minutes * 5.5);

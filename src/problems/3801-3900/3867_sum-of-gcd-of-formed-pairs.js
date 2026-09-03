@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Two Pointers (topic_9)
@@ -15,6 +16,7 @@
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 27,321
  * - Total Submissions: 42,020
  * - Acceptance Rate: 65.0%
@@ -27,7 +29,7 @@
  * `n` = length of `nums`, `k` = largest number encountered when calculating GCD
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const gcdSum = (nums) => {
         const gcd = (a, b) => (b ? gcd(b, a % b) : a);

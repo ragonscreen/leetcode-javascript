@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minOperations,
         minOperations1,
@@ -12,17 +13,19 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($nums) -> $expected', ({ nums, expected }) => {
-                expect(minOperations(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minOperations(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minOperations1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations1($nums) -> $expected', ({ nums, expected }) => {
-                expect(minOperations1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minOperations1(nums)).toStrictEqual(expected);
+                },
+        );
 });

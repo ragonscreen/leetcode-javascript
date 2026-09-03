@@ -1,8 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import {
-        setZeroes,
-        setZeroes1,
-} from '../../../src/problems/0001-0100/0073_set-matrix-zeroes.js';
+
+import { setZeroes, setZeroes1 } from '../../../src/problems/0001-0100/0073_set-matrix-zeroes.js';
 
 const testcases = [
         {
@@ -32,19 +30,21 @@ const testcases = [
 ];
 
 describe('setZeroes', () => {
-        test.each(
-                structuredClone(testcases),
-        )('setZeroes($matrix) -> $expected', ({ matrix, expected }) => {
-                expect(setZeroes(matrix)).toBeNil();
-                expect(matrix).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'setZeroes($matrix) -> $expected',
+                ({ matrix, expected }) => {
+                        expect(setZeroes(matrix)).toBeNil();
+                        expect(matrix).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('setZeroes1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('setZeroes1($matrix) -> $expected', ({ matrix, expected }) => {
-                expect(setZeroes1(matrix)).toBeNil();
-                expect(matrix).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'setZeroes1($matrix) -> $expected',
+                ({ matrix, expected }) => {
+                        expect(setZeroes1(matrix)).toBeNil();
+                        expect(matrix).toStrictEqual(expected);
+                },
+        );
 });

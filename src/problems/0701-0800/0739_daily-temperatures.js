@@ -1,5 +1,5 @@
 /**
- * 0739. Daily Temperatures
+ * 739. Daily Temperatures
  *
  * Link: https://leetcode.com/problems/daily-temperatures/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 1,647,244
  * - Total Submissions: 2,407,483
  * - Acceptance Rate: 68.4%
  *
  * Similar Problems:
+ *
  * - next-greater-element-i (Easy)
  * - online-stock-span (Medium)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} temperatures
- * @return {number[]}
+ * @returns {number[]}
  */
 const dailyTemperatures = (temperatures) => {
         const n = temperatures.length;
@@ -55,7 +58,7 @@ const dailyTemperatures = (temperatures) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} temperatures
- * @return {number[]}
+ * @returns {number[]}
  */
 const dailyTemperatures1 = (temperatures) => {
         const n = temperatures.length;

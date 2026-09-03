@@ -1,5 +1,5 @@
 /**
- * 0946. Validate Stack Sequences
+ * 946. Validate Stack Sequences
  *
  * Link: https://leetcode.com/problems/validate-stack-sequences/
  * Category: Algorithms
@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 368,774
  * - Total Submissions: 525,033
  * - Acceptance Rate: 70.2%
@@ -25,7 +27,7 @@
  *
  * @param {number[]} pushed
  * @param {number[]} popped
- * @return {boolean}
+ * @returns {boolean}
  */
 const validateStackSequences = (pushed, popped) => {
         const stack = [];

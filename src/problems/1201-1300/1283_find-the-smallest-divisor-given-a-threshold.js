@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 448,138
  * - Total Submissions: 681,453
  * - Acceptance Rate: 65.8%
  *
  * Similar Problems:
+ *
  * - minimized-maximum-of-products-distributed-to-any-store (Medium)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} threshold
- * @return {number}
+ * @returns {number}
  */
 const smallestDivisor = (nums, threshold) => {
         const check = (div) => {

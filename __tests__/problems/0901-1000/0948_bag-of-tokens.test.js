@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { bagOfTokensScore } from '../../../src/problems/0901-1000/0948_bag-of-tokens.js';
 
 const testcases = [
@@ -20,13 +21,10 @@ const testcases = [
 ];
 
 describe('bagOfTokensScore', () => {
-        test.each(
-                structuredClone(testcases),
-        )('bagOfTokensScore($tokens, $power) -> $expected', ({
-                tokens,
-                power,
-                expected,
-        }) => {
-                expect(bagOfTokensScore(tokens, power)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'bagOfTokensScore($tokens, $power) -> $expected',
+                ({ tokens, power, expected }) => {
+                        expect(bagOfTokensScore(tokens, power)).toStrictEqual(expected);
+                },
+        );
 });

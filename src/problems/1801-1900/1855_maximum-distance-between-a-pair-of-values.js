@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 62,704
  * - Total Submissions: 115,509
  * - Acceptance Rate: 54.3%
  *
  * Similar Problems:
+ *
  * - two-furthest-houses-with-different-colors (Easy)
  */
 
@@ -28,12 +31,12 @@
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
- * @return {number}
+ * @returns {number}
  */
 const maxDistance = (nums1, nums2) => {
         let res = 0;
 
-        for (let l = 0, r = 0; l < nums1.length; ) {
+        for (let l = 0, r = 0; l < nums1.length;) {
                 if (nums2[r] >= nums1[l]) {
                         r++;
                 } else {
@@ -52,7 +55,7 @@ const maxDistance = (nums1, nums2) => {
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
- * @return {number}
+ * @returns {number}
  */
 const maxDistance1 = (nums1, nums2) => {
         const n = nums1.length;

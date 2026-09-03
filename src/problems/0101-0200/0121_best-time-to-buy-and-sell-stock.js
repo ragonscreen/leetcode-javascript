@@ -1,5 +1,5 @@
 /**
- * 0121. Best Time to Buy and Sell Stock
+ * 121. Best Time to Buy and Sell Stock
  *
  * Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 7,729,666
  * - Total Submissions: 13,684,290
  * - Acceptance Rate: 56.5%
  *
  * Similar Problems:
+ *
  * - maximum-difference-between-increasing-elements (Easy)
  * - best-time-to-buy-and-sell-stock-ii (Medium)
  * - best-time-to-buy-and-sell-stock-v (Medium)
@@ -34,7 +37,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} prices
- * @return {number}
+ * @returns {number}
  */
 const maxProfit = (prices) => {
         let maxVal = 0;
@@ -54,7 +57,7 @@ const maxProfit = (prices) => {
  * Space Complexity: O(1)
  *
  * @param {number[]} prices
- * @return {number}
+ * @returns {number}
  */
 const maxProfit1 = (prices) => {
         let max = 0;

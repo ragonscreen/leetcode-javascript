@@ -1,5 +1,5 @@
 /**
- * 0605. Can Place Flowers
+ * 605. Can Place Flowers
  *
  * Link: https://leetcode.com/problems/can-place-flowers/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 1,368,226
  * - Total Submissions: 4,707,502
  * - Acceptance Rate: 29.1%
  *
  * Similar Problems:
+ *
  * - teemo-attacking (Easy)
  * - asteroid-collision (Medium)
  */
@@ -28,7 +31,7 @@
  *
  * @param {number[]} flowerbed
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const canPlaceFlowers = (flowerbed, n) => {
         let count = 0;

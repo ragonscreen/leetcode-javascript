@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 440,290
  * - Total Submissions: 481,924
  * - Acceptance Rate: 91.4%
@@ -22,7 +24,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const scoreOfString = (s) => {
         let res = 0;

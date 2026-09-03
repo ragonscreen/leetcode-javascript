@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 17,882
  * - Total Submissions: 57,215
  * - Acceptance Rate: 31.3%
@@ -20,7 +21,7 @@
  * `n` = length of `nums`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minArraySum = (nums) => {
         const n = nums.length;
@@ -81,7 +82,7 @@ const minArraySum = (nums) => {
  * `n` = length of `nums`, `f` = number of factors of `nums[i]`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minArraySum1 = (nums) => {
         const getFactors = (num) => {

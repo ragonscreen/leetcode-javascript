@@ -1,5 +1,5 @@
 /**
- * 0069. Sqrt(x)
+ * 69. Sqrt(x)
  *
  * Link: https://leetcode.com/problems/sqrtx/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 3,131,797
  * - Total Submissions: 7,525,916
  * - Acceptance Rate: 41.6%
  *
  * Similar Problems:
+ *
  * - valid-perfect-square (Easy)
  * - powx-n (Medium)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} x
- * @return {number}
+ * @returns {number}
  */
 const mySqrt = (x) => {
         const digits = Math.floor(Math.log10(x)) + 1;
@@ -64,7 +67,7 @@ const mySqrt = (x) => {
  * Space Complexity: O(1)
  *
  * @param {number} x
- * @return {number}
+ * @returns {number}
  */
 const mySqrt1 = (x) => {
         let l = 0;

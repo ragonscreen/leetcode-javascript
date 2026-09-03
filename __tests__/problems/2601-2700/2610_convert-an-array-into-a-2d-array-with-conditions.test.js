@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findMatrix,
         findMatrix1,
@@ -11,25 +12,27 @@ const testcases = [
 ];
 
 describe('findMatrix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findMatrix($nums) -> $expected', ({ nums, expected }) => {
-                const actual = findMatrix(nums);
+        test.each(structuredClone(testcases))(
+                'findMatrix($nums) -> $expected',
+                ({ nums, expected }) => {
+                        const actual = findMatrix(nums);
 
-                for (let i = 0; i < expected.length; i++) {
-                        expect(actual[i]).toContainAllValues(expected[i]);
-                }
-        });
+                        for (let i = 0; i < expected.length; i++) {
+                                expect(actual[i]).toContainAllValues(expected[i]);
+                        }
+                },
+        );
 });
 
 describe('findMatrix1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findMatrix1($nums) -> $expected', ({ nums, expected }) => {
-                const actual = findMatrix1(nums);
+        test.each(structuredClone(testcases))(
+                'findMatrix1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        const actual = findMatrix1(nums);
 
-                for (let i = 0; i < expected.length; i++) {
-                        expect(actual[i]).toContainAllValues(expected[i]);
-                }
-        });
+                        for (let i = 0; i < expected.length; i++) {
+                                expect(actual[i]).toContainAllValues(expected[i]);
+                        }
+                },
+        );
 });

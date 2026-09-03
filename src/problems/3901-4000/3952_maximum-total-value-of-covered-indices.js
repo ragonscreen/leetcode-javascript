@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Biweekly Contest 184 (contest_biweekly-contest-184)
  *
  * Stats:
+ *
  * - Total Accepted: 10,711
  * - Total Submissions: 43,196
  * - Acceptance Rate: 24.8%
@@ -24,7 +26,7 @@
  *
  * @param {number[]} nums
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const maxTotal = (nums, s) => {
         let res = 0;
@@ -51,7 +53,7 @@ const maxTotal = (nums, s) => {
  *
  * @param {number[]} nums
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const maxTotal1 = (nums, s) => {
         let f = 0;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxValue } from '../../../src/problems/1801-1900/1802_maximum-value-at-a-given-index-in-a-bounded-array.js';
 
 const testcases = [
@@ -9,14 +10,10 @@ const testcases = [
 ];
 
 describe('maxValue', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxValue($n, $index, $maxSum) -> $expected', ({
-                n,
-                index,
-                maxSum,
-                expected,
-        }) => {
-                expect(maxValue(n, index, maxSum)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxValue($n, $index, $maxSum) -> $expected',
+                ({ n, index, maxSum, expected }) => {
+                        expect(maxValue(n, index, maxSum)).toStrictEqual(expected);
+                },
+        );
 });

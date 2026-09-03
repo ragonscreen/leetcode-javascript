@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         addSpaces,
         addSpaces1,
@@ -23,17 +24,19 @@ const testcases = [
 ];
 
 describe('addSpaces', () => {
-        test.each(
-                structuredClone(testcases),
-        )('addSpaces($s, $spaces) -> $expected', ({ s, spaces, expected }) => {
-                expect(addSpaces(s, spaces)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'addSpaces($s, $spaces) -> $expected',
+                ({ s, spaces, expected }) => {
+                        expect(addSpaces(s, spaces)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('addSpaces1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('addSpaces1($s, $spaces) -> $expected', ({ s, spaces, expected }) => {
-                expect(addSpaces1(s, spaces)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'addSpaces1($s, $spaces) -> $expected',
+                ({ s, spaces, expected }) => {
+                        expect(addSpaces1(s, spaces)).toStrictEqual(expected);
+                },
+        );
 });

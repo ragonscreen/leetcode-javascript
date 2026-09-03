@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { survivedRobotsHealths } from '../../../src/problems/2701-2800/2751_robot-collisions.js';
 
 const testcases = [
@@ -41,16 +42,12 @@ const testcases = [
 ];
 
 describe('survivedRobotsHealths', () => {
-        test.each(
-                structuredClone(testcases),
-        )('survivedRobotsHealths($positions, $healths, $directions) -> $expected', ({
-                positions,
-                healths,
-                directions,
-                expected,
-        }) => {
-                expect(
-                        survivedRobotsHealths(positions, healths, directions),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'survivedRobotsHealths($positions, $healths, $directions) -> $expected',
+                ({ positions, healths, directions, expected }) => {
+                        expect(survivedRobotsHealths(positions, healths, directions)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

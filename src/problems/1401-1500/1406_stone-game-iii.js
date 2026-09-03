@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
@@ -18,11 +19,13 @@
  * - Weekly Contest 183 (contest_weekly-contest-183)
  *
  * Stats:
+ *
  * - Total Accepted: 211,925
  * - Total Submissions: 312,011
  * - Acceptance Rate: 67.9%
  *
  * Similar Problems:
+ *
  * - stone-game-ix (Medium)
  * - stone-game-vi (Medium)
  * - stone-game-vii (Medium)
@@ -37,7 +40,7 @@
  * `n` = `stoneValue.length`
  *
  * @param {number[]} stoneValue
- * @return {string}
+ * @returns {string}
  */
 const stoneGameIII = (stoneValue) => {
         const n = stoneValue.length;

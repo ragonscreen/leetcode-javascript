@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Prefix Sum (topic_61068)
@@ -15,6 +16,7 @@
  * - Weekly Contest 477 (contest_weekly-contest-477)
  *
  * Stats:
+ *
  * - Total Accepted: 95,289
  * - Total Submissions: 223,327
  * - Acceptance Rate: 42.7%
@@ -28,7 +30,7 @@
  *
  * @param {string} s
  * @param {number[][]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const sumAndMultiply = (s, queries) => {
         const MOD = 1e9 + 7;

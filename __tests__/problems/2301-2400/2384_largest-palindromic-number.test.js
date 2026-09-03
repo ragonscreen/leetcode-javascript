@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { largestPalindromic } from '../../../src/problems/2301-2400/2384_largest-palindromic-number.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('largestPalindromic', () => {
-        test.each(
-                structuredClone(testcases),
-        )('largestPalindromic($num) -> $expected', ({ num, expected }) => {
-                expect(largestPalindromic(num)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'largestPalindromic($num) -> $expected',
+                ({ num, expected }) => {
+                        expect(largestPalindromic(num)).toStrictEqual(expected);
+                },
+        );
 });

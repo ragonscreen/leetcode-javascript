@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 14,433
  * - Total Submissions: 36,384
  * - Acceptance Rate: 39.7%
  *
  * Similar Problems:
+ *
  * - minimum-penalty-for-a-shop (Medium)
  * - minimum-time-to-complete-trips (Medium)
  */
@@ -30,7 +33,7 @@
  * @param {number} power
  * @param {number[]} damage
  * @param {number[]} health
- * @return {number}
+ * @returns {number}
  */
 const minDamage = (power, damage, health) => {
         const n = damage.length;

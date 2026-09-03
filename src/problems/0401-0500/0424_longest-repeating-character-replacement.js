@@ -1,5 +1,5 @@
 /**
- * 0424. Longest Repeating Character Replacement
+ * 424. Longest Repeating Character Replacement
  *
  * Link: https://leetcode.com/problems/longest-repeating-character-replacement/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 1,483,295
  * - Total Submissions: 2,507,053
  * - Acceptance Rate: 59.2%
  *
  * Similar Problems:
+ *
  * - longest-substring-with-at-most-k-distinct-characters (Medium)
  * - max-consecutive-ones-iii (Medium)
  * - maximize-the-confusion-of-an-exam (Medium)
@@ -33,7 +36,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const characterReplacement = (s, k) => {
         const chars = new Set(s);

@@ -1,5 +1,5 @@
 /**
- * 0036. Valid Sudoku
+ * 36. Valid Sudoku
  *
  * Link: https://leetcode.com/problems/valid-sudoku/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 2,432,131
  * - Total Submissions: 3,786,731
  * - Acceptance Rate: 64.2%
  *
  * Similar Problems:
+ *
  * - check-if-every-row-and-column-contains-all-numbers (Easy)
  * - sudoku-solver (Hard)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {character[][]} board
- * @return {boolean}
+ * @returns {boolean}
  */
 const isValidSudoku = (board) => {
         const set = new Set();

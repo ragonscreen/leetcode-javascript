@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Weekly Contest 238 (contest_weekly-contest-238)
  *
  * Stats:
+ *
  * - Total Accepted: 83,742
  * - Total Submissions: 124,943
  * - Acceptance Rate: 67.0%
  *
  * Similar Problems:
+ *
  * - find-maximum-value-in-a-constrained-sequence (Medium)
  */
 
@@ -31,7 +34,7 @@
  *
  * @param {number} n
  * @param {number[][]} restrictions
- * @return {number}
+ * @returns {number}
  */
 const maxBuilding = (n, restrictions) => {
         const m = restrictions.length;
@@ -41,10 +44,7 @@ const maxBuilding = (n, restrictions) => {
         }
 
         restrictions.sort((a, b) => a[0] - b[0]);
-        restrictions[0][1] = Math.min(
-                restrictions[0][1],
-                restrictions[0][0] - 1,
-        );
+        restrictions[0][1] = Math.min(restrictions[0][1], restrictions[0][0] - 1);
 
         for (let i = 0; i < m - 1; i++) {
                 const [ci, ch] = restrictions[i];

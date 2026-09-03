@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { lengthOfLongestSubstring } from '../../../src/problems/0001-0100/0003_longest-substring-without-repeating-characters.js';
 
 const testcases = [
@@ -19,9 +20,10 @@ const testcases = [
 ];
 
 describe('lengthOfLongestSubstring', () => {
-        test.each(
-                structuredClone(testcases),
-        )('lengthOfLongestSubstring($s) -> $expected', ({ s, expected }) => {
-                expect(lengthOfLongestSubstring(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'lengthOfLongestSubstring($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(lengthOfLongestSubstring(s)).toStrictEqual(expected);
+                },
+        );
 });

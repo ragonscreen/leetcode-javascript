@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 259,475
  * - Total Submissions: 415,888
  * - Acceptance Rate: 62.4%
  *
  * Similar Problems:
+ *
  * - find-the-number-of-subarrays-where-boundary-elements-are-maximum (Hard)
  */
 
@@ -27,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const countSubarrays = (nums, k) => {
         const max = Math.max(...nums);

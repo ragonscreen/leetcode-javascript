@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { rankTeams } from '../../../src/problems/1301-1400/1366_rank-teams-by-votes.js';
 
 const testcases = [
@@ -43,9 +44,10 @@ const testcases = [
 ];
 
 describe('rankTeams', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rankTeams($votes) -> $expected', ({ votes, expected }) => {
-                expect(rankTeams(votes)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rankTeams($votes) -> $expected',
+                ({ votes, expected }) => {
+                        expect(rankTeams(votes)).toStrictEqual(expected);
+                },
+        );
 });

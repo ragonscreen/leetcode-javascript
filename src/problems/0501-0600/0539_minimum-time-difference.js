@@ -1,5 +1,5 @@
 /**
- * 0539. Minimum Time Difference
+ * 539. Minimum Time Difference
  *
  * Link: https://leetcode.com/problems/minimum-time-difference/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - String (topic_10)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 349,046
  * - Total Submissions: 557,601
  * - Acceptance Rate: 62.6%
  *
  * Similar Problems:
+ *
  * - minimum-cost-to-set-cooking-time (Medium)
  */
 
@@ -28,7 +31,7 @@
  * Space Complexity: O(1440) = O(1)
  *
  * @param {string[]} timePoints
- * @return {number}
+ * @returns {number}
  */
 const findMinDifference = (timePoints) => {
         const n = timePoints.length;

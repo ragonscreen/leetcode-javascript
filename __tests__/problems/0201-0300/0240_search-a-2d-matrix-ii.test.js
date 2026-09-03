@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         searchMatrix,
         searchMatrix1,
@@ -49,25 +50,19 @@ const testcases = [
 ];
 
 describe('searchMatrix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('searchMatrix($matrix, $target) -> $expected', ({
-                matrix,
-                target,
-                expected,
-        }) => {
-                expect(searchMatrix(matrix, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'searchMatrix($matrix, $target) -> $expected',
+                ({ matrix, target, expected }) => {
+                        expect(searchMatrix(matrix, target)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('searchMatrix1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('searchMatrix1($matrix, $target) -> $expected', ({
-                matrix,
-                target,
-                expected,
-        }) => {
-                expect(searchMatrix1(matrix, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'searchMatrix1($matrix, $target) -> $expected',
+                ({ matrix, target, expected }) => {
+                        expect(searchMatrix1(matrix, target)).toStrictEqual(expected);
+                },
+        );
 });

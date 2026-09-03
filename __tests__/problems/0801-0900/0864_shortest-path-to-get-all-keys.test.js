@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { shortestPathAllKeys } from '../../../src/problems/0801-0900/0864_shortest-path-to-get-all-keys.js';
 
 const testcases = [
@@ -47,9 +48,10 @@ const testcases = [
 ];
 
 describe('shortestPathAllKeys', () => {
-        test.each(
-                structuredClone(testcases),
-        )('shortestPathAllKeys($grid) -> $expected', ({ grid, expected }) => {
-                expect(shortestPathAllKeys(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'shortestPathAllKeys($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(shortestPathAllKeys(grid)).toStrictEqual(expected);
+                },
+        );
 });

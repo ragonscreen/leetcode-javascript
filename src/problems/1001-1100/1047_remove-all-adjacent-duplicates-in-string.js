@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 852,048
  * - Total Submissions: 1,168,434
  * - Acceptance Rate: 72.9%
  *
  * Similar Problems:
+ *
  * - minimize-string-length (Easy)
  * - remove-all-adjacent-duplicates-in-string-ii (Medium)
  * - removing-stars-from-a-string (Medium)
@@ -28,7 +31,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const removeDuplicates = (s) => {
         const stack = new Array(s.length);

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
@@ -15,6 +16,7 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 124,260
  * - Total Submissions: 199,685
  * - Acceptance Rate: 62.2%
@@ -28,7 +30,7 @@ import { Queue } from '@datastructures-js/queue';
  * Space Complexity: O(n * m)
  *
  * @param {character[][]} grid
- * @return {boolean}
+ * @returns {boolean}
  */
 const containsCycle = (grid) => {
         const n = grid.length;
@@ -40,9 +42,7 @@ const containsCycle = (grid) => {
                 [0, -1],
         ];
 
-        const visited = Array.from({ length: n }, () =>
-                new Uint8Array(m).fill(0),
-        );
+        const visited = Array.from({ length: n }, () => new Uint8Array(m).fill(0));
 
         const bfs = (val, y0, x0) => {
                 // tracking path length is not necessary because

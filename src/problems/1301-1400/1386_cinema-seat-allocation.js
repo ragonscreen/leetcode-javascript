@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Greedy (topic_17)
@@ -16,11 +17,13 @@
  * - Biweekly Contest 22 (contest_biweekly-contest-22)
  *
  * Stats:
+ *
  * - Total Accepted: 173,442
  * - Total Submissions: 304,858
  * - Acceptance Rate: 56.9%
  *
  * Similar Problems:
+ *
  * - booking-concert-tickets-in-groups (Hard)
  */
 
@@ -32,7 +35,7 @@
  *
  * @param {number} n
  * @param {number[][]} reservedSeats
- * @return {number}
+ * @returns {number}
  */
 const maxNumberOfFamilies = (n, reservedSeats) => {
         const map = new Map();

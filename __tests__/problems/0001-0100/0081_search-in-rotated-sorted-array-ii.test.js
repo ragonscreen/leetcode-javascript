@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { search } from '../../../src/problems/0001-0100/0081_search-in-rotated-sorted-array-ii.js';
 
 const testcases = [
@@ -18,13 +19,10 @@ const testcases = [
 ];
 
 describe('search', () => {
-        test.each(
-                structuredClone(testcases),
-        )('search($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(search(nums, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'search($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(search(nums, target)).toStrictEqual(expected);
+                },
+        );
 });

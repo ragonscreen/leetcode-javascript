@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minimumIndex,
         minimumIndex1,
@@ -11,17 +12,19 @@ const testcases = [
 ];
 
 describe('minimumIndex', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumIndex($nums) -> $expected', ({ nums, expected }) => {
-                expect(minimumIndex(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumIndex($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minimumIndex(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minimumIndex1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumIndex1($nums) -> $expected', ({ nums, expected }) => {
-                expect(minimumIndex1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumIndex1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minimumIndex1(nums)).toStrictEqual(expected);
+                },
+        );
 });

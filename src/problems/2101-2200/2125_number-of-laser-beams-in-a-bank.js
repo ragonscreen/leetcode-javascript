@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - String (topic_10)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 350,233
  * - Total Submissions: 402,512
  * - Acceptance Rate: 87.0%
  *
  * Similar Problems:
+ *
  * - set-matrix-zeroes (Medium)
  */
 
@@ -29,7 +32,7 @@
  * `n` = length of `bank`, `m` = length of `bank[0]`
  *
  * @param {string[]} bank
- * @return {number}
+ * @returns {number}
  */
 const numberOfBeams = (bank) => {
         const n = bank.length;

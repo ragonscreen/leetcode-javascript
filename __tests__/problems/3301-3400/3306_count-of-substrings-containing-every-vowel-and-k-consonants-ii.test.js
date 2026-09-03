@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countOfSubstrings } from '../../../src/problems/3301-3400/3306_count-of-substrings-containing-every-vowel-and-k-consonants-ii.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('countOfSubstrings', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countOfSubstrings($word, $k) -> $expected', ({
-                word,
-                k,
-                expected,
-        }) => {
-                expect(countOfSubstrings(word, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countOfSubstrings($word, $k) -> $expected',
+                ({ word, k, expected }) => {
+                        expect(countOfSubstrings(word, k)).toStrictEqual(expected);
+                },
+        );
 });

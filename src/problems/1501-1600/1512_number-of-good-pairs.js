@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 1,051,957
  * - Total Submissions: 1,171,218
  * - Acceptance Rate: 89.8%
  *
  * Similar Problems:
+ *
  * - number-of-pairs-of-interchangeable-rectangles (Medium)
  * - substrings-that-begin-and-end-with-the-same-letter (Medium)
  */
@@ -29,7 +32,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const numIdenticalPairs = (nums) => {
         const map = new Map();

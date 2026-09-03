@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { evaluate } from '../../../src/problems/1801-1900/1807_evaluate-the-bracket-pairs-of-a-string.js';
 
 const testcases = [
@@ -19,13 +20,10 @@ const testcases = [
 ];
 
 describe('evaluate', () => {
-        test.each(
-                structuredClone(testcases),
-        )('evaluate($s, $knowledge) -> $expected', ({
-                s,
-                knowledge,
-                expected,
-        }) => {
-                expect(evaluate(s, knowledge)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'evaluate($s, $knowledge) -> $expected',
+                ({ s, knowledge, expected }) => {
+                        expect(evaluate(s, knowledge)).toStrictEqual(expected);
+                },
+        );
 });

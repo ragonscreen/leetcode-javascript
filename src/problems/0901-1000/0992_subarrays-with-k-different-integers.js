@@ -1,5 +1,5 @@
 /**
- * 0992. Subarrays with K Different Integers
+ * 992. Subarrays with K Different Integers
  *
  * Link: https://leetcode.com/problems/subarrays-with-k-different-integers/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 384,238
  * - Total Submissions: 567,233
  * - Acceptance Rate: 67.7%
  *
  * Similar Problems:
+ *
  * - count-vowel-substrings-of-a-string (Easy)
  * - count-complete-subarrays-in-an-array (Medium)
  * - k-divisible-elements-subarrays (Medium)
@@ -35,7 +38,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const subarraysWithKDistinct = (nums, k) => {
         const map = new Map();

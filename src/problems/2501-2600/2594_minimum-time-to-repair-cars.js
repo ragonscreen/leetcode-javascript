@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 155,164
  * - Total Submissions: 260,455
  * - Acceptance Rate: 59.6%
  *
  * Similar Problems:
+ *
  * - koko-eating-bananas (Medium)
  * - sort-transformed-array (Medium)
  */
@@ -29,7 +32,7 @@
  *
  * @param {number[]} ranks
  * @param {number} cars
- * @return {number}
+ * @returns {number}
  */
 const repairCars = (ranks, cars) => {
         const check = (minutes) => {

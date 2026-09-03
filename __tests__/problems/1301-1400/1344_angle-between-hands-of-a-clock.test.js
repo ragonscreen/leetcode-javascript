@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { angleClock } from '../../../src/problems/1301-1400/1344_angle-between-hands-of-a-clock.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('angleClock', () => {
-        test.each(
-                structuredClone(testcases),
-        )('angleClock($hour, $minutes) -> $expected', ({
-                hour,
-                minutes,
-                expected,
-        }) => {
-                expect(angleClock(hour, minutes)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'angleClock($hour, $minutes) -> $expected',
+                ({ hour, minutes, expected }) => {
+                        expect(angleClock(hour, minutes)).toStrictEqual(expected);
+                },
+        );
 });

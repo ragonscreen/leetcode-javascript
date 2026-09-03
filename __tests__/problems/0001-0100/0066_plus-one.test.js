@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { plusOne } from '../../../src/problems/0001-0100/0066_plus-one.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('plusOne', () => {
-        test.each(
-                structuredClone(testcases),
-        )('plusOne($digits) -> $expected', ({ digits, expected }) => {
-                expect(plusOne(digits)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'plusOne($digits) -> $expected',
+                ({ digits, expected }) => {
+                        expect(plusOne(digits)).toStrictEqual(expected);
+                },
+        );
 });

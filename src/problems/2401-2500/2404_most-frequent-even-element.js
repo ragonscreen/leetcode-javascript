@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 133,904
  * - Total Submissions: 251,125
  * - Acceptance Rate: 53.3%
  *
  * Similar Problems:
+ *
  * - majority-element (Easy)
  * - majority-element-ii (Medium)
  * - sort-characters-by-frequency (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const mostFrequentEven = (nums) => {
         const map = {};

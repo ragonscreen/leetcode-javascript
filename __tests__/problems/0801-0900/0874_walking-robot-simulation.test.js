@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { robotSim } from '../../../src/problems/0801-0900/0874_walking-robot-simulation.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('robotSim', () => {
-        test.each(
-                structuredClone(testcases),
-        )('robotSim($commands, $obstacles) -> $expected', ({
-                commands,
-                obstacles,
-                expected,
-        }) => {
-                expect(robotSim(commands, obstacles)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'robotSim($commands, $obstacles) -> $expected',
+                ({ commands, obstacles, expected }) => {
+                        expect(robotSim(commands, obstacles)).toStrictEqual(expected);
+                },
+        );
 });

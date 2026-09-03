@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Counting (topic_61062)
@@ -15,11 +16,13 @@
  * - Weekly Contest 295 (contest_weekly-contest-295)
  *
  * Stats:
+ *
  * - Total Accepted: 64,480
  * - Total Submissions: 102,246
  * - Acceptance Rate: 63.1%
  *
  * Similar Problems:
+ *
  * - find-words-that-can-be-formed-by-characters (Easy)
  * - maximum-number-of-occurrences-of-a-substring (Medium)
  */
@@ -32,7 +35,7 @@
  *
  * @param {string} s
  * @param {string} target
- * @return {number}
+ * @returns {number}
  */
 const rearrangeCharacters = (s, target) => {
         const n = s.length;

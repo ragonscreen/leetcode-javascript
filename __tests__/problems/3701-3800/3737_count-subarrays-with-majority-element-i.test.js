@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         countMajoritySubarrays,
         countMajoritySubarrays1,
@@ -12,29 +13,19 @@ const testcases = [
 ];
 
 describe('countMajoritySubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countMajoritySubarrays($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(countMajoritySubarrays(nums, target)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countMajoritySubarrays($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(countMajoritySubarrays(nums, target)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countMajoritySubarrays1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countMajoritySubarrays1($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(countMajoritySubarrays1(nums, target)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countMajoritySubarrays1($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(countMajoritySubarrays1(nums, target)).toStrictEqual(expected);
+                },
+        );
 });

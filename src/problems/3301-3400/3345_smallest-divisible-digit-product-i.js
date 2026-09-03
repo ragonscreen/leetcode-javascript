@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Enumeration (topic_61066)
  * - Mid Level (position_mid-level)
  * - Biweekly Contest 143 (contest_biweekly-contest-143)
  *
  * Stats:
+ *
  * - Total Accepted: 206,397
  * - Total Submissions: 282,581
  * - Acceptance Rate: 73.0%
  *
  * Similar Problems:
+ *
  * - smallest-number-with-given-digit-product (Medium) (Premium)
  */
 
@@ -30,7 +33,7 @@
  *
  * @param {number} n
  * @param {number} t
- * @return {number}
+ * @returns {number}
  */
 const smallestNumber = (n, t) => {
         const f = (num) => {

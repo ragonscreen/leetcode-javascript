@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Binary Search (topic_11)
  * - Greedy (topic_17)
@@ -15,6 +16,7 @@
  * - Weekly Contest 233 (contest_weekly-contest-233)
  *
  * Stats:
+ *
  * - Total Accepted: 89,135
  * - Total Submissions: 229,329
  * - Acceptance Rate: 38.9%
@@ -29,7 +31,7 @@
  * @param {number} n
  * @param {number} index
  * @param {number} maxSum
- * @return {number}
+ * @returns {number}
  */
 const maxValue = (n, index, maxSum) => {
         const check = (num, cnt) => {
@@ -64,7 +66,7 @@ const maxValue = (n, index, maxSum) => {
  * @param {number} n
  * @param {number} index
  * @param {number} maxSum
- * @return {number}
+ * @returns {number}
  */
 const maxValue1 = (n, index, maxSum) => {
         const check = (num) => {

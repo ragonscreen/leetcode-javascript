@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         passwordStrength,
         passwordStrength1,
@@ -12,34 +13,28 @@ const testcases = [
 ];
 
 describe('passwordStrength', () => {
-        test.each(
-                structuredClone(testcases),
-        )('passwordStrength($password) -> $expected', ({
-                password,
-                expected,
-        }) => {
-                expect(passwordStrength(password)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'passwordStrength($password) -> $expected',
+                ({ password, expected }) => {
+                        expect(passwordStrength(password)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('passwordStrength1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('passwordStrength1($password) -> $expected', ({
-                password,
-                expected,
-        }) => {
-                expect(passwordStrength1(password)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'passwordStrength1($password) -> $expected',
+                ({ password, expected }) => {
+                        expect(passwordStrength1(password)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('passwordStrength2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('passwordStrength2($password) -> $expected', ({
-                password,
-                expected,
-        }) => {
-                expect(passwordStrength2(password)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'passwordStrength2($password) -> $expected',
+                ({ password, expected }) => {
+                        expect(passwordStrength2(password)).toStrictEqual(expected);
+                },
+        );
 });

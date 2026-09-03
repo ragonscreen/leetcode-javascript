@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 403,284
  * - Total Submissions: 589,080
  * - Acceptance Rate: 68.5%
@@ -23,17 +25,13 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const makeGood = (s) => {
         const stack = [];
 
         for (const c of s) {
-                if (
-                        Math.abs(
-                                c.charCodeAt() - stack.at(-1)?.charCodeAt(),
-                        ) === 32
-                ) {
+                if (Math.abs(c.charCodeAt() - stack.at(-1)?.charCodeAt()) === 32) {
                         stack.pop();
                 } else {
                         stack.push(c);

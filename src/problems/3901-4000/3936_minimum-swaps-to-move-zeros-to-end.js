@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Mid Level (position_mid-level)
  * - Biweekly Contest 183 (contest_biweekly-contest-183)
  *
  * Stats:
+ *
  * - Total Accepted: 31,636
  * - Total Submissions: 52,015
  * - Acceptance Rate: 60.8%
@@ -24,7 +26,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minimumSwaps = (nums) => {
         const n = nums.length;

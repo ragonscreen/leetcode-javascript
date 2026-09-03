@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Breadth-First Search (topic_22)
  * - Graph Theory (topic_24)
@@ -18,11 +19,13 @@
  * - Weekly Contest 334 (contest_weekly-contest-334)
  *
  * Stats:
+ *
  * - Total Accepted: 88,536
  * - Total Submissions: 157,366
  * - Acceptance Rate: 56.3%
  *
  * Similar Problems:
+ *
  * - find-minimum-time-to-reach-last-room-i (Medium)
  * - find-minimum-time-to-reach-last-room-ii (Medium)
  */
@@ -35,7 +38,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const minimumTime = (grid) => {
         // cannot move back and forth if first move is invalid

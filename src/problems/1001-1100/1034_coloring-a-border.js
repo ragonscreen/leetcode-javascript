@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
@@ -16,11 +17,13 @@
  * - Weekly Contest 134 (contest_weekly-contest-134)
  *
  * Stats:
+ *
  * - Total Accepted: 51,900
  * - Total Submissions: 101,018
  * - Acceptance Rate: 51.4%
  *
  * Similar Problems:
+ *
  * - island-perimeter (Easy)
  */
 
@@ -34,7 +37,7 @@
  * @param {number} row
  * @param {number} col
  * @param {number} color
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const colorBorder = (grid, row, col, color) => {
         const n = grid.length;
@@ -57,13 +60,7 @@ const colorBorder = (grid, row, col, color) => {
                         const nx = x + d[i + 1];
                         const nk = m * ny + nx;
 
-                        if (
-                                ny < 0 ||
-                                ny >= n ||
-                                nx < 0 ||
-                                nx >= m ||
-                                grid[ny][nx] !== clr
-                        ) {
+                        if (ny < 0 || ny >= n || nx < 0 || nx >= m || grid[ny][nx] !== clr) {
                                 isBound = true;
                                 continue;
                         }

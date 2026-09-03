@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countOppositeParity } from '../../../src/problems/3901-4000/3917_count-indices-with-opposite-parity.js';
 
 const testcases = [
@@ -7,11 +8,10 @@ const testcases = [
 ];
 
 describe('countOppositeParity', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countOppositeParity($nums) -> $expected', ({ nums, expected }) => {
-                expect(Array.from(countOppositeParity(nums))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countOppositeParity($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(Array.from(countOppositeParity(nums))).toStrictEqual(expected);
+                },
+        );
 });

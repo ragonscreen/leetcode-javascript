@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 22,452
  * - Total Submissions: 30,391
  * - Acceptance Rate: 73.9%
@@ -19,7 +20,7 @@
  * Space Complexity: O(n)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const sumOfPrimesInRange = (n) => {
         const r = (num) => {

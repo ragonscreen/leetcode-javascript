@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { judgeCircle } from '../../../src/problems/0601-0700/0657_robot-return-to-origin.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('judgeCircle', () => {
-        test.each(
-                structuredClone(testcases),
-        )('judgeCircle($moves) -> $expected', ({ moves, expected }) => {
-                expect(judgeCircle(moves)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'judgeCircle($moves) -> $expected',
+                ({ moves, expected }) => {
+                        expect(judgeCircle(moves)).toStrictEqual(expected);
+                },
+        );
 });

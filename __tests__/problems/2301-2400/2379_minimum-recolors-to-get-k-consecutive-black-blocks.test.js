@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumRecolors } from '../../../src/problems/2301-2400/2379_minimum-recolors-to-get-k-consecutive-black-blocks.js';
 
 const testcases = [
@@ -7,13 +8,10 @@ const testcases = [
 ];
 
 describe('minimumRecolors', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumRecolors($blocks, $k) -> $expected', ({
-                blocks,
-                k,
-                expected,
-        }) => {
-                expect(minimumRecolors(blocks, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumRecolors($blocks, $k) -> $expected',
+                ({ blocks, k, expected }) => {
+                        expect(minimumRecolors(blocks, k)).toStrictEqual(expected);
+                },
+        );
 });

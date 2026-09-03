@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 56,875
  * - Total Submissions: 135,688
  * - Acceptance Rate: 41.9%
  *
  * Similar Problems:
+ *
  * - remove-duplicates-from-sorted-array (Easy)
  * - find-all-duplicates-in-an-array (Medium)
  * - minimum-operations-to-make-all-array-elements-equal (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const distance = (nums) => {
         const n = nums.length;

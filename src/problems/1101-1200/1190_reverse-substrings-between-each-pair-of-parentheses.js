@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 243,433
  * - Total Submissions: 338,329
  * - Acceptance Rate: 72.0%
@@ -23,7 +25,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const reverseParentheses = (s) => {
         const stackLevel = [];

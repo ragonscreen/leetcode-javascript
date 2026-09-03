@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
@@ -16,11 +17,13 @@
  * - Weekly Contest 385 (contest_weekly-contest-385)
  *
  * Stats:
+ *
  * - Total Accepted: 175,838
  * - Total Submissions: 308,311
  * - Acceptance Rate: 57.0%
  *
  * Similar Problems:
+ *
  * - longest-common-prefix (Easy)
  * - longest-common-suffix-queries (Hard)
  */
@@ -34,7 +37,7 @@
  *
  * @param {number[]} arr1
  * @param {number[]} arr2
- * @return {number}
+ * @returns {number}
  */
 const longestCommonPrefix = (arr1, arr2) => {
         const n = arr1.length;

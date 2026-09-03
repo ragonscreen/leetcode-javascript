@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Simulation (topic_61055)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 387 (contest_weekly-contest-387)
  *
  * Stats:
+ *
  * - Total Accepted: 204,030
  * - Total Submissions: 243,879
  * - Acceptance Rate: 83.7%
  *
  * Similar Problems:
+ *
  * - divide-array-into-equal-pairs (Easy)
  * - split-array-largest-sum (Hard)
  */
@@ -30,7 +33,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const resultArray = (nums) => {
         const arr1 = [nums[0]];

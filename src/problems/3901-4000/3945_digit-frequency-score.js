@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Mid Level (position_mid-level)
  * - Weekly Contest 504 (contest_weekly-contest-504)
  *
  * Stats:
+ *
  * - Total Accepted: 40,488
  * - Total Submissions: 44,311
  * - Acceptance Rate: 91.4%
@@ -23,7 +25,7 @@
  * Space Complexity: O(log n)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const digitFrequencyScore = (n) => {
         const map = new Map();

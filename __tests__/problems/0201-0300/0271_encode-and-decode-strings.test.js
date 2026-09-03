@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { Solution } from '../../../src/problems/0201-0300/0271_encode-and-decode-strings.js';
 
 describe('Solution', () => {

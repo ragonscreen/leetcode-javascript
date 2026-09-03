@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         isGood,
         isGood1,
@@ -18,28 +19,28 @@ const testcases = [
 ];
 
 describe('isGood', () => {
-        test.each(structuredClone(testcases))('isGood($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(isGood(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isGood($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(isGood(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('isGood1', () => {
-        test.each(structuredClone(testcases))('isGood1($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(isGood1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isGood1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(isGood1(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('isGood2', () => {
-        test.each(structuredClone(testcases))('isGood2($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(isGood2(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isGood2($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(isGood2(nums)).toStrictEqual(expected);
+                },
+        );
 });

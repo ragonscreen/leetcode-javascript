@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 42,331
  * - Total Submissions: 60,928
  * - Acceptance Rate: 69.5%
  *
  * Similar Problems:
+ *
  * - apply-substitutions (Medium)
  */
 
@@ -29,7 +32,7 @@
  *
  * @param {string} s
  * @param {string[][]} knowledge
- * @return {string}
+ * @returns {string}
  */
 const evaluate = (s, knowledge) => {
         const map = new Map(knowledge);

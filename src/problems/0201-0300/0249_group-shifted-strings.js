@@ -1,5 +1,5 @@
 /**
- * 0249. Group Shifted Strings
+ * 249. Group Shifted Strings
  *
  * Link: https://leetcode.com/problems/group-shifted-strings/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 314,570
  * - Total Submissions: 464,256
  * - Acceptance Rate: 67.8%
  *
  * Similar Problems:
+ *
  * - find-maximum-number-of-string-pairs (Easy)
  * - group-anagrams (Medium)
  */
@@ -29,7 +32,7 @@
  * `n` = length of `strings`, `m` = length of the longest string in `strings`
  *
  * @param {string[]} strings
- * @return {string[][]}
+ * @returns {string[][]}
  */
 const groupStrings = (strings) => {
         const map = {};

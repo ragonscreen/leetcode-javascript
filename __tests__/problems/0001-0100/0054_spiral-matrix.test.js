@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { spiralOrder } from '../../../src/problems/0001-0100/0054_spiral-matrix.js';
 
 const testcases = [
@@ -21,9 +22,10 @@ const testcases = [
 ];
 
 describe('spiralOrder', () => {
-        test.each(
-                structuredClone(testcases),
-        )('spiralOrder($matrix) -> $expected', ({ matrix, expected }) => {
-                expect(spiralOrder(matrix)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'spiralOrder($matrix) -> $expected',
+                ({ matrix, expected }) => {
+                        expect(spiralOrder(matrix)).toStrictEqual(expected);
+                },
+        );
 });

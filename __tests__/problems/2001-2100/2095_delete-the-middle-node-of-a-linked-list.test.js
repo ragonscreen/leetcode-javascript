@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { deleteMiddle } from '../../../src/problems/2001-2100/2095_delete-the-middle-node-of-a-linked-list.js';
 import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
@@ -10,11 +11,12 @@ const testcases = [
 ];
 
 describe('deleteMiddle', () => {
-        test.each(
-                structuredClone(testcases),
-        )('deleteMiddle($head) -> $expected', ({ head, expected }) => {
-                expect(
-                        listToArray(deleteMiddle(arrayToList(head))),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'deleteMiddle($head) -> $expected',
+                ({ head, expected }) => {
+                        expect(listToArray(deleteMiddle(arrayToList(head)))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

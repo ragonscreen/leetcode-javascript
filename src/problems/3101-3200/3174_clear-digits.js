@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 277,442
  * - Total Submissions: 335,586
  * - Acceptance Rate: 82.7%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const clearDigits = (s) => {
         const stack = [];

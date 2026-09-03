@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Greedy (topic_17)
@@ -16,11 +17,13 @@
  * - Weekly Contest 307 (contest_weekly-contest-307)
  *
  * Stats:
+ *
  * - Total Accepted: 54,537
  * - Total Submissions: 146,725
  * - Acceptance Rate: 37.2%
  *
  * Similar Problems:
+ *
  * - longest-palindrome (Easy)
  */
 
@@ -31,7 +34,7 @@
  * `n` = `num.length`
  *
  * @param {string} num
- * @return {string}
+ * @returns {string}
  */
 const largestPalindromic = (num) => {
         const n = num.length;

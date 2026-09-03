@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
  * - Graph Theory (topic_24)
@@ -15,6 +16,7 @@
  * - Weekly Contest 418 (contest_weekly-contest-418)
  *
  * Stats:
+ *
  * - Total Accepted: 91,910
  * - Total Submissions: 137,134
  * - Acceptance Rate: 67.0%
@@ -29,7 +31,7 @@
  * @param {number} n
  * @param {number} k
  * @param {number[][]} invocations
- * @return {number[]}
+ * @returns {number[]}
  */
 const remainingMethods = (n, k, invocations) => {
         const m = invocations.length;

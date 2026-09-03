@@ -1,5 +1,5 @@
 /**
- * 0152. Maximum Product Subarray
+ * 152. Maximum Product Subarray
  *
  * Link: https://leetcode.com/problems/maximum-product-subarray/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 2,051,235
  * - Total Submissions: 5,628,882
  * - Acceptance Rate: 36.4%
  *
  * Similar Problems:
+ *
  * - maximum-product-of-three-numbers (Easy)
  * - house-robber (Medium)
  * - maximum-subarray (Medium)
@@ -31,7 +34,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxProduct = (nums) => {
         const helper = (l, r) => {

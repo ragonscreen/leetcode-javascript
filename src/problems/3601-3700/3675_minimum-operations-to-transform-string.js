@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Greedy (topic_17)
  * - Senior (position_senior)
  * - Weekly Contest 466 (contest_weekly-contest-466)
  *
  * Stats:
+ *
  * - Total Accepted: 52,614
  * - Total Submissions: 84,675
  * - Acceptance Rate: 62.1%
@@ -30,7 +32,7 @@
  * moves is the number of steps taken for the smallest character to reach 'a'.
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (s) => {
         const set = new Uint8Array(26);

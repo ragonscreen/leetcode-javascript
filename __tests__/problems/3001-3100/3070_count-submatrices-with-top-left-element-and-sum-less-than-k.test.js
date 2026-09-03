@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countSubmatrices } from '../../../src/problems/3001-3100/3070_count-submatrices-with-top-left-element-and-sum-less-than-k.js';
 
 const testcases = [
@@ -22,13 +23,10 @@ const testcases = [
 ];
 
 describe('countSubmatrices', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countSubmatrices($grid, $k) -> $expected', ({
-                grid,
-                k,
-                expected,
-        }) => {
-                expect(countSubmatrices(grid, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countSubmatrices($grid, $k) -> $expected',
+                ({ grid, k, expected }) => {
+                        expect(countSubmatrices(grid, k)).toStrictEqual(expected);
+                },
+        );
 });

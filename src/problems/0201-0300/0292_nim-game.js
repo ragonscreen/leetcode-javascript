@@ -1,5 +1,5 @@
 /**
- * 0292. Nim Game
+ * 292. Nim Game
  *
  * Link: https://leetcode.com/problems/nim-game/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Brainteaser (topic_32)
  * - Game Theory (topic_61073)
  *
  * Stats:
+ *
  * - Total Accepted: 546,696
  * - Total Submissions: 915,920
  * - Acceptance Rate: 59.7%
  *
  * Similar Problems:
+ *
  * - flip-game-ii (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const canWinNim = (n) => n % 4 !== 0;
 

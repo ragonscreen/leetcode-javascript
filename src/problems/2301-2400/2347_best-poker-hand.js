@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 53,938
  * - Total Submissions: 87,445
  * - Acceptance Rate: 61.7%
  *
  * Similar Problems:
+ *
  * - categorize-box-according-to-criteria (Easy)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number[]} ranks
  * @param {character[]} suits
- * @return {string}
+ * @returns {string}
  */
 const bestHand = (ranks, suits) => {
         const map = new Map();

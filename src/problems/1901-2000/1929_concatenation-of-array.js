@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 1,377,075
  * - Total Submissions: 1,521,941
  * - Acceptance Rate: 90.5%
@@ -23,7 +25,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const getConcatenation = (nums) => {
         const n = nums.length;

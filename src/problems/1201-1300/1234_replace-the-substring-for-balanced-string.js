@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 48,223
  * - Total Submissions: 118,002
  * - Acceptance Rate: 40.9%
@@ -23,7 +25,7 @@
  * Space Complexity: O(20) = O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const balancedString = (s) => {
         const o = (c) => c.charCodeAt() - 69; // E
@@ -83,7 +85,7 @@ const balancedString = (s) => {
  * Space Complexity: O(22) = O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const balancedString1 = (s) => {
         const o = (c) => c.charCodeAt() - 'E'.charCodeAt();

@@ -1,5 +1,5 @@
 /**
- * 0486. Predict the Winner
+ * 486. Predict the Winner
  *
  * Link: https://leetcode.com/problems/predict-the-winner/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
@@ -18,11 +19,13 @@
  * - Senior Staff (position_senior-staff)
  *
  * Stats:
+ *
  * - Total Accepted: 420,591
  * - Total Submissions: 701,956
  * - Acceptance Rate: 59.9%
  *
  * Similar Problems:
+ *
  * - find-the-number-of-winning-players (Easy)
  * - find-the-winning-player-in-coin-game (Easy)
  * - can-i-win (Medium)
@@ -40,7 +43,7 @@
  * gain.
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const predictTheWinner = (nums) => {
         const n = nums.length;
@@ -49,9 +52,7 @@ const predictTheWinner = (nums) => {
                 return true;
         }
 
-        const memo = Array.from({ length: n }, (_) =>
-                new Int32Array(n).fill(-1),
-        );
+        const memo = Array.from({ length: n }, (_) => new Int32Array(n).fill(-1));
 
         const rec = (l, r) => {
                 let res = memo[l][r];
@@ -67,10 +68,7 @@ const predictTheWinner = (nums) => {
                         return res;
                 }
 
-                res = Math.max(
-                        nums[l] - rec(l + 1, r),
-                        nums[r] - rec(l, r - 1),
-                );
+                res = Math.max(nums[l] - rec(l + 1, r), nums[r] - rec(l, r - 1));
 
                 memo[l][r] = res;
 

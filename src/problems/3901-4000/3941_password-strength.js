@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Senior (position_senior)
  * - Weekly Contest 503 (contest_weekly-contest-503)
  *
  * Stats:
+ *
  * - Total Accepted: 40,867
  * - Total Submissions: 54,828
  * - Acceptance Rate: 74.5%
@@ -24,7 +26,7 @@
  * `n` = `password.length`
  *
  * @param {string} password
- * @return {number}
+ * @returns {number}
  */
 const passwordStrength = (password) => {
         let nmask = 0;
@@ -78,7 +80,7 @@ const passwordStrength = (password) => {
  * `n` = `password.length`
  *
  * @param {string} password
- * @return {number}
+ * @returns {number}
  */
 const passwordStrength1 = (password) => {
         const set = new Uint8Array(90);
@@ -115,7 +117,7 @@ const passwordStrength1 = (password) => {
  * `n` = `password.length`
  *
  * @param {string} password
- * @return {number}
+ * @returns {number}
  */
 const passwordStrength2 = (password) => {
         const set = new Set(password);

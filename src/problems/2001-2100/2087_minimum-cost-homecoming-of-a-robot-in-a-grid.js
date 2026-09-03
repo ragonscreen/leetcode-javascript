@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 27,393
  * - Total Submissions: 52,925
  * - Acceptance Rate: 51.8%
  *
  * Similar Problems:
+ *
  * - bomb-enemy (Medium)
  * - check-if-there-is-a-path-with-equal-number-of-0s-and-1s (Medium)
  * - count-square-submatrices-with-all-ones (Medium)
@@ -37,7 +40,7 @@ import { Queue } from '@datastructures-js/queue';
  * @param {number[]} homePos
  * @param {number[]} rowCosts
  * @param {number[]} colCosts
- * @return {number}
+ * @returns {number}
  */
 const minCost = (startPos, homePos, rowCosts, colCosts) => {
         let [y, x] = startPos;
@@ -69,7 +72,7 @@ const minCost = (startPos, homePos, rowCosts, colCosts) => {
  * @param {number[]} homePos
  * @param {number[]} rowCosts
  * @param {number[]} colCosts
- * @return {number}
+ * @returns {number}
  */
 const minCost1 = (startPos, homePos, rowCosts, colCosts) => {
         const n = rowCosts.length;
@@ -129,7 +132,7 @@ const minCost1 = (startPos, homePos, rowCosts, colCosts) => {
  * @param {number[]} homePos
  * @param {number[]} rowCosts
  * @param {number[]} colCosts
- * @return {number}
+ * @returns {number}
  */
 const minCost2 = (startPos, homePos, rowCosts, colCosts) => {
         const n = rowCosts.length;

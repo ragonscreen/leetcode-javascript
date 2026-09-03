@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Senior (position_senior)
  * - Weekly Contest 394 (contest_weekly-contest-394)
  *
  * Stats:
+ *
  * - Total Accepted: 164,879
  * - Total Submissions: 273,459
  * - Acceptance Rate: 60.3%
  *
  * Similar Problems:
+ *
  * - count-the-number-of-special-characters-i (Easy)
  * - detect-capital (Easy)
  * - greatest-english-letter-in-upper-and-lower-case (Easy)
@@ -31,7 +34,7 @@
  * `n` = `word.length`
  *
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
 const numberOfSpecialChars = (word) => {
         let lmask = 0;

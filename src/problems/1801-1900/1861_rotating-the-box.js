@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 195,792
  * - Total Submissions: 243,521
  * - Acceptance Rate: 80.4%
@@ -25,7 +27,7 @@
  * `n` = length of `boxGrid`, `m` = length of `boxGrid[i]`
  *
  * @param {character[][]} boxGrid
- * @return {character[][]}
+ * @returns {character[][]}
  */
 const rotateTheBox = (boxGrid) => {
         const n = boxGrid.length;

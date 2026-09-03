@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 442,280
  * - Total Submissions: 682,461
  * - Acceptance Rate: 64.8%
@@ -23,7 +25,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const arraySign = (nums) => {
         let cnt = 0;

@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 156,119
  * - Total Submissions: 286,574
  * - Acceptance Rate: 54.5%
  *
  * Similar Problems:
+ *
  * - zero-array-transformation-iv (Medium)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number[][]} queries
- * @return {boolean}
+ * @returns {boolean}
  */
 const isZeroArray = (nums, queries) => {
         const n = nums.length;

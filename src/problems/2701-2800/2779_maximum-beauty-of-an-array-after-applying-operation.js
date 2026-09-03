@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Sliding Window (topic_55821)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 132,210
  * - Total Submissions: 226,513
  * - Acceptance Rate: 58.4%
  *
  * Similar Problems:
+ *
  * - maximum-size-subarray-sum-equals-k (Medium)
  * - partition-array-such-that-maximum-difference-is-k (Medium)
  */
@@ -30,7 +33,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maximumBeauty = (nums, k) => {
         nums.sort((a, b) => a - b);

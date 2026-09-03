@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { topKFrequent } from '../../../src/problems/0301-0400/0347_top-k-frequent-elements.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('topKFrequent', () => {
-        test.each(
-                structuredClone(testcases),
-        )('topKFrequent($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(topKFrequent(nums, k)).toContainAllValues(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'topKFrequent($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(topKFrequent(nums, k)).toContainAllValues(expected);
+                },
+        );
 });

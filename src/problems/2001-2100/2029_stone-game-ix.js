@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Greedy (topic_17)
@@ -20,11 +21,13 @@
  * - Weekly Contest 261 (contest_weekly-contest-261)
  *
  * Stats:
+ *
  * - Total Accepted: 92,975
  * - Total Submissions: 161,818
  * - Acceptance Rate: 57.5%
  *
  * Similar Problems:
+ *
  * - stone-game (Medium)
  * - stone-game-ii (Medium)
  * - stone-game-ix (Medium)
@@ -43,7 +46,7 @@
  * `n` = `stones.length`
  *
  * @param {number[]} stones
- * @return {boolean}
+ * @returns {boolean}
  */
 const stoneGameIX = (stones) => {
         const map = [0, 0, 0];

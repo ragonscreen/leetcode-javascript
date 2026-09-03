@@ -1,5 +1,5 @@
 /**
- * 0658. Find K Closest Elements
+ * 658. Find K Closest Elements
  *
  * Link: https://leetcode.com/problems/find-k-closest-elements/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
@@ -16,11 +17,13 @@
  * - Heap (Priority Queue) (topic_61050)
  *
  * Stats:
+ *
  * - Total Accepted: 808,692
  * - Total Submissions: 1,631,840
  * - Acceptance Rate: 49.6%
  *
  * Similar Problems:
+ *
  * - find-closest-number-to-zero (Easy)
  * - guess-number-higher-or-lower (Easy)
  * - guess-number-higher-or-lower-ii (Medium)
@@ -35,7 +38,7 @@
  * @param {number[]} arr
  * @param {number} k
  * @param {number} x
- * @return {number[]}
+ * @returns {number[]}
  */
 const findClosestElements = (arr, k, x) => {
         let l = 0;
@@ -62,7 +65,7 @@ const findClosestElements = (arr, k, x) => {
  * @param {number[]} arr
  * @param {number} k
  * @param {number} x
- * @return {number[]}
+ * @returns {number[]}
  */
 const findClosestElements1 = (arr, k, x) => {
         const n = arr.length;
@@ -80,8 +83,7 @@ const findClosestElements1 = (arr, k, x) => {
                 }
         }
 
-        const idx =
-                Math.abs(arr[l - 1] - x) <= Math.abs(arr[l] - x) ? l - 1 : l;
+        const idx = Math.abs(arr[l - 1] - x) <= Math.abs(arr[l] - x) ? l - 1 : l;
         let count = 1;
         l = idx;
         r = idx;

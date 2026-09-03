@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
@@ -15,6 +16,7 @@
  * - Weekly Contest 474 (contest_weekly-contest-474)
  *
  * Stats:
+ *
  * - Total Accepted: 270,430
  * - Total Submissions: 305,370
  * - Acceptance Rate: 88.6%
@@ -27,7 +29,7 @@
  * `n` = `nums.length`, `k` = `max(nums[i])`
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const findMissingElements = (nums) => {
         const n = nums.length;

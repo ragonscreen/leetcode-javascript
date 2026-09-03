@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
@@ -17,11 +18,13 @@
  * - Weekly Contest 334 (contest_weekly-contest-334)
  *
  * Stats:
+ *
  * - Total Accepted: 27,467
  * - Total Submissions: 66,537
  * - Acceptance Rate: 41.3%
  *
  * Similar Problems:
+ *
  * - minimum-array-length-after-pair-removals (Medium)
  */
 
@@ -32,7 +35,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxNumOfMarkedIndices = (nums) => {
         nums.sort((a, b) => a - b);

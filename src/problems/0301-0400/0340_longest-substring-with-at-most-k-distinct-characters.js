@@ -1,5 +1,5 @@
 /**
- * 0340. Longest Substring with At Most K Distinct Characters
+ * 340. Longest Substring with At Most K Distinct Characters
  *
  * Link: https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 399,370
  * - Total Submissions: 799,128
  * - Acceptance Rate: 50.0%
  *
  * Similar Problems:
+ *
  * - longest-repeating-character-replacement (Medium)
  * - longest-substring-with-at-most-two-distinct-characters (Medium)
  * - longest-substring-without-repeating-characters (Medium)
@@ -34,7 +37,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const lengthOfLongestSubstringKDistinct = (s, k) => {
         const map = new Map();

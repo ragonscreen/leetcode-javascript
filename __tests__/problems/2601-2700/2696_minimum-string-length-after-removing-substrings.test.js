@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minLength } from '../../../src/problems/2601-2700/2696_minimum-string-length-after-removing-substrings.js';
 
 const testcases = [
@@ -7,10 +8,7 @@ const testcases = [
 ];
 
 describe('minLength', () => {
-        test.each(structuredClone(testcases))('minLength($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('minLength($s) -> $expected', ({ s, expected }) => {
                 expect(minLength(s)).toStrictEqual(expected);
         });
 });

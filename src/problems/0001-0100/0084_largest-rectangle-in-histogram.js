@@ -1,5 +1,5 @@
 /**
- * 0084. Largest Rectangle in Histogram
+ * 84. Largest Rectangle in Histogram
  *
  * Link: https://leetcode.com/problems/largest-rectangle-in-histogram/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 1,502,334
  * - Total Submissions: 3,038,541
  * - Acceptance Rate: 49.4%
  *
  * Similar Problems:
+ *
  * - maximal-rectangle (Hard)
  * - maximum-score-of-a-good-subarray (Hard)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} heights
- * @return {number}
+ * @returns {number}
  */
 const largestRectangleArea = (heights) => {
         const n = heights.length;

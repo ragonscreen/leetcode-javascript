@@ -214,9 +214,9 @@
                 "require-await": "error",
                 "require-unicode-regexp": "off",
                 "require-yield": "error",
-                "sort-imports": "error",
+                "sort-imports": "off",
                 "sort-keys": [
-                        "error",
+                        "off",
                         "asc",
                         { "allowLineSeparatedGroups": true, "minKeys": 3, "natural": false }
                 ],
@@ -460,7 +460,7 @@
                         { "cases": { "kebabCase": true, "snakeCase": true } }
                 ],
                 "unicorn/import-style": "warn",
-                "unicorn/max-nested-calls": ["error", { "max": 3 }],
+                "unicorn/max-nested-calls": ["error", { "max": 4 }],
                 "unicorn/new-for-builtins": "error",
                 "unicorn/no-abusive-eslint-disable": "error",
                 "unicorn/no-accessor-recursion": "error",

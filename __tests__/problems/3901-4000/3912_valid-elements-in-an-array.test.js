@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findValidElements } from '../../../src/problems/3901-4000/3912_valid-elements-in-an-array.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('findValidElements', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findValidElements($nums) -> $expected', ({ nums, expected }) => {
-                expect(findValidElements(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findValidElements($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findValidElements(nums)).toStrictEqual(expected);
+                },
+        );
 });

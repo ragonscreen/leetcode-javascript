@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { digitFrequencyScore } from '../../../src/problems/3901-4000/3945_digit-frequency-score.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('digitFrequencyScore', () => {
-        test.each(
-                structuredClone(testcases),
-        )('digitFrequencyScore($n) -> $expected', ({ n, expected }) => {
-                expect(digitFrequencyScore(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'digitFrequencyScore($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(digitFrequencyScore(n)).toStrictEqual(expected);
+                },
+        );
 });

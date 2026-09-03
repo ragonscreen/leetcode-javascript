@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Weekly Contest 506 (contest_weekly-contest-506)
  *
  * Stats:
+ *
  * - Total Accepted: 6,291
  * - Total Submissions: 19,407
  * - Acceptance Rate: 32.4%
@@ -23,7 +25,7 @@
  * `n` = `units.length`, `m` = `units[0].length`
  *
  * @param {number[][]} units
- * @return {number}
+ * @returns {number}
  */
 const maxRatings = (units) => {
         const INF = Number.MAX_SAFE_INTEGER;

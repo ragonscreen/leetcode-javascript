@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { addTwoNumbers } from '../../../src/problems/0001-0100/0002_add-two-numbers.js';
 import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
@@ -13,13 +14,12 @@ const testcases = [
 ];
 
 describe('addTwoNumbers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('addTwoNumbers($l1, $l2) -> $expected', ({ l1, l2, expected }) => {
-                expect(
-                        listToArray(
-                                addTwoNumbers(arrayToList(l1), arrayToList(l2)),
-                        ),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'addTwoNumbers($l1, $l2) -> $expected',
+                ({ l1, l2, expected }) => {
+                        expect(
+                                listToArray(addTwoNumbers(arrayToList(l1), arrayToList(l2))),
+                        ).toStrictEqual(expected);
+                },
+        );
 });

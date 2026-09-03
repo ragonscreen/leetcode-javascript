@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { arraySign } from '../../../src/problems/1801-1900/1822_sign-of-the-product-of-an-array.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('arraySign', () => {
-        test.each(
-                structuredClone(testcases),
-        )('arraySign($nums) -> $expected', ({ nums, expected }) => {
-                expect(arraySign(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'arraySign($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(arraySign(nums)).toStrictEqual(expected);
+                },
+        );
 });

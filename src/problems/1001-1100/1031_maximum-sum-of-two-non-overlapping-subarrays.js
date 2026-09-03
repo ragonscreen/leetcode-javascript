@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Sliding Window (topic_55821)
@@ -15,6 +16,7 @@
  * - Weekly Contest 133 (contest_weekly-contest-133)
  *
  * Stats:
+ *
  * - Total Accepted: 89,979
  * - Total Submissions: 146,446
  * - Acceptance Rate: 61.4%
@@ -29,7 +31,7 @@
  * @param {number[]} nums
  * @param {number} firstLen
  * @param {number} secondLen
- * @return {number}
+ * @returns {number}
  */
 const maxSumTwoNoOverlap = (nums, firstLen, secondLen) => {
         const sw = (len1, len2) => {
@@ -75,7 +77,7 @@ const maxSumTwoNoOverlap = (nums, firstLen, secondLen) => {
  * @param {number[]} nums
  * @param {number} firstLen
  * @param {number} secondLen
- * @return {number}
+ * @returns {number}
  */
 const maxSumTwoNoOverlap1 = (nums, firstLen, secondLen) => {
         const n = nums.length;
@@ -116,7 +118,7 @@ const maxSumTwoNoOverlap1 = (nums, firstLen, secondLen) => {
  * @param {number[]} nums
  * @param {number} firstLen
  * @param {number} secondLen
- * @return {number}
+ * @returns {number}
  */
 const maxSumTwoNoOverlap2 = (nums, firstLen, secondLen) => {
         const n = nums.length;

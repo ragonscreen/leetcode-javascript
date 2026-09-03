@@ -1,5 +1,5 @@
 /**
- * 0441. Arranging Coins
+ * 441. Arranging Coins
  *
  * Link: https://leetcode.com/problems/arranging-coins/
  * Category: Algorithms
@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 622,736
  * - Total Submissions: 1,292,989
  * - Acceptance Rate: 48.2%
@@ -23,7 +25,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const arrangeCoins = (n) => {
         // let k be number of rows to hold n coins
@@ -46,7 +48,7 @@ const arrangeCoins = (n) => {
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const arrangeCoins1 = (n) => {
         let ok = 1;

@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 133,694
  * - Total Submissions: 306,774
  * - Acceptance Rate: 43.6%
  *
  * Similar Problems:
+ *
  * - corporate-flight-bookings (Medium)
  * - minimum-moves-to-make-array-complementary (Medium)
  * - zero-array-transformation-iv (Medium)
@@ -31,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number[][]} queries
- * @return {number}
+ * @returns {number}
  */
 const minZeroArray = (nums, queries) => {
         const n = nums.length;
@@ -71,7 +74,7 @@ const minZeroArray = (nums, queries) => {
  *
  * @param {number[]} nums
  * @param {number[][]} queries
- * @return {number}
+ * @returns {number}
  */
 const minZeroArray1 = (nums, queries) => {
         const n = nums.length;

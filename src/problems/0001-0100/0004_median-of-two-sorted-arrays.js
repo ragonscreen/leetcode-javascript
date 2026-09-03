@@ -1,5 +1,5 @@
 /**
- * 0004. Median of Two Sorted Arrays
+ * 4. Median of Two Sorted Arrays
  *
  * Link: https://leetcode.com/problems/median-of-two-sorted-arrays/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Divide and Conquer (topic_12)
  *
  * Stats:
+ *
  * - Total Accepted: 4,172,571
  * - Total Submissions: 9,020,619
  * - Acceptance Rate: 46.3%
  *
  * Similar Problems:
+ *
  * - median-of-a-row-wise-sorted-matrix (Medium)
  */
 
@@ -29,7 +32,7 @@
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
- * @return {number}
+ * @returns {number}
  */
 const findMedianSortedArrays = (nums1, nums2) => {
         const lastIdx = nums1.length + nums2.length - 1;

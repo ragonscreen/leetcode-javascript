@@ -1,5 +1,5 @@
 /**
- * 0064. Minimum Path Sum
+ * 64. Minimum Path Sum
  *
  * Link: https://leetcode.com/problems/minimum-path-sum/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 1,858,523
  * - Total Submissions: 2,724,722
  * - Acceptance Rate: 68.2%
  *
  * Similar Problems:
+ *
  * - check-if-there-is-a-path-with-equal-number-of-0s-and-1s (Medium)
  * - maximum-number-of-points-with-cost (Medium)
  * - minimum-cost-homecoming-of-a-robot-in-a-grid (Medium)
@@ -37,7 +40,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const minPathSum = (grid) => {
         const n = grid.length;
@@ -69,7 +72,7 @@ const minPathSum = (grid) => {
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const minPathSum1 = (grid) => {
         const n = grid.length;

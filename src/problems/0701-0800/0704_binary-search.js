@@ -1,5 +1,5 @@
 /**
- * 0704. Binary Search
+ * 704. Binary Search
  *
  * Link: https://leetcode.com/problems/binary-search/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 3,834,537
  * - Total Submissions: 6,320,826
  * - Acceptance Rate: 60.7%
  *
  * Similar Problems:
+ *
  * - maximum-count-of-positive-integer-and-negative-integer (Easy)
  * - search-in-a-sorted-array-of-unknown-size (Medium)
  */
@@ -28,7 +31,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const search = (nums, target) => {
         let l = 0;

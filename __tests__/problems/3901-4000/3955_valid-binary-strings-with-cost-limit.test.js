@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { generateValidStrings } from '../../../src/problems/3901-4000/3955_valid-binary-strings-with-cost-limit.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('generateValidStrings', () => {
-        test.each(
-                structuredClone(testcases),
-        )('generateValidStrings($n, $k) -> $expected', ({ n, k, expected }) => {
-                expect(generateValidStrings(n, k)).toContainAllValues(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'generateValidStrings($n, $k) -> $expected',
+                ({ n, k, expected }) => {
+                        expect(generateValidStrings(n, k)).toContainAllValues(expected);
+                },
+        );
 });

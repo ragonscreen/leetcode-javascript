@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxSlidingWindow } from '../../../src/problems/0000_wip/0239_sliding-window-maximum.js';
 
 const testcases = [
@@ -14,9 +15,7 @@ describe('maxSlidingWindow', () => {
         test.each(structuredClone(testcases)).failing(
                 'maxSlidingWindow($nums, $k) -> $expected',
                 ({ nums, k, expected }) => {
-                        expect(maxSlidingWindow(nums, k)).toStrictEqual(
-                                expected,
-                        );
+                        expect(maxSlidingWindow(nums, k)).toStrictEqual(expected);
                 },
         );
 });

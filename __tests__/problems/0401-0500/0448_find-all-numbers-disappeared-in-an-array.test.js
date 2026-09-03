@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findDisappearedNumbers,
         findDisappearedNumbers1,
@@ -10,23 +11,19 @@ const testcases = [
 ];
 
 describe('findDisappearedNumbers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findDisappearedNumbers($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(findDisappearedNumbers(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findDisappearedNumbers($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findDisappearedNumbers(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findDisappearedNumbers1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findDisappearedNumbers1($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(findDisappearedNumbers1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findDisappearedNumbers1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findDisappearedNumbers1(nums)).toStrictEqual(expected);
+                },
+        );
 });

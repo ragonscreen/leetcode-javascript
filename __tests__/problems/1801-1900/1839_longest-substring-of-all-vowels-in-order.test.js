@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestBeautifulSubstring } from '../../../src/problems/1801-1900/1839_longest-substring-of-all-vowels-in-order.js';
 
 const testcases = [
@@ -8,12 +9,10 @@ const testcases = [
 ];
 
 describe('longestBeautifulSubstring', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestBeautifulSubstring($word) -> $expected', ({
-                word,
-                expected,
-        }) => {
-                expect(longestBeautifulSubstring(word)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestBeautifulSubstring($word) -> $expected',
+                ({ word, expected }) => {
+                        expect(longestBeautifulSubstring(word)).toStrictEqual(expected);
+                },
+        );
 });

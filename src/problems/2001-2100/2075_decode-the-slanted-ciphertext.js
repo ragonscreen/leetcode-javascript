@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 99,464
  * - Total Submissions: 147,024
  * - Acceptance Rate: 67.7%
  *
  * Similar Problems:
+ *
  * - diagonal-traverse (Medium)
  */
 
@@ -27,7 +30,7 @@
  *
  * @param {string} encodedText
  * @param {number} rows
- * @return {string}
+ * @returns {string}
  */
 const decodeCiphertext = (encodedText, rows) => {
         const cols = encodedText.length / rows;

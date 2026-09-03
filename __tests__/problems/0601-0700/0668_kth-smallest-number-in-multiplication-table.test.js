@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findKthNumber,
         findKthNumber1,
@@ -10,22 +11,19 @@ const testcases = [
 ];
 
 describe('findKthNumber', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findKthNumber($m, $n, $k) -> $expected', ({ m, n, k, expected }) => {
-                expect(findKthNumber(m, n, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findKthNumber($m, $n, $k) -> $expected',
+                ({ m, n, k, expected }) => {
+                        expect(findKthNumber(m, n, k)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findKthNumber1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findKthNumber1($m, $n, $k) -> $expected', ({
-                m,
-                n,
-                k,
-                expected,
-        }) => {
-                expect(findKthNumber1(m, n, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findKthNumber1($m, $n, $k) -> $expected',
+                ({ m, n, k, expected }) => {
+                        expect(findKthNumber1(m, n, k)).toStrictEqual(expected);
+                },
+        );
 });

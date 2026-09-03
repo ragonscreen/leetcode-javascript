@@ -1,5 +1,5 @@
 /**
- * 0275. H-Index II
+ * 275. H-Index II
  *
  * Link: https://leetcode.com/problems/h-index-ii/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 268,093
  * - Total Submissions: 677,616
  * - Acceptance Rate: 39.6%
  *
  * Similar Problems:
+ *
  * - h-index (Medium)
  */
 
@@ -26,7 +29,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} citations
- * @return {number}
+ * @returns {number}
  */
 const hIndex = (citations) => {
         const n = citations.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { isPerfectSquare } from '../../../src/problems/0301-0400/0367_valid-perfect-square.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('isPerfectSquare', () => {
-        test.each(
-                structuredClone(testcases),
-        )('isPerfectSquare($num) -> $expected', ({ num, expected }) => {
-                expect(isPerfectSquare(num)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isPerfectSquare($num) -> $expected',
+                ({ num, expected }) => {
+                        expect(isPerfectSquare(num)).toStrictEqual(expected);
+                },
+        );
 });

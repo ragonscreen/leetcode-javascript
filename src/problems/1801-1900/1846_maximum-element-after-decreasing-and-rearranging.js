@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 51 (contest_biweekly-contest-51)
  *
  * Stats:
+ *
  * - Total Accepted: 225,085
  * - Total Submissions: 325,471
  * - Acceptance Rate: 69.2%
@@ -27,7 +29,7 @@
  * `n` = `arr.length`
  *
  * @param {number[]} arr
- * @return {number}
+ * @returns {number}
  */
 const maximumElementAfterDecrementingAndRearranging = (arr) => {
         arr.sort((a, b) => a - b);

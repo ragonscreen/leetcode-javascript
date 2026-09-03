@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { shiftGrid } from '../../../src/problems/1201-1300/1260_shift-2d-grid.js';
 
 const testcases = [
@@ -46,9 +47,10 @@ const testcases = [
 ];
 
 describe('shiftGrid', () => {
-        test.each(
-                structuredClone(testcases),
-        )('shiftGrid($grid, $k) -> $expected', ({ grid, k, expected }) => {
-                expect(shiftGrid(grid, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'shiftGrid($grid, $k) -> $expected',
+                ({ grid, k, expected }) => {
+                        expect(shiftGrid(grid, k)).toStrictEqual(expected);
+                },
+        );
 });

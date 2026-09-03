@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { uniformArray } from '../../../src/problems/3801-3900/3876_construct-uniform-parity-array-ii.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('uniformArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('uniformArray($nums1) -> $expected', ({ nums1, expected }) => {
-                expect(uniformArray(nums1)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'uniformArray($nums1) -> $expected',
+                ({ nums1, expected }) => {
+                        expect(uniformArray(nums1)).toStrictEqual(expected);
+                },
+        );
 });

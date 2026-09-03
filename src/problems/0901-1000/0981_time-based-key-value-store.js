@@ -1,5 +1,5 @@
 /**
- * 0981. Time Based Key-Value Store
+ * 981. Time Based Key-Value Store
  *
  * Link: https://leetcode.com/problems/time-based-key-value-store/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Binary Search (topic_11)
  * - Design (topic_25)
  *
  * Stats:
+ *
  * - Total Accepted: 724,008
  * - Total Submissions: 1,453,259
  * - Acceptance Rate: 49.8%
  *
  * Similar Problems:
+ *
  * - stock-price-fluctuation (Medium)
  */
 
@@ -42,7 +45,7 @@ class TimeMap {
          * @param {string} key
          * @param {string} value
          * @param {number} timestamp
-         * @return {void}
+         * @returns {void}
          */
         set(key, value, timestamp) {
                 const val = this.map.get(key) ?? [];
@@ -57,7 +60,7 @@ class TimeMap {
          *
          * @param {string} key
          * @param {number} timestamp
-         * @return {string}
+         * @returns {string}
          */
         get(key, timestamp) {
                 const values = this.map.get(key);

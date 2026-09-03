@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
@@ -15,11 +16,13 @@
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 23,492
  * - Total Submissions: 76,616
  * - Acceptance Rate: 30.7%
  *
  * Similar Problems:
+ *
  * - find-the-number-of-good-pairs-i (Easy)
  * - check-if-array-pairs-are-divisible-by-k (Medium)
  * - find-the-number-of-good-pairs-ii (Medium)
@@ -34,7 +37,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const countPairs = (nums, k) => {
         const gcd = (a, b) => (b ? gcd(b, a % b) : a);

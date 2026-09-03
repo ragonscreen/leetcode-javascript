@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { shortestBridge } from '../../../src/problems/0901-1000/0934_shortest-bridge.js';
 
 const testcases = [
@@ -30,9 +31,10 @@ const testcases = [
 ];
 
 describe('shortestBridge', () => {
-        test.each(
-                structuredClone(testcases),
-        )('shortestBridge($grid) -> $expected', ({ grid, expected }) => {
-                expect(shortestBridge(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'shortestBridge($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(shortestBridge(grid)).toStrictEqual(expected);
+                },
+        );
 });

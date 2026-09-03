@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Breadth-First Search (topic_22)
  * - Graph Theory (topic_24)
@@ -18,11 +19,13 @@
  * - Biweekly Contest 139 (contest_biweekly-contest-139)
  *
  * Stats:
+ *
  * - Total Accepted: 37,024
  * - Total Submissions: 111,124
  * - Acceptance Rate: 33.3%
  *
  * Similar Problems:
+ *
  * - shortest-path-in-a-grid-with-obstacles-elimination (Hard)
  */
 
@@ -34,7 +37,7 @@
  *
  * @param {number[][]} grid
  * @param {number} health
- * @return {boolean}
+ * @returns {boolean}
  */
 const findSafeWalk = (grid, health) => {
         if (health === grid[0][0]) {
@@ -98,7 +101,7 @@ const findSafeWalk = (grid, health) => {
  *
  * @param {number[][]} grid
  * @param {number} health
- * @return {boolean}
+ * @returns {boolean}
  */
 const findSafeWalk1 = (grid, health) => {
         health -= grid[0][0];

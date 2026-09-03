@@ -1,5 +1,5 @@
 /**
- * 0682. Baseball Game
+ * 682. Baseball Game
  *
  * Link: https://leetcode.com/problems/baseball-game/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 577,227
  * - Total Submissions: 720,110
  * - Acceptance Rate: 80.2%
  *
  * Similar Problems:
+ *
  * - crawler-log-folder (Easy)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(n)
  *
  * @param {string[]} operations
- * @return {number}
+ * @returns {number}
  */
 const calPoints = (operations) => {
         const stack = [];

@@ -1,5 +1,5 @@
 /**
- * 0019. Remove Nth Node From End of List
+ * 19. Remove Nth Node From End of List
  *
  * Link: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Two Pointers (topic_9)
  *
  * Stats:
+ *
  * - Total Accepted: 4,169,854
  * - Total Submissions: 8,114,344
  * - Acceptance Rate: 51.4%
  *
  * Similar Problems:
+ *
  * - delete-n-nodes-after-m-nodes-of-a-linked-list (Easy)
  * - delete-the-middle-node-of-a-linked-list (Medium)
  * - swapping-nodes-in-a-linked-list (Medium)
@@ -29,7 +32,7 @@
  *
  * @param {ListNode} head
  * @param {number} n
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const removeNthFromEnd = (head, n) => {
         let r = head;
@@ -63,7 +66,7 @@ const removeNthFromEnd = (head, n) => {
  *
  * @param {ListNode} head
  * @param {number} n
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const removeNthFromEnd1 = (head, n) => {
         let len = 0;

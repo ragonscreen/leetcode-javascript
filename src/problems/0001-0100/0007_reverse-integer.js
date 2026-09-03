@@ -1,5 +1,5 @@
 /**
- * 0007. Reverse Integer
+ * 7. Reverse Integer
  *
  * Link: https://leetcode.com/problems/reverse-integer/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 4,930,801
  * - Total Submissions: 15,534,268
  * - Acceptance Rate: 31.7%
  *
  * Similar Problems:
+ *
  * - a-number-after-a-double-reversal (Easy)
  * - reverse-bits (Easy)
  * - count-number-of-distinct-integers-after-reverse-operations (Medium)
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} x
- * @return {number}
+ * @returns {number}
  */
 const reverse = (x) => {
         const MAX_VAL = 2 ** 31;
@@ -54,7 +57,7 @@ const reverse = (x) => {
  * Space Complexity: O(log n)
  *
  * @param {number} x
- * @return {number}
+ * @returns {number}
  */
 const reverse1 = (x) => {
         const MAX_VAL = 2 ** 31;

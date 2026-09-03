@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findClosestNumber } from '../../../src/problems/2201-2300/2239_find-closest-number-to-zero.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('findClosestNumber', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findClosestNumber($nums) -> $expected', ({ nums, expected }) => {
-                expect(findClosestNumber(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findClosestNumber($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findClosestNumber(nums)).toStrictEqual(expected);
+                },
+        );
 });

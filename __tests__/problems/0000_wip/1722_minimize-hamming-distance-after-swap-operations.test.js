@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minimumHammingDistance,
         minimumHammingDistance1,
@@ -61,12 +62,12 @@ const testcases = [
         },
         {
                 source: [
-                        50, 46, 54, 35, 18, 42, 26, 72, 75, 47, 50, 4, 54, 21,
-                        18, 18, 61, 64, 100, 14,
+                        50, 46, 54, 35, 18, 42, 26, 72, 75, 47, 50, 4, 54, 21, 18, 18, 61, 64, 100,
+                        14,
                 ],
                 target: [
-                        83, 34, 43, 73, 61, 94, 10, 68, 74, 31, 54, 46, 28, 60,
-                        18, 18, 4, 44, 79, 92,
+                        83, 34, 43, 73, 61, 94, 10, 68, 74, 31, 54, 46, 28, 60, 18, 18, 4, 44, 79,
+                        92,
                 ],
                 allowedSwaps: [
                         [1, 8],
@@ -125,31 +126,23 @@ const testcases = [
 ];
 
 describe.skip('minimumHammingDistance', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumHammingDistance($source, $target, $allowedSwaps) -> $expected', ({
-                source,
-                target,
-                allowedSwaps,
-                expected,
-        }) => {
-                expect(
-                        minimumHammingDistance(source, target, allowedSwaps),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumHammingDistance($source, $target, $allowedSwaps) -> $expected',
+                ({ source, target, allowedSwaps, expected }) => {
+                        expect(minimumHammingDistance(source, target, allowedSwaps)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe.skip('minimumHammingDistance1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumHammingDistance1($source, $target, $allowedSwaps) -> $expected', ({
-                source,
-                target,
-                allowedSwaps,
-                expected,
-        }) => {
-                expect(
-                        minimumHammingDistance1(source, target, allowedSwaps),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumHammingDistance1($source, $target, $allowedSwaps) -> $expected',
+                ({ source, target, allowedSwaps, expected }) => {
+                        expect(minimumHammingDistance1(source, target, allowedSwaps)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numOfSubarrays } from '../../../src/problems/1501-1600/1524_number-of-sub-arrays-with-odd-sum.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('numOfSubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numOfSubarrays($arr) -> $expected', ({ arr, expected }) => {
-                expect(numOfSubarrays(arr)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numOfSubarrays($arr) -> $expected',
+                ({ arr, expected }) => {
+                        expect(numOfSubarrays(arr)).toStrictEqual(expected);
+                },
+        );
 });

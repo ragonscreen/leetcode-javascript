@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Greedy (topic_17)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 173,497
  * - Total Submissions: 274,152
  * - Acceptance Rate: 63.3%
  *
  * Similar Problems:
+ *
  * - climbing-stairs (Easy)
  * - odd-string-difference (Easy)
  * - minimum-levels-to-gain-more-points (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} tasks
- * @return {number}
+ * @returns {number}
  */
 const minimumRounds = (tasks) => {
         const map = new Map();

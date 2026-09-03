@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findContentChildren } from '../../../src/problems/0401-0500/0455_assign-cookies.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('findContentChildren', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findContentChildren($g, $s) -> $expected', ({ g, s, expected }) => {
-                expect(findContentChildren(g, s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findContentChildren($g, $s) -> $expected',
+                ({ g, s, expected }) => {
+                        expect(findContentChildren(g, s)).toStrictEqual(expected);
+                },
+        );
 });

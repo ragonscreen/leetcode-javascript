@@ -1,5 +1,5 @@
 /**
- * 0788. Rotated Digits
+ * 788. Rotated Digits
  *
  * Link: https://leetcode.com/problems/rotated-digits/
  * Category: Algorithms
@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 156,034
  * - Total Submissions: 262,000
  * - Acceptance Rate: 59.6%
@@ -23,7 +25,7 @@
  * Space Complexity: O(10) = O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const rotatedDigits = (n) => {
         const ok = [-1, -1, 1, 0, 0, 1, 1, 0, -1, 1];
@@ -57,7 +59,7 @@ const rotatedDigits = (n) => {
  * Space Complexity: O(9) = O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const rotatedDigits1 = (n) => {
         const ok = [2, 5, 6, 9];

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 148 (contest_biweekly-contest-148)
  *
  * Stats:
+ *
  * - Total Accepted: 26,062
  * - Total Submissions: 68,138
  * - Acceptance Rate: 38.2%
@@ -33,7 +35,7 @@
  * @param {number[]} arr
  * @param {number[]} brr
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minCost = (arr, brr, k) => {
         const n = arr.length;

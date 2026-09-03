@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { categorizeBox } from '../../../src/problems/2501-2600/2525_categorize-box-according-to-criteria.js';
 
 const testcases = [
@@ -16,17 +17,10 @@ const testcases = [
 ];
 
 describe('categorizeBox', () => {
-        test.each(
-                structuredClone(testcases),
-        )('categorizeBox($length, $width, $height, $mass) -> $expected', ({
-                length,
-                width,
-                height,
-                mass,
-                expected,
-        }) => {
-                expect(
-                        categorizeBox(length, width, height, mass),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'categorizeBox($length, $width, $height, $mass) -> $expected',
+                ({ length, width, height, mass, expected }) => {
+                        expect(categorizeBox(length, width, height, mass)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0720. Longest Word in Dictionary
+ * 720. Longest Word in Dictionary
  *
  * Link: https://leetcode.com/problems/longest-word-in-dictionary/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
@@ -15,11 +16,13 @@
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 191,819
  * - Total Submissions: 350,755
  * - Acceptance Rate: 54.7%
  *
  * Similar Problems:
+ *
  * - implement-magic-dictionary (Medium)
  * - longest-word-in-dictionary-through-deleting (Medium)
  * - longest-word-with-all-prefixes (Medium)
@@ -32,7 +35,7 @@
  * `n` = length of `words`, `m` = average length of `words[i]`
  *
  * @param {string[]} words
- * @return {string}
+ * @returns {string}
  */
 const longestWord = (words) => {
         words.sort();
@@ -61,7 +64,7 @@ const longestWord = (words) => {
  * `n` = length of `words`, `m` = average length of `words[i]`
  *
  * @param {string[]} words
- * @return {string}
+ * @returns {string}
  */
 const longestWord1 = (words) => {
         const set = new Set(words);

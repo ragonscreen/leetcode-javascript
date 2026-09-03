@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Segment Tree (topic_29)
@@ -16,6 +17,7 @@
  * - Weekly Contest 468 (contest_weekly-contest-468)
  *
  * Stats:
+ *
  * - Total Accepted: 68,026
  * - Total Submissions: 164,935
  * - Acceptance Rate: 41.2%
@@ -31,7 +33,7 @@ import { PriorityQueue } from '@datastructures-js/priority-queue';
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxTotalValue = (nums, k) => {
         const n = nums.length;
@@ -47,15 +49,9 @@ const maxTotalValue = (nums, k) => {
 
         for (let j = 1; j < log2; j++) {
                 for (let i = 0; i + (1 << j) - 1 < n; i++) {
-                        mns[j][i] = Math.min(
-                                mns[j - 1][i],
-                                mns[j - 1][i + (1 << (j - 1))],
-                        );
+                        mns[j][i] = Math.min(mns[j - 1][i], mns[j - 1][i + (1 << (j - 1))]);
 
-                        mxs[j][i] = Math.max(
-                                mxs[j - 1][i],
-                                mxs[j - 1][i + (1 << (j - 1))],
-                        );
+                        mxs[j][i] = Math.max(mxs[j - 1][i], mxs[j - 1][i + (1 << (j - 1))]);
                 }
         }
 

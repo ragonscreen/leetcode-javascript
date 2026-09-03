@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { characterReplacement } from '../../../src/problems/0401-0500/0424_longest-repeating-character-replacement.js';
 
 const testcases = [
@@ -23,9 +24,10 @@ const testcases = [
 ];
 
 describe('characterReplacement', () => {
-        test.each(
-                structuredClone(testcases),
-        )('characterReplacement($s, $k) -> $expected', ({ s, k, expected }) => {
-                expect(characterReplacement(s, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'characterReplacement($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(characterReplacement(s, k)).toStrictEqual(expected);
+                },
+        );
 });

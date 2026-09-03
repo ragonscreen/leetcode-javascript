@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         removeNthFromEnd,
         removeNthFromEnd1,
@@ -18,29 +19,23 @@ const testcases = [
 ];
 
 describe('removeNthFromEnd', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeNthFromEnd($head, $n) -> $expected', ({
-                head,
-                n,
-                expected,
-        }) => {
-                expect(
-                        listToArray(removeNthFromEnd(arrayToList(head), n)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeNthFromEnd($head, $n) -> $expected',
+                ({ head, n, expected }) => {
+                        expect(listToArray(removeNthFromEnd(arrayToList(head), n))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe('removeNthFromEnd1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeNthFromEnd1($head, $n) -> $expected', ({
-                head,
-                n,
-                expected,
-        }) => {
-                expect(
-                        listToArray(removeNthFromEnd1(arrayToList(head), n)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeNthFromEnd1($head, $n) -> $expected',
+                ({ head, n, expected }) => {
+                        expect(listToArray(removeNthFromEnd1(arrayToList(head), n))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

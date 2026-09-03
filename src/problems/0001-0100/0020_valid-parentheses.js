@@ -1,5 +1,5 @@
 /**
- * 0020. Valid Parentheses
+ * 20. Valid Parentheses
  *
  * Link: https://leetcode.com/problems/valid-parentheses/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 7,315,118
  * - Total Submissions: 16,697,997
  * - Acceptance Rate: 43.8%
  *
  * Similar Problems:
+ *
  * - check-if-a-parentheses-string-can-be-valid (Medium)
  * - check-if-word-is-valid-after-substitutions (Medium)
  * - generate-parentheses (Medium)
@@ -31,7 +34,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 const isValid = (s) => {
         const map = {

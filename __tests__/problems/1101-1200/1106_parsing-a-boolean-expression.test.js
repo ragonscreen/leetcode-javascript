@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { parseBoolExpr } from '../../../src/problems/1101-1200/1106_parsing-a-boolean-expression.js';
 
 const testcases = [
@@ -11,12 +12,10 @@ const testcases = [
 ];
 
 describe('parseBoolExpr', () => {
-        test.each(
-                structuredClone(testcases),
-        )('parseBoolExpr($expression) -> $expected', ({
-                expression,
-                expected,
-        }) => {
-                expect(parseBoolExpr(expression)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'parseBoolExpr($expression) -> $expected',
+                ({ expression, expected }) => {
+                        expect(parseBoolExpr(expression)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { stoneGame } from '../../../src/problems/0801-0900/0877_stone-game.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('stoneGame', () => {
-        test.each(
-                structuredClone(testcases),
-        )('stoneGame($piles) -> $expected', ({ piles, expected }) => {
-                expect(stoneGame(piles)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'stoneGame($piles) -> $expected',
+                ({ piles, expected }) => {
+                        expect(stoneGame(piles)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0628. Maximum Product of Three Numbers
+ * 628. Maximum Product of Three Numbers
  *
  * Link: https://leetcode.com/problems/maximum-product-of-three-numbers/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Sorting (topic_61049)
  * - Mid Level (position_mid-level)
  *
  * Stats:
+ *
  * - Total Accepted: 517,376
  * - Total Submissions: 1,121,259
  * - Acceptance Rate: 46.1%
  *
  * Similar Problems:
+ *
  * - maximum-product-of-three-elements-after-one-replacement (Medium)
  * - maximum-product-subarray (Medium)
  */
@@ -30,7 +33,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maximumProduct = (nums) => {
         const n = nums.length;
@@ -99,11 +102,7 @@ const maximumProduct = (nums) => {
         const cntZ = n - cntNz;
 
         // not enough non-zero numbers / zero greedy construction possible
-        if (
-                cntNz < 3 ||
-                (cntNeg === 1 && cntPos === 2) ||
-                (cntPos === 0 && cntZ >= 1)
-        ) {
+        if (cntNz < 3 || (cntNeg === 1 && cntPos === 2) || (cntPos === 0 && cntZ >= 1)) {
                 return 0;
         }
 

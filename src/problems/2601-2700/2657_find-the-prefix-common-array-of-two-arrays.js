@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Bit Manipulation (topic_19)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 103 (contest_biweekly-contest-103)
  *
  * Stats:
+ *
  * - Total Accepted: 275,079
  * - Total Submissions: 314,078
  * - Acceptance Rate: 87.6%
@@ -28,7 +30,7 @@
  *
  * @param {number[]} A
  * @param {number[]} B
- * @return {number[]}
+ * @returns {number[]}
  */
 const findThePrefixCommonArray = (A, B) => {
         const n = A.length;

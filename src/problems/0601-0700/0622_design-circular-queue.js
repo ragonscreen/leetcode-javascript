@@ -1,5 +1,5 @@
 /**
- * 0622. Design Circular Queue
+ * 622. Design Circular Queue
  *
  * Link: https://leetcode.com/problems/design-circular-queue/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Linked List (topic_7)
  * - Design (topic_25)
  * - Queue (topic_34)
  *
  * Stats:
+ *
  * - Total Accepted: 480,480
  * - Total Submissions: 879,517
  * - Acceptance Rate: 54.6%
  *
  * Similar Problems:
+ *
  * - design-circular-deque (Medium)
  * - design-front-middle-back-queue (Medium)
  */
@@ -48,7 +51,7 @@ class MyCircularQueue {
          * Space Complexity: O(1)
          *
          * @param {number} value
-         * @return {boolean}
+         * @returns {boolean}
          */
         enQueue(value) {
                 if (this.isFull()) {
@@ -66,7 +69,7 @@ class MyCircularQueue {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         deQueue() {
                 if (this.isEmpty()) {
@@ -83,7 +86,7 @@ class MyCircularQueue {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {number}
+         * @returns {number}
          */
         Front() {
                 return this.isEmpty() ? -1 : this.queue[this.left];
@@ -93,7 +96,7 @@ class MyCircularQueue {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {number}
+         * @returns {number}
          */
         Rear() {
                 return this.isEmpty() ? -1 : this.queue[this.right];
@@ -103,7 +106,7 @@ class MyCircularQueue {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         isEmpty() {
                 return this.size === 0;
@@ -113,7 +116,7 @@ class MyCircularQueue {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         isFull() {
                 return this.size === this.cap;
@@ -141,7 +144,7 @@ class MyCircularQueue1 {
          * Space Complexity: O(1)
          *
          * @param {number} value
-         * @return {boolean}
+         * @returns {boolean}
          */
         enQueue(value) {
                 if (this.isFull()) {
@@ -160,7 +163,7 @@ class MyCircularQueue1 {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         deQueue() {
                 if (this.isEmpty()) {
@@ -182,7 +185,7 @@ class MyCircularQueue1 {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {number}
+         * @returns {number}
          */
         Front() {
                 return this.isEmpty() ? -1 : this.left.next.val;
@@ -192,7 +195,7 @@ class MyCircularQueue1 {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {number}
+         * @returns {number}
          */
         Rear() {
                 return this.isEmpty() ? -1 : this.right.val;
@@ -202,7 +205,7 @@ class MyCircularQueue1 {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         isEmpty() {
                 return this.left.next === null;
@@ -212,7 +215,7 @@ class MyCircularQueue1 {
          * Time Complexity: O(1)
          * Space Complexity: O(1)
          *
-         * @return {boolean}
+         * @returns {boolean}
          */
         isFull() {
                 return this.space === 0;

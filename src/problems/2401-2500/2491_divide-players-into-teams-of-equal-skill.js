@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 203,136
  * - Total Submissions: 294,684
  * - Acceptance Rate: 68.9%
  *
  * Similar Problems:
+ *
  * - max-number-of-k-sum-pairs (Medium)
  * - minimum-moves-to-equal-array-elements (Medium)
  */
@@ -29,7 +32,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} skill
- * @return {number}
+ * @returns {number}
  */
 const dividePlayers = (skill) => {
         const n = skill.length;
@@ -70,7 +73,7 @@ const dividePlayers = (skill) => {
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} skill
- * @return {number}
+ * @returns {number}
  */
 const dividePlayers1 = (skill) => {
         skill.sort((a, b) => a - b);

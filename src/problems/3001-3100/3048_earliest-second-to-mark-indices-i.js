@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Staff (position_staff)
  * - Weekly Contest 386 (contest_weekly-contest-386)
  *
  * Stats:
+ *
  * - Total Accepted: 11,888
  * - Total Submissions: 32,134
  * - Acceptance Rate: 37.0%
@@ -27,7 +29,7 @@
  *
  * @param {number[]} nums
  * @param {number[]} changeIndices
- * @return {number}
+ * @returns {number}
  */
 const earliestSecondToMarkIndices = (nums, changeIndices) => {
         const n = nums.length;

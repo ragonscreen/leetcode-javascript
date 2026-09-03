@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minScore } from '../../../src/problems/2401-2500/2492_minimum-score-of-a-path-between-two-cities.js';
 
 const testcases = [
@@ -57,9 +58,10 @@ const testcases = [
 ];
 
 describe('minScore', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minScore($n, $roads) -> $expected', ({ n, roads, expected }) => {
-                expect(minScore(n, roads)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minScore($n, $roads) -> $expected',
+                ({ n, roads, expected }) => {
+                        expect(minScore(n, roads)).toStrictEqual(expected);
+                },
+        );
 });

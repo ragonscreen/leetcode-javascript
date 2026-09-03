@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestStrChain } from '../../../src/problems/1001-1100/1048_longest-string-chain.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('longestStrChain', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestStrChain($words) -> $expected', ({ words, expected }) => {
-                expect(longestStrChain(words)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestStrChain($words) -> $expected',
+                ({ words, expected }) => {
+                        expect(longestStrChain(words)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { firstMissingPositive } from '../../../src/problems/0001-0100/0041_first-missing-positive.js';
 
 const testcases = [
@@ -12,9 +13,10 @@ const testcases = [
 ];
 
 describe('firstMissingPositive', () => {
-        test.each(
-                structuredClone(testcases),
-        )('firstMissingPositive($nums) -> $expected', ({ nums, expected }) => {
-                expect(firstMissingPositive(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'firstMissingPositive($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(firstMissingPositive(nums)).toStrictEqual(expected);
+                },
+        );
 });

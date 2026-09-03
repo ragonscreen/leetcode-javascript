@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { hasValidPath } from '../../../src/problems/1301-1400/1391_check-if-there-is-a-valid-path-in-a-grid.js';
 
 const testcases = [
@@ -34,9 +35,10 @@ const testcases = [
 ];
 
 describe('hasValidPath', () => {
-        test.each(
-                structuredClone(testcases),
-        )('hasValidPath($grid) -> $expected', ({ grid, expected }) => {
-                expect(hasValidPath(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'hasValidPath($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(hasValidPath(grid)).toStrictEqual(expected);
+                },
+        );
 });

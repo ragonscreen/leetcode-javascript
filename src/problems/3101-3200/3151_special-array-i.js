@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 262,504
  * - Total Submissions: 321,612
  * - Acceptance Rate: 81.6%
@@ -22,7 +24,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const isArraySpecial = (nums) => {
         for (let i = 0; i < nums.length; i++) {

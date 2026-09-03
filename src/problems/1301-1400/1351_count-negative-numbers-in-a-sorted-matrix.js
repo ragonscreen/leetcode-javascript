@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 659,567
  * - Total Submissions: 828,925
  * - Acceptance Rate: 79.6%
  *
  * Similar Problems:
+ *
  * - maximum-count-of-positive-integer-and-negative-integer (Easy)
  */
 
@@ -28,7 +31,7 @@
  * `n` = length of `grid`, `m` = length of `grid[i]`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const countNegatives = (grid) => {
         const n = grid.length;
@@ -58,7 +61,7 @@ const countNegatives = (grid) => {
  * `n` = length of `grid`, `m` = length of `grid[i]`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const countNegatives1 = (grid) => {
         const n = grid.length;
@@ -103,7 +106,7 @@ const countNegatives1 = (grid) => {
  * `n` = length of `grid`, `m` = length of `grid[i]`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const countNegatives2 = (grid) => {
         const n = grid.length;

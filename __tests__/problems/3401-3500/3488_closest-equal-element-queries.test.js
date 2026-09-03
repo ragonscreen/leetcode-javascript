@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         solveQueries,
         solveQueries1,
@@ -18,25 +19,19 @@ const testcases = [
 ];
 
 describe('solveQueries', () => {
-        test.each(
-                structuredClone(testcases),
-        )('solveQueries($nums, $queries) -> $expected', ({
-                nums,
-                queries,
-                expected,
-        }) => {
-                expect(solveQueries(nums, queries)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'solveQueries($nums, $queries) -> $expected',
+                ({ nums, queries, expected }) => {
+                        expect(solveQueries(nums, queries)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('solveQueries1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('solveQueries1($nums, $queries) -> $expected', ({
-                nums,
-                queries,
-                expected,
-        }) => {
-                expect(solveQueries1(nums, queries)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'solveQueries1($nums, $queries) -> $expected',
+                ({ nums, queries, expected }) => {
+                        expect(solveQueries1(nums, queries)).toStrictEqual(expected);
+                },
+        );
 });

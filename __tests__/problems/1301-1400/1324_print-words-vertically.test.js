@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { printVertically } from '../../../src/problems/1301-1400/1324_print-words-vertically.js';
 
 const testcases = [
@@ -15,9 +16,10 @@ const testcases = [
 ];
 
 describe('printVertically', () => {
-        test.each(
-                structuredClone(testcases),
-        )('printVertically($s) -> $expected', ({ s, expected }) => {
-                expect(printVertically(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'printVertically($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(printVertically(s)).toStrictEqual(expected);
+                },
+        );
 });

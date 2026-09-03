@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Union-Find (topic_23)
  *
  * Stats:
+ *
  * - Total Accepted: 41,781
  * - Total Submissions: 69,708
  * - Acceptance Rate: 59.9%
  *
  * Similar Problems:
+ *
  * - make-lexicographically-smallest-array-by-swapping-elements (Medium)
  * - smallest-string-with-swaps (Medium)
  */
@@ -32,7 +35,7 @@ import { Queue } from '@datastructures-js/queue';
  * @param {number[]} source
  * @param {number[]} target
  * @param {number[][]} allowedSwaps
- * @return {number}
+ * @returns {number}
  */
 const minimumHammingDistance = (source, target, allowedSwaps) => {
         const n = source.length;
@@ -104,7 +107,7 @@ const minimumHammingDistance = (source, target, allowedSwaps) => {
  * @param {number[]} source
  * @param {number[]} target
  * @param {number[][]} allowedSwaps
- * @return {number}
+ * @returns {number}
  */
 const minimumHammingDistance1 = (source, target, allowedSwaps) => {
         const n = source.length;

@@ -1,5 +1,5 @@
 /**
- * 0135. Candy
+ * 135. Candy
  *
  * Link: https://leetcode.com/problems/candy/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 1,034,271
  * - Total Submissions: 2,142,404
  * - Acceptance Rate: 48.3%
  *
  * Similar Problems:
+ *
  * - check-if-grid-satisfies-conditions (Easy)
  * - minimum-number-of-operations-to-satisfy-conditions (Medium)
  * - minimize-maximum-value-in-a-grid (Hard)
@@ -28,7 +31,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} ratings
- * @return {number}
+ * @returns {number}
  */
 const candy = (ratings) => {
         const n = ratings.length;

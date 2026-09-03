@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { hIndex } from '../../../src/problems/0201-0300/0275_h-index-ii.js';
 
 const testcases = [
@@ -12,9 +13,10 @@ const testcases = [
 ];
 
 describe('hIndex', () => {
-        test.each(
-                structuredClone(testcases),
-        )('hIndex($citations) -> $expected', ({ citations, expected }) => {
-                expect(hIndex(citations)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'hIndex($citations) -> $expected',
+                ({ citations, expected }) => {
+                        expect(hIndex(citations)).toStrictEqual(expected);
+                },
+        );
 });

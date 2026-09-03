@@ -1,5 +1,5 @@
 /**
- * 0008. String to Integer (atoi)
+ * 8. String to Integer (atoi)
  *
  * Link: https://leetcode.com/problems/string-to-integer-atoi/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 2,408,701
  * - Total Submissions: 11,563,856
  * - Acceptance Rate: 20.8%
  *
  * Similar Problems:
+ *
  * - check-if-numbers-are-ascending-in-a-sentence (Easy)
  * - reverse-integer (Medium)
  * - valid-number (Hard)
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const myAtoi = (s) => {
         const MAX_VAL = 2 ** 31 - 1;
@@ -74,7 +77,7 @@ const myAtoi = (s) => {
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const myAtoi1 = (s) => {
         const max = 2 ** 31 - 1;

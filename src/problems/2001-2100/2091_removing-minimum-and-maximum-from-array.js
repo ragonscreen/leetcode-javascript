@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Staff (position_staff)
  * - Weekly Contest 269 (contest_weekly-contest-269)
  *
  * Stats:
+ *
  * - Total Accepted: 179,667
  * - Total Submissions: 266,426
  * - Acceptance Rate: 67.4%
  *
  * Similar Problems:
+ *
  * - maximum-points-you-can-obtain-from-cards (Medium)
  * - minimum-deletions-to-make-character-frequencies-unique (Medium)
  */
@@ -30,7 +33,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minimumDeletions = (nums) => {
         const n = nums.length;

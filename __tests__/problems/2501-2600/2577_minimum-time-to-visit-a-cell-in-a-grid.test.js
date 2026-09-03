@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumTime } from '../../../src/problems/2501-2600/2577_minimum-time-to-visit-a-cell-in-a-grid.js';
 
 const testcases = [
@@ -39,9 +40,10 @@ const testcases = [
 ];
 
 describe('minimumTime', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumTime($grid) -> $expected', ({ grid, expected }) => {
-                expect(minimumTime(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumTime($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(minimumTime(grid)).toStrictEqual(expected);
+                },
+        );
 });

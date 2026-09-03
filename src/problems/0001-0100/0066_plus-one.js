@@ -1,5 +1,5 @@
 /**
- * 0066. Plus One
+ * 66. Plus One
  *
  * Link: https://leetcode.com/problems/plus-one/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 3,697,382
  * - Total Submissions: 7,422,648
  * - Acceptance Rate: 49.8%
  *
  * Similar Problems:
+ *
  * - add-binary (Easy)
  * - add-to-array-form-of-integer (Easy)
  * - minimum-operations-to-reduce-an-integer-to-0 (Medium)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} digits
- * @return {number[]}
+ * @returns {number[]}
  */
 const plusOne = (digits) => {
         const n = digits.length;

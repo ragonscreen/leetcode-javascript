@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countPrimes } from '../../../src/problems/0201-0300/0204_count-primes.js';
 
 const testcases = [
@@ -9,10 +10,7 @@ const testcases = [
 ];
 
 describe('countPrimes', () => {
-        test.each(structuredClone(testcases))('countPrimes($n) -> $expected', ({
-                n,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('countPrimes($n) -> $expected', ({ n, expected }) => {
                 expect(countPrimes(n)).toStrictEqual(expected);
         });
 });

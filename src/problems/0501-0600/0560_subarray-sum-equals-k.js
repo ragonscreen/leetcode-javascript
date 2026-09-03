@@ -1,5 +1,5 @@
 /**
- * 0560. Subarray Sum Equals K
+ * 560. Subarray Sum Equals K
  *
  * Link: https://leetcode.com/problems/subarray-sum-equals-k/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 2,334,617
  * - Total Submissions: 4,973,415
  * - Acceptance Rate: 46.9%
  *
  * Similar Problems:
+ *
  * - find-pivot-index (Easy)
  * - two-sum (Easy)
  * - continuous-subarray-sum (Medium)
@@ -35,7 +38,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const subarraySum = (nums, k) => {
         const map = new Map();
@@ -64,7 +67,7 @@ const subarraySum = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const subarraySum1 = (nums, k) => {
         const pre = new Array(nums.length);

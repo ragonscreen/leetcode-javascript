@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Math (topic_8)
  * - Senior (position_senior)
  * - Weekly Contest 129 (contest_weekly-contest-129)
  *
  * Stats:
+ *
  * - Total Accepted: 191,936
  * - Total Submissions: 353,552
  * - Acceptance Rate: 54.3%
@@ -26,7 +28,7 @@
  * `K` = `k`
  *
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const smallestRepunitDivByK = (k) => {
         if (k % 2 === 0 || k % 5 === 0) {
@@ -53,7 +55,7 @@ const smallestRepunitDivByK = (k) => {
  * `K` = `k`
  *
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const smallestRepunitDivByK1 = (k) => {
         if (k % 2 === 0 || k % 5 === 0) {

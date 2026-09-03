@@ -1,5 +1,5 @@
 /**
- * 0319. Bulb Switcher
+ * 319. Bulb Switcher
  *
  * Link: https://leetcode.com/problems/bulb-switcher/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Brainteaser (topic_32)
  *
  * Stats:
+ *
  * - Total Accepted: 306,916
  * - Total Submissions: 550,087
  * - Acceptance Rate: 55.8%
  *
  * Similar Problems:
+ *
  * - find-the-pivot-integer (Easy)
  * - bulb-switcher-ii (Medium)
  * - number-of-times-binary-string-is-prefix-aligned (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const bulbSwitch = (n) => Math.floor(Math.sqrt(n));
 

@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 273,118
  * - Total Submissions: 483,383
  * - Acceptance Rate: 56.5%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} instructions
- * @return {boolean}
+ * @returns {boolean}
  */
 const isRobotBounded = (instructions) => {
         const dirs = [

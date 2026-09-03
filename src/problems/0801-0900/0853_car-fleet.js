@@ -1,5 +1,5 @@
 /**
- * 0853. Car Fleet
+ * 853. Car Fleet
  *
  * Link: https://leetcode.com/problems/car-fleet/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Sorting (topic_61049)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 472,647
  * - Total Submissions: 861,964
  * - Acceptance Rate: 54.8%
  *
  * Similar Problems:
+ *
  * - count-collisions-on-a-road (Medium)
  * - car-fleet-ii (Hard)
  */
@@ -32,7 +35,7 @@
  * @param {number} target
  * @param {number[]} position
  * @param {number[]} speed
- * @return {number}
+ * @returns {number}
  */
 const carFleet = (target, position, speed) => {
         const cars = new Array(target).fill(null);

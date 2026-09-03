@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 223,412
  * - Total Submissions: 281,730
  * - Acceptance Rate: 79.3%
  *
  * Similar Problems:
+ *
  * - circular-sentence (Easy)
  * - shortest-distance-to-target-string-in-a-circular-array (Easy)
  * - take-k-of-each-character-from-left-and-right (Medium)
@@ -29,7 +32,7 @@
  *
  * @param {number[]} code
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const decrypt = (code, k) => {
         const n = code.length;

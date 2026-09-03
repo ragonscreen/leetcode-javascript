@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { NumArray } from '../../../src/problems/0301-0400/0303_range-sum-query-immutable.js';
 
 describe('NumArray', () => {

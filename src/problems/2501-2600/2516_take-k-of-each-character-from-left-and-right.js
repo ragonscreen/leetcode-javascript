@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 114,771
  * - Total Submissions: 223,097
  * - Acceptance Rate: 51.4%
  *
  * Similar Problems:
+ *
  * - defuse-the-bomb (Easy)
  * - merge-sorted-array (Easy)
  * - reorder-list (Medium)
@@ -30,7 +33,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const takeCharacters = (s, k) => {
         const key = [0, 0, 0];

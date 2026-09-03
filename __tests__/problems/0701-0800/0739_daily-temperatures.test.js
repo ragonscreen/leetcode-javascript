@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         dailyTemperatures,
         dailyTemperatures1,
@@ -14,25 +15,19 @@ const testcases = [
 ];
 
 describe('dailyTemperatures', () => {
-        test.each(
-                structuredClone(testcases),
-        )('dailyTemperatures($temperatures) -> $expected', ({
-                temperatures,
-                expected,
-        }) => {
-                expect(dailyTemperatures(temperatures)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'dailyTemperatures($temperatures) -> $expected',
+                ({ temperatures, expected }) => {
+                        expect(dailyTemperatures(temperatures)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('dailyTemperatures1', () => {
-        test.each(
-                testcases,
-        )('dailyTemperatures1($temperatures) -> $expected', ({
-                temperatures,
-                expected,
-        }) => {
-                expect(dailyTemperatures1(temperatures)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(testcases)(
+                'dailyTemperatures1($temperatures) -> $expected',
+                ({ temperatures, expected }) => {
+                        expect(dailyTemperatures1(temperatures)).toStrictEqual(expected);
+                },
+        );
 });

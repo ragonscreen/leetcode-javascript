@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Enumeration (topic_61066)
  * - Senior (position_senior)
  * - Biweekly Contest 37 (contest_biweekly-contest-37)
  *
  * Stats:
+ *
  * - Total Accepted: 12,296
  * - Total Submissions: 30,679
  * - Acceptance Rate: 40.1%
@@ -28,7 +30,7 @@
  *
  * @param {number[][]} towers
  * @param {number} radius
- * @return {number[]}
+ * @returns {number[]}
  */
 const bestCoordinate = (towers, radius) => {
         const r2 = radius ** 2;
@@ -46,9 +48,7 @@ const bestCoordinate = (towers, radius) => {
                                 const d2 = (xx - x) ** 2 + (yy - y) ** 2;
 
                                 if (d2 <= r2) {
-                                        val += Math.floor(
-                                                q / (1 + Math.sqrt(d2)),
-                                        );
+                                        val += Math.floor(q / (1 + Math.sqrt(d2)));
                                 }
                         }
 

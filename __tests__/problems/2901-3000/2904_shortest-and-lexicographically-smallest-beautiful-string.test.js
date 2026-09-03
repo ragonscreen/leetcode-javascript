@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { shortestBeautifulSubstring } from '../../../src/problems/2901-3000/2904_shortest-and-lexicographically-smallest-beautiful-string.js';
 
 const testcases = [
@@ -13,15 +14,10 @@ const testcases = [
 ];
 
 describe('shortestBeautifulSubstring', () => {
-        test.each(
-                structuredClone(testcases),
-        )('shortestBeautifulSubstring($s, $k) -> $expected', ({
-                s,
-                k,
-                expected,
-        }) => {
-                expect(shortestBeautifulSubstring(s, k)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'shortestBeautifulSubstring($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(shortestBeautifulSubstring(s, k)).toStrictEqual(expected);
+                },
+        );
 });

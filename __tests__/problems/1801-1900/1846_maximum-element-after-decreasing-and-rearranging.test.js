@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumElementAfterDecrementingAndRearranging } from '../../../src/problems/1801-1900/1846_maximum-element-after-decreasing-and-rearranging.js';
 
 const testcases = [
@@ -9,14 +10,12 @@ const testcases = [
 ];
 
 describe('maximumElementAfterDecrementingAndRearranging', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumElementAfterDecrementingAndRearranging($arr) -> $expected', ({
-                arr,
-                expected,
-        }) => {
-                expect(
-                        maximumElementAfterDecrementingAndRearranging(arr),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumElementAfterDecrementingAndRearranging($arr) -> $expected',
+                ({ arr, expected }) => {
+                        expect(maximumElementAfterDecrementingAndRearranging(arr)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

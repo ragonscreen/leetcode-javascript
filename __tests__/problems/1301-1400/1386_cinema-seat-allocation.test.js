@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxNumberOfFamilies } from '../../../src/problems/1301-1400/1386_cinema-seat-allocation.js';
 
 const testcases = [
@@ -36,15 +37,10 @@ const testcases = [
 ];
 
 describe('maxNumberOfFamilies', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxNumberOfFamilies($n, $reservedSeats) -> $expected', ({
-                n,
-                reservedSeats,
-                expected,
-        }) => {
-                expect(maxNumberOfFamilies(n, reservedSeats)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'maxNumberOfFamilies($n, $reservedSeats) -> $expected',
+                ({ n, reservedSeats, expected }) => {
+                        expect(maxNumberOfFamilies(n, reservedSeats)).toStrictEqual(expected);
+                },
+        );
 });

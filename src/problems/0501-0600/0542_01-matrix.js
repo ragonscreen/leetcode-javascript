@@ -1,5 +1,5 @@
 /**
- * 0542. 01 Matrix
+ * 542. 01 Matrix
  *
  * Link: https://leetcode.com/problems/01-matrix/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Breadth-First Search (topic_22)
@@ -15,11 +16,13 @@
  * - Principal (position_principal)
  *
  * Stats:
+ *
  * - Total Accepted: 916,450
  * - Total Submissions: 1,697,513
  * - Acceptance Rate: 54.0%
  *
  * Similar Problems:
+ *
  * - difference-between-ones-and-zeros-in-row-and-column (Medium)
  * - shortest-path-to-get-food (Medium) (Premium)
  * - minimum-operations-to-remove-adjacent-ones-in-matrix (Hard) (Premium)
@@ -32,7 +35,7 @@
  * `n` = `mat.length`, `m` = `mat[0].length`
  *
  * @param {number[][]} mat
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const updateMatrix = (mat) => {
         // instead of moving from every one-cell towards closest zero-cell,
@@ -66,13 +69,7 @@ const updateMatrix = (mat) => {
                                 const ny = y + d[i];
                                 const nx = x + d[i + 1];
 
-                                if (
-                                        ny < 0 ||
-                                        ny >= n ||
-                                        nx < 0 ||
-                                        nx >= m ||
-                                        mat[ny][nx] !== -1
-                                ) {
+                                if (ny < 0 || ny >= n || nx < 0 || nx >= m || mat[ny][nx] !== -1) {
                                         continue;
                                 }
 

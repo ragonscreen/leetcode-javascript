@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 40,506
  * - Total Submissions: 51,690
  * - Acceptance Rate: 78.4%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minLengthAfterRemovals = (s) => {
         let cntA = 0;

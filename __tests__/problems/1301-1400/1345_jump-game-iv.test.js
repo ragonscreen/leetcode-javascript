@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minJumps } from '../../../src/problems/1301-1400/1345_jump-game-iv.js';
 
 const testcases = [
@@ -8,10 +9,10 @@ const testcases = [
 ];
 
 describe('minJumps', () => {
-        test.each(structuredClone(testcases))('minJumps($arr) -> $expected', ({
-                arr,
-                expected,
-        }) => {
-                expect(minJumps(arr)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minJumps($arr) -> $expected',
+                ({ arr, expected }) => {
+                        expect(minJumps(arr)).toStrictEqual(expected);
+                },
+        );
 });

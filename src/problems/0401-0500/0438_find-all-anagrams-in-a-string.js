@@ -1,5 +1,5 @@
 /**
- * 0438. Find All Anagrams in a String
+ * 438. Find All Anagrams in a String
  *
  * Link: https://leetcode.com/problems/find-all-anagrams-in-a-string/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  * - Junior (position_junior)
  *
  * Stats:
+ *
  * - Total Accepted: 1,191,534
  * - Total Submissions: 2,224,311
  * - Acceptance Rate: 53.6%
  *
  * Similar Problems:
+ *
  * - valid-anagram (Easy)
  * - permutation-in-string (Medium)
  */
@@ -31,7 +34,7 @@
  *
  * @param {string} s
  * @param {string} p
- * @return {number[]}
+ * @returns {number[]}
  */
 const findAnagrams = (s, p) => {
         const ord = (c) => c.charCodeAt() - 97;
@@ -76,7 +79,7 @@ const findAnagrams = (s, p) => {
  *
  * @param {string} s
  * @param {string} p
- * @return {number[]}
+ * @returns {number[]}
  */
 const findAnagrams1 = (s, p) => {
         const ord = (c) => c.charCodeAt() - 97;
@@ -124,7 +127,7 @@ const findAnagrams1 = (s, p) => {
  *
  * @param {string} s
  * @param {string} p
- * @return {number[]}
+ * @returns {number[]}
  */
 const findAnagrams2 = (s, p) => {
         let set = new Array(26).fill(0);

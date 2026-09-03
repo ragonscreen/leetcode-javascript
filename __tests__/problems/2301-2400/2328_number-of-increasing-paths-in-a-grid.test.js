@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countPaths } from '../../../src/problems/2301-2400/2328_number-of-increasing-paths-in-a-grid.js';
 
 const testcases = [
@@ -13,9 +14,10 @@ const testcases = [
 ];
 
 describe('countPaths', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countPaths($grid) -> $expected', ({ grid, expected }) => {
-                expect(countPaths(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countPaths($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(countPaths(grid)).toStrictEqual(expected);
+                },
+        );
 });

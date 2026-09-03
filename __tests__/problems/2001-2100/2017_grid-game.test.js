@@ -1,8 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import {
-        gridGame,
-        gridGame1,
-} from '../../../src/problems/2001-2100/2017_grid-game.js';
+
+import { gridGame, gridGame1 } from '../../../src/problems/2001-2100/2017_grid-game.js';
 
 const testcases = [
         {
@@ -36,18 +34,19 @@ const testcases = [
 ];
 
 describe('gridGame', () => {
-        test.each(structuredClone(testcases))('gridGame($grid) -> $expected', ({
-                grid,
-                expected,
-        }) => {
-                expect(gridGame(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'gridGame($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(gridGame(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('gridGame1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('gridGame1($grid) -> $expected', ({ grid, expected }) => {
-                expect(gridGame1(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'gridGame1($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(gridGame1(grid)).toStrictEqual(expected);
+                },
+        );
 });

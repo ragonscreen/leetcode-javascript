@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         arrayRankTransform,
         arrayRankTransform1,
@@ -18,21 +19,19 @@ const testcases = [
 ];
 
 describe('arrayRankTransform', () => {
-        test.each(
-                structuredClone(testcases),
-        )('arrayRankTransform($arr) -> $expected', ({ arr, expected }) => {
-                expect(Array.from(arrayRankTransform(arr))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'arrayRankTransform($arr) -> $expected',
+                ({ arr, expected }) => {
+                        expect(Array.from(arrayRankTransform(arr))).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('arrayRankTransform1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('arrayRankTransform1($arr) -> $expected', ({ arr, expected }) => {
-                expect(Array.from(arrayRankTransform1(arr))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'arrayRankTransform1($arr) -> $expected',
+                ({ arr, expected }) => {
+                        expect(Array.from(arrayRankTransform1(arr))).toStrictEqual(expected);
+                },
+        );
 });

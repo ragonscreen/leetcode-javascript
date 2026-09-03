@@ -1,5 +1,5 @@
 /**
- * 0206. Reverse Linked List
+ * 206. Reverse Linked List
  *
  * Link: https://leetcode.com/problems/reverse-linked-list/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 6,231,020
  * - Total Submissions: 7,746,254
  * - Acceptance Rate: 80.4%
  *
  * Similar Problems:
+ *
  * - palindrome-linked-list (Easy)
  * - binary-tree-upside-down (Medium)
  * - insert-greatest-common-divisors-in-linked-list (Medium)
@@ -32,7 +35,7 @@
  * Space Complexity: O(1)
  *
  * @param {ListNode} head
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const reverseList = (head) => {
         let prev = null;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { canConstruct } from '../../../src/problems/0301-0400/0383_ransom-note.js';
 
 const testcases = [
@@ -8,15 +9,10 @@ const testcases = [
 ];
 
 describe('canConstruct', () => {
-        test.each(
-                testcases,
-        )('canConstruct($ransomNote, $magazine) -> $expected', ({
-                ransomNote,
-                magazine,
-                expected,
-        }) => {
-                expect(canConstruct(ransomNote, magazine)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(testcases)(
+                'canConstruct($ransomNote, $magazine) -> $expected',
+                ({ ransomNote, magazine, expected }) => {
+                        expect(canConstruct(ransomNote, magazine)).toStrictEqual(expected);
+                },
+        );
 });

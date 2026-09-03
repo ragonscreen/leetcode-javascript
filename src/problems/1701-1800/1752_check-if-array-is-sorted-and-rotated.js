@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 227 (contest_weekly-contest-227)
  *
  * Stats:
+ *
  * - Total Accepted: 986,958
  * - Total Submissions: 1,719,693
  * - Acceptance Rate: 57.4%
  *
  * Similar Problems:
+ *
  * - check-if-all-as-appears-before-all-bs (Easy)
  */
 
@@ -28,7 +31,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const check = (nums) => {
         const n = nums.length;

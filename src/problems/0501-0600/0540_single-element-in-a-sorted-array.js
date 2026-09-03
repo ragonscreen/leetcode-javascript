@@ -1,5 +1,5 @@
 /**
- * 0540. Single Element in a Sorted Array
+ * 540. Single Element in a Sorted Array
  *
  * Link: https://leetcode.com/problems/single-element-in-a-sorted-array/
  * Category: Algorithms
@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 1,189,058
  * - Total Submissions: 2,007,134
  * - Acceptance Rate: 59.2%
@@ -23,7 +25,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const singleNonDuplicate = (nums) => {
         let l = 0;

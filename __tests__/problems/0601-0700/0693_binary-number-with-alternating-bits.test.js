@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         hasAlternatingBits,
         hasAlternatingBits1,
@@ -12,17 +13,19 @@ const testcases = [
 ];
 
 describe('hasAlternatingBits', () => {
-        test.each(
-                structuredClone(testcases),
-        )('hasAlternatingBits($n) -> $expected', ({ n, expected }) => {
-                expect(hasAlternatingBits(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'hasAlternatingBits($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(hasAlternatingBits(n)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('hasAlternatingBits1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('hasAlternatingBits1($n) -> $expected', ({ n, expected }) => {
-                expect(hasAlternatingBits1(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'hasAlternatingBits1($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(hasAlternatingBits1(n)).toStrictEqual(expected);
+                },
+        );
 });

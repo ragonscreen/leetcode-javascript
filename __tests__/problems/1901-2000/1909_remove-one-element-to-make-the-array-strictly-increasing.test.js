@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { canBeIncreasing } from '../../../src/problems/1901-2000/1909_remove-one-element-to-make-the-array-strictly-increasing.js';
 
 const testcases = [
@@ -13,9 +14,10 @@ const testcases = [
 ];
 
 describe('canBeIncreasing', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canBeIncreasing($nums) -> $expected', ({ nums, expected }) => {
-                expect(canBeIncreasing(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canBeIncreasing($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(canBeIncreasing(nums)).toStrictEqual(expected);
+                },
+        );
 });

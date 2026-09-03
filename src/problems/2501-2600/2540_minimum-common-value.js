@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Two Pointers (topic_9)
@@ -16,11 +17,13 @@
  * - Biweekly Contest 96 (contest_biweekly-contest-96)
  *
  * Stats:
+ *
  * - Total Accepted: 353,479
  * - Total Submissions: 596,827
  * - Acceptance Rate: 59.2%
  *
  * Similar Problems:
+ *
  * - intersection-of-two-arrays (Easy)
  * - intersection-of-two-arrays-ii (Easy)
  */
@@ -33,7 +36,7 @@
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
- * @return {number}
+ * @returns {number}
  */
 const getCommon = (nums1, nums2) => {
         let p = 0;

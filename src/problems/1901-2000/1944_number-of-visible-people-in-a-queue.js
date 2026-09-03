@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 121,455
  * - Total Submissions: 167,155
  * - Acceptance Rate: 72.7%
  *
  * Similar Problems:
+ *
  * - buildings-with-an-ocean-view (Medium)
  * - number-of-people-that-can-be-seen-in-a-grid (Medium)
  * - sum-of-subarray-ranges (Medium)
@@ -31,7 +34,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} heights
- * @return {number[]}
+ * @returns {number[]}
  */
 const canSeePersonsCount = (heights) => {
         const n = heights.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minOperations } from '../../../src/problems/1501-1600/1598_crawler-log-folder.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($logs) -> $expected', ({ logs, expected }) => {
-                expect(minOperations(logs)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($logs) -> $expected',
+                ({ logs, expected }) => {
+                        expect(minOperations(logs)).toStrictEqual(expected);
+                },
+        );
 });

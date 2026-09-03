@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minArraySum,
         minArraySum1,
@@ -11,17 +12,19 @@ const testcases = [
 ];
 
 describe('minArraySum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minArraySum($nums) -> $expected', ({ nums, expected }) => {
-                expect(minArraySum(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minArraySum($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minArraySum(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minArraySum1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minArraySum1($nums) -> $expected', ({ nums, expected }) => {
-                expect(minArraySum1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minArraySum1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minArraySum1(nums)).toStrictEqual(expected);
+                },
+        );
 });

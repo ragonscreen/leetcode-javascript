@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         totalWaviness,
         totalWaviness1,
@@ -11,25 +12,19 @@ const testcases = [
 ];
 
 describe('totalWaviness', () => {
-        test.each(
-                structuredClone(testcases),
-        )('totalWaviness($num1, $num2) -> $expected', ({
-                num1,
-                num2,
-                expected,
-        }) => {
-                expect(totalWaviness(num1, num2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'totalWaviness($num1, $num2) -> $expected',
+                ({ num1, num2, expected }) => {
+                        expect(totalWaviness(num1, num2)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('totalWaviness1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('totalWaviness1($num1, $num2) -> $expected', ({
-                num1,
-                num2,
-                expected,
-        }) => {
-                expect(totalWaviness1(num1, num2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'totalWaviness1($num1, $num2) -> $expected',
+                ({ num1, num2, expected }) => {
+                        expect(totalWaviness1(num1, num2)).toStrictEqual(expected);
+                },
+        );
 });

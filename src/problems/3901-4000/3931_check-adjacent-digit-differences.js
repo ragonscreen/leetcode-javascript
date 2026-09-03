@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 26,136
  * - Total Submissions: 33,711
  * - Acceptance Rate: 77.5%
@@ -19,7 +20,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 const isAdjacentDiffAtMostTwo = (s) => {
         for (let i = 0; i < s.length - 1; i++) {

@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 118,020
  * - Total Submissions: 147,421
  * - Acceptance Rate: 80.1%
  *
  * Similar Problems:
+ *
  * - find-the-original-typed-string-i (Easy)
  * - reverse-only-letters (Easy)
  * - reverse-string-ii (Easy)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const finalString = (s) => {
         const n = s.length;
@@ -58,7 +61,7 @@ const finalString = (s) => {
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const finalString1 = (s) => {
         const res = [];

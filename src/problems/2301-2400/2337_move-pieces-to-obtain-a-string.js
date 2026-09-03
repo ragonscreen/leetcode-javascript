@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  * - Staff (position_staff)
  * - Weekly Contest 301 (contest_weekly-contest-301)
  *
  * Stats:
+ *
  * - Total Accepted: 150,934
  * - Total Submissions: 266,498
  * - Acceptance Rate: 56.6%
  *
  * Similar Problems:
+ *
  * - valid-parentheses (Easy)
  * - swap-adjacent-in-lr-string (Medium)
  */
@@ -31,7 +34,7 @@
  *
  * @param {string} start
  * @param {string} target
- * @return {boolean}
+ * @returns {boolean}
  */
 const canChange = (start, target) => {
         const n = start.length;
@@ -55,11 +58,7 @@ const canChange = (start, target) => {
                 const cs = start[si];
                 const ct = target[ti];
 
-                if (
-                        cs !== ct ||
-                        (cs === 'L' && si < ti) ||
-                        (cs === 'R' && si > ti)
-                ) {
+                if (cs !== ct || (cs === 'L' && si < ti) || (cs === 'R' && si > ti)) {
                         return false;
                 }
         }
@@ -75,7 +74,7 @@ const canChange = (start, target) => {
  *
  * @param {string} start
  * @param {string} target
- * @return {boolean}
+ * @returns {boolean}
  */
 const canChange1 = (start, target) => {
         const n = start.length;
@@ -102,11 +101,7 @@ const canChange1 = (start, target) => {
                 const cs = start[si];
                 const ct = target[ti];
 
-                if (
-                        cs !== ct ||
-                        (cs === 'L' && si < ti) ||
-                        (cs === 'R' && si > ti)
-                ) {
+                if (cs !== ct || (cs === 'L' && si < ti) || (cs === 'R' && si > ti)) {
                         return false;
                 }
         }

@@ -1,5 +1,5 @@
 /**
- * 0345. Reverse Vowels of a String
+ * 345. Reverse Vowels of a String
  *
  * Link: https://leetcode.com/problems/reverse-vowels-of-a-string/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 1,554,019
  * - Total Submissions: 2,555,561
  * - Acceptance Rate: 60.8%
  *
  * Similar Problems:
+ *
  * - faulty-keyboard (Easy)
  * - remove-vowels-from-a-string (Easy)
  * - reverse-string (Easy)
@@ -29,7 +32,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const reverseVowels = (s) => {
         const set = new Set('aeiouAEIOU');

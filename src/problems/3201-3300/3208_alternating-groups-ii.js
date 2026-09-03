@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 159,403
  * - Total Submissions: 265,945
  * - Acceptance Rate: 59.9%
@@ -24,7 +26,7 @@
  *
  * @param {number[]} colors
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const numberOfAlternatingGroups = (colors, k) => {
         const n = colors.length;
@@ -62,19 +64,11 @@ const numberOfAlternatingGroups = (colors, k) => {
                 if (lastInvalidIdx === -1) {
                         res++;
                 } else {
-                        if (
-                                l < r &&
-                                lastInvalidIdx < l &&
-                                lastInvalidIdx <= r
-                        ) {
+                        if (l < r && lastInvalidIdx < l && lastInvalidIdx <= r) {
                                 res++;
                         }
 
-                        if (
-                                l > r &&
-                                lastInvalidIdx < l &&
-                                lastInvalidIdx >= r
-                        ) {
+                        if (l > r && lastInvalidIdx < l && lastInvalidIdx >= r) {
                                 res++;
                         }
                 }

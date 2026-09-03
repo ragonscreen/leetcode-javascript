@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findRepeatedDnaSequences,
         findRepeatedDnaSequences1,
@@ -21,17 +22,19 @@ const testcases = [
 ];
 
 describe('findRepeatedDnaSequences', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findRepeatedDnaSequences($s) -> $expected', ({ s, expected }) => {
-                expect(findRepeatedDnaSequences(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findRepeatedDnaSequences($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(findRepeatedDnaSequences(s)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findRepeatedDnaSequences1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findRepeatedDnaSequences1($s) -> $expected', ({ s, expected }) => {
-                expect(findRepeatedDnaSequences1(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findRepeatedDnaSequences1($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(findRepeatedDnaSequences1(s)).toStrictEqual(expected);
+                },
+        );
 });

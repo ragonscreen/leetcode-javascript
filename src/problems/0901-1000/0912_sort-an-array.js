@@ -1,5 +1,5 @@
 /**
- * 0912. Sort an Array
+ * 912. Sort an Array
  *
  * Link: https://leetcode.com/problems/sort-an-array/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Divide and Conquer (topic_12)
  * - Sorting (topic_61049)
@@ -18,6 +19,7 @@
  * - Counting Sort (topic_61072)
  *
  * Stats:
+ *
  * - Total Accepted: 1,125,575
  * - Total Submissions: 2,013,332
  * - Acceptance Rate: 55.9%
@@ -30,7 +32,7 @@
  * `n` = length of `nums`, `d` = difference between maximum and minimum value in `nums`
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const sortArray = (nums) => {
         const n = nums.length;
@@ -70,7 +72,7 @@ const sortArray = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const sortArray1 = (nums) => {
         const merge = (A, l, m, r) => {
@@ -121,7 +123,7 @@ const sortArray1 = (nums) => {
  * Space Complexity: O(1) auxiliary, O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const sortArray2 = (nums) => {
         for (let i = 1; i < nums.length; i++) {

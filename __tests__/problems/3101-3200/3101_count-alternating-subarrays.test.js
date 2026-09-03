@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countAlternatingSubarrays } from '../../../src/problems/3101-3200/3101_count-alternating-subarrays.js';
 
 const testcases = [
@@ -7,12 +8,10 @@ const testcases = [
 ];
 
 describe('countAlternatingSubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countAlternatingSubarrays($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(countAlternatingSubarrays(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countAlternatingSubarrays($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(countAlternatingSubarrays(nums)).toStrictEqual(expected);
+                },
+        );
 });

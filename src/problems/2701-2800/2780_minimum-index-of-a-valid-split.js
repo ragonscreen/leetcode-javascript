@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 149,173
  * - Total Submissions: 197,595
  * - Acceptance Rate: 75.5%
  *
  * Similar Problems:
+ *
  * - majority-element (Easy)
  * - partition-array-into-disjoint-intervals (Medium)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minimumIndex = (nums) => {
         // Boyer-Moore
@@ -72,7 +75,7 @@ const minimumIndex = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minimumIndex1 = (nums) => {
         // Boyer-Moore

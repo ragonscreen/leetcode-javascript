@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numberOfAlternatingGroups } from '../../../src/problems/3201-3300/3208_alternating-groups-ii.js';
 
 const testcases = [
@@ -12,15 +13,10 @@ const testcases = [
 ];
 
 describe('numberOfAlternatingGroups', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numberOfAlternatingGroups($colors, $k) -> $expected', ({
-                colors,
-                k,
-                expected,
-        }) => {
-                expect(numberOfAlternatingGroups(colors, k)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'numberOfAlternatingGroups($colors, $k) -> $expected',
+                ({ colors, k, expected }) => {
+                        expect(numberOfAlternatingGroups(colors, k)).toStrictEqual(expected);
+                },
+        );
 });

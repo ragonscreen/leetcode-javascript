@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { canVisitAllRooms } from '../../../src/problems/0801-0900/0841_keys-and-rooms.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('canVisitAllRooms', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canVisitAllRooms($rooms) -> $expected', ({ rooms, expected }) => {
-                expect(canVisitAllRooms(rooms)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canVisitAllRooms($rooms) -> $expected',
+                ({ rooms, expected }) => {
+                        expect(canVisitAllRooms(rooms)).toStrictEqual(expected);
+                },
+        );
 });

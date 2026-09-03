@@ -1,5 +1,5 @@
 /**
- * 0167. Two Sum II - Input Array Is Sorted
+ * 167. Two Sum II - Input Array Is Sorted
  *
  * Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 3,276,953
  * - Total Submissions: 5,063,500
  * - Acceptance Rate: 64.7%
  *
  * Similar Problems:
+ *
  * - two-sum (Easy)
  * - two-sum-iv-input-is-a-bst (Easy)
  * - two-sum-less-than-k (Easy)
@@ -30,7 +33,7 @@
  *
  * @param {number[]} numbers
  * @param {number} target
- * @return {number[]}
+ * @returns {number[]}
  */
 const twoSum = (numbers, target) => {
         let l = 0;

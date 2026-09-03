@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { checkPossibility } from '../../../src/problems/0601-0700/0665_non-decreasing-array.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('checkPossibility', () => {
-        test.each(
-                structuredClone(testcases),
-        )('checkPossibility($nums) -> $expected', ({ nums, expected }) => {
-                expect(checkPossibility(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'checkPossibility($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(checkPossibility(nums)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Simulation (topic_61055)
@@ -15,6 +16,7 @@
  * - Weekly Contest 163 (contest_weekly-contest-163)
  *
  * Stats:
+ *
  * - Total Accepted: 251,641
  * - Total Submissions: 337,788
  * - Acceptance Rate: 74.5%
@@ -28,7 +30,7 @@
  *
  * @param {number[][]} grid
  * @param {number} k
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const shiftGrid = (grid, k) => {
         const n = grid.length;

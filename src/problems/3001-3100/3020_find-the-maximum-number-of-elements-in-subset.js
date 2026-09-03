@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Enumeration (topic_61066)
@@ -15,11 +16,13 @@
  * - Weekly Contest 382 (contest_weekly-contest-382)
  *
  * Stats:
+ *
  * - Total Accepted: 114,403
  * - Total Submissions: 270,521
  * - Acceptance Rate: 42.3%
  *
  * Similar Problems:
+ *
  * - longest-consecutive-sequence (Medium)
  */
 
@@ -30,7 +33,7 @@
  * `n` = `nums.length`, `k` = `max(nums[i])`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maximumLength = (nums) => {
         const map = new Map();

@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Divide and Conquer (topic_12)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 75,179
  * - Total Submissions: 102,767
  * - Acceptance Rate: 73.2%
@@ -26,7 +28,7 @@
  *
  * @param {number[]} nums
  * @param {number[][]} queries
- * @return {number}
+ * @returns {number}
  */
 const xorAfterQueries = (nums, queries) => {
         for (const [l, r, k, v] of queries) {

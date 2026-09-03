@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findAnagrams,
         findAnagrams1,
@@ -12,25 +13,28 @@ const testcases = [
 ];
 
 describe('findAnagrams', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findAnagrams($s, $p) -> $expected', ({ s, p, expected }) => {
-                expect(findAnagrams(s, p)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findAnagrams($s, $p) -> $expected',
+                ({ s, p, expected }) => {
+                        expect(findAnagrams(s, p)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findAnagrams1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findAnagrams1($s, $p) -> $expected', ({ s, p, expected }) => {
-                expect(findAnagrams1(s, p)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findAnagrams1($s, $p) -> $expected',
+                ({ s, p, expected }) => {
+                        expect(findAnagrams1(s, p)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findAnagrams2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findAnagrams2($s, $p) -> $expected', ({ s, p, expected }) => {
-                expect(findAnagrams2(s, p)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findAnagrams2($s, $p) -> $expected',
+                ({ s, p, expected }) => {
+                        expect(findAnagrams2(s, p)).toStrictEqual(expected);
+                },
+        );
 });

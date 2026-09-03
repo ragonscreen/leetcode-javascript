@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { validPalindrome } from '../../../src/problems/0601-0700/0680_valid-palindrome-ii.js';
 
 const testcases = [
@@ -16,9 +17,10 @@ const testcases = [
 ];
 
 describe('validPalindrome', () => {
-        test.each(
-                structuredClone(testcases),
-        )('validPalindrome($s) -> $expected', ({ s, expected }) => {
-                expect(validPalindrome(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'validPalindrome($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(validPalindrome(s)).toStrictEqual(expected);
+                },
+        );
 });

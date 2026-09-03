@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { sortedSquares } from '../../../src/problems/0901-1000/0977_squares-of-a-sorted-array.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('sortedSquares', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sortedSquares($nums) -> $expected', ({ nums, expected }) => {
-                expect(sortedSquares(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sortedSquares($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(sortedSquares(nums)).toStrictEqual(expected);
+                },
+        );
 });

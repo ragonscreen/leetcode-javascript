@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findMissingElements } from '../../../src/problems/3701-3800/3731_find-missing-elements.js';
 
 const testcases = [
@@ -8,11 +9,10 @@ const testcases = [
 ];
 
 describe('findMissingElements', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findMissingElements($nums) -> $expected', ({ nums, expected }) => {
-                expect(Array.from(findMissingElements(nums))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'findMissingElements($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(Array.from(findMissingElements(nums))).toStrictEqual(expected);
+                },
+        );
 });

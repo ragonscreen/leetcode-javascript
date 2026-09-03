@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findGCD } from '../../../src/problems/1901-2000/1979_find-greatest-common-divisor-of-array.js';
 
 const testcases = [
@@ -8,10 +9,10 @@ const testcases = [
 ];
 
 describe('findGCD', () => {
-        test.each(structuredClone(testcases))('findGCD($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(findGCD(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findGCD($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findGCD(nums)).toStrictEqual(expected);
+                },
+        );
 });

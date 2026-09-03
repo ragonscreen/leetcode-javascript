@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         maxSubarrayLength,
         maxSubarrayLength1,
@@ -12,25 +13,19 @@ const testcases = [
 ];
 
 describe('maxSubarrayLength', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSubarrayLength($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(maxSubarrayLength(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSubarrayLength($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(maxSubarrayLength(nums, k)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('maxSubarrayLength1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSubarrayLength1($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(maxSubarrayLength1(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSubarrayLength1($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(maxSubarrayLength1(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

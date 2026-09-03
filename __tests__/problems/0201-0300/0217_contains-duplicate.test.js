@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { containsDuplicate } from '../../../src/problems/0201-0300/0217_contains-duplicate.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('containsDuplicate', () => {
-        test.each(
-                structuredClone(testcases),
-        )('containsDuplicate($nums) -> $expected', ({ nums, expected }) => {
-                expect(containsDuplicate(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'containsDuplicate($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(containsDuplicate(nums)).toStrictEqual(expected);
+                },
+        );
 });

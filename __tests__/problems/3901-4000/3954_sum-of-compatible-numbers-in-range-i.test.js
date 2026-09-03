@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { sumOfGoodIntegers } from '../../../src/problems/3901-4000/3954_sum-of-compatible-numbers-in-range-i.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('sumOfGoodIntegers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sumOfGoodIntegers($n, $k) -> $expected', ({ n, k, expected }) => {
-                expect(sumOfGoodIntegers(n, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sumOfGoodIntegers($n, $k) -> $expected',
+                ({ n, k, expected }) => {
+                        expect(sumOfGoodIntegers(n, k)).toStrictEqual(expected);
+                },
+        );
 });

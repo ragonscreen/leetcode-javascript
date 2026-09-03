@@ -1,5 +1,5 @@
 /**
- * 0092. Reverse Linked List II
+ * 92. Reverse Linked List II
  *
  * Link: https://leetcode.com/problems/reverse-linked-list-ii/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  *
  * Stats:
+ *
  * - Total Accepted: 1,302,665
  * - Total Submissions: 2,537,904
  * - Acceptance Rate: 51.3%
  *
  * Similar Problems:
+ *
  * - reverse-linked-list (Easy)
  */
 
@@ -28,7 +31,7 @@
  * @param {ListNode} head
  * @param {number} left
  * @param {number} right
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const reverseBetween = (head, left, right) => {
         if (left === right) {

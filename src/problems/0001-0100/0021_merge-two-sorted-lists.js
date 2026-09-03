@@ -1,5 +1,5 @@
 /**
- * 0021. Merge Two Sorted Lists
+ * 21. Merge Two Sorted Lists
  *
  * Link: https://leetcode.com/problems/merge-two-sorted-lists/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 6,198,067
  * - Total Submissions: 9,094,084
  * - Acceptance Rate: 68.2%
  *
  * Similar Problems:
+ *
  * - merge-sorted-array (Easy)
  * - merge-two-2d-arrays-by-summing-values (Easy)
  * - add-two-polynomials-represented-as-linked-lists (Medium)
@@ -36,7 +39,7 @@ import { ListNode } from '../../data-structures/linked-list/LinkedListNode.js';
  *
  * @param {ListNode} list1
  * @param {ListNode} list2
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const mergeTwoLists = (list1, list2) => {
         const head = new ListNode();
@@ -72,7 +75,7 @@ const mergeTwoLists = (list1, list2) => {
  *
  * @param {ListNode} list1
  * @param {ListNode} list2
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const mergeTwoLists1 = (list1, list2) => {
         const head = new ListNode();

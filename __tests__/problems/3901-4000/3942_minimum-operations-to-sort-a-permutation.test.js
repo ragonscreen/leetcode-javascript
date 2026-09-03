@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minOperations } from '../../../src/problems/3901-4000/3942_minimum-operations-to-sort-a-permutation.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($nums) -> $expected', ({ nums, expected }) => {
-                expect(minOperations(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minOperations(nums)).toStrictEqual(expected);
+                },
+        );
 });

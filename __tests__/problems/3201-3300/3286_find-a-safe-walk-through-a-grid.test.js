@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         findSafeWalk,
         findSafeWalk1,
@@ -41,25 +42,19 @@ const testcases = [
 ];
 
 describe('findSafeWalk', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findSafeWalk($grid, $health) -> $expected', ({
-                grid,
-                health,
-                expected,
-        }) => {
-                expect(findSafeWalk(grid, health)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findSafeWalk($grid, $health) -> $expected',
+                ({ grid, health, expected }) => {
+                        expect(findSafeWalk(grid, health)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('findSafeWalk1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findSafeWalk1($grid, $health) -> $expected', ({
-                grid,
-                health,
-                expected,
-        }) => {
-                expect(findSafeWalk1(grid, health)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findSafeWalk1($grid, $health) -> $expected',
+                ({ grid, health, expected }) => {
+                        expect(findSafeWalk1(grid, health)).toStrictEqual(expected);
+                },
+        );
 });

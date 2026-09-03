@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Senior (position_senior)
  * - Weekly Contest 494 (contest_weekly-contest-494)
  *
  * Stats:
+ *
  * - Total Accepted: 40,386
  * - Total Submissions: 79,147
  * - Acceptance Rate: 51.0%
@@ -31,7 +33,7 @@
  * number cannot be made even.
  *
  * @param {number[]} nums1
- * @return {boolean}
+ * @returns {boolean}
  */
 const uniformArray = (nums1) => {
         if (Math.min(...nums1) & 1) {

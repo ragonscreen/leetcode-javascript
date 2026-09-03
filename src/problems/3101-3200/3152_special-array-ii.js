@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 138,449
  * - Total Submissions: 302,451
  * - Acceptance Rate: 45.8%
@@ -26,7 +28,7 @@
  *
  * @param {number[]} nums
  * @param {number[][]} queries
- * @return {boolean[]}
+ * @returns {boolean[]}
  */
 const isArraySpecial = (nums, queries) => {
         const n = nums.length;

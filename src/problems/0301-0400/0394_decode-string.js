@@ -1,5 +1,5 @@
 /**
- * 0394. Decode String
+ * 394. Decode String
  *
  * Link: https://leetcode.com/problems/decode-string/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 1,174,053
  * - Total Submissions: 1,882,770
  * - Acceptance Rate: 62.4%
  *
  * Similar Problems:
+ *
  * - brace-expansion (Medium)
  * - encode-string-with-shortest-length (Hard)
  * - number-of-atoms (Hard)
@@ -29,7 +32,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const decodeString = (s) => {
         const stack = [];

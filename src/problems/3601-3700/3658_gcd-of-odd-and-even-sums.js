@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Number Theory (topic_61067)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 464 (contest_weekly-contest-464)
  *
  * Stats:
+ *
  * - Total Accepted: 289,909
  * - Total Submissions: 322,649
  * - Acceptance Rate: 89.9%
@@ -25,7 +27,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const gcdOfOddEvenSums = (n) => n;
 
@@ -36,7 +38,7 @@ const gcdOfOddEvenSums = (n) => n;
  * `N` = `n`
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const gcdOfOddEvenSums1 = (n) => {
         const gcd = (a, b) => (a ? gcd(b % a, a) : b);

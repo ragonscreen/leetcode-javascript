@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 611,755
  * - Total Submissions: 710,712
  * - Acceptance Rate: 86.1%
  *
  * Similar Problems:
+ *
  * - check-if-an-original-string-exists-given-two-encoded-strings (Hard)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {string[]} word1
  * @param {string[]} word2
- * @return {boolean}
+ * @returns {boolean}
  */
 const arrayStringsAreEqual = (word1, word2) => {
         let i = 0;
@@ -63,9 +66,8 @@ const arrayStringsAreEqual = (word1, word2) => {
  *
  * @param {string[]} word1
  * @param {string[]} word2
- * @return {boolean}
+ * @returns {boolean}
  */
-const arrayStringsAreEqual1 = (word1, word2) =>
-        word1.join('') === word2.join('');
+const arrayStringsAreEqual1 = (word1, word2) => word1.join('') === word2.join('');
 
 export { arrayStringsAreEqual, arrayStringsAreEqual1 };

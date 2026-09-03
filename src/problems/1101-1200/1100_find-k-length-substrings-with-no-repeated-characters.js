@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 56,330
  * - Total Submissions: 73,645
  * - Acceptance Rate: 76.5%
@@ -26,7 +28,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const numKLenSubstrNoRepeats = (s, k) => {
         const map = new Map();

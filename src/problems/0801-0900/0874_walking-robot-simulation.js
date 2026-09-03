@@ -1,5 +1,5 @@
 /**
- * 0874. Walking Robot Simulation
+ * 874. Walking Robot Simulation
  *
  * Link: https://leetcode.com/problems/walking-robot-simulation/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 253,821
  * - Total Submissions: 393,190
  * - Acceptance Rate: 64.6%
  *
  * Similar Problems:
+ *
  * - walking-robot-simulation-ii (Medium)
  */
 
@@ -28,7 +31,7 @@
  *
  * @param {number[]} commands
  * @param {number[][]} obstacles
- * @return {number}
+ * @returns {number}
  */
 const robotSim = (commands, obstacles) => {
         const OFFSET = 3 * 10 ** 4; // based on constraint -3 * 10^4 <= x[i], y[i] <= 3 * 10^4

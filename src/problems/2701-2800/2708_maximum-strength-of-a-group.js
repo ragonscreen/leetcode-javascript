@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Backtracking (topic_14)
@@ -17,11 +18,13 @@
  * - Enumeration (topic_61066)
  *
  * Stats:
+ *
  * - Total Accepted: 38,481
  * - Total Submissions: 149,804
  * - Acceptance Rate: 25.7%
  *
  * Similar Problems:
+ *
  * - maximum-strength-of-k-disjoint-subarrays (Hard)
  */
 
@@ -32,7 +35,7 @@
  * `n` = length of `nums`, `m` = number of negative numbers in `nums`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxStrength = (nums) => {
         const negatives = [];

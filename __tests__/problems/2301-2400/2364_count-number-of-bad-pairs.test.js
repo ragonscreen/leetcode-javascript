@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { countBadPairs } from '../../../src/problems/2301-2400/2364_count-number-of-bad-pairs.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('countBadPairs', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countBadPairs($nums) -> $expected', ({ nums, expected }) => {
-                expect(countBadPairs(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countBadPairs($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(countBadPairs(nums)).toStrictEqual(expected);
+                },
+        );
 });

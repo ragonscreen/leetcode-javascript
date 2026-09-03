@@ -1,5 +1,5 @@
 /**
- * 0014. Longest Common Prefix
+ * 14. Longest Common Prefix
  *
  * Link: https://leetcode.com/problems/longest-common-prefix/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Trie (topic_27)
  *
  * Stats:
+ *
  * - Total Accepted: 5,589,816
  * - Total Submissions: 11,838,289
  * - Acceptance Rate: 47.2%
  *
  * Similar Problems:
+ *
  * - smallest-missing-integer-greater-than-sequential-prefix-sum (Easy)
  * - find-the-length-of-the-longest-common-prefix (Medium)
  * - longest-common-prefix-after-at-most-one-removal (Medium) (Premium)
@@ -37,7 +40,7 @@ class TrieNode {
  * `n` = `strs.length`, `m` = `min(strs[i].length)`
  *
  * @param {string[]} strs
- * @return {string}
+ * @returns {string}
  */
 const longestCommonPrefix = (strs) => {
         const str = strs[0];
@@ -62,7 +65,7 @@ const longestCommonPrefix = (strs) => {
  * `n` = `strs.length`, `m` = `min(strs[i].length)`
  *
  * @param {string[]} strs
- * @return {string}
+ * @returns {string}
  */
 const longestCommonPrefix1 = (strs) => {
         const n = strs.length;
@@ -99,7 +102,7 @@ const longestCommonPrefix1 = (strs) => {
  * `n` = `strs.length`, `m` = `min(strs[i].length)`
  *
  * @param {string[]} strs
- * @return {string}
+ * @returns {string}
  */
 const longestCommonPrefix2 = (strs) => {
         const n = strs.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getLength } from '../../../src/problems/3901-4000/3960_frequency-balance-subarray.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('getLength', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getLength($nums) -> $expected', ({ nums, expected }) => {
-                expect(getLength(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getLength($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(getLength(nums)).toStrictEqual(expected);
+                },
+        );
 });

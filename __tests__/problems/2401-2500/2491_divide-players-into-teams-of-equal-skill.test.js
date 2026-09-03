@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         dividePlayers,
         dividePlayers1,
@@ -11,17 +12,19 @@ const testcases = [
 ];
 
 describe('dividePlayers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('dividePlayers($skill) -> $expected', ({ skill, expected }) => {
-                expect(dividePlayers(skill)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'dividePlayers($skill) -> $expected',
+                ({ skill, expected }) => {
+                        expect(dividePlayers(skill)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('dividePlayers1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('dividePlayers1($skill) -> $expected', ({ skill, expected }) => {
-                expect(dividePlayers1(skill)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'dividePlayers1($skill) -> $expected',
+                ({ skill, expected }) => {
+                        expect(dividePlayers1(skill)).toStrictEqual(expected);
+                },
+        );
 });

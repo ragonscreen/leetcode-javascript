@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { separateDigits } from '../../../src/problems/2501-2600/2553_separate-the-digits-in-an-array.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('separateDigits', () => {
-        test.each(
-                structuredClone(testcases),
-        )('separateDigits($nums) -> $expected', ({ nums, expected }) => {
-                expect(separateDigits(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'separateDigits($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(separateDigits(nums)).toStrictEqual(expected);
+                },
+        );
 });

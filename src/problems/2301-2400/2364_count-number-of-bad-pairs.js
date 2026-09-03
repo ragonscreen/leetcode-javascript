@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 186,538
  * - Total Submissions: 344,147
  * - Acceptance Rate: 54.2%
  *
  * Similar Problems:
+ *
  * - count-equal-and-divisible-pairs-in-an-array (Easy)
  * - count-number-of-pairs-with-absolute-difference-k (Easy)
  * - count-nice-pairs-in-an-array (Medium)
@@ -33,7 +36,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const countBadPairs = (nums) => {
         const n = nums.length;

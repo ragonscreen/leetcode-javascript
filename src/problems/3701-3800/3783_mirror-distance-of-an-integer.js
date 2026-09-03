@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  *
  * Stats:
+ *
  * - Total Accepted: 114,919
  * - Total Submissions: 126,188
  * - Acceptance Rate: 91.1%
@@ -22,7 +24,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const mirrorDistance = (n) => {
         const r = (num) => {

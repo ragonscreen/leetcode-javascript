@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { valueAfterKSeconds } from '../../../src/problems/3101-3200/3179_find-the-n-th-value-after-k-seconds.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('valueAfterKSeconds', () => {
-        test.each(
-                structuredClone(testcases),
-        )('valueAfterKSeconds($n, $k) -> $expected', ({ n, k, expected }) => {
-                expect(valueAfterKSeconds(n, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'valueAfterKSeconds($n, $k) -> $expected',
+                ({ n, k, expected }) => {
+                        expect(valueAfterKSeconds(n, k)).toStrictEqual(expected);
+                },
+        );
 });

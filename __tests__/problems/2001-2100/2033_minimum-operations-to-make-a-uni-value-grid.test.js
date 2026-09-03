@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minOperations } from '../../../src/problems/2001-2100/2033_minimum-operations-to-make-a-uni-value-grid.js';
 
 const testcases = [
@@ -29,9 +30,10 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($grid, $x) -> $expected', ({ grid, x, expected }) => {
-                expect(minOperations(grid, x)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($grid, $x) -> $expected',
+                ({ grid, x, expected }) => {
+                        expect(minOperations(grid, x)).toStrictEqual(expected);
+                },
+        );
 });

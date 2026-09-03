@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Bit Manipulation (topic_19)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 118,529
  * - Total Submissions: 193,032
  * - Acceptance Rate: 61.4%
@@ -25,7 +27,7 @@
  *
  * @param {number} n
  * @param {number[][]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const productQueries = (n, queries) => {
         const mod = 1e9 + 7;

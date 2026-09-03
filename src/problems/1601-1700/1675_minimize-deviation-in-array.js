@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Heap (Priority Queue) (topic_61050)
  * - Ordered Set (topic_61070)
  *
  * Stats:
+ *
  * - Total Accepted: 100,940
  * - Total Submissions: 187,002
  * - Acceptance Rate: 54.0%
@@ -28,7 +30,7 @@ import { MaxPriorityQueue } from '@datastructures-js/priority-queue';
  * `n` = length of `nums`, `m` = maximum value of `nums[i]`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minimumDeviation = (nums) => {
         let min = Number.MAX_SAFE_INTEGER;

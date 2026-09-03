@@ -1,5 +1,5 @@
 /**
- * 0219. Contains Duplicate II
+ * 219. Contains Duplicate II
  *
  * Link: https://leetcode.com/problems/contains-duplicate-ii/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 1,718,597
  * - Total Submissions: 3,374,742
  * - Acceptance Rate: 50.9%
  *
  * Similar Problems:
+ *
  * - contains-duplicate (Easy)
  * - contains-duplicate-iii (Hard)
  */
@@ -29,7 +32,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {boolean}
+ * @returns {boolean}
  */
 const containsNearbyDuplicate = (nums, k) => {
         const set = new Set();

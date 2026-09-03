@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numberOfSubstrings } from '../../../src/problems/1301-1400/1358_number-of-substrings-containing-all-three-characters.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('numberOfSubstrings', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numberOfSubstrings($s) -> $expected', ({ s, expected }) => {
-                expect(numberOfSubstrings(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numberOfSubstrings($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(numberOfSubstrings(s)).toStrictEqual(expected);
+                },
+        );
 });

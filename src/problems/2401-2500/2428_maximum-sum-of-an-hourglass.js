@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 54,226
  * - Total Submissions: 71,068
  * - Acceptance Rate: 76.3%
  *
  * Similar Problems:
+ *
  * - matrix-block-sum (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const maxSum = (grid) => {
         const n = grid.length;
@@ -62,7 +65,7 @@ const maxSum = (grid) => {
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const maxSum1 = (grid) => {
         const n = grid.length;

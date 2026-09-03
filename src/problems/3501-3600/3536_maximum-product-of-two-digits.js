@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Sorting (topic_61049)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 448 (contest_weekly-contest-448)
  *
  * Stats:
+ *
  * - Total Accepted: 208,544
  * - Total Submissions: 275,526
  * - Acceptance Rate: 75.7%
@@ -26,7 +28,7 @@
  * `N` = `n`
  *
  * @param {number} n
- * @return {number}
+ * @returns {number}
  */
 const maxProduct = (n) => {
         let mx1 = -1;

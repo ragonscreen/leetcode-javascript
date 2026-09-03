@@ -1,5 +1,5 @@
 /**
- * 0811. Subdomain Visit Count
+ * 811. Subdomain Visit Count
  *
  * Link: https://leetcode.com/problems/subdomain-visit-count/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 263,332
  * - Total Submissions: 341,075
  * - Acceptance Rate: 77.2%
@@ -26,7 +28,7 @@
  * `n` = length of `cpdomains`, `m` = length of domain in `cpdomains`
  *
  * @param {string[]} cpdomains
- * @return {string[]}
+ * @returns {string[]}
  */
 const subdomainVisits = (cpdomains) => {
         const map = new Map();

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 9,698
  * - Total Submissions: 22,490
  * - Acceptance Rate: 43.1%
@@ -21,7 +22,7 @@
  *
  * @param {number[][]} points
  * @param {number[]} target
- * @return {number}
+ * @returns {number}
  */
 const minGenerations = (points, target) => {
         const p = (x, y, z) => x * 49 + y * 7 + z;

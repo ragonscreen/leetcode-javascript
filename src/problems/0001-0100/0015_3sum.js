@@ -1,5 +1,5 @@
 /**
- * 0015. 3Sum
+ * 15. 3Sum
  *
  * Link: https://leetcode.com/problems/3sum/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 5,746,162
  * - Total Submissions: 14,852,094
  * - Acceptance Rate: 38.7%
  *
  * Similar Problems:
+ *
  * - minimum-sum-of-mountain-triplets-i (Easy)
  * - number-of-arithmetic-triplets (Easy)
  * - two-sum (Easy)
@@ -34,7 +37,7 @@
  * `n` = length of `nums`, `m` = number of triplets in `nums`
  *
  * @param {number[]} nums
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const threeSum = (nums) => {
         nums.sort((a, b) => a - b);

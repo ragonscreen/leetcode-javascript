@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         removeStars,
         removeStars1,
@@ -10,18 +11,16 @@ const testcases = [
 ];
 
 describe('removeStars', () => {
-        test.each(structuredClone(testcases))('removeStars($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('removeStars($s) -> $expected', ({ s, expected }) => {
                 expect(removeStars(s)).toStrictEqual(expected);
         });
 });
 
 describe('removeStars1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeStars1($s) -> $expected', ({ s, expected }) => {
-                expect(removeStars1(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeStars1($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(removeStars1(s)).toStrictEqual(expected);
+                },
+        );
 });

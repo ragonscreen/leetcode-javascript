@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Brainteaser (topic_32)
  *
  * Stats:
+ *
  * - Total Accepted: 34,549
  * - Total Submissions: 66,142
  * - Acceptance Rate: 52.2%
@@ -25,7 +27,7 @@
  * @param {number} a
  * @param {number} b
  * @param {number} c
- * @return {number[]}
+ * @returns {number[]}
  */
 const numMovesStones = (a, b, c) => {
         const [l, m, r] = [a, b, c].sort((x, y) => x - y);

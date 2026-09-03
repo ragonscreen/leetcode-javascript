@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { rotate } from '../../../src/problems/0001-0100/0048_rotate-image.js';
 
 const testcases = [
@@ -51,14 +52,14 @@ const testcases = [
 ];
 
 describe('rotate', () => {
-        test.each(structuredClone(testcases))('rotate($matrix) -> $expected', ({
-                matrix,
-                expected,
-        }) => {
-                expect(rotate(matrix)).toBeNil();
+        test.each(structuredClone(testcases))(
+                'rotate($matrix) -> $expected',
+                ({ matrix, expected }) => {
+                        expect(rotate(matrix)).toBeNil();
 
-                for (let i = 0; i < matrix.length; i++) {
-                        expect(matrix[i]).toStrictEqual(expected[i]);
-                }
-        });
+                        for (let i = 0; i < matrix.length; i++) {
+                                expect(matrix[i]).toStrictEqual(expected[i]);
+                        }
+                },
+        );
 });

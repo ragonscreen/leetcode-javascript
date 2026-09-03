@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { removeDuplicates } from '../../../src/problems/1201-1300/1209_remove-all-adjacent-duplicates-in-string-ii.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('removeDuplicates', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeDuplicates($s, $k) -> $expected', ({ s, k, expected }) => {
-                expect(removeDuplicates(s, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeDuplicates($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(removeDuplicates(s, k)).toStrictEqual(expected);
+                },
+        );
 });

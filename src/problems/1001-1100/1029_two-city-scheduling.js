@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
@@ -17,11 +18,13 @@
  * - Weekly Contest 133 (contest_weekly-contest-133)
  *
  * Stats:
+ *
  * - Total Accepted: 297,159
  * - Total Submissions: 431,136
  * - Acceptance Rate: 68.9%
  *
  * Similar Problems:
+ *
  * - rearrange-array-to-maximize-prefix-score (Medium)
  */
 
@@ -37,7 +40,7 @@
  * half should be sent to B and the second half to A.
  *
  * @param {number[][]} costs
- * @return {number}
+ * @returns {number}
  */
 const twoCitySchedCost = (costs) => {
         const n = costs.length;

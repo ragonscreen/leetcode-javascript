@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 48,301
  * - Total Submissions: 110,931
  * - Acceptance Rate: 43.5%
@@ -26,7 +28,7 @@
  *
  * @param {number[]} nums
  * @param {number[]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const solveQueries = (nums, queries) => {
         const n = nums.length;
@@ -59,12 +61,7 @@ const solveQueries = (nums, queries) => {
                         const distR = Math.abs(idx - idxR);
                         const distL = Math.abs(idx - idxL);
 
-                        minDists[idx] = Math.min(
-                                distR,
-                                n - distR,
-                                distL,
-                                n - distL,
-                        );
+                        minDists[idx] = Math.min(distR, n - distR, distL, n - distL);
                 }
         }
 
@@ -79,14 +76,13 @@ const solveQueries = (nums, queries) => {
 };
 
 /**
- * Approach: Hash Map + Binary Search
- * Time Complexity: O(n + m log k)
- * Space Complexity: O(n) auxiliary, O(n + m) total
- * `n` = length of `nums`, `m` = length of `queries`, `k` = maximum count of occurences of each value in `nums`
+ * Approach: Hash Map + Binary Search Time Complexity: O(n + m log k) Space Complexity: O(n)
+ * auxiliary, O(n + m) total `n` = length of `nums`, `m` = length of `queries`, `k` = maximum count
+ * of occurences of each value in `nums`
  *
  * @param {number[]} nums
  * @param {number[]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const solveQueries1 = (nums, queries) => {
         const n = nums.length;

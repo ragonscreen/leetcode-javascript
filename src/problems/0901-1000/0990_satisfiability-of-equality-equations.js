@@ -1,5 +1,5 @@
 /**
- * 0990. Satisfiability of Equality Equations
+ * 990. Satisfiability of Equality Equations
  *
  * Link: https://leetcode.com/problems/satisfiability-of-equality-equations/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Union-Find (topic_23)
@@ -16,6 +17,7 @@
  * - Weekly Contest 123 (contest_weekly-contest-123)
  *
  * Stats:
+ *
  * - Total Accepted: 169,840
  * - Total Submissions: 327,490
  * - Acceptance Rate: 51.9%
@@ -28,7 +30,7 @@
  * `n` = `equations.length`
  *
  * @param {string[]} equations
- * @return {boolean}
+ * @returns {boolean}
  */
 const equationsPossible = (equations) => {
         const n = equations.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { isNumber } from '../../../src/problems/0001-0100/0065_valid-number.js';
 
 const testcases = [
@@ -14,10 +15,7 @@ const testcases = [
 ];
 
 describe('isNumber', () => {
-        test.each(structuredClone(testcases))('isNumber($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('isNumber($s) -> $expected', ({ s, expected }) => {
                 expect(isNumber(s)).toStrictEqual(expected);
         });
 });

@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 205,583
  * - Total Submissions: 297,946
  * - Acceptance Rate: 69.0%
  *
  * Similar Problems:
+ *
  * - available-captures-for-rook (Easy)
  * - bomb-enemy (Medium)
  */
@@ -31,7 +34,7 @@
  * @param {number} n
  * @param {number[][]} guards
  * @param {number[][]} walls
- * @return {number}
+ * @returns {number}
  */
 const countUnguarded = (m, n, guards, walls) => {
         const grid = new Array(m);

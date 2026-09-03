@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { largestInteger } from '../../../src/problems/3401-3500/3471_find-the-largest-almost-missing-integer.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('largestInteger', () => {
-        test.each(
-                structuredClone(testcases),
-        )('largestInteger($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(largestInteger(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'largestInteger($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(largestInteger(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

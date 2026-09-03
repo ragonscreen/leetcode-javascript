@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumLength } from '../../../src/problems/1701-1800/1750_minimum-length-of-string-after-deleting-similar-ends.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('minimumLength', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumLength($s) -> $expected', ({ s, expected }) => {
-                expect(minimumLength(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumLength($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(minimumLength(s)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0038. Count and Say
+ * 38. Count and Say
  *
  * Link: https://leetcode.com/problems/count-and-say/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 1,405,179
  * - Total Submissions: 2,242,196
  * - Acceptance Rate: 62.7%
  *
  * Similar Problems:
+ *
  * - encode-and-decode-strings (Medium)
  * - string-compression (Medium)
  */
@@ -27,7 +30,7 @@
  * `n` = `n`, `k` = length of rle string for each iteration
  *
  * @param {number} n
- * @return {string}
+ * @returns {string}
  */
 const countAndSay = (n) => {
         const rle = (s) => {
@@ -60,7 +63,7 @@ const countAndSay = (n) => {
  * `n` = `n`, `k` = length of rle string for each iteration
  *
  * @param {number} n
- * @return {string}
+ * @returns {string}
  */
 const countAndSay1 = (n) => {
         const rle = (s) => {

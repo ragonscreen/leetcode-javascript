@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minJumps } from '../../../src/problems/3601-3700/3629_minimum-jumps-to-reach-end-via-prime-teleportation.js';
 
 const testcases = [
@@ -9,10 +10,10 @@ const testcases = [
 ];
 
 describe('minJumps', () => {
-        test.each(structuredClone(testcases))('minJumps($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(minJumps(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minJumps($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minJumps(nums)).toStrictEqual(expected);
+                },
+        );
 });

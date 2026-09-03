@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         countWordOccurrences,
         countWordOccurrences1,
@@ -28,29 +29,19 @@ const testcases = [
 ];
 
 describe('countWordOccurrences', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countWordOccurrences($chunks, $queries) -> $expected', ({
-                chunks,
-                queries,
-                expected,
-        }) => {
-                expect(countWordOccurrences(chunks, queries)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countWordOccurrences($chunks, $queries) -> $expected',
+                ({ chunks, queries, expected }) => {
+                        expect(countWordOccurrences(chunks, queries)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countWordOccurrences1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countWordOccurrences1($chunks, $queries) -> $expected', ({
-                chunks,
-                queries,
-                expected,
-        }) => {
-                expect(countWordOccurrences1(chunks, queries)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'countWordOccurrences1($chunks, $queries) -> $expected',
+                ({ chunks, queries, expected }) => {
+                        expect(countWordOccurrences1(chunks, queries)).toStrictEqual(expected);
+                },
+        );
 });

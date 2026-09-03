@@ -1,5 +1,5 @@
 /**
- * 0045. Jump Game II
+ * 45. Jump Game II
  *
  * Link: https://leetcode.com/problems/jump-game-ii/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 2,115,589
  * - Total Submissions: 4,954,067
  * - Acceptance Rate: 42.7%
  *
  * Similar Problems:
+ *
  * - jump-game (Medium)
  * - jump-game-iii (Medium)
  * - jump-game-vii (Medium)
@@ -33,7 +36,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const jump = (nums) => {
         const n = nums.length;

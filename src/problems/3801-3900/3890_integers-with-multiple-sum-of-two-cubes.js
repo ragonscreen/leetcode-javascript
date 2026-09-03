@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
  * - Counting (topic_61062)
@@ -16,6 +17,7 @@
  * - Weekly Contest 496 (contest_weekly-contest-496)
  *
  * Stats:
+ *
  * - Total Accepted: 31,893
  * - Total Submissions: 57,383
  * - Acceptance Rate: 55.6%
@@ -28,7 +30,7 @@
  * `N` = `n`, `k` = count of valid numbers
  *
  * @param {number} n
- * @return {number[]}
+ * @returns {number[]}
  */
 const findGoodIntegers = (n) => {
         const max = Math.floor(Math.cbrt(n));

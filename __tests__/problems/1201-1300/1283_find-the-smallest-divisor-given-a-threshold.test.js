@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { smallestDivisor } from '../../../src/problems/1201-1300/1283_find-the-smallest-divisor-given-a-threshold.js';
 
 const testcases = [
@@ -9,15 +10,10 @@ const testcases = [
 ];
 
 describe('smallestDivisor', () => {
-        test.each(
-                structuredClone(testcases),
-        )('smallestDivisor($nums, $threshold) -> $expected', ({
-                nums,
-                threshold,
-                expected,
-        }) => {
-                expect(smallestDivisor(nums, threshold)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'smallestDivisor($nums, $threshold) -> $expected',
+                ({ nums, threshold, expected }) => {
+                        expect(smallestDivisor(nums, threshold)).toStrictEqual(expected);
+                },
+        );
 });

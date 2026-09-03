@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Breadth-First Search (topic_22)
  * - Matrix (topic_61053)
@@ -15,11 +16,13 @@
  * - Weekly Contest 141 (contest_weekly-contest-141)
  *
  * Stats:
+ *
  * - Total Accepted: 853,603
  * - Total Submissions: 1,656,623
  * - Acceptance Rate: 51.5%
  *
  * Similar Problems:
+ *
  * - paths-in-matrix-whose-sum-is-divisible-by-k (Hard)
  */
 
@@ -30,7 +33,7 @@
  * `n` = `grid.length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const shortestPathBinaryMatrix = (grid) => {
         const n = grid.length;
@@ -63,13 +66,7 @@ const shortestPathBinaryMatrix = (grid) => {
                                 const nx = x + d[i + 1];
                                 const nk = p(ny, nx);
 
-                                if (
-                                        ny < 0 ||
-                                        ny >= n ||
-                                        nx < 0 ||
-                                        nx >= n ||
-                                        grid[ny][nx]
-                                ) {
+                                if (ny < 0 || ny >= n || nx < 0 || nx >= n || grid[ny][nx]) {
                                         continue;
                                 }
 

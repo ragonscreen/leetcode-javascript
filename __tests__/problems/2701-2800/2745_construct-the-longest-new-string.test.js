@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestString } from '../../../src/problems/2701-2800/2745_construct-the-longest-new-string.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('longestString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestString($x, $y, $z) -> $expected', ({ x, y, z, expected }) => {
-                expect(longestString(x, y, z)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestString($x, $y, $z) -> $expected',
+                ({ x, y, z, expected }) => {
+                        expect(longestString(x, y, z)).toStrictEqual(expected);
+                },
+        );
 });

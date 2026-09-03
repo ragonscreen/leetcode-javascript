@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { lengthOfLastWord } from '../../../src/problems/0001-0100/0058_length-of-last-word.js';
 
 const testcases = [
@@ -13,9 +14,10 @@ const testcases = [
 ];
 
 describe('lengthOfLastWord', () => {
-        test.each(
-                structuredClone(testcases),
-        )('lengthOfLastWord($s) -> $expected', ({ s, expected }) => {
-                expect(lengthOfLastWord(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'lengthOfLastWord($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(lengthOfLastWord(s)).toStrictEqual(expected);
+                },
+        );
 });

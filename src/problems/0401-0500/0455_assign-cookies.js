@@ -1,5 +1,5 @@
 /**
- * 0455. Assign Cookies
+ * 455. Assign Cookies
  *
  * Link: https://leetcode.com/problems/assign-cookies/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 940,221
  * - Total Submissions: 1,713,306
  * - Acceptance Rate: 54.9%
@@ -26,7 +28,7 @@
  *
  * @param {number[]} g
  * @param {number[]} s
- * @return {number}
+ * @returns {number}
  */
 const findContentChildren = (g, s) => {
         g.sort((a, b) => b - a);

@@ -1,5 +1,5 @@
 /**
- * 0316. Remove Duplicate Letters
+ * 316. Remove Duplicate Letters
  *
  * Link: https://leetcode.com/problems/remove-duplicate-letters/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Greedy (topic_17)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 485,881
  * - Total Submissions: 894,341
  * - Acceptance Rate: 54.3%
  *
  * Similar Problems:
+ *
  * - lexicographically-smallest-string-after-deleting-duplicate-characters (Hard)
  * - smallest-k-length-subsequence-with-occurrences-of-a-letter (Hard)
  */
@@ -30,7 +33,7 @@
  * `n` = `s.length`
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const removeDuplicateLetters = (s) => {
         const ord = (c) => c.charCodeAt() - 97;

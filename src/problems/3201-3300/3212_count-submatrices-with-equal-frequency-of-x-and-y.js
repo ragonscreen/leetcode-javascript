@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 107,001
  * - Total Submissions: 153,739
  * - Acceptance Rate: 69.6%
  *
  * Similar Problems:
+ *
  * - count-submatrices-with-all-ones (Medium)
  * - maximum-equal-frequency (Hard)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(m)
  *
  * @param {character[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const numberOfSubmatrices = (grid) => {
         const n = grid.length;
@@ -57,7 +60,7 @@ const numberOfSubmatrices = (grid) => {
  * Space Complexity: O(n * m * 2) = O(n * m)
  *
  * @param {character[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const numberOfSubmatrices1 = (grid) => {
         const n = grid.length;

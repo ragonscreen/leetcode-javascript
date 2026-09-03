@@ -1,5 +1,5 @@
 /**
- * 0041. First Missing Positive
+ * 41. First Missing Positive
  *
  * Link: https://leetcode.com/problems/first-missing-positive/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  *
  * Stats:
+ *
  * - Total Accepted: 1,714,146
  * - Total Submissions: 4,027,396
  * - Acceptance Rate: 42.6%
  *
  * Similar Problems:
+ *
  * - find-all-numbers-disappeared-in-an-array (Easy)
  * - missing-number (Easy)
  * - smallest-missing-integer-greater-than-sequential-prefix-sum (Easy)
@@ -34,7 +37,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const firstMissingPositive = (nums) => {
         const n = nums.length;

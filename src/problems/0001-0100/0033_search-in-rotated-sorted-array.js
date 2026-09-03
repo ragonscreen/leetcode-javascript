@@ -1,5 +1,5 @@
 /**
- * 0033. Search in Rotated Sorted Array
+ * 33. Search in Rotated Sorted Array
  *
  * Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 4,361,618
  * - Total Submissions: 9,841,200
  * - Acceptance Rate: 44.3%
  *
  * Similar Problems:
+ *
  * - find-minimum-in-rotated-sorted-array (Medium)
  * - pour-water-between-buckets-to-make-water-levels-equal (Medium)
  * - search-in-rotated-sorted-array-ii (Medium)
@@ -29,7 +32,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const search = (nums, target) => {
         let l = 0;
@@ -70,7 +73,7 @@ const search = (nums, target) => {
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const search1 = (nums, target) => {
         const n = nums.length;

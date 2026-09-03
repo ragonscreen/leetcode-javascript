@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { largestPrime } from '../../../src/problems/3701-3800/3770_largest-prime-from-consecutive-prime-sum.js';
 
 const testcases = [
@@ -16,9 +17,10 @@ const testcases = [
 ];
 
 describe('largestPrime', () => {
-        test.each(
-                structuredClone(testcases),
-        )('largestPrime($n) -> $expected', ({ n, expected }) => {
-                expect(largestPrime(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'largestPrime($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(largestPrime(n)).toStrictEqual(expected);
+                },
+        );
 });

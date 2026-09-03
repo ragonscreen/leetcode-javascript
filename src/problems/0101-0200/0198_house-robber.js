@@ -1,5 +1,5 @@
 /**
- * 0198. House Robber
+ * 198. House Robber
  *
  * Link: https://leetcode.com/problems/house-robber/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 3,560,596
  * - Total Submissions: 6,693,518
  * - Acceptance Rate: 53.2%
  *
  * Similar Problems:
+ *
  * - count-number-of-ways-to-place-houses (Medium)
  * - delete-and-earn (Medium)
  * - house-robber-ii (Medium)
@@ -39,7 +42,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const rob = (nums) => {
         const n = nums.length;
@@ -66,7 +69,7 @@ const rob = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const rob1 = (nums) => {
         const n = nums.length;

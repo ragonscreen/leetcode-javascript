@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         numberOfSubmatrices,
         numberOfSubmatrices1,
@@ -29,17 +30,19 @@ const testcases = [
 ];
 
 describe('numberOfSubmatrices', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numberOfSubmatrices($grid) -> $expected', ({ grid, expected }) => {
-                expect(numberOfSubmatrices(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numberOfSubmatrices($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(numberOfSubmatrices(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('numberOfSubmatrices1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numberOfSubmatrices1($grid) -> $expected', ({ grid, expected }) => {
-                expect(numberOfSubmatrices1(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numberOfSubmatrices1($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(numberOfSubmatrices1(grid)).toStrictEqual(expected);
+                },
+        );
 });

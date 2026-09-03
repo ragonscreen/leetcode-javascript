@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 276,299
  * - Total Submissions: 352,481
  * - Acceptance Rate: 78.4%
  *
  * Similar Problems:
+ *
  * - longest-substring-with-at-least-k-repeating-characters (Medium)
  * - longest-substring-without-repeating-characters (Medium)
  * - maximum-sum-of-distinct-subarrays-with-length-k (Medium)
@@ -31,7 +34,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const partitionString = (s) => {
         let res = 1;
@@ -57,7 +60,7 @@ const partitionString = (s) => {
  * Space Complexity: O(26) = O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const partitionString1 = (s) => {
         // faster than Set() because maximum size of `set` is 26

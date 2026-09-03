@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 671,010
  * - Total Submissions: 1,087,901
  * - Acceptance Rate: 61.7%
  *
  * Similar Problems:
+ *
  * - minimum-recolors-to-get-k-consecutive-black-blocks (Easy)
  * - length-of-the-longest-alphabetical-continuous-substring (Medium)
  * - maximum-white-tiles-covered-by-a-carpet (Medium)
@@ -29,7 +32,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxVowels = (s, k) => {
         const vowels = 'aeiou';

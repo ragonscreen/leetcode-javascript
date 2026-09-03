@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Sorting (topic_61049)
  * - Counting Sort (topic_61072)
@@ -15,11 +16,13 @@
  * - Weekly Contest 445 (contest_weekly-contest-445)
  *
  * Stats:
+ *
  * - Total Accepted: 186,109
  * - Total Submissions: 249,629
  * - Acceptance Rate: 74.6%
  *
  * Similar Problems:
+ *
  * - shortest-palindrome (Hard)
  */
 
@@ -30,7 +33,7 @@
  * `n` = `s.length`
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const smallestPalindrome = (s) => {
         const n = s.length;

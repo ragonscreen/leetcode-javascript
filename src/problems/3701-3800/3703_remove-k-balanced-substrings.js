@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 19,876
  * - Total Submissions: 60,875
  * - Acceptance Rate: 32.7%
@@ -25,7 +27,7 @@
  *
  * @param {string} s
  * @param {number} k
- * @return {string}
+ * @returns {string}
  */
 const removeSubstring = (s, k) => {
         const stack = [];

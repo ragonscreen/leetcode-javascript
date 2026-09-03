@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { isValidSudoku } from '../../../src/problems/0001-0100/0036_valid-sudoku.js';
 
 const testcases = [
@@ -33,9 +34,10 @@ const testcases = [
 ];
 
 describe('isValidSudoku', () => {
-        test.each(
-                structuredClone(testcases),
-        )('isValidSudoku($board) -> $expected', ({ board, expected }) => {
-                expect(isValidSudoku(board)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isValidSudoku($board) -> $expected',
+                ({ board, expected }) => {
+                        expect(isValidSudoku(board)).toStrictEqual(expected);
+                },
+        );
 });

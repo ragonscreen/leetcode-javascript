@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         pairSum,
         pairSum1,
@@ -12,19 +13,19 @@ const testcases = [
 ];
 
 describe('pairSum', () => {
-        test.each(structuredClone(testcases))('pairSum($head) -> $expected', ({
-                head,
-                expected,
-        }) => {
-                expect(pairSum(arrayToList(head))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'pairSum($head) -> $expected',
+                ({ head, expected }) => {
+                        expect(pairSum(arrayToList(head))).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('pairSum1', () => {
-        test.each(structuredClone(testcases))('pairSum1($head) -> $expected', ({
-                head,
-                expected,
-        }) => {
-                expect(pairSum1(arrayToList(head))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'pairSum1($head) -> $expected',
+                ({ head, expected }) => {
+                        expect(pairSum1(arrayToList(head))).toStrictEqual(expected);
+                },
+        );
 });

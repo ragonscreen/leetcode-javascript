@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { merge } from '../../../src/problems/0001-0100/0088_merge-sorted-array.js';
 
 const testcases = [
@@ -22,16 +23,11 @@ const testcases = [
 ];
 
 describe('merge', () => {
-        test.each(
-                structuredClone(testcases),
-        )('merge($nums1, $m, $nums2, $n) -> $expected', ({
-                nums1,
-                m,
-                nums2,
-                n,
-                expected,
-        }) => {
-                expect(merge(nums1, m, nums2, n)).toBeNil();
-                expect(nums1).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'merge($nums1, $m, $nums2, $n) -> $expected',
+                ({ nums1, m, nums2, n, expected }) => {
+                        expect(merge(nums1, m, nums2, n)).toBeNil();
+                        expect(nums1).toStrictEqual(expected);
+                },
+        );
 });

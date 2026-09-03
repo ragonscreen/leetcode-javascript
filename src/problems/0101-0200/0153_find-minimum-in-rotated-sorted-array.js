@@ -1,5 +1,5 @@
 /**
- * 0153. Find Minimum in Rotated Sorted Array
+ * 153. Find Minimum in Rotated Sorted Array
  *
  * Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 2,961,153
  * - Total Submissions: 5,484,607
  * - Acceptance Rate: 54.0%
  *
  * Similar Problems:
+ *
  * - search-in-rotated-sorted-array (Medium)
  * - find-minimum-in-rotated-sorted-array-ii (Hard)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const findMin = (nums) => {
         let l = 0;

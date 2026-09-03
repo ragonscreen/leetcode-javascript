@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { nextLargerNodes } from '../../../src/problems/1001-1100/1019_next-greater-node-in-linked-list.js';
 import { arrayToList } from '../../utils/linked-list.js';
 
@@ -8,11 +9,10 @@ const testcases = [
 ];
 
 describe('nextLargerNodes', () => {
-        test.each(
-                structuredClone(testcases),
-        )('nextLargerNodes($head) -> $expected', ({ head, expected }) => {
-                expect(nextLargerNodes(arrayToList(head))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'nextLargerNodes($head) -> $expected',
+                ({ head, expected }) => {
+                        expect(nextLargerNodes(arrayToList(head))).toStrictEqual(expected);
+                },
+        );
 });

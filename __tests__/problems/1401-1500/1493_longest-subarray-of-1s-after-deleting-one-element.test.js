@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestSubarray } from '../../../src/problems/1401-1500/1493_longest-subarray-of-1s-after-deleting-one-element.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('longestSubarray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestSubarray($nums) -> $expected', ({ nums, expected }) => {
-                expect(longestSubarray(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestSubarray($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(longestSubarray(nums)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 270,962
  * - Total Submissions: 362,616
  * - Acceptance Rate: 74.7%
  *
  * Similar Problems:
+ *
  * - move-zeroes (Easy)
  * - remove-duplicates-from-sorted-array (Easy)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const applyOperations = (nums) => {
         for (let i = 0; i < nums.length - 1; i++) {

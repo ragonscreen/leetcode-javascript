@@ -1,5 +1,5 @@
 /**
- * 0396. Rotate Function
+ * 396. Rotate Function
  *
  * Link: https://leetcode.com/problems/rotate-function/
  * Category: Algorithms
@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 144,191
  * - Total Submissions: 291,526
  * - Acceptance Rate: 49.5%
@@ -24,7 +26,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxRotateFunction = (nums) => {
         const n = nums.length;
@@ -54,7 +56,7 @@ const maxRotateFunction = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maxRotateFunction1 = (nums) => {
         const n = nums.length;

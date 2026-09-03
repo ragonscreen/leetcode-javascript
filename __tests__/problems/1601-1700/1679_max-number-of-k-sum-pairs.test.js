@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxOperations } from '../../../src/problems/1601-1700/1679_max-number-of-k-sum-pairs.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('maxOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxOperations($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(maxOperations(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxOperations($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(maxOperations(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

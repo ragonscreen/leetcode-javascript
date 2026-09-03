@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getSkyline } from '../../../src/problems/0000_wip/0218_the-skyline-problem.js';
 
 const testcases = [
@@ -33,9 +34,10 @@ const testcases = [
 ];
 
 describe.skip('getSkyline', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getSkyline($buildings) -> $expected', ({ buildings, expected }) => {
-                expect(getSkyline(buildings)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getSkyline($buildings) -> $expected',
+                ({ buildings, expected }) => {
+                        expect(getSkyline(buildings)).toStrictEqual(expected);
+                },
+        );
 });

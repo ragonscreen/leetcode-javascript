@@ -1,5 +1,5 @@
 /**
- * 0934. Shortest Bridge
+ * 934. Shortest Bridge
  *
  * Link: https://leetcode.com/problems/shortest-bridge/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
@@ -16,11 +17,13 @@
  * - Weekly Contest 109 (contest_weekly-contest-109)
  *
  * Stats:
+ *
  * - Total Accepted: 279,536
  * - Total Submissions: 469,778
  * - Acceptance Rate: 59.5%
  *
  * Similar Problems:
+ *
  * - minimum-number-of-operations-to-make-x-and-y-equal (Medium)
  */
 
@@ -31,7 +34,7 @@
  * `n` = `grid.length`
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const shortestBridge = (grid) => {
         const n = grid.length;
@@ -56,13 +59,7 @@ const shortestBridge = (grid) => {
                                 const nx = x + d[i + 1];
                                 const nk = n * ny + nx;
 
-                                if (
-                                        ny < 0 ||
-                                        ny >= n ||
-                                        nx < 0 ||
-                                        nx >= n ||
-                                        v[nk]
-                                ) {
+                                if (ny < 0 || ny >= n || nx < 0 || nx >= n || v[nk]) {
                                         continue;
                                 }
 
@@ -98,13 +95,7 @@ const shortestBridge = (grid) => {
                                         const nx = x + d[i + 1];
                                         const nk = n * ny + nx;
 
-                                        if (
-                                                ny < 0 ||
-                                                ny >= n ||
-                                                nx < 0 ||
-                                                nx >= n ||
-                                                v[nk]
-                                        ) {
+                                        if (ny < 0 || ny >= n || nx < 0 || nx >= n || v[nk]) {
                                                 continue;
                                         }
 

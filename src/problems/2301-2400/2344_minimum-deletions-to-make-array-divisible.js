@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 48,621
  * - Total Submissions: 79,277
  * - Acceptance Rate: 61.3%
  *
  * Similar Problems:
+ *
  * - check-if-array-pairs-are-divisible-by-k (Medium)
  */
 
@@ -32,7 +35,7 @@
  *
  * @param {number[]} nums
  * @param {number[]} numsDivide
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (nums, numsDivide) => {
         const g = (a, b) => (a ? g(b % a, a) : b);
@@ -79,7 +82,7 @@ const minOperations = (nums, numsDivide) => {
  *
  * @param {number[]} nums
  * @param {number[]} numsDivide
- * @return {number}
+ * @returns {number}
  */
 const minOperations1 = (nums, numsDivide) => {
         const g = (a, b) => (a ? g(b % a, a) : b);

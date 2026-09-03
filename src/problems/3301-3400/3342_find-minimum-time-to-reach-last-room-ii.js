@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Graph Theory (topic_24)
  * - Heap (Priority Queue) (topic_61050)
@@ -15,11 +16,13 @@
  * - Shortest Path (topic_61076)
  *
  * Stats:
+ *
  * - Total Accepted: 96,642
  * - Total Submissions: 142,854
  * - Acceptance Rate: 67.7%
  *
  * Similar Problems:
+ *
  * - minimum-cost-to-reach-destination-in-time (Hard)
  * - minimum-time-to-visit-a-cell-in-a-grid (Hard)
  */
@@ -32,7 +35,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} moveTime
- * @return {number}
+ * @returns {number}
  */
 const minTimeToReach = (moveTime) => {
         const n = moveTime.length;

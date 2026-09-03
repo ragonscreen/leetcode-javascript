@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
@@ -15,6 +16,7 @@
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 26,355
  * - Total Submissions: 51,550
  * - Acceptance Rate: 51.1%
@@ -26,7 +28,7 @@
  * Space Complexity: O(n)
  *
  * @param {string[]} words
- * @return {number}
+ * @returns {number}
  */
 const countPairs = (words) => {
         const ord = (c) => c.charCodeAt() - 97;

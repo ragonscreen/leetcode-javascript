@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { calculate } from '../../../src/problems/0201-0300/0227_basic-calculator-ii.js';
 
 const testcases = [
@@ -10,10 +11,7 @@ const testcases = [
 ];
 
 describe('calculate', () => {
-        test.each(structuredClone(testcases))('calculate($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('calculate($s) -> $expected', ({ s, expected }) => {
                 expect(calculate(s)).toStrictEqual(expected);
         });
 });

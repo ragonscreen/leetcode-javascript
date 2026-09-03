@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
@@ -15,6 +16,7 @@
  * - Number Theory (topic_61067)
  *
  * Stats:
+ *
  * - Total Accepted: 68,356
  * - Total Submissions: 158,211
  * - Acceptance Rate: 43.2%
@@ -29,7 +31,7 @@ import { Queue } from '@datastructures-js/queue';
  * `n` = length of `nums`, `k` = maximum value of `nums[i]`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minJumps = (nums) => {
         const n = nums.length;
@@ -109,7 +111,7 @@ const minJumps = (nums) => {
  * `n` = length of `nums`, `k` = maximum value of `nums[i]`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minJumps1 = (nums) => {
         const gpf = (num) => {

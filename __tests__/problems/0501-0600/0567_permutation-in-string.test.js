@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         checkInclusion,
         checkInclusion1,
@@ -18,17 +19,19 @@ const testcases = [
 ];
 
 describe('checkInclusion', () => {
-        test.each(
-                structuredClone(testcases),
-        )('checkInclusion($s1, $s2) -> $expected', ({ s1, s2, expected }) => {
-                expect(checkInclusion(s1, s2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'checkInclusion($s1, $s2) -> $expected',
+                ({ s1, s2, expected }) => {
+                        expect(checkInclusion(s1, s2)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('checkInclusion1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('checkInclusion1($s1, $s2) -> $expected', ({ s1, s2, expected }) => {
-                expect(checkInclusion1(s1, s2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'checkInclusion1($s1, $s2) -> $expected',
+                ({ s1, s2, expected }) => {
+                        expect(checkInclusion1(s1, s2)).toStrictEqual(expected);
+                },
+        );
 });

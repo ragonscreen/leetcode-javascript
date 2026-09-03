@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 8,920
  * - Total Submissions: 18,523
  * - Acceptance Rate: 48.2%
@@ -20,7 +21,7 @@
  *
  * @param {number[]} nums
  * @param {number[][]} queries
- * @return {number[]}
+ * @returns {number[]}
  */
 const minCost = (nums, queries) => {
         const n = nums.length;
@@ -67,10 +68,7 @@ const minCost = (nums, queries) => {
                 const [from, to] = queries[i];
                 // no need to check minimum because
                 // jump cost will always be >= walk cost
-                res[i] =
-                        from < to
-                                ? preR[to] - preR[from]
-                                : preL[to] - preL[from];
+                res[i] = from < to ? preR[to] - preR[from] : preL[to] - preL[from];
         }
 
         return res;

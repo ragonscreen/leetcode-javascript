@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Staff (position_staff)
  * - Weekly Contest 391 (contest_weekly-contest-391)
  *
  * Stats:
+ *
  * - Total Accepted: 45,809
  * - Total Submissions: 79,705
  * - Acceptance Rate: 57.5%
@@ -26,7 +28,7 @@
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const countAlternatingSubarrays = (nums) => {
         let res = 1;

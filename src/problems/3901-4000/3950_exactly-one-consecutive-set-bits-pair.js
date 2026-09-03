@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Biweekly Contest 184 (contest_biweekly-contest-184)
  *
  * Stats:
+ *
  * - Total Accepted: 27,142
  * - Total Submissions: 53,978
  * - Acceptance Rate: 50.3%
@@ -23,7 +25,7 @@
  * `N` = `n`
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const consecutiveSetBits = (n) => {
         let pre = 0;
@@ -46,7 +48,7 @@ const consecutiveSetBits = (n) => {
  * `N` = `n`
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const consecutiveSetBits1 = (n) => {
         const s = n.toString(2);

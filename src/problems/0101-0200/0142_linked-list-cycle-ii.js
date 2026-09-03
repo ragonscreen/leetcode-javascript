@@ -1,5 +1,5 @@
 /**
- * 0142. Linked List Cycle II
+ * 142. Linked List Cycle II
  *
  * Link: https://leetcode.com/problems/linked-list-cycle-ii/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Linked List (topic_7)
  * - Two Pointers (topic_9)
  *
  * Stats:
+ *
  * - Total Accepted: 2,022,453
  * - Total Submissions: 3,495,125
  * - Acceptance Rate: 57.9%
  *
  * Similar Problems:
+ *
  * - linked-list-cycle (Easy)
  * - find-the-duplicate-number (Medium)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {ListNode} head
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const detectCycle = (head) => {
         let hasCycle = false;

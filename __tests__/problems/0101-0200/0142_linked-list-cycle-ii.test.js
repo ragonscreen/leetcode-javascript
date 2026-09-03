@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { detectCycle } from '../../../src/problems/0101-0200/0142_linked-list-cycle-ii.js';
 import { arrayToList, createCycle } from '../../utils/linked-list.js';
 
@@ -13,35 +14,36 @@ const testcases = [
 ];
 
 describe('detectCycle', () => {
-        test.each(
-                structuredClone(testcases),
-        )('detectCycle($head, $pos) -> $expected', ({ head, pos }) => {
-                const list = createCycle(arrayToList(head), pos);
-                const recieved = detectCycle(list);
+        test.each(structuredClone(testcases))(
+                'detectCycle($head, $pos) -> $expected',
+                ({ head, pos }) => {
+                        const list = createCycle(arrayToList(head), pos);
+                        const recieved = detectCycle(list);
 
-                if (pos === -1) {
-                        expect(recieved).toStrictEqual(null);
-                } else {
-                        let slow = list;
-                        let fast = list;
+                        if (pos === -1) {
+                                expect(recieved).toStrictEqual(null);
+                        } else {
+                                let slow = list;
+                                let fast = list;
 
-                        while (fast?.next) {
-                                slow = slow.next;
-                                fast = fast.next.next;
+                                while (fast?.next) {
+                                        slow = slow.next;
+                                        fast = fast.next.next;
 
-                                if (fast === slow) {
-                                        break;
+                                        if (fast === slow) {
+                                                break;
+                                        }
                                 }
+
+                                let find = list;
+
+                                while (slow !== find) {
+                                        slow = slow.next;
+                                        find = find.next;
+                                }
+
+                                expect(recieved).toStrictEqual(find);
                         }
-
-                        let find = list;
-
-                        while (slow !== find) {
-                                slow = slow.next;
-                                find = find.next;
-                        }
-
-                        expect(recieved).toStrictEqual(find);
-                }
-        });
+                },
+        );
 });

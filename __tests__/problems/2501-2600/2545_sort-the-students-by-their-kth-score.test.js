@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { sortTheStudents } from '../../../src/problems/2501-2600/2545_sort-the-students-by-their-kth-score.js';
 
 const testcases = [
@@ -29,13 +30,10 @@ const testcases = [
 ];
 
 describe('sortTheStudents', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sortTheStudents($score, $k) -> $expected', ({
-                score,
-                k,
-                expected,
-        }) => {
-                expect(sortTheStudents(score, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sortTheStudents($score, $k) -> $expected',
+                ({ score, k, expected }) => {
+                        expect(sortTheStudents(score, k)).toStrictEqual(expected);
+                },
+        );
 });

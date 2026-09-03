@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { updateMatrix } from '../../../src/problems/0501-0600/0542_01-matrix.js';
 
 const testcases = [
@@ -29,9 +30,10 @@ const testcases = [
 ];
 
 describe('updateMatrix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('updateMatrix($mat) -> $expected', ({ mat, expected }) => {
-                expect(updateMatrix(mat)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'updateMatrix($mat) -> $expected',
+                ({ mat, expected }) => {
+                        expect(updateMatrix(mat)).toStrictEqual(expected);
+                },
+        );
 });

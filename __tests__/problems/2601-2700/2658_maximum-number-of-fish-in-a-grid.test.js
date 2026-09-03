@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findMaxFish } from '../../../src/problems/2601-2700/2658_maximum-number-of-fish-in-a-grid.js';
 
 const testcases = [
@@ -30,9 +31,10 @@ const testcases = [
 ];
 
 describe('findMaxFish', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findMaxFish($grid) -> $expected', ({ grid, expected }) => {
-                expect(findMaxFish(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findMaxFish($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(findMaxFish(grid)).toStrictEqual(expected);
+                },
+        );
 });

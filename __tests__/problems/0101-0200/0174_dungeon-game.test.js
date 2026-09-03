@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { calculateMinimumHP } from '../../../src/problems/0101-0200/0174_dungeon-game.js';
 
 const testcases = [
@@ -14,12 +15,10 @@ const testcases = [
 ];
 
 describe('calculateMinimumHP', () => {
-        test.each(
-                structuredClone(testcases),
-        )('calculateMinimumHP($dungeon) -> $expected', ({
-                dungeon,
-                expected,
-        }) => {
-                expect(calculateMinimumHP(dungeon)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'calculateMinimumHP($dungeon) -> $expected',
+                ({ dungeon, expected }) => {
+                        expect(calculateMinimumHP(dungeon)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0179. Largest Number
+ * 179. Largest Number
  *
  * Link: https://leetcode.com/problems/largest-number/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 811,832
  * - Total Submissions: 1,900,534
  * - Acceptance Rate: 42.7%
  *
  * Similar Problems:
+ *
  * - find-the-key-of-the-numbers (Easy)
  * - smallest-value-of-the-rearranged-number (Medium)
  */
@@ -30,7 +33,7 @@
  * `n` = length of `nums`, `k` = digit length of the largest number in `nums`
  *
  * @param {number[]} nums
- * @return {string}
+ * @returns {string}
  */
 const largestNumber = (nums) => {
         const sortFn = (a, b) => {
@@ -88,7 +91,7 @@ const largestNumber = (nums) => {
  * `n` = length of `nums`, `k` = digit length of the largest number in `nums`
  *
  * @param {number[]} nums
- * @return {string}
+ * @returns {string}
  */
 const largestNumber1 = (nums) => {
         const sortFn = (a, b) => {

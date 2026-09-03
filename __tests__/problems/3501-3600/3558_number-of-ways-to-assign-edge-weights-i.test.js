@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { assignEdgeWeights } from '../../../src/problems/3501-3600/3558_number-of-ways-to-assign-edge-weights-i.js';
 
 const testcases = [
@@ -15,9 +16,10 @@ const testcases = [
 ];
 
 describe('assignEdgeWeights', () => {
-        test.each(
-                structuredClone(testcases),
-        )('assignEdgeWeights($edges) -> $expected', ({ edges, expected }) => {
-                expect(assignEdgeWeights(edges)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'assignEdgeWeights($edges) -> $expected',
+                ({ edges, expected }) => {
+                        expect(assignEdgeWeights(edges)).toStrictEqual(expected);
+                },
+        );
 });

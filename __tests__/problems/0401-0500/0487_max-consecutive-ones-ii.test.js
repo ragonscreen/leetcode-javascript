@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findMaxConsecutiveOnes } from '../../../src/problems/0401-0500/0487_max-consecutive-ones-ii.js';
 
 const testcases = [
@@ -7,12 +8,10 @@ const testcases = [
 ];
 
 describe('findMaxConsecutiveOnes', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findMaxConsecutiveOnes($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(findMaxConsecutiveOnes(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findMaxConsecutiveOnes($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findMaxConsecutiveOnes(nums)).toStrictEqual(expected);
+                },
+        );
 });

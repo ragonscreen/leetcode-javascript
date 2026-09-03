@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         minFlips,
         minFlips1,
@@ -12,19 +13,13 @@ const testcases = [
 ];
 
 describe('minFlips', () => {
-        test.each(structuredClone(testcases))('minFlips($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('minFlips($s) -> $expected', ({ s, expected }) => {
                 expect(minFlips(s)).toStrictEqual(expected);
         });
 });
 
 describe('minFlips1', () => {
-        test.each(structuredClone(testcases))('minFlips1($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('minFlips1($s) -> $expected', ({ s, expected }) => {
                 expect(minFlips1(s)).toStrictEqual(expected);
         });
 });

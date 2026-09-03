@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Breadth-First Search (topic_22)
  *
  * Stats:
+ *
  * - Total Accepted: 164,032
  * - Total Submissions: 354,325
  * - Acceptance Rate: 46.3%
  *
  * Similar Problems:
+ *
  * - jump-game-vii (Medium)
  * - jump-game-viii (Medium)
  * - maximum-number-of-jumps-to-reach-the-last-index (Medium)
@@ -29,7 +32,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} arr
- * @return {number}
+ * @returns {number}
  */
 const minJumps = (arr) => {
         const n = arr.length;

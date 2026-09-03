@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { queensAttacktheKing } from '../../../src/problems/1201-1300/1222_queens-that-can-attack-the-king.js';
 
 const testcases = [
@@ -38,15 +39,10 @@ const testcases = [
 ];
 
 describe('queensAttacktheKing', () => {
-        test.each(
-                structuredClone(testcases),
-        )('queensAttacktheKing($queens, $king) -> $expected', ({
-                queens,
-                king,
-                expected,
-        }) => {
-                expect(queensAttacktheKing(queens, king)).toContainAllValues(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'queensAttacktheKing($queens, $king) -> $expected',
+                ({ queens, king, expected }) => {
+                        expect(queensAttacktheKing(queens, king)).toContainAllValues(expected);
+                },
+        );
 });

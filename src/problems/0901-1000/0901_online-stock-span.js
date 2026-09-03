@@ -1,5 +1,5 @@
 /**
- * 0901. Online Stock Span
+ * 901. Online Stock Span
  *
  * Link: https://leetcode.com/problems/online-stock-span/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Stack (topic_15)
  * - Design (topic_25)
  * - Monotonic Stack (topic_61054)
  * - Data Stream (topic_61063)
  *
  * Stats:
+ *
  * - Total Accepted: 582,417
  * - Total Submissions: 846,510
  * - Acceptance Rate: 68.8%
  *
  * Similar Problems:
+ *
  * - daily-temperatures (Medium)
  */
 
@@ -40,7 +43,7 @@ class StockSpanner {
          * Space Complexity: O(1)
          *
          * @param {number} price
-         * @return {number}
+         * @returns {number}
          */
         next(price) {
                 while (this.stack.length && this.stack.at(-1)[0] <= price) {

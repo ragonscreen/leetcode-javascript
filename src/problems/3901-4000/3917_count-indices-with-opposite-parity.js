@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 24,207
  * - Total Submissions: 30,052
  * - Acceptance Rate: 80.6%
@@ -19,7 +20,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const countOppositeParity = (nums) => {
         const n = nums.length;

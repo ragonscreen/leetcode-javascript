@@ -1,5 +1,5 @@
 /**
- * 0904. Fruit Into Baskets
+ * 904. Fruit Into Baskets
  *
  * Link: https://leetcode.com/problems/fruit-into-baskets/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 802,432
  * - Total Submissions: 1,582,680
  * - Acceptance Rate: 50.7%
  *
  * Similar Problems:
+ *
  * - fruits-into-baskets-ii (Easy)
  * - longest-nice-subarray (Medium)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} fruits
- * @return {number}
+ * @returns {number}
  */
 const totalFruit = (fruits) => {
         const map = new Map();

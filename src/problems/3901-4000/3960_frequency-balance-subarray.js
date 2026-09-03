@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Weekly Contest 506 (contest_weekly-contest-506)
  *
  * Stats:
+ *
  * - Total Accepted: 10,539
  * - Total Submissions: 46,686
  * - Acceptance Rate: 22.6%
@@ -22,7 +24,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const getLength = (nums) => {
         const n = nums.length;
@@ -51,10 +53,7 @@ const getLength = (nums) => {
                                 }
                         }
 
-                        if (
-                                frq.size === 1 ||
-                                (frc.size === 2 && frc.has(mxf / 2))
-                        ) {
+                        if (frq.size === 1 || (frc.size === 2 && frc.has(mxf / 2))) {
                                 res = Math.max(res, j - i + 1);
                         }
                 }

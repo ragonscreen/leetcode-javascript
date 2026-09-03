@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { scoreOfString } from '../../../src/problems/3101-3200/3110_score-of-a-string.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('scoreOfString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('scoreOfString($s) -> $expected', ({ s, expected }) => {
-                expect(scoreOfString(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'scoreOfString($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(scoreOfString(s)).toStrictEqual(expected);
+                },
+        );
 });

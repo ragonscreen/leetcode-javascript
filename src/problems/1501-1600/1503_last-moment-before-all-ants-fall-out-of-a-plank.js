@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Brainteaser (topic_32)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 99,202
  * - Total Submissions: 145,513
  * - Acceptance Rate: 68.2%
  *
  * Similar Problems:
+ *
  * - count-collisions-on-a-road (Medium)
  * - movement-of-robots (Medium)
  */
@@ -31,7 +34,7 @@
  * @param {number} n
  * @param {number[]} left
  * @param {number[]} right
- * @return {number}
+ * @returns {number}
  */
 const getLastMoment = (n, left, right) => {
         const maxRight = n - Math.min(...right);

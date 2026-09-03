@@ -1,5 +1,5 @@
 /**
- * 0344. Reverse String
+ * 344. Reverse String
  *
  * Link: https://leetcode.com/problems/reverse-string/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 3,740,027
  * - Total Submissions: 4,639,130
  * - Acceptance Rate: 80.6%
  *
  * Similar Problems:
+ *
  * - reverse-string-ii (Easy)
  * - reverse-vowels-of-a-string (Easy)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {character[]} s
- * @return {void}
+ * @returns {void}
  */
 const reverseString = (s) => {
         const n = s.length;

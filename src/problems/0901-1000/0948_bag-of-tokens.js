@@ -1,5 +1,5 @@
 /**
- * 0948. Bag of Tokens
+ * 948. Bag of Tokens
  *
  * Link: https://leetcode.com/problems/bag-of-tokens/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 267,590
  * - Total Submissions: 448,996
  * - Acceptance Rate: 59.6%
@@ -26,7 +28,7 @@
  *
  * @param {number[]} tokens
  * @param {number} power
- * @return {number}
+ * @returns {number}
  */
 const bagOfTokensScore = (tokens, power) => {
         tokens.sort((a, b) => a - b);

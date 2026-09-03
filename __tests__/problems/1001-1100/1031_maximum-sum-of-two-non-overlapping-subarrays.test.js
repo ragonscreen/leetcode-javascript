@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         maxSumTwoNoOverlap,
         maxSumTwoNoOverlap1,
@@ -26,31 +27,23 @@ const testcases = [
 ];
 
 describe('maxSumTwoNoOverlap', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSumTwoNoOverlap($nums, $firstLen, $secondLen) -> $expected', ({
-                nums,
-                firstLen,
-                secondLen,
-                expected,
-        }) => {
-                expect(
-                        maxSumTwoNoOverlap(nums, firstLen, secondLen),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSumTwoNoOverlap($nums, $firstLen, $secondLen) -> $expected',
+                ({ nums, firstLen, secondLen, expected }) => {
+                        expect(maxSumTwoNoOverlap(nums, firstLen, secondLen)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe('maxSumTwoNoOverlap1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSumTwoNoOverlap1($nums, $firstLen, $secondLen) -> $expected', ({
-                nums,
-                firstLen,
-                secondLen,
-                expected,
-        }) => {
-                expect(
-                        maxSumTwoNoOverlap1(nums, firstLen, secondLen),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSumTwoNoOverlap1($nums, $firstLen, $secondLen) -> $expected',
+                ({ nums, firstLen, secondLen, expected }) => {
+                        expect(maxSumTwoNoOverlap1(nums, firstLen, secondLen)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

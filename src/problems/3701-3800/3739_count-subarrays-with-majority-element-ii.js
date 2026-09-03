@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Divide and Conquer (topic_12)
@@ -18,6 +19,7 @@
  * - Biweekly Contest 169 (contest_biweekly-contest-169)
  *
  * Stats:
+ *
  * - Total Accepted: 76,228
  * - Total Submissions: 117,601
  * - Acceptance Rate: 64.8%
@@ -31,7 +33,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const countMajoritySubarrays = (nums, target) => {
         const n = nums.length;

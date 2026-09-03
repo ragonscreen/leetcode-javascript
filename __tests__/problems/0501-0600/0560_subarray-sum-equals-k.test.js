@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { subarraySum } from '../../../src/problems/0501-0600/0560_subarray-sum-equals-k.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('subarraySum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('subarraySum($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(subarraySum(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'subarraySum($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(subarraySum(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

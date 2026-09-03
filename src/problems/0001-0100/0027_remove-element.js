@@ -1,5 +1,5 @@
 /**
- * 0027. Remove Element
+ * 27. Remove Element
  *
  * Link: https://leetcode.com/problems/remove-element/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  *
  * Stats:
+ *
  * - Total Accepted: 5,076,679
  * - Total Submissions: 8,258,805
  * - Acceptance Rate: 61.5%
  *
  * Similar Problems:
+ *
  * - move-zeroes (Easy)
  * - remove-duplicates-from-sorted-array (Easy)
  * - remove-linked-list-elements (Easy)
@@ -29,7 +32,7 @@
  *
  * @param {number[]} nums
  * @param {number} val
- * @return {number}
+ * @returns {number}
  */
 const removeElement = (nums, val) => {
         let slow = 0;

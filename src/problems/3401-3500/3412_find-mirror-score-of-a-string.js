@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Stack (topic_15)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 25,184
  * - Total Submissions: 70,713
  * - Acceptance Rate: 35.6%
@@ -25,7 +27,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const calculateScore = (s) => {
         const map = new Array(26); // map of stack of indices

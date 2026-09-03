@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { checkSubarraySum } from '../../../src/problems/0501-0600/0523_continuous-subarray-sum.js';
 
 const testcases = [
@@ -11,13 +12,10 @@ const testcases = [
 ];
 
 describe('checkSubarraySum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('checkSubarraySum($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(checkSubarraySum(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'checkSubarraySum($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(checkSubarraySum(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

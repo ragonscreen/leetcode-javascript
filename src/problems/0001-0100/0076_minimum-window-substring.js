@@ -1,5 +1,5 @@
 /**
- * 0076. Minimum Window Substring
+ * 76. Minimum Window Substring
  *
  * Link: https://leetcode.com/problems/minimum-window-substring/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 2,091,903
  * - Total Submissions: 4,444,000
  * - Acceptance Rate: 47.1%
  *
  * Similar Problems:
+ *
  * - count-substrings-that-can-be-rearranged-to-contain-a-string-i (Medium)
  * - minimum-size-subarray-sum (Medium)
  * - permutation-in-string (Medium)
@@ -36,7 +39,7 @@
  *
  * @param {string} s
  * @param {string} t
- * @return {string}
+ * @returns {string}
  */
 const minWindow = (s, t) => {
         if (t.length > s.length) {
@@ -93,7 +96,7 @@ const minWindow = (s, t) => {
  *
  * @param {string} s
  * @param {string} t
- * @return {string}
+ * @returns {string}
  */
 const minWindow1 = (s, t) => {
         const checkValid = (keyS, keyT) => {

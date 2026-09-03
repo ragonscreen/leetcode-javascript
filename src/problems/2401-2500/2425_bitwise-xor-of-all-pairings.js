@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Bit Manipulation (topic_19)
  * - Brainteaser (topic_32)
  *
  * Stats:
+ *
  * - Total Accepted: 152,989
  * - Total Submissions: 228,657
  * - Acceptance Rate: 66.9%
@@ -26,7 +28,7 @@
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
- * @return {number}
+ * @returns {number}
  */
 const xorAllNums = (nums1, nums2) => {
         const xor = (nums) => {

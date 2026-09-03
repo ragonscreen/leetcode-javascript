@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         canChange,
         canChange1,
@@ -14,25 +15,19 @@ const testcases = [
 ];
 
 describe('canChange', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canChange($start, $target) -> $expected', ({
-                start,
-                target,
-                expected,
-        }) => {
-                expect(canChange(start, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canChange($start, $target) -> $expected',
+                ({ start, target, expected }) => {
+                        expect(canChange(start, target)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('canChange1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canChange1($start, $target) -> $expected', ({
-                start,
-                target,
-                expected,
-        }) => {
-                expect(canChange1(start, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canChange1($start, $target) -> $expected',
+                ({ start, target, expected }) => {
+                        expect(canChange1(start, target)).toStrictEqual(expected);
+                },
+        );
 });

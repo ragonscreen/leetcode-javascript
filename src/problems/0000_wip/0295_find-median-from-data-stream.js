@@ -1,5 +1,5 @@
 /**
- * 0295. Find Median from Data Stream
+ * 295. Find Median from Data Stream
  *
  * Link: https://leetcode.com/problems/find-median-from-data-stream/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - Design (topic_25)
  * - Sorting (topic_61049)
@@ -15,11 +16,13 @@
  * - Data Stream (topic_61063)
  *
  * Stats:
+ *
  * - Total Accepted: 1,204,082
  * - Total Submissions: 2,215,378
  * - Acceptance Rate: 54.4%
  *
  * Similar Problems:
+ *
  * - minimum-operations-to-make-median-of-array-equal-to-k (Medium)
  * - minimum-operations-to-make-subarray-elements-equal (Medium)
  * - finding-mk-average (Hard)
@@ -50,7 +53,7 @@ class MedianFinder {
          * `n` = size of `pq`
          *
          * @param {number} num
-         * @return {void}
+         * @returns {void}
          */
         addNum(num) {
                 this.pq.enqueue(num);
@@ -60,7 +63,7 @@ class MedianFinder {
          * Time Complexity: O(n)
          * Space Complexity: O(1)
          *
-         * @return {number}
+         * @returns {number}
          */
         findMedian() {
                 const size = this.pq.size();

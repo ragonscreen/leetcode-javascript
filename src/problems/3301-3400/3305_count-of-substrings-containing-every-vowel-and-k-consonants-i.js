@@ -1,23 +1,25 @@
 /**
  * 3305. Count of Substrings Containing Every Vowel and K Consonants I
  *
- * Link: https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-i/
- * Category: Algorithms
- * Difficulty: Medium
- * Date: 2026-03-20
- * Author: ragonscreen (https://github.com/ragonscreen/)
+ * Link:
+ * https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-i/
+ * Category: Algorithms Difficulty: Medium Date: 2026-03-20 Author: ragonscreen
+ * (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 32,646
  * - Total Submissions: 78,176
  * - Acceptance Rate: 41.8%
  *
  * Similar Problems:
+ *
  * - count-vowel-substrings-of-a-string (Easy)
  * - longest-substring-of-all-vowels-in-order (Medium)
  */
@@ -29,7 +31,7 @@
  *
  * @param {string} word
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const countOfSubstrings = (word, k) => {
         const getKey = (char) => {
@@ -60,10 +62,7 @@ const countOfSubstrings = (word, k) => {
                         l = m;
                 }
 
-                while (
-                        getKey(word[m]) !== 'c' &&
-                        map.get(getKey(word[m])) > 1
-                ) {
+                while (getKey(word[m]) !== 'c' && map.get(getKey(word[m])) > 1) {
                         const keyM = getKey(word[m]);
                         map.set(keyM, map.get(keyM) - 1);
                         m++;

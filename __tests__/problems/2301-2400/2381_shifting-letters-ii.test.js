@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { shiftingLetters } from '../../../src/problems/2301-2400/2381_shifting-letters-ii.js';
 
 const testcases = [
@@ -22,13 +23,10 @@ const testcases = [
 ];
 
 describe('shiftingLetters', () => {
-        test.each(
-                structuredClone(testcases),
-        )('shiftingLetters($s, $shifts) -> $expected', ({
-                s,
-                shifts,
-                expected,
-        }) => {
-                expect(shiftingLetters(s, shifts)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'shiftingLetters($s, $shifts) -> $expected',
+                ({ s, shifts, expected }) => {
+                        expect(shiftingLetters(s, shifts)).toStrictEqual(expected);
+                },
+        );
 });

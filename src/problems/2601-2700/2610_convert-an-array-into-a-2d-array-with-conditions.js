@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  *
  * Stats:
+ *
  * - Total Accepted: 225,821
  * - Total Submissions: 261,490
  * - Acceptance Rate: 86.4%
@@ -23,7 +25,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const findMatrix = (nums) => {
         const map = new Map();
@@ -45,7 +47,7 @@ const findMatrix = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const findMatrix1 = (nums) => {
         const sets = [];

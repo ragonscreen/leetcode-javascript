@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Dynamic Programming (topic_13)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 409,064
  * - Total Submissions: 627,223
  * - Acceptance Rate: 65.2%
@@ -26,7 +28,7 @@
  *
  * @param {string} colors
  * @param {number[]} neededTime
- * @return {number}
+ * @returns {number}
  */
 const minCost = (colors, neededTime) => {
         let res = 0;

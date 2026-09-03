@@ -1,5 +1,5 @@
 /**
- * 0554. Brick Wall
+ * 554. Brick Wall
  *
  * Link: https://leetcode.com/problems/brick-wall/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  *
  * Stats:
+ *
  * - Total Accepted: 170,262
  * - Total Submissions: 303,956
  * - Acceptance Rate: 56.0%
  *
  * Similar Problems:
+ *
  * - number-of-ways-to-build-sturdy-brick-wall (Medium)
  */
 
@@ -27,7 +30,7 @@
  * `n` = length of `wall`, `m` = length of `wall[i]`
  *
  * @param {number[][]} wall
- * @return {number}
+ * @returns {number}
  */
 const leastBricks = (wall) => {
         const n = wall.length;
@@ -56,7 +59,7 @@ const leastBricks = (wall) => {
  * `n` = length of `wall`, `m` = length of `wall[i]`
  *
  * @param {number[][]} wall
- * @return {number}
+ * @returns {number}
  */
 const leastBricks1 = (wall) => {
         const n = wall.length;

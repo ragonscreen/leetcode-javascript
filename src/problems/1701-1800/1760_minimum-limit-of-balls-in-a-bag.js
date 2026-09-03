@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 153,757
  * - Total Submissions: 231,632
  * - Acceptance Rate: 66.4%
  *
  * Similar Problems:
+ *
  * - maximum-candies-allocated-to-k-children (Medium)
  * - minimized-maximum-of-products-distributed-to-any-store (Medium)
  */
@@ -29,7 +32,7 @@
  *
  * @param {number[]} nums
  * @param {number} maxOperations
- * @return {number}
+ * @returns {number}
  */
 const minimumSize = (nums, maxOperations) => {
         const check = (val) => {

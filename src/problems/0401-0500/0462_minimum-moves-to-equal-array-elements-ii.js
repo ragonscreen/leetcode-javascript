@@ -1,5 +1,5 @@
 /**
- * 0462. Minimum Moves to Equal Array Elements II
+ * 462. Minimum Moves to Equal Array Elements II
  *
  * Link: https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 227,947
  * - Total Submissions: 368,393
  * - Acceptance Rate: 61.9%
  *
  * Similar Problems:
+ *
  * - minimum-cost-to-make-array-equalindromic (Medium)
  * - minimum-moves-to-equal-array-elements (Medium)
  * - minimum-operations-to-make-a-uni-value-grid (Medium)
@@ -35,7 +38,7 @@
  * Space Complexity: O(1) auxiliary, O(n) for sorting
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minMoves2 = (nums) => {
         nums.sort((a, b) => a - b);

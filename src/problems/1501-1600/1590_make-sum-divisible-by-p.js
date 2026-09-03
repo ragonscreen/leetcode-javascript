@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Prefix Sum (topic_61068)
@@ -15,11 +16,13 @@
  * - Biweekly Contest 35 (contest_biweekly-contest-35)
  *
  * Stats:
+ *
  * - Total Accepted: 237,051
  * - Total Submissions: 556,453
  * - Acceptance Rate: 42.6%
  *
  * Similar Problems:
+ *
  * - find-the-divisibility-array-of-a-string (Medium)
  * - subarray-sums-divisible-by-k (Medium)
  */
@@ -36,7 +39,7 @@
  *
  * @param {number[]} nums
  * @param {number} p
- * @return {number}
+ * @returns {number}
  */
 const minSubarray = (nums, p) => {
         const n = nums.length;

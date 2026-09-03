@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 254 (contest_weekly-contest-254)
  *
  * Stats:
+ *
  * - Total Accepted: 247,360
  * - Total Submissions: 287,131
  * - Acceptance Rate: 86.1%
@@ -27,9 +29,8 @@
  *
  * @param {string[]} patterns
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
-const numOfStrings = (patterns, word) =>
-        patterns.filter((e) => word.includes(e)).length;
+const numOfStrings = (patterns, word) => patterns.filter((e) => word.includes(e)).length;
 
 export { numOfStrings };

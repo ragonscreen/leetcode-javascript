@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 208,765
  * - Total Submissions: 452,199
  * - Acceptance Rate: 46.2%
  *
  * Similar Problems:
+ *
  * - count-pairs-that-form-a-complete-day-i (Easy)
  * - count-pairs-that-form-a-complete-day-ii (Medium)
  * - count-array-pairs-divisible-by-k (Hard)
@@ -32,7 +35,7 @@
  *
  * @param {number[]} arr
  * @param {number} k
- * @return {boolean}
+ * @returns {boolean}
  */
 const canArrange = (arr, k) => {
         const map = new Uint32Array(k);
@@ -64,7 +67,7 @@ const canArrange = (arr, k) => {
  *
  * @param {number[]} arr
  * @param {number} k
- * @return {boolean}
+ * @returns {boolean}
  */
 const canArrange1 = (arr, k) => {
         const map = new Uint32Array(k);

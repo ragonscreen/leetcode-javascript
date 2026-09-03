@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findThePrefixCommonArray } from '../../../src/problems/2601-2700/2657_find-the-prefix-common-array-of-two-arrays.js';
 
 const testcases = [
@@ -8,15 +9,10 @@ const testcases = [
 ];
 
 describe('findThePrefixCommonArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findThePrefixCommonArray($A, $B) -> $expected', ({
-                A,
-                B,
-                expected,
-        }) => {
-                expect(
-                        Array.from(findThePrefixCommonArray(A, B)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findThePrefixCommonArray($A, $B) -> $expected',
+                ({ A, B, expected }) => {
+                        expect(Array.from(findThePrefixCommonArray(A, B))).toStrictEqual(expected);
+                },
+        );
 });

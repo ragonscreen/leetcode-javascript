@@ -1,23 +1,25 @@
 /**
  * 1888. Minimum Number of Flips to Make the Binary String Alternating
  *
- * Link: https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/
- * Category: Algorithms
- * Difficulty: Medium
- * Date: 2026-04-21
- * Author: ragonscreen (https://github.com/ragonscreen/)
+ * Link:
+ * https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/
+ * Category: Algorithms Difficulty: Medium Date: 2026-04-21 Author: ragonscreen
+ * (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Dynamic Programming (topic_13)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 126,101
  * - Total Submissions: 235,670
  * - Acceptance Rate: 53.5%
  *
  * Similar Problems:
+ *
  * - minimum-operations-to-make-the-array-alternating (Medium)
  */
 
@@ -27,7 +29,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minFlips = (s) => {
         const n = s.length;
@@ -68,7 +70,7 @@ const minFlips = (s) => {
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const minFlips1 = (s) => {
         const n = s.length;

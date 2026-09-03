@@ -8,9 +8,11 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 105,855
  * - Total Submissions: 173,078
  * - Acceptance Rate: 61.2%
@@ -24,7 +26,7 @@
  * @param {number[]} nums
  * @param {number} target
  * @param {number} start
- * @return {number}
+ * @returns {number}
  */
 const getMinDistance = (nums, target, start) => {
         const n = nums.length;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { openLock } from '../../../src/problems/0701-0800/0752_open-the-lock.js';
 
 const testcases = [
@@ -31,13 +32,10 @@ const testcases = [
 ];
 
 describe('openLock', () => {
-        test.each(
-                structuredClone(testcases),
-        )('openLock($deadends, $target) -> $expected', ({
-                deadends,
-                target,
-                expected,
-        }) => {
-                expect(openLock(deadends, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'openLock($deadends, $target) -> $expected',
+                ({ deadends, target, expected }) => {
+                        expect(openLock(deadends, target)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Simulation (topic_61055)
@@ -15,6 +16,7 @@
  * - Weekly Contest 172 (contest_weekly-contest-172)
  *
  * Stats:
+ *
  * - Total Accepted: 54,566
  * - Total Submissions: 80,180
  * - Acceptance Rate: 68.1%
@@ -27,7 +29,7 @@
  * `n` = number of words in `s`, `k` = max length of word
  *
  * @param {string} s
- * @return {string[]}
+ * @returns {string[]}
  */
 const printVertically = (s) => {
         const words = s.split(' ');

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { productQueries } from '../../../src/problems/0000_wip/2438_range-product-queries-of-powers.js';
 
 const testcases = [
@@ -77,27 +78,20 @@ const testcases = [
                         [4, 6],
                 ],
                 expected: [
-                        256, 128, 2, 4_194_304, 16_777_216, 512, 131_072, 128,
-                        256, 131_072, 8, 524_288, 268_435_456, 256, 128, 2,
-                        8192, 32_768, 128, 131_072, 16_384, 16, 16_384,
-                        4_194_304, 128, 256, 16_777_216, 32_768, 16_384, 512,
-                        512, 512, 4, 4_194_304, 16_384, 128, 8192, 256, 512, 4,
-                        64, 256, 147_483_634, 16, 512, 128, 1, 8, 512, 512,
-                        268_435_456, 16_384, 512, 4, 16_777_216,
+                        256, 128, 2, 4_194_304, 16_777_216, 512, 131_072, 128, 256, 131_072, 8,
+                        524_288, 268_435_456, 256, 128, 2, 8192, 32_768, 128, 131_072, 16_384, 16,
+                        16_384, 4_194_304, 128, 256, 16_777_216, 32_768, 16_384, 512, 512, 512, 4,
+                        4_194_304, 16_384, 128, 8192, 256, 512, 4, 64, 256, 147_483_634, 16, 512,
+                        128, 1, 8, 512, 512, 268_435_456, 16_384, 512, 4, 16_777_216,
                 ],
         },
 ];
 
 describe.skip('productQueries', () => {
-        test.each(
-                structuredClone(testcases),
-        )('productQueries($n, $queries) -> $expected', ({
-                n,
-                queries,
-                expected,
-        }) => {
-                expect(Array.from(productQueries(n, queries))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'productQueries($n, $queries) -> $expected',
+                ({ n, queries, expected }) => {
+                        expect(Array.from(productQueries(n, queries))).toStrictEqual(expected);
+                },
+        );
 });

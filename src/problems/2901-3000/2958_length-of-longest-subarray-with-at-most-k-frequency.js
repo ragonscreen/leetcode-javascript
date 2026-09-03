@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sliding Window (topic_55821)
@@ -15,11 +16,13 @@
  * - Biweekly Contest 119 (contest_biweekly-contest-119)
  *
  * Stats:
+ *
  * - Total Accepted: 334,150
  * - Total Submissions: 551,987
  * - Acceptance Rate: 60.5%
  *
  * Similar Problems:
+ *
  * - longest-substring-with-at-least-k-repeating-characters (Medium)
  */
 
@@ -33,7 +36,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxSubarrayLength = (nums, k) => {
         const map = {};
@@ -72,7 +75,7 @@ const maxSubarrayLength = (nums, k) => {
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const maxSubarrayLength1 = (nums, k) => {
         const map = {};

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { canSeePersonsCount } from '../../../src/problems/1901-2000/1944_number-of-visible-people-in-a-queue.js';
 
 const testcases = [
@@ -8,12 +9,10 @@ const testcases = [
 ];
 
 describe('canSeePersonsCount', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canSeePersonsCount($heights) -> $expected', ({
-                heights,
-                expected,
-        }) => {
-                expect(canSeePersonsCount(heights)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canSeePersonsCount($heights) -> $expected',
+                ({ heights, expected }) => {
+                        expect(canSeePersonsCount(heights)).toStrictEqual(expected);
+                },
+        );
 });

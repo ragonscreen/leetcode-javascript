@@ -1,5 +1,5 @@
 /**
- * 0383. Ransom Note
+ * 383. Ransom Note
  *
  * Link: https://leetcode.com/problems/ransom-note/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 1,911,793
  * - Total Submissions: 2,909,106
  * - Acceptance Rate: 65.7%
  *
  * Similar Problems:
+ *
  * - find-words-that-can-be-formed-by-characters (Easy)
  * - stickers-to-spell-word (Hard)
  */
@@ -30,7 +33,7 @@
  *
  * @param {string} ransomNote
  * @param {string} magazine
- * @return {boolean}
+ * @returns {boolean}
  */
 const canConstruct = (ransomNote, magazine) => {
         const map = new Map();

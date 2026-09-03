@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 81,330
  * - Total Submissions: 109,729
  * - Acceptance Rate: 74.1%
@@ -25,7 +27,7 @@
  *
  * @param {number[][]} grid
  * @param {number} k
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const rotateGrid = (grid, k) => {
         const n = grid.length;
@@ -108,7 +110,7 @@ const rotateGrid = (grid, k) => {
  *
  * @param {number[][]} grid
  * @param {number} k
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const rotateGrid1 = (grid, k) => {
         const n = grid.length;

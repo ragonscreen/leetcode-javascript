@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumDifference } from '../../../src/problems/1901-2000/1984_minimum-difference-between-highest-and-lowest-of-k-scores.js';
 
 const testcases = [
@@ -7,13 +8,10 @@ const testcases = [
 ];
 
 describe('minimumDifference', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumDifference($nums, $k) -> $expected', ({
-                nums,
-                k,
-                expected,
-        }) => {
-                expect(minimumDifference(nums, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimumDifference($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(minimumDifference(nums, k)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0877. Stone Game
+ * 877. Stone Game
  *
  * Link: https://leetcode.com/problems/stone-game/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
@@ -18,11 +19,13 @@
  * - Weekly Contest 95 (contest_weekly-contest-95)
  *
  * Stats:
+ *
  * - Total Accepted: 525,141
  * - Total Submissions: 682,130
  * - Acceptance Rate: 77.0%
  *
  * Similar Problems:
+ *
  * - stone-game-ix (Medium)
  * - stone-game-vi (Medium)
  * - stone-game-vii (Medium)
@@ -43,7 +46,7 @@
  * simply chooses the parity with more stones and wins the game.
  *
  * @param {number[]} piles
- * @return {boolean}
+ * @returns {boolean}
  */
 const stoneGame = (piles) => true;
 

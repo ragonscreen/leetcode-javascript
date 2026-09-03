@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { resultsArray } from '../../../src/problems/3201-3300/3254_find-the-power-of-k-size-subarrays-i.js';
 
 const testcases = [
@@ -8,11 +9,10 @@ const testcases = [
 ];
 
 describe('resultsArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('resultsArray($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(Array.from(resultsArray(nums, k))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'resultsArray($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(Array.from(resultsArray(nums, k))).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { totalFruit } from '../../../src/problems/0901-1000/0904_fruit-into-baskets.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('totalFruit', () => {
-        test.each(
-                structuredClone(testcases),
-        )('totalFruit($fruits) -> $expected', ({ fruits, expected }) => {
-                expect(totalFruit(fruits)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'totalFruit($fruits) -> $expected',
+                ({ fruits, expected }) => {
+                        expect(totalFruit(fruits)).toStrictEqual(expected);
+                },
+        );
 });

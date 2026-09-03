@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { decrypt } from '../../../src/problems/1601-1700/1652_defuse-the-bomb.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('decrypt', () => {
-        test.each(
-                structuredClone(testcases),
-        )('decrypt($code, $k) -> $expected', ({ code, k, expected }) => {
-                expect(Array.from(decrypt(code, k))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'decrypt($code, $k) -> $expected',
+                ({ code, k, expected }) => {
+                        expect(Array.from(decrypt(code, k))).toStrictEqual(expected);
+                },
+        );
 });

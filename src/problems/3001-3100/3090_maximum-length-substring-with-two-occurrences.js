@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sliding Window (topic_55821)
@@ -15,6 +16,7 @@
  * - Weekly Contest 390 (contest_weekly-contest-390)
  *
  * Stats:
+ *
  * - Total Accepted: 199,822
  * - Total Submissions: 257,036
  * - Acceptance Rate: 77.7%
@@ -27,7 +29,7 @@
  * `n` = `s.length`
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const maximumLengthSubstring = (s) => {
         const map = new Uint32Array(26);

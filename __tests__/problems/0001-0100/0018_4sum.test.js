@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { fourSum } from '../../../src/problems/0001-0100/0018_4sum.js';
 
 const testcases = [
@@ -15,13 +16,10 @@ const testcases = [
 ];
 
 describe('fourSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('fourSum($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(fourSum(nums, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'fourSum($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(fourSum(nums, target)).toStrictEqual(expected);
+                },
+        );
 });

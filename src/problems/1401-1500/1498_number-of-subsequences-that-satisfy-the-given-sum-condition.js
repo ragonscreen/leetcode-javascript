@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 250,576
  * - Total Submissions: 509,324
  * - Acceptance Rate: 49.2%
  *
  * Similar Problems:
+ *
  * - find-the-sum-of-subsequence-powers (Hard)
  * - find-the-sum-of-the-power-of-all-subsequences (Hard)
  * - minimum-operations-to-form-subsequence-with-target-sum (Hard)
@@ -31,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const numSubseq = (nums, target) => {
         nums.sort((a, b) => a - b);

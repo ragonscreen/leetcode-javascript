@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { missingInteger } from '../../../src/problems/2901-3000/2996_smallest-missing-integer-greater-than-sequential-prefix-sum.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('missingInteger', () => {
-        test.each(
-                structuredClone(testcases),
-        )('missingInteger($nums) -> $expected', ({ nums, expected }) => {
-                expect(missingInteger(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'missingInteger($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(missingInteger(nums)).toStrictEqual(expected);
+                },
+        );
 });

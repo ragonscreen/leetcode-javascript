@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Dynamic Programming (topic_13)
  * - Enumeration (topic_61066)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 170 (contest_biweekly-contest-170)
  *
  * Stats:
+ *
  * - Total Accepted: 58,340
  * - Total Submissions: 68,075
  * - Acceptance Rate: 85.7%
@@ -28,7 +30,7 @@
  *
  * @param {number} num1
  * @param {number} num2
- * @return {number}
+ * @returns {number}
  */
 const totalWaviness = (num1, num2) => {
         let res = 0;
@@ -47,10 +49,7 @@ const totalWaviness = (num1, num2) => {
                         const pre = a % 10;
                         const nxt = _num % 10;
 
-                        if (
-                                (val > pre && val > nxt) ||
-                                (val < pre && val < nxt)
-                        ) {
+                        if ((val > pre && val > nxt) || (val < pre && val < nxt)) {
                                 res++;
                         }
 
@@ -69,7 +68,7 @@ const totalWaviness = (num1, num2) => {
  *
  * @param {number} num1
  * @param {number} num2
- * @return {number}
+ * @returns {number}
  */
 const totalWaviness1 = (num1, num2) => {
         let res = 0;
@@ -89,10 +88,7 @@ const totalWaviness1 = (num1, num2) => {
                         const pre = d[j - 1];
                         const nxt = d[j + 1];
 
-                        if (
-                                (val > pre && val > nxt) ||
-                                (val < pre && val < nxt)
-                        ) {
+                        if ((val > pre && val > nxt) || (val < pre && val < nxt)) {
                                 res++;
                         }
                 }

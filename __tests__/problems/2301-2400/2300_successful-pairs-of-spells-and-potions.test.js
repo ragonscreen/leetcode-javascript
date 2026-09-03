@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         successfulPairs,
         successfulPairs1,
@@ -20,31 +21,19 @@ const testcases = [
 ];
 
 describe('successfulPairs', () => {
-        test.each(
-                structuredClone(testcases),
-        )('successfulPairs($spells, $potions, $success) -> $expected', ({
-                spells,
-                potions,
-                success,
-                expected,
-        }) => {
-                expect(successfulPairs(spells, potions, success)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'successfulPairs($spells, $potions, $success) -> $expected',
+                ({ spells, potions, success, expected }) => {
+                        expect(successfulPairs(spells, potions, success)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('successfulPairs1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('successfulPairs1($spells, $potions, $success) -> $expected', ({
-                spells,
-                potions,
-                success,
-                expected,
-        }) => {
-                expect(
-                        successfulPairs1(spells, potions, success),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'successfulPairs1($spells, $potions, $success) -> $expected',
+                ({ spells, potions, success, expected }) => {
+                        expect(successfulPairs1(spells, potions, success)).toStrictEqual(expected);
+                },
+        );
 });

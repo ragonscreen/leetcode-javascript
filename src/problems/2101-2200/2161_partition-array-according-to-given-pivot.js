@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 312,379
  * - Total Submissions: 347,980
  * - Acceptance Rate: 89.8%
  *
  * Similar Problems:
+ *
  * - partition-list (Medium)
  * - rearrange-array-elements-by-sign (Medium)
  */
@@ -29,7 +32,7 @@
  *
  * @param {number[]} nums
  * @param {number} pivot
- * @return {number[]}
+ * @returns {number[]}
  */
 const pivotArray = (nums, pivot) => {
         const n = nums.length;

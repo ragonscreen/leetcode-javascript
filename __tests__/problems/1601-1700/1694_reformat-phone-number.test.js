@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { reformatNumber } from '../../../src/problems/1601-1700/1694_reformat-phone-number.js';
 
 const testcases = [
@@ -9,9 +10,10 @@ const testcases = [
 ];
 
 describe('reformatNumber', () => {
-        test.each(
-                structuredClone(testcases),
-        )('reformatNumber($number) -> $expected', ({ number, expected }) => {
-                expect(reformatNumber(number)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'reformatNumber($number) -> $expected',
+                ({ number, expected }) => {
+                        expect(reformatNumber(number)).toStrictEqual(expected);
+                },
+        );
 });

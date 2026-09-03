@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxSubArray } from '../../../src/problems/0001-0100/0053_maximum-subarray.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('maxSubArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSubArray($nums) -> $expected', ({ nums, expected }) => {
-                expect(maxSubArray(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSubArray($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxSubArray(nums)).toStrictEqual(expected);
+                },
+        );
 });

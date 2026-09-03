@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minOperations } from '../../../src/problems/2801-2900/2870_minimum-number-of-operations-to-make-array-empty.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('minOperations', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minOperations($nums) -> $expected', ({ nums, expected }) => {
-                expect(minOperations(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minOperations($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(minOperations(nums)).toStrictEqual(expected);
+                },
+        );
 });

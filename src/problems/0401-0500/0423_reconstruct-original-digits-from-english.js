@@ -1,5 +1,5 @@
 /**
- * 0423. Reconstruct Original Digits from English
+ * 423. Reconstruct Original Digits from English
  *
  * Link: https://leetcode.com/problems/reconstruct-original-digits-from-english/
  * Category: Algorithms
@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Math (topic_8)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 99,926
  * - Total Submissions: 189,122
  * - Acceptance Rate: 52.8%
@@ -25,7 +27,7 @@
  * `n` = length of `s`, `k` = total count of all digits
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const originalDigits = (s) => {
         /*

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         maxIncreasingSubarrays,
         maxIncreasingSubarrays1,
@@ -10,23 +11,19 @@ const testcases = [
 ];
 
 describe('maxIncreasingSubarrays', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxIncreasingSubarrays($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(maxIncreasingSubarrays(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxIncreasingSubarrays($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxIncreasingSubarrays(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('maxIncreasingSubarrays1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxIncreasingSubarrays1($nums) -> $expected', ({
-                nums,
-                expected,
-        }) => {
-                expect(maxIncreasingSubarrays1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxIncreasingSubarrays1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxIncreasingSubarrays1(nums)).toStrictEqual(expected);
+                },
+        );
 });

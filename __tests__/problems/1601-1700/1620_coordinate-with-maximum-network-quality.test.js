@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { bestCoordinate } from '../../../src/problems/1601-1700/1620_coordinate-with-maximum-network-quality.js';
 
 const testcases = [
@@ -29,13 +30,10 @@ const testcases = [
 ];
 
 describe('bestCoordinate', () => {
-        test.each(
-                structuredClone(testcases),
-        )('bestCoordinate($towers, $radius) -> $expected', ({
-                towers,
-                radius,
-                expected,
-        }) => {
-                expect(bestCoordinate(towers, radius)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'bestCoordinate($towers, $radius) -> $expected',
+                ({ towers, radius, expected }) => {
+                        expect(bestCoordinate(towers, radius)).toStrictEqual(expected);
+                },
+        );
 });

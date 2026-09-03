@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Heap (Priority Queue) (topic_61050)
  *
  * Stats:
+ *
  * - Total Accepted: 150,289
  * - Total Submissions: 228,963
  * - Acceptance Rate: 65.6%
  *
  * Similar Problems:
+ *
  * - take-gifts-from-the-richest-pile (Easy)
  * - maximal-score-after-applying-k-operations (Medium)
  * - minimum-operations-to-halve-array-sum (Medium)
@@ -33,7 +36,7 @@ import { MaxPriorityQueue } from '@datastructures-js/priority-queue';
  *
  * @param {number[]} piles
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minStoneSum = (piles, k) => {
         let sum = 0;
@@ -52,7 +55,7 @@ const minStoneSum = (piles, k) => {
 
         let count = 0;
 
-        for (let i = max; i > -1; ) {
+        for (let i = max; i > -1;) {
                 if (!bucket[i]) {
                         i--;
                         continue;
@@ -79,7 +82,7 @@ const minStoneSum = (piles, k) => {
  *
  * @param {number[]} piles
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minStoneSum1 = (piles, k) => {
         let sum = 0;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         longestWord,
         longestWord1,
@@ -13,17 +14,19 @@ const testcases = [
 ];
 
 describe('longestWord', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestWord($words) -> $expected', ({ words, expected }) => {
-                expect(longestWord(words)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestWord($words) -> $expected',
+                ({ words, expected }) => {
+                        expect(longestWord(words)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('longestWord1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestWord1($words) -> $expected', ({ words, expected }) => {
-                expect(longestWord1(words)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestWord1($words) -> $expected',
+                ({ words, expected }) => {
+                        expect(longestWord1(words)).toStrictEqual(expected);
+                },
+        );
 });

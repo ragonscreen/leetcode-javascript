@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         sortArray,
         sortArray1,
@@ -12,25 +13,28 @@ const testcases = [
 ];
 
 describe('sortArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sortArray($nums) -> $expected', ({ nums, expected }) => {
-                expect(Array.from(sortArray(nums))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sortArray($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(Array.from(sortArray(nums))).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('sortArray1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sortArray1($nums) -> $expected', ({ nums, expected }) => {
-                expect(Array.from(sortArray1(nums))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sortArray1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(Array.from(sortArray1(nums))).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('sortArray2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('sortArray2($nums) -> $expected', ({ nums, expected }) => {
-                expect(Array.from(sortArray2(nums))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'sortArray2($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(Array.from(sortArray2(nums))).toStrictEqual(expected);
+                },
+        );
 });

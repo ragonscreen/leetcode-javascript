@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { latestTimeCatchTheBus } from '../../../src/problems/2301-2400/2332_the-latest-time-to-catch-a-bus.js';
 
 const testcases = [
@@ -29,16 +30,12 @@ const testcases = [
 ];
 
 describe('latestTimeCatchTheBus', () => {
-        test.each(
-                structuredClone(testcases),
-        )('latestTimeCatchTheBus($buses, $passengers, $capacity) -> $expected', ({
-                buses,
-                passengers,
-                capacity,
-                expected,
-        }) => {
-                expect(
-                        latestTimeCatchTheBus(buses, passengers, capacity),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'latestTimeCatchTheBus($buses, $passengers, $capacity) -> $expected',
+                ({ buses, passengers, capacity, expected }) => {
+                        expect(latestTimeCatchTheBus(buses, passengers, capacity)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Dynamic Programming (topic_13)
  * - Sliding Window (topic_55821)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 68,264
  * - Total Submissions: 256,769
  * - Acceptance Rate: 26.6%
  *
  * Similar Problems:
+ *
  * - count-vowel-strings-in-ranges (Medium)
  * - jump-game (Medium)
  * - jump-game-ii (Medium)
@@ -39,7 +42,7 @@
  * @param {string} s
  * @param {number} minJump
  * @param {number} maxJump
- * @return {boolean}
+ * @returns {boolean}
  */
 const canReach = (s, minJump, maxJump) => {
         const n = s.length;
@@ -63,7 +66,7 @@ const canReach = (s, minJump, maxJump) => {
  * @param {string} s
  * @param {number} minJump
  * @param {number} maxJump
- * @return {boolean}
+ * @returns {boolean}
  */
 const canReach1 = (s, minJump, maxJump) => {
         const n = s.length;

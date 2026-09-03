@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { isTrionic } from '../../../src/problems/3601-3700/3637_trionic-array-i.js';
 
 const testcases = [
@@ -10,9 +11,10 @@ const testcases = [
 ];
 
 describe('isTrionic', () => {
-        test.each(
-                structuredClone(testcases),
-        )('isTrionic($nums) -> $expected', ({ nums, expected }) => {
-                expect(isTrionic(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'isTrionic($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(isTrionic(nums)).toStrictEqual(expected);
+                },
+        );
 });

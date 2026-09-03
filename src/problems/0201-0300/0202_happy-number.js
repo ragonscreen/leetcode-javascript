@@ -1,5 +1,5 @@
 /**
- * 0202. Happy Number
+ * 202. Happy Number
  *
  * Link: https://leetcode.com/problems/happy-number/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - Math (topic_8)
  * - Two Pointers (topic_9)
  *
  * Stats:
+ *
  * - Total Accepted: 2,215,802
  * - Total Submissions: 3,733,207
  * - Acceptance Rate: 59.4%
  *
  * Similar Problems:
+ *
  * - add-digits (Easy)
  * - count-the-digits-that-divide-a-number (Easy)
  * - linked-list-cycle (Easy)
@@ -33,7 +36,7 @@
  * Space Complexity: O(1)
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const isHappy = (n) => {
         let slow = getVal(n);
@@ -58,7 +61,7 @@ const isHappy = (n) => {
  * `k` = number of unique numbers encountered
  *
  * @param {number} n
- * @return {boolean}
+ * @returns {boolean}
  */
 const isHappy1 = (n) => {
         const set = new Set();

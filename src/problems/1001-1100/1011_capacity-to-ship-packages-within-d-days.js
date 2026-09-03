@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 752,707
  * - Total Submissions: 1,021,347
  * - Acceptance Rate: 73.7%
  *
  * Similar Problems:
+ *
  * - cutting-ribbons (Medium)
  * - maximum-bags-with-full-capacity-of-rocks (Medium)
  * - minimized-maximum-of-products-distributed-to-any-store (Medium)
@@ -33,7 +36,7 @@
  *
  * @param {number[]} weights
  * @param {number} days
- * @return {number}
+ * @returns {number}
  */
 const shipWithinDays = (weights, days) => {
         const check = (size) => {

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { addDigits } from '../../../src/problems/0201-0300/0258_add-digits.js';
 
 const testcases = [
@@ -8,10 +9,10 @@ const testcases = [
 ];
 
 describe('addDigits', () => {
-        test.each(structuredClone(testcases))('addDigits($num) -> $expected', ({
-                num,
-                expected,
-        }) => {
-                expect(addDigits(num)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'addDigits($num) -> $expected',
+                ({ num, expected }) => {
+                        expect(addDigits(num)).toStrictEqual(expected);
+                },
+        );
 });

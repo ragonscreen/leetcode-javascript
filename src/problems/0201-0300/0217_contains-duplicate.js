@@ -1,5 +1,5 @@
 /**
- * 0217. Contains Duplicate
+ * 217. Contains Duplicate
  *
  * Link: https://leetcode.com/problems/contains-duplicate/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 6,202,605
  * - Total Submissions: 9,673,435
  * - Acceptance Rate: 64.1%
  *
  * Similar Problems:
+ *
  * - contains-duplicate-ii (Easy)
  * - find-valid-pair-of-adjacent-digits-in-string (Easy)
  * - make-array-zero-by-subtracting-equal-amounts (Easy)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const containsDuplicate = (nums) => {
         const set = new Set();

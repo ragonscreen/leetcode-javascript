@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         mergeKLists,
         mergeKLists1,
@@ -20,31 +21,34 @@ const testcases = [
 ];
 
 describe('mergeKLists', () => {
-        test.each(
-                structuredClone(testcases),
-        )('mergeKLists($lists) -> $expected', ({ lists, expected }) => {
-                expect(
-                        listToArray(mergeKLists(lists.map(arrayToList))),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'mergeKLists($lists) -> $expected',
+                ({ lists, expected }) => {
+                        expect(listToArray(mergeKLists(lists.map(arrayToList)))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe('mergeKLists1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('mergeKLists1($lists) -> $expected', ({ lists, expected }) => {
-                expect(
-                        listToArray(mergeKLists1(lists.map(arrayToList))),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'mergeKLists1($lists) -> $expected',
+                ({ lists, expected }) => {
+                        expect(listToArray(mergeKLists1(lists.map(arrayToList)))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe('mergeKLists2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('mergeKLists2($lists) -> $expected', ({ lists, expected }) => {
-                expect(
-                        listToArray(mergeKLists2(lists.map(arrayToList))),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'mergeKLists2($lists) -> $expected',
+                ({ lists, expected }) => {
+                        expect(listToArray(mergeKLists2(lists.map(arrayToList)))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

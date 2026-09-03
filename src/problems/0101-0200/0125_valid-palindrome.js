@@ -1,5 +1,5 @@
 /**
- * 0125. Valid Palindrome
+ * 125. Valid Palindrome
  *
  * Link: https://leetcode.com/problems/valid-palindrome/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Two Pointers (topic_9)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 5,246,222
  * - Total Submissions: 9,918,627
  * - Acceptance Rate: 52.9%
  *
  * Similar Problems:
+ *
  * - find-first-palindromic-string-in-the-array (Easy)
  * - palindrome-linked-list (Easy)
  * - valid-palindrome-ii (Easy)
@@ -31,7 +34,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} s
- * @return {boolean}
+ * @returns {boolean}
  */
 const isPalindrome = (s) => {
         let l = 0;

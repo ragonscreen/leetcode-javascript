@@ -1,19 +1,20 @@
 /**
  * 1415. The k-th Lexicographical String of All Happy Strings of Length n
  *
- * Link: https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/
- * Category: Algorithms
- * Difficulty: Medium
- * Date: 2026-05-20
- * Author: ragonscreen (https://github.com/ragonscreen/)
+ * Link:
+ * https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/
+ * Category: Algorithms Difficulty: Medium Date: 2026-05-20 Author: ragonscreen
+ * (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Backtracking (topic_14)
  * - Staff (position_staff)
  * - Biweekly Contest 24 (contest_biweekly-contest-24)
  *
  * Stats:
+ *
  * - Total Accepted: 276,299
  * - Total Submissions: 317,174
  * - Acceptance Rate: 87.1%
@@ -27,7 +28,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {string}
+ * @returns {string}
  */
 const getHappyString = (n, k) => {
         let rem = 2 ** (n - 1);

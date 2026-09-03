@@ -1,5 +1,5 @@
 /**
- * 0229. Majority Element II
+ * 229. Majority Element II
  *
  * Link: https://leetcode.com/problems/majority-element-ii/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Sorting (topic_61049)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 1,226,081
  * - Total Submissions: 2,193,283
  * - Acceptance Rate: 55.9%
  *
  * Similar Problems:
+ *
  * - check-if-a-number-is-majority-element-in-a-sorted-array (Easy)
  * - majority-element (Easy)
  * - most-frequent-even-element (Easy)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const majorityElement = (nums) => {
         const map = new Map();
@@ -86,7 +89,7 @@ const majorityElement = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const majorityElement1 = (nums) => {
         const set = new Set();

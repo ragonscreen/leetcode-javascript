@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { getDistances } from '../../../src/problems/2101-2200/2121_intervals-between-identical-elements.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('getDistances', () => {
-        test.each(
-                structuredClone(testcases),
-        )('getDistances($arr) -> $expected', ({ arr, expected }) => {
-                expect(Array.from(getDistances(arr))).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'getDistances($arr) -> $expected',
+                ({ arr, expected }) => {
+                        expect(Array.from(getDistances(arr))).toStrictEqual(expected);
+                },
+        );
 });

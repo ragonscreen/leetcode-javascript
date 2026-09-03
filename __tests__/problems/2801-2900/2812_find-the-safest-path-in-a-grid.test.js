@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumSafenessFactor } from '../../../src/problems/2801-2900/2812_find-the-safest-path-in-a-grid.js';
 
 const testcases = [
@@ -30,9 +31,10 @@ const testcases = [
 ];
 
 describe('maximumSafenessFactor', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumSafenessFactor($grid) -> $expected', ({ grid, expected }) => {
-                expect(maximumSafenessFactor(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumSafenessFactor($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(maximumSafenessFactor(grid)).toStrictEqual(expected);
+                },
+        );
 });

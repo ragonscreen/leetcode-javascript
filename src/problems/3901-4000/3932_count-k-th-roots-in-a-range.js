@@ -8,10 +8,12 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Senior (position_senior)
  * - Weekly Contest 502 (contest_weekly-contest-502)
  *
  * Stats:
+ *
  * - Total Accepted: 17,169
  * - Total Submissions: 80,657
  * - Acceptance Rate: 21.3%
@@ -25,7 +27,7 @@
  * @param {number} l
  * @param {number} r
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const countKthRoots = (l, r, k) => {
         const d = Number.EPSILON;
@@ -44,7 +46,7 @@ const countKthRoots = (l, r, k) => {
  * @param {number} l
  * @param {number} r
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const countKthRoots1 = (l, r, k) => {
         if (k === 1) {
@@ -80,7 +82,7 @@ const countKthRoots1 = (l, r, k) => {
  * @param {number} l
  * @param {number} r
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const countKthRoots2 = (l, r, k) => {
         const kthRoot = (num) => {

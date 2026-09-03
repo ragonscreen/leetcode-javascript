@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Trie (topic_27)
@@ -15,11 +16,13 @@
  * - Weekly Contest 390 (contest_weekly-contest-390)
  *
  * Stats:
+ *
  * - Total Accepted: 32,398
  * - Total Submissions: 71,140
  * - Acceptance Rate: 45.5%
  *
  * Similar Problems:
+ *
  * - longest-common-prefix (Easy)
  * - find-the-length-of-the-longest-common-prefix (Medium)
  */
@@ -40,7 +43,7 @@ class TrieNode {
  *
  * @param {string[]} wordsContainer
  * @param {string[]} wordsQuery
- * @return {number[]}
+ * @returns {number[]}
  */
 const stringIndices = (wordsContainer, wordsQuery) => {
         const n = wordsContainer.length;
@@ -111,7 +114,7 @@ const stringIndices = (wordsContainer, wordsQuery) => {
  *
  * @param {string[]} wordsContainer
  * @param {string[]} wordsQuery
- * @return {number[]}
+ * @returns {number[]}
  */
 const stringIndices1 = (wordsContainer, wordsQuery) => {
         const INF = Number.MAX_SAFE_INTEGER;

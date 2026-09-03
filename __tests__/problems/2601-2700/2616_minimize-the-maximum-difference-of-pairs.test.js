@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimizeMax } from '../../../src/problems/2601-2700/2616_minimize-the-maximum-difference-of-pairs.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('minimizeMax', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimizeMax($nums, $p) -> $expected', ({ nums, p, expected }) => {
-                expect(minimizeMax(nums, p)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minimizeMax($nums, $p) -> $expected',
+                ({ nums, p, expected }) => {
+                        expect(minimizeMax(nums, p)).toStrictEqual(expected);
+                },
+        );
 });

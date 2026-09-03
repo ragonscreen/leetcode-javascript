@@ -1,8 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import {
-        wordSubsets,
-        wordSubsets1,
-} from '../../../src/problems/0901-1000/0916_word-subsets.js';
+
+import { wordSubsets, wordSubsets1 } from '../../../src/problems/0901-1000/0916_word-subsets.js';
 
 const testcases = [
         {
@@ -23,25 +21,19 @@ const testcases = [
 ];
 
 describe('wordSubsets', () => {
-        test.each(
-                structuredClone(testcases),
-        )('wordSubsets($words1, $words2) -> $expected', ({
-                words1,
-                words2,
-                expected,
-        }) => {
-                expect(wordSubsets(words1, words2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'wordSubsets($words1, $words2) -> $expected',
+                ({ words1, words2, expected }) => {
+                        expect(wordSubsets(words1, words2)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('wordSubsets1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('wordSubsets1($words1, $words2) -> $expected', ({
-                words1,
-                words2,
-                expected,
-        }) => {
-                expect(wordSubsets1(words1, words2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'wordSubsets1($words1, $words2) -> $expected',
+                ({ words1, words2, expected }) => {
+                        expect(wordSubsets1(words1, words2)).toStrictEqual(expected);
+                },
+        );
 });

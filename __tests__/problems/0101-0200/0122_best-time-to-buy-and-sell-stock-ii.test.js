@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxProfit } from '../../../src/problems/0101-0200/0122_best-time-to-buy-and-sell-stock-ii.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('maxProfit', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxProfit($prices) -> $expected', ({ prices, expected }) => {
-                expect(maxProfit(prices)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxProfit($prices) -> $expected',
+                ({ prices, expected }) => {
+                        expect(maxProfit(prices)).toStrictEqual(expected);
+                },
+        );
 });

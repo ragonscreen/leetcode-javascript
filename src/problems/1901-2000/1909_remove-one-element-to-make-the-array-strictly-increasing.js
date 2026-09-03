@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 86,246
  * - Total Submissions: 290,187
  * - Acceptance Rate: 29.7%
  *
  * Similar Problems:
+ *
  * - find-the-maximum-factor-score-of-array (Medium)
  * - steps-to-make-array-non-decreasing (Medium)
  */
@@ -26,7 +29,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {boolean}
+ * @returns {boolean}
  */
 const canBeIncreasing = (nums) => {
         const n = nums.length;

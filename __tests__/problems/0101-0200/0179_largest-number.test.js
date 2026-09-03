@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { largestNumber } from '../../../src/problems/0101-0200/0179_largest-number.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('largestNumber', () => {
-        test.each(
-                structuredClone(testcases),
-        )('largestNumber($nums) -> $expected', ({ nums, expected }) => {
-                expect(largestNumber(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'largestNumber($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(largestNumber(nums)).toStrictEqual(expected);
+                },
+        );
 });

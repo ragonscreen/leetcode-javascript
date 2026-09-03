@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         countBattleships,
         countBattleships1,
@@ -20,17 +21,19 @@ const testcases = [
 ];
 
 describe('countBattleships', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countBattleships($board) -> $expected', ({ board, expected }) => {
-                expect(countBattleships(board)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countBattleships($board) -> $expected',
+                ({ board, expected }) => {
+                        expect(countBattleships(board)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countBattleships1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countBattleships1($board) -> $expected', ({ board, expected }) => {
-                expect(countBattleships1(board)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countBattleships1($board) -> $expected',
+                ({ board, expected }) => {
+                        expect(countBattleships1(board)).toStrictEqual(expected);
+                },
+        );
 });

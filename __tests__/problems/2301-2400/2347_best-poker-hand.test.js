@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { bestHand } from '../../../src/problems/2301-2400/2347_best-poker-hand.js';
 
 const testcases = [
@@ -20,13 +21,10 @@ const testcases = [
 ];
 
 describe('bestHand', () => {
-        test.each(
-                structuredClone(testcases),
-        )('bestHand($ranks, $suits) -> $expected', ({
-                ranks,
-                suits,
-                expected,
-        }) => {
-                expect(bestHand(ranks, suits)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'bestHand($ranks, $suits) -> $expected',
+                ({ ranks, suits, expected }) => {
+                        expect(bestHand(ranks, suits)).toStrictEqual(expected);
+                },
+        );
 });

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Math (topic_8)
@@ -15,11 +16,13 @@
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 487,768
  * - Total Submissions: 650,529
  * - Acceptance Rate: 75.0%
  *
  * Similar Problems:
+ *
  * - count-of-interesting-subarrays (Medium)
  * - k-divisible-elements-subarrays (Medium)
  * - ways-to-split-array-into-good-subarrays (Medium)
@@ -33,7 +36,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const numberOfSubarrays = (nums, k) => {
         let res = 0;

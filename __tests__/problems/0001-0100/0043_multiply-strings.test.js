@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { multiply } from '../../../src/problems/0001-0100/0043_multiply-strings.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('multiply', () => {
-        test.each(
-                structuredClone(testcases),
-        )('multiply($num1, $num2) -> $expected', ({ num1, num2, expected }) => {
-                expect(multiply(num1, num2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'multiply($num1, $num2) -> $expected',
+                ({ num1, num2, expected }) => {
+                        expect(multiply(num1, num2)).toStrictEqual(expected);
+                },
+        );
 });

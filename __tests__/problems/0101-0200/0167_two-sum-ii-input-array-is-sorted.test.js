@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { twoSum } from '../../../src/problems/0101-0200/0167_two-sum-ii-input-array-is-sorted.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('twoSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('twoSum($numbers, $target) -> $expected', ({
-                numbers,
-                target,
-                expected,
-        }) => {
-                expect(twoSum(numbers, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'twoSum($numbers, $target) -> $expected',
+                ({ numbers, target, expected }) => {
+                        expect(twoSum(numbers, target)).toStrictEqual(expected);
+                },
+        );
 });

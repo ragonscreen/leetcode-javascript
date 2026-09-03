@@ -1,32 +1,17 @@
 import { describe, expect, test } from 'bun:test';
+
 import { fullJustify } from '../../../src/problems/0001-0100/0068_text-justification.js';
 
 const testcases = [
         {
-                words: [
-                        'This',
-                        'is',
-                        'an',
-                        'example',
-                        'of',
-                        'text',
-                        'justification.',
-                ],
+                words: ['This', 'is', 'an', 'example', 'of', 'text', 'justification.'],
                 maxWidth: 16,
-                expected: [
-                        'This    is    an',
-                        'example  of text',
-                        'justification.  ',
-                ],
+                expected: ['This    is    an', 'example  of text', 'justification.  '],
         },
         {
                 words: ['What', 'must', 'be', 'acknowledgment', 'shall', 'be'],
                 maxWidth: 16,
-                expected: [
-                        'What   must   be',
-                        'acknowledgment  ',
-                        'shall be        ',
-                ],
+                expected: ['What   must   be', 'acknowledgment  ', 'shall be        '],
         },
         {
                 words: [
@@ -62,13 +47,10 @@ const testcases = [
 ];
 
 describe('fullJustify', () => {
-        test.each(
-                structuredClone(testcases),
-        )('fullJustify($words, $maxWidth) -> $expected', ({
-                words,
-                maxWidth,
-                expected,
-        }) => {
-                expect(fullJustify(words, maxWidth)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'fullJustify($words, $maxWidth) -> $expected',
+                ({ words, maxWidth, expected }) => {
+                        expect(fullJustify(words, maxWidth)).toStrictEqual(expected);
+                },
+        );
 });

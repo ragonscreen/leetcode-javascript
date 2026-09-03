@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         stringIndices,
         stringIndices1,
@@ -28,29 +29,23 @@ const testcases = [
 ];
 
 describe('stringIndices', () => {
-        test.each(
-                structuredClone(testcases),
-        )('stringIndices($wordsContainer, $wordsQuery) -> $expected', ({
-                wordsContainer,
-                wordsQuery,
-                expected,
-        }) => {
-                expect(
-                        Array.from(stringIndices(wordsContainer, wordsQuery)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'stringIndices($wordsContainer, $wordsQuery) -> $expected',
+                ({ wordsContainer, wordsQuery, expected }) => {
+                        expect(Array.from(stringIndices(wordsContainer, wordsQuery))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });
 
 describe('stringIndices1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('stringIndices1($wordsContainer, $wordsQuery) -> $expected', ({
-                wordsContainer,
-                wordsQuery,
-                expected,
-        }) => {
-                expect(
-                        Array.from(stringIndices1(wordsContainer, wordsQuery)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'stringIndices1($wordsContainer, $wordsQuery) -> $expected',
+                ({ wordsContainer, wordsQuery, expected }) => {
+                        expect(
+                                Array.from(stringIndices1(wordsContainer, wordsQuery)),
+                        ).toStrictEqual(expected);
+                },
+        );
 });

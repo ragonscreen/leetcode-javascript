@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         ladderLength,
         ladderLength1,
@@ -22,61 +23,37 @@ const testcases = [
 ];
 
 describe('ladderLength', () => {
-        test.each(
-                structuredClone(testcases),
-        )('ladderLength($beginWord, $endWord, $wordList) -> $expected', ({
-                beginWord,
-                endWord,
-                wordList,
-                expected,
-        }) => {
-                expect(
-                        ladderLength(beginWord, endWord, wordList),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'ladderLength($beginWord, $endWord, $wordList) -> $expected',
+                ({ beginWord, endWord, wordList, expected }) => {
+                        expect(ladderLength(beginWord, endWord, wordList)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('ladderLength1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('ladderLength1($beginWord, $endWord, $wordList) -> $expected', ({
-                beginWord,
-                endWord,
-                wordList,
-                expected,
-        }) => {
-                expect(
-                        ladderLength1(beginWord, endWord, wordList),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'ladderLength1($beginWord, $endWord, $wordList) -> $expected',
+                ({ beginWord, endWord, wordList, expected }) => {
+                        expect(ladderLength1(beginWord, endWord, wordList)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('ladderLength2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('ladderLength2($beginWord, $endWord, $wordList) -> $expected', ({
-                beginWord,
-                endWord,
-                wordList,
-                expected,
-        }) => {
-                expect(
-                        ladderLength2(beginWord, endWord, wordList),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'ladderLength2($beginWord, $endWord, $wordList) -> $expected',
+                ({ beginWord, endWord, wordList, expected }) => {
+                        expect(ladderLength2(beginWord, endWord, wordList)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('ladderLength3', () => {
-        test.each(
-                structuredClone(testcases),
-        )('ladderLength3($beginWord, $endWord, $wordList) -> $expected', ({
-                beginWord,
-                endWord,
-                wordList,
-                expected,
-        }) => {
-                expect(
-                        ladderLength3(beginWord, endWord, wordList),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'ladderLength3($beginWord, $endWord, $wordList) -> $expected',
+                ({ beginWord, endWord, wordList, expected }) => {
+                        expect(ladderLength3(beginWord, endWord, wordList)).toStrictEqual(expected);
+                },
+        );
 });

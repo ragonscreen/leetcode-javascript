@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Depth-First Search (topic_21)
@@ -16,11 +17,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 130,462
  * - Total Submissions: 190,038
  * - Acceptance Rate: 68.7%
  *
  * Similar Problems:
+ *
  * - bricks-falling-when-hit (Hard)
  * - escape-the-spreading-fire (Hard)
  */
@@ -36,7 +39,7 @@ import { Queue } from '@datastructures-js/queue';
  * @param {number} row
  * @param {number} col
  * @param {number[][]} cells
- * @return {number}
+ * @returns {number}
  */
 const latestDayToCross = (row, col, cells) => {
         const grid = Array.from({ length: row }, () => new Array(col).fill(0));
@@ -48,9 +51,7 @@ const latestDayToCross = (row, col, cells) => {
 
         const bfs = (day) => {
                 const q = new Queue();
-                const visited = Array.from({ length: row }, () =>
-                        new Array(col).fill(false),
-                );
+                const visited = Array.from({ length: row }, () => new Array(col).fill(false));
 
                 for (let c = 0; c < col; c++) {
                         if (grid[0]?.[c] > day) {

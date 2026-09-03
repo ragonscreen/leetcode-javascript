@@ -1,5 +1,5 @@
 /**
- * 0825. Friends Of Appropriate Ages
+ * 825. Friends Of Appropriate Ages
  *
  * Link: https://leetcode.com/problems/friends-of-appropriate-ages/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
@@ -16,6 +17,7 @@
  * - Weekly Contest 82 (contest_weekly-contest-82)
  *
  * Stats:
+ *
  * - Total Accepted: 131,009
  * - Total Submissions: 262,432
  * - Acceptance Rate: 49.9%
@@ -28,7 +30,7 @@
  * `n` = `ages.length`, `k` = `max(ages[i])`
  *
  * @param {number[]} ages
- * @return {number}
+ * @returns {number}
  */
 const numFriendRequests = (ages) => {
         const n = ages.length;

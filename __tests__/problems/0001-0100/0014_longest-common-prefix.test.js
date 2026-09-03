@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         longestCommonPrefix,
         longestCommonPrefix1,
@@ -16,25 +17,28 @@ const testcases = [
 ];
 
 describe('longestCommonPrefix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestCommonPrefix($strs) -> $expected', ({ strs, expected }) => {
-                expect(longestCommonPrefix(strs)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestCommonPrefix($strs) -> $expected',
+                ({ strs, expected }) => {
+                        expect(longestCommonPrefix(strs)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('longestCommonPrefix1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestCommonPrefix1($strs) -> $expected', ({ strs, expected }) => {
-                expect(longestCommonPrefix1(strs)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestCommonPrefix1($strs) -> $expected',
+                ({ strs, expected }) => {
+                        expect(longestCommonPrefix1(strs)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('longestCommonPrefix2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestCommonPrefix2($strs) -> $expected', ({ strs, expected }) => {
-                expect(longestCommonPrefix2(strs)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestCommonPrefix2($strs) -> $expected',
+                ({ strs, expected }) => {
+                        expect(longestCommonPrefix2(strs)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { rotate } from '../../../src/problems/0101-0200/0189_rotate-array.js';
 
 const testcases = [
@@ -7,10 +8,11 @@ const testcases = [
 ];
 
 describe('rotate', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rotate($nums, $k) -> $expected', ({ nums, k, expected }) => {
-                expect(rotate(nums, k)).toBeNil();
-                expect(nums).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rotate($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(rotate(nums, k)).toBeNil();
+                        expect(nums).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { coinChange } from '../../../src/problems/0301-0400/0322_coin-change.js';
 
 const testcases = [
@@ -10,13 +11,10 @@ const testcases = [
 ];
 
 describe('coinChange', () => {
-        test.each(
-                structuredClone(testcases),
-        )('coinChange($coins, $amount) -> $expected', ({
-                coins,
-                amount,
-                expected,
-        }) => {
-                expect(coinChange(coins, amount)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'coinChange($coins, $amount) -> $expected',
+                ({ coins, amount, expected }) => {
+                        expect(coinChange(coins, amount)).toStrictEqual(expected);
+                },
+        );
 });

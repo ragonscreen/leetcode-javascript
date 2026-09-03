@@ -1,8 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import {
-        countAndSay,
-        countAndSay1,
-} from '../../../src/problems/0001-0100/0038_count-and-say.js';
+
+import { countAndSay, countAndSay1 } from '../../../src/problems/0001-0100/0038_count-and-say.js';
 
 const testcases = [
         { n: 1, expected: '1' },
@@ -14,18 +12,16 @@ const testcases = [
 ];
 
 describe('countAndSay', () => {
-        test.each(structuredClone(testcases))('countAndSay($n) -> $expected', ({
-                n,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('countAndSay($n) -> $expected', ({ n, expected }) => {
                 expect(countAndSay(n)).toStrictEqual(expected);
         });
 });
 
 describe('countAndSay1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countAndSay1($n) -> $expected', ({ n, expected }) => {
-                expect(countAndSay1(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countAndSay1($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(countAndSay1(n)).toStrictEqual(expected);
+                },
+        );
 });

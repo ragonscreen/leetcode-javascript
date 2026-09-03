@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { halveArray } from '../../../src/problems/2201-2300/2208_minimum-operations-to-halve-array-sum.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('halveArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('halveArray($nums) -> $expected', ({ nums, expected }) => {
-                expect(halveArray(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'halveArray($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(halveArray(nums)).toStrictEqual(expected);
+                },
+        );
 });

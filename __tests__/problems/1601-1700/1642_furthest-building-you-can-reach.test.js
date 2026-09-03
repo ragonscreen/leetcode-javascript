@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { furthestBuilding } from '../../../src/problems/1601-1700/1642_furthest-building-you-can-reach.js';
 
 const testcases = [
@@ -18,16 +19,10 @@ const testcases = [
 ];
 
 describe('furthestBuilding', () => {
-        test.each(
-                structuredClone(testcases),
-        )('furthestBuilding($heights, $bricks, $ladders) -> $expected', ({
-                heights,
-                bricks,
-                ladders,
-                expected,
-        }) => {
-                expect(
-                        furthestBuilding(heights, bricks, ladders),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'furthestBuilding($heights, $bricks, $ladders) -> $expected',
+                ({ heights, bricks, ladders, expected }) => {
+                        expect(furthestBuilding(heights, bricks, ladders)).toStrictEqual(expected);
+                },
+        );
 });

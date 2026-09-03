@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         removeSubfolders,
         removeSubfolders1,
@@ -18,25 +19,28 @@ const testcases = [
 ];
 
 describe('removeSubfolders', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeSubfolders($folder) -> $expected', ({ folder, expected }) => {
-                expect(removeSubfolders(folder)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeSubfolders($folder) -> $expected',
+                ({ folder, expected }) => {
+                        expect(removeSubfolders(folder)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('removeSubfolders1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeSubfolders1($folder) -> $expected', ({ folder, expected }) => {
-                expect(removeSubfolders1(folder)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeSubfolders1($folder) -> $expected',
+                ({ folder, expected }) => {
+                        expect(removeSubfolders1(folder)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('removeSubfolders2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeSubfolders2($folder) -> $expected', ({ folder, expected }) => {
-                expect(removeSubfolders2(folder)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeSubfolders2($folder) -> $expected',
+                ({ folder, expected }) => {
+                        expect(removeSubfolders2(folder)).toStrictEqual(expected);
+                },
+        );
 });

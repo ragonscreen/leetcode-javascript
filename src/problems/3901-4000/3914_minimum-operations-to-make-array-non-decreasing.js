@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Stats:
+ *
  * - Total Accepted: 12,973
  * - Total Submissions: 24,190
  * - Acceptance Rate: 53.6%
@@ -19,7 +20,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (nums) => {
         let res = 0;
@@ -37,7 +38,7 @@ const minOperations = (nums) => {
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const minOperations1 = (nums) => {
         const stack = [];

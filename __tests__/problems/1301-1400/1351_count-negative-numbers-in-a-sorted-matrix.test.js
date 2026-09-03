@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         countNegatives,
         countNegatives1,
@@ -35,25 +36,28 @@ const testcases = [
 ];
 
 describe('countNegatives', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countNegatives($grid) -> $expected', ({ grid, expected }) => {
-                expect(countNegatives(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countNegatives($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(countNegatives(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countNegatives1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countNegatives1($grid) -> $expected', ({ grid, expected }) => {
-                expect(countNegatives1(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countNegatives1($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(countNegatives1(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('countNegatives2', () => {
-        test.each(
-                structuredClone(testcases),
-        )('countNegatives2($grid) -> $expected', ({ grid, expected }) => {
-                expect(countNegatives2(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'countNegatives2($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(countNegatives2(grid)).toStrictEqual(expected);
+                },
+        );
 });

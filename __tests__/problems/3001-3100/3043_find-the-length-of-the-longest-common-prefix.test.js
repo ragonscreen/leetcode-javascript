@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { longestCommonPrefix } from '../../../src/problems/3001-3100/3043_find-the-length-of-the-longest-common-prefix.js';
 
 const testcases = [
@@ -13,13 +14,10 @@ const testcases = [
 ];
 
 describe('longestCommonPrefix', () => {
-        test.each(
-                structuredClone(testcases),
-        )('longestCommonPrefix($arr1, $arr2) -> $expected', ({
-                arr1,
-                arr2,
-                expected,
-        }) => {
-                expect(longestCommonPrefix(arr1, arr2)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'longestCommonPrefix($arr1, $arr2) -> $expected',
+                ({ arr1, arr2, expected }) => {
+                        expect(longestCommonPrefix(arr1, arr2)).toStrictEqual(expected);
+                },
+        );
 });

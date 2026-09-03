@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { uniqueXorTriplets } from '../../../src/problems/3501-3600/3513_number-of-unique-xor-triplets-i.js';
 
 const testcases = [
@@ -13,9 +14,10 @@ const testcases = [
 ];
 
 describe('uniqueXorTriplets', () => {
-        test.each(
-                structuredClone(testcases),
-        )('uniqueXorTriplets($nums) -> $expected', ({ nums, expected }) => {
-                expect(uniqueXorTriplets(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'uniqueXorTriplets($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(uniqueXorTriplets(nums)).toStrictEqual(expected);
+                },
+        );
 });

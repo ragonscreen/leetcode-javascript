@@ -1,5 +1,5 @@
 /**
- * 0048. Rotate Image
+ * 48. Rotate Image
  *
  * Link: https://leetcode.com/problems/rotate-image/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Math (topic_8)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 2,893,427
  * - Total Submissions: 3,617,497
  * - Acceptance Rate: 80.0%
  *
  * Similar Problems:
+ *
  * - determine-whether-matrix-can-be-obtained-by-rotation (Easy)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(1) auxiliary, O(n^2) total
  *
  * @param {number[][]} matrix
- * @return {void}
+ * @returns {void}
  */
 const rotate = (matrix) => {
         let min = 0;

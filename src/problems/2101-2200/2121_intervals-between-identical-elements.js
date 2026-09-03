@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 29,511
  * - Total Submissions: 62,578
  * - Acceptance Rate: 47.2%
  *
  * Similar Problems:
+ *
  * - continuous-subarray-sum (Medium)
  */
 
@@ -27,7 +30,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} arr
- * @return {number[]}
+ * @returns {number[]}
  */
 const getDistances = (arr) => {
         const n = arr.length;

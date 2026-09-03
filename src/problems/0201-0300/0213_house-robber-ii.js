@@ -1,5 +1,5 @@
 /**
- * 0213. House Robber II
+ * 213. House Robber II
  *
  * Link: https://leetcode.com/problems/house-robber-ii/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 1,257,453
  * - Total Submissions: 2,801,471
  * - Acceptance Rate: 44.9%
  *
  * Similar Problems:
+ *
  * - house-robber (Medium)
  * - house-robber-iii (Medium)
  * - paint-fence (Medium)
@@ -31,7 +34,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const rob = (nums) => {
         const n = nums.length;

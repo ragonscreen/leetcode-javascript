@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { peakIndexInMountainArray } from '../../../src/problems/0801-0900/0852_peak-index-in-a-mountain-array.js';
 
 const testcases = [
@@ -9,12 +10,10 @@ const testcases = [
 ];
 
 describe('peakIndexInMountainArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('peakIndexInMountainArray($arr) -> $expected', ({
-                arr,
-                expected,
-        }) => {
-                expect(peakIndexInMountainArray(arr)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'peakIndexInMountainArray($arr) -> $expected',
+                ({ arr, expected }) => {
+                        expect(peakIndexInMountainArray(arr)).toStrictEqual(expected);
+                },
+        );
 });

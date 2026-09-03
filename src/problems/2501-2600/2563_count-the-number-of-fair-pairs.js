@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 238,320
  * - Total Submissions: 452,448
  * - Acceptance Rate: 52.7%
  *
  * Similar Problems:
+ *
  * - count-number-of-pairs-with-absolute-difference-k (Easy)
  * - count-pairs-whose-sum-is-less-than-target (Easy)
  * - finding-pairs-with-a-certain-sum (Medium)
@@ -33,7 +36,7 @@
  * @param {number[]} nums
  * @param {number} lower
  * @param {number} upper
- * @return {number}
+ * @returns {number}
  */
 const countFairPairs = (nums, lower, upper) => {
         const n = nums.length;

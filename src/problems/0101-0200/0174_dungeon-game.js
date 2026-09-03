@@ -1,5 +1,5 @@
 /**
- * 0174. Dungeon Game
+ * 174. Dungeon Game
  *
  * Link: https://leetcode.com/problems/dungeon-game/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 302,935
  * - Total Submissions: 732,922
  * - Acceptance Rate: 41.3%
  *
  * Similar Problems:
+ *
  * - check-if-there-is-a-path-with-equal-number-of-0s-and-1s (Medium)
  * - minimum-health-to-beat-game (Medium)
  * - minimum-path-cost-in-a-grid (Medium)
@@ -33,7 +36,7 @@
  * Space Complexity: O(n * m)
  *
  * @param {number[][]} dungeon
- * @return {number}
+ * @returns {number}
  */
 const calculateMinimumHP = (dungeon) => {
         const n = dungeon.length;
@@ -50,12 +53,7 @@ const calculateMinimumHP = (dungeon) => {
 
                         const p1 = dp[p(y, x + 1)];
                         const p2 = dp[p(y + 1, x)];
-                        const min =
-                                y === n - 1
-                                        ? p1
-                                        : x === m - 1
-                                          ? p2
-                                          : Math.min(p1, p2);
+                        const min = y === n - 1 ? p1 : x === m - 1 ? p2 : Math.min(p1, p2);
 
                         dp[p(y, x)] = Math.max(1, min - dungeon[y][x]);
                 }

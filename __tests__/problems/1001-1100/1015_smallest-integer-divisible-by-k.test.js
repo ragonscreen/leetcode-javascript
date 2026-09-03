@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         smallestRepunitDivByK,
         smallestRepunitDivByK1,
@@ -11,17 +12,19 @@ const testcases = [
 ];
 
 describe('smallestRepunitDivByK', () => {
-        test.each(
-                structuredClone(testcases),
-        )('smallestRepunitDivByK($k) -> $expected', ({ k, expected }) => {
-                expect(smallestRepunitDivByK(k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'smallestRepunitDivByK($k) -> $expected',
+                ({ k, expected }) => {
+                        expect(smallestRepunitDivByK(k)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('smallestRepunitDivByK1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('smallestRepunitDivByK1($k) -> $expected', ({ k, expected }) => {
-                expect(smallestRepunitDivByK1(k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'smallestRepunitDivByK1($k) -> $expected',
+                ({ k, expected }) => {
+                        expect(smallestRepunitDivByK1(k)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { MinStack } from '../../../src/problems/0101-0200/0155_min-stack.js';
 
 describe('MinStack', () => {

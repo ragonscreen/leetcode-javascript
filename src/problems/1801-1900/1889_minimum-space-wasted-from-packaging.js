@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Sorting (topic_61049)
@@ -16,6 +17,7 @@
  * - Weekly Contest 244 (contest_weekly-contest-244)
  *
  * Stats:
+ *
  * - Total Accepted: 18,237
  * - Total Submissions: 54,275
  * - Acceptance Rate: 33.6%
@@ -30,7 +32,7 @@
  *
  * @param {number[]} packages
  * @param {number[][]} boxes
- * @return {number}
+ * @returns {number}
  */
 const minWastedSpace = (packages, boxes) => {
         const INF = Number.MAX_SAFE_INTEGER;
@@ -85,7 +87,7 @@ const minWastedSpace = (packages, boxes) => {
  *
  * @param {number[]} packages
  * @param {number[][]} boxes
- * @return {number}
+ * @returns {number}
  */
 const minWastedSpace1 = (packages, boxes) => {
         const INF = Number.MAX_SAFE_INTEGER;

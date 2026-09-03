@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  * - Greedy (topic_17)
@@ -16,11 +17,13 @@
  * - Weekly Contest 140 (contest_weekly-contest-140)
  *
  * Stats:
+ *
  * - Total Accepted: 193,925
  * - Total Submissions: 274,722
  * - Acceptance Rate: 70.6%
  *
  * Similar Problems:
+ *
  * - find-the-most-competitive-subsequence (Medium)
  */
 
@@ -31,7 +34,7 @@
  * `n` = `s.length`
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const smallestSubsequence = (s) => {
         const ord = (c) => c.charCodeAt() - 97;

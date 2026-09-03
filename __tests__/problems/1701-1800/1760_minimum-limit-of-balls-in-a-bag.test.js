@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minimumSize } from '../../../src/problems/1701-1800/1760_minimum-limit-of-balls-in-a-bag.js';
 
 const testcases = [
@@ -7,15 +8,10 @@ const testcases = [
 ];
 
 describe('minimumSize', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minimumSize($nums, $maxOperations) -> $expected', ({
-                nums,
-                maxOperations,
-                expected,
-        }) => {
-                expect(minimumSize(nums, maxOperations)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'minimumSize($nums, $maxOperations) -> $expected',
+                ({ nums, maxOperations, expected }) => {
+                        expect(minimumSize(nums, maxOperations)).toStrictEqual(expected);
+                },
+        );
 });

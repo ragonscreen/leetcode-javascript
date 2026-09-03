@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Mid Level (position_mid-level)
  * - Weekly Contest 439 (contest_weekly-contest-439)
  *
  * Stats:
+ *
  * - Total Accepted: 163,892
  * - Total Submissions: 332,174
  * - Acceptance Rate: 49.3%
  *
  * Similar Problems:
+ *
  * - missing-number (Easy)
  */
 
@@ -30,7 +33,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const largestInteger = (nums, k) => {
         const n = nums.length;

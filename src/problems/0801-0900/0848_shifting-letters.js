@@ -1,5 +1,5 @@
 /**
- * 0848. Shifting Letters
+ * 848. Shifting Letters
  *
  * Link: https://leetcode.com/problems/shifting-letters/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 136,413
  * - Total Submissions: 295,398
  * - Acceptance Rate: 46.2%
  *
  * Similar Problems:
+ *
  * - find-the-k-th-character-in-string-game-i (Easy)
  * - replace-all-digits-with-characters (Easy)
  * - lexicographically-smallest-string-after-substring-operation (Medium)
@@ -33,7 +36,7 @@
  *
  * @param {string} s
  * @param {number[]} shifts
- * @return {string}
+ * @returns {string}
  */
 const shiftingLetters = (s, shifts) => {
         const n = s.length;
@@ -43,9 +46,7 @@ const shiftingLetters = (s, shifts) => {
 
         for (let i = n - 1; i > -1; i--) {
                 cnt += shifts[i];
-                res[i] = String.fromCharCode(
-                        ((s[i].charCodeAt() - a + cnt) % 26) + a,
-                );
+                res[i] = String.fromCharCode(((s[i].charCodeAt() - a + cnt) % 26) + a);
         }
 
         return res.join('');
@@ -58,7 +59,7 @@ const shiftingLetters = (s, shifts) => {
  *
  * @param {string} s
  * @param {number[]} shifts
- * @return {string}
+ * @returns {string}
  */
 const shiftingLetters1 = (s, shifts) => {
         const n = s.length;
@@ -74,9 +75,7 @@ const shiftingLetters1 = (s, shifts) => {
         let res = '';
 
         for (let i = 0; i < n; i++) {
-                res += String.fromCharCode(
-                        ((s[i].charCodeAt() - a + prefix[i]) % 26) + a,
-                );
+                res += String.fromCharCode(((s[i].charCodeAt() - a + prefix[i]) % 26) + a);
         }
 
         return res;

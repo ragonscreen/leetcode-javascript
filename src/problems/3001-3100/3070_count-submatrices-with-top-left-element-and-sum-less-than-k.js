@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 121,441
  * - Total Submissions: 162,327
  * - Acceptance Rate: 74.8%
@@ -25,7 +27,7 @@
  *
  * @param {number[][]} grid
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const countSubmatrices = (grid, k) => {
         const n = grid.length;

@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sorting (topic_61049)
@@ -16,11 +17,13 @@
  * - Weekly Contest 215 (contest_weekly-contest-215)
  *
  * Stats:
+ *
  * - Total Accepted: 598,597
  * - Total Submissions: 1,099,754
  * - Acceptance Rate: 54.4%
  *
  * Similar Problems:
+ *
  * - buddy-strings (Easy)
  * - minimum-number-of-steps-to-make-two-strings-anagram (Medium)
  * - minimum-swaps-to-make-strings-equal (Medium)
@@ -34,7 +37,7 @@
  *
  * @param {string} word1
  * @param {string} word2
- * @return {boolean}
+ * @returns {boolean}
  */
 const closeStrings = (word1, word2) => {
         const n = word1.length;

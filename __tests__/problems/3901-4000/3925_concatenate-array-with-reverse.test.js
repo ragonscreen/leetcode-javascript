@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { concatWithReverse } from '../../../src/problems/3901-4000/3925_concatenate-array-with-reverse.js';
 
 const testcases = [
@@ -7,11 +8,10 @@ const testcases = [
 ];
 
 describe('concatWithReverse', () => {
-        test.each(
-                structuredClone(testcases),
-        )('concatWithReverse($nums) -> $expected', ({ nums, expected }) => {
-                expect(Array.from(concatWithReverse(nums))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'concatWithReverse($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(Array.from(concatWithReverse(nums))).toStrictEqual(expected);
+                },
+        );
 });

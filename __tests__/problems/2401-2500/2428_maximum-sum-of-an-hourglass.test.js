@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxSum } from '../../../src/problems/2401-2500/2428_maximum-sum-of-an-hourglass.js';
 
 const testcases = [
@@ -22,10 +23,10 @@ const testcases = [
 ];
 
 describe('maxSum', () => {
-        test.each(structuredClone(testcases))('maxSum($grid) -> $expected', ({
-                grid,
-                expected,
-        }) => {
-                expect(maxSum(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSum($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(maxSum(grid)).toStrictEqual(expected);
+                },
+        );
 });

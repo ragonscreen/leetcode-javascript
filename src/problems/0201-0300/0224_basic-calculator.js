@@ -1,5 +1,5 @@
 /**
- * 0224. Basic Calculator
+ * 224. Basic Calculator
  *
  * Link: https://leetcode.com/problems/basic-calculator/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Stack (topic_15)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 698,826
  * - Total Submissions: 1,494,323
  * - Acceptance Rate: 46.8%
  *
  * Similar Problems:
+ *
  * - basic-calculator-ii (Medium)
  * - different-ways-to-add-parentheses (Medium)
  * - evaluate-reverse-polish-notation (Medium)
@@ -34,7 +37,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const calculate = (s) => {
         const stack = [];

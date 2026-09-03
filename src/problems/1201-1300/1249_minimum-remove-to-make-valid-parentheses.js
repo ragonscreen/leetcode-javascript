@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - String (topic_10)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 1,046,752
  * - Total Submissions: 1,467,264
  * - Acceptance Rate: 71.3%
  *
  * Similar Problems:
+ *
  * - check-if-a-parentheses-string-can-be-valid (Medium)
  * - minimum-number-of-swaps-to-make-the-string-balanced (Medium)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const minRemoveToMakeValid = (s) => {
         const n = s.length;
@@ -73,7 +76,7 @@ const minRemoveToMakeValid = (s) => {
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {string}
+ * @returns {string}
  */
 const minRemoveToMakeValid1 = (s) => {
         const n = s.length;

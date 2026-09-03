@@ -1,5 +1,5 @@
 /**
- * 0779. K-th Symbol in Grammar
+ * 779. K-th Symbol in Grammar
  *
  * Link: https://leetcode.com/problems/k-th-symbol-in-grammar/
  * Category: Algorithms
@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - Bit Manipulation (topic_19)
  * - Recursion (topic_31)
  *
  * Stats:
+ *
  * - Total Accepted: 255,646
  * - Total Submissions: 531,210
  * - Acceptance Rate: 48.1%
@@ -25,7 +27,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const kthGrammar = (n, k) => {
         let count = 0;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { earliestFinishTime } from '../../../src/problems/3601-3700/3633_earliest-finish-time-for-land-and-water-rides-i.js';
 
 const testcases = [
@@ -26,22 +27,17 @@ const testcases = [
 ];
 
 describe('earliestFinishTime', () => {
-        test.each(
-                structuredClone(testcases),
-        )('earliestFinishTime($landStartTime, $landDuration, $waterStartTime, $waterDuration) -> $expected', ({
-                landStartTime,
-                landDuration,
-                waterStartTime,
-                waterDuration,
-                expected,
-        }) => {
-                expect(
-                        earliestFinishTime(
-                                landStartTime,
-                                landDuration,
-                                waterStartTime,
-                                waterDuration,
-                        ),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'earliestFinishTime($landStartTime, $landDuration, $waterStartTime, $waterDuration) -> $expected',
+                ({ landStartTime, landDuration, waterStartTime, waterDuration, expected }) => {
+                        expect(
+                                earliestFinishTime(
+                                        landStartTime,
+                                        landDuration,
+                                        waterStartTime,
+                                        waterDuration,
+                                ),
+                        ).toStrictEqual(expected);
+                },
+        );
 });

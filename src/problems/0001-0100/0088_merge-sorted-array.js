@@ -1,5 +1,5 @@
 /**
- * 0088. Merge Sorted Array
+ * 88. Merge Sorted Array
  *
  * Link: https://leetcode.com/problems/merge-sorted-array/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 5,530,931
  * - Total Submissions: 10,145,847
  * - Acceptance Rate: 54.5%
  *
  * Similar Problems:
+ *
  * - merge-two-sorted-lists (Easy)
  * - squares-of-a-sorted-array (Easy)
  * - interval-list-intersections (Medium)
@@ -33,7 +36,7 @@
  * @param {number} m
  * @param {number[]} nums2
  * @param {number} n
- * @return {void}
+ * @returns {void}
  */
 const merge = (nums1, m, nums2, n) => {
         let p = m - 1;

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { nodesBetweenCriticalPoints } from '../../../src/problems/2001-2100/2058_find-the-minimum-and-maximum-number-of-nodes-between-critical-points.js';
 import { arrayToList } from '../../utils/linked-list.js';
 
@@ -9,14 +10,12 @@ const testcases = [
 ];
 
 describe('nodesBetweenCriticalPoints', () => {
-        test.each(
-                structuredClone(testcases),
-        )('nodesBetweenCriticalPoints($head) -> $expected', ({
-                head,
-                expected,
-        }) => {
-                expect(
-                        nodesBetweenCriticalPoints(arrayToList(head)),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'nodesBetweenCriticalPoints($head) -> $expected',
+                ({ head, expected }) => {
+                        expect(nodesBetweenCriticalPoints(arrayToList(head))).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

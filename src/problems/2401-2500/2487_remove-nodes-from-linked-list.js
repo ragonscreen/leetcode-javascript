@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Linked List (topic_7)
  * - Stack (topic_15)
  * - Recursion (topic_31)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 272,013
  * - Total Submissions: 363,085
  * - Acceptance Rate: 74.9%
  *
  * Similar Problems:
+ *
  * - next-greater-element-i (Easy)
  * - reverse-linked-list (Easy)
  * - delete-node-in-a-linked-list (Medium)
@@ -31,7 +34,7 @@
  * Space Complexity: O(1)
  *
  * @param {ListNode} head
- * @return {ListNode}
+ * @returns {ListNode}
  */
 const removeNodes = (head) => {
         // reverse

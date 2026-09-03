@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { splitMessage } from '../../../src/problems/0000_wip/2468_split-message-based-on-limit.js';
 
 const testcases = [
@@ -30,13 +31,10 @@ const testcases = [
 ];
 
 describe.skip('splitMessage', () => {
-        test.each(
-                structuredClone(testcases),
-        )('splitMessage($message, $limit) -> $expected', ({
-                message,
-                limit,
-                expected,
-        }) => {
-                expect(splitMessage(message, limit)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'splitMessage($message, $limit) -> $expected',
+                ({ message, limit, expected }) => {
+                        expect(splitMessage(message, limit)).toStrictEqual(expected);
+                },
+        );
 });

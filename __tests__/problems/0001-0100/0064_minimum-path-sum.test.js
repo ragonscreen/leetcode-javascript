@@ -1,8 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import {
-        minPathSum,
-        minPathSum1,
-} from '../../../src/problems/0001-0100/0064_minimum-path-sum.js';
+
+import { minPathSum, minPathSum1 } from '../../../src/problems/0001-0100/0064_minimum-path-sum.js';
 
 const testcases = [
         {
@@ -23,17 +21,19 @@ const testcases = [
 ];
 
 describe('minPathSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minPathSum($grid) -> $expected', ({ grid, expected }) => {
-                expect(minPathSum(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minPathSum($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(minPathSum(grid)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('minPathSum1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minPathSum1($grid) -> $expected', ({ grid, expected }) => {
-                expect(minPathSum1(grid)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minPathSum1($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(minPathSum1(grid)).toStrictEqual(expected);
+                },
+        );
 });

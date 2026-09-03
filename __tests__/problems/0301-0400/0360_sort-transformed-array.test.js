@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         sortTransformedArray,
         sortTransformedArray1,
@@ -10,33 +11,19 @@ const testcases = [
 ];
 
 describe('sortTransformedArray', () => {
-        test.each(
-                testcases,
-        )('sortTransformedArray($nums, $a, $b, $c) -> $expected', ({
-                nums,
-                a,
-                b,
-                c,
-                expected,
-        }) => {
-                expect(sortTransformedArray(nums, a, b, c)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(testcases)(
+                'sortTransformedArray($nums, $a, $b, $c) -> $expected',
+                ({ nums, a, b, c, expected }) => {
+                        expect(sortTransformedArray(nums, a, b, c)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe.skip('sortTransformedArray1', () => {
-        test.each(
-                testcases,
-        )('sortTransformedArray1($nums, $a, $b, $c) -> $expected', ({
-                nums,
-                a,
-                b,
-                c,
-                expected,
-        }) => {
-                expect(sortTransformedArray1(nums, a, b, c)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(testcases)(
+                'sortTransformedArray1($nums, $a, $b, $c) -> $expected',
+                ({ nums, a, b, c, expected }) => {
+                        expect(sortTransformedArray1(nums, a, b, c)).toStrictEqual(expected);
+                },
+        );
 });

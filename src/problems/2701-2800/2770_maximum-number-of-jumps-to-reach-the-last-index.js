@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Dynamic Programming (topic_13)
  *
  * Stats:
+ *
  * - Total Accepted: 106,991
  * - Total Submissions: 210,624
  * - Acceptance Rate: 50.8%
  *
  * Similar Problems:
+ *
  * - jump-game-ii (Medium)
  * - jump-game-iii (Medium)
  * - jump-game-vii (Medium)
@@ -32,7 +35,7 @@
  *
  * @param {number[]} nums
  * @param {number} target
- * @return {number}
+ * @returns {number}
  */
 const maximumJumps = (nums, target) => {
         const n = nums.length;

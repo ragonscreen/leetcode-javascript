@@ -1,5 +1,5 @@
 /**
- * 0967. Numbers With Same Consecutive Differences
+ * 967. Numbers With Same Consecutive Differences
  *
  * Link: https://leetcode.com/problems/numbers-with-same-consecutive-differences/
  * Category: Algorithms
@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Backtracking (topic_14)
  * - Breadth-First Search (topic_22)
  * - Staff (position_staff)
  * - Weekly Contest 117 (contest_weekly-contest-117)
  *
  * Stats:
+ *
  * - Total Accepted: 157,639
  * - Total Submissions: 266,151
  * - Acceptance Rate: 59.2%
@@ -27,7 +29,7 @@
  *
  * @param {number} n
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const numsSameConsecDiff = (n, k) => {
         let q = [1, 2, 3, 4, 5, 6, 7, 8, 9];

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { earliestSecondToMarkIndices } from '../../../src/problems/3001-3100/3048_earliest-second-to-mark-indices-i.js';
 
 const testcases = [
@@ -12,15 +13,12 @@ const testcases = [
 ];
 
 describe('earliestSecondToMarkIndices', () => {
-        test.each(
-                structuredClone(testcases),
-        )('earliestSecondToMarkIndices($nums, $changeIndices) -> $expected', ({
-                nums,
-                changeIndices,
-                expected,
-        }) => {
-                expect(
-                        earliestSecondToMarkIndices(nums, changeIndices),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'earliestSecondToMarkIndices($nums, $changeIndices) -> $expected',
+                ({ nums, changeIndices, expected }) => {
+                        expect(earliestSecondToMarkIndices(nums, changeIndices)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

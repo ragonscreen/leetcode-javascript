@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { pathExistenceQueries } from '../../../src/problems/3501-3600/3532_path-existence-queries-in-a-graph-i.js';
 
 const testcases = [
@@ -27,8 +28,8 @@ const testcases = [
         {
                 n: 23,
                 nums: [
-                        0, 1, 6, 8, 8, 11, 15, 15, 19, 25, 28, 28, 32, 32, 32,
-                        33, 35, 39, 39, 44, 45, 47, 48,
+                        0, 1, 6, 8, 8, 11, 15, 15, 19, 25, 28, 28, 32, 32, 32, 33, 35, 39, 39, 44,
+                        45, 47, 48,
                 ],
                 maxDiff: 2,
                 queries: [
@@ -45,17 +46,12 @@ const testcases = [
 ];
 
 describe('pathExistenceQueries', () => {
-        test.each(
-                structuredClone(testcases),
-        )('pathExistenceQueries($n, $nums, $maxDiff, $queries) -> $expected', ({
-                n,
-                nums,
-                maxDiff,
-                queries,
-                expected,
-        }) => {
-                expect(
-                        pathExistenceQueries(n, nums, maxDiff, queries),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'pathExistenceQueries($n, $nums, $maxDiff, $queries) -> $expected',
+                ({ n, nums, maxDiff, queries, expected }) => {
+                        expect(pathExistenceQueries(n, nums, maxDiff, queries)).toStrictEqual(
+                                expected,
+                        );
+                },
+        );
 });

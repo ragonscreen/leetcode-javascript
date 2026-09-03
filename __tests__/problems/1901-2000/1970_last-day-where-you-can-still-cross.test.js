@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { latestDayToCross } from '../../../src/problems/1901-2000/1970_last-day-where-you-can-still-cross.js';
 
 const testcases = [
@@ -220,16 +221,10 @@ const testcases = [
 ];
 
 describe('latestDayToCross', () => {
-        test.each(
-                structuredClone(testcases),
-        )('latestDayToCross($row, $col, $cells) -> $expected', ({
-                row,
-                col,
-                cells,
-                expected,
-        }) => {
-                expect(latestDayToCross(row, col, cells)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'latestDayToCross($row, $col, $cells) -> $expected',
+                ({ row, col, cells, expected }) => {
+                        expect(latestDayToCross(row, col, cells)).toStrictEqual(expected);
+                },
+        );
 });

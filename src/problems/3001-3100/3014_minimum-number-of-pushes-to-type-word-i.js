@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Greedy (topic_17)
@@ -15,11 +16,13 @@
  * - Weekly Contest 381 (contest_weekly-contest-381)
  *
  * Stats:
+ *
  * - Total Accepted: 192,224
  * - Total Submissions: 248,309
  * - Acceptance Rate: 77.4%
  *
  * Similar Problems:
+ *
  * - letter-combinations-of-a-phone-number (Medium)
  */
 
@@ -29,7 +32,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
 const minimumPushes = (word) => {
         // the number of keypresses is in arithmetic progression
@@ -48,7 +51,7 @@ const minimumPushes = (word) => {
  * `n` = `word.length`
  *
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
 const minimumPushes1 = (word) => {
         let n = word.length;

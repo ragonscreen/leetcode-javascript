@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Greedy (topic_17)
@@ -17,6 +18,7 @@
  * - Weekly Contest 472 (contest_weekly-contest-472)
  *
  * Stats:
+ *
  * - Total Accepted: 90,811
  * - Total Submissions: 188,087
  * - Acceptance Rate: 48.3%
@@ -30,7 +32,7 @@
  *
  * @param {string} s
  * @param {string} target
- * @return {string}
+ * @returns {string}
  */
 const lexGreaterPermutation = (s, target) => {
         const n = s.length;
@@ -95,7 +97,7 @@ const lexGreaterPermutation = (s, target) => {
  *
  * @param {string} s
  * @param {string} target
- * @return {string}
+ * @returns {string}
  */
 const lexGreaterPermutation1 = (s, target) => {
         const n = s.length;

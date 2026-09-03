@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 75,502
  * - Total Submissions: 392,082
  * - Acceptance Rate: 19.3%
  *
  * Similar Problems:
+ *
  * - minimum-deletions-to-make-character-frequencies-unique (Medium)
  * - maximum-equal-frequency (Hard)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {string} word
- * @return {boolean}
+ * @returns {boolean}
  */
 
 const equalFrequency = (word) => {

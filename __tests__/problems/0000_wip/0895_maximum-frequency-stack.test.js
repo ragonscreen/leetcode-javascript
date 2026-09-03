@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { FreqStack } from '../../../src/problems/0000_wip/0895_maximum-frequency-stack.js';
 
 describe('FreqStack', () => {

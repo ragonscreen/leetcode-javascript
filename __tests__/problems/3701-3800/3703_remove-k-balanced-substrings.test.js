@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { removeSubstring } from '../../../src/problems/3701-3800/3703_remove-k-balanced-substrings.js';
 
 const testcases = [
@@ -11,9 +12,10 @@ const testcases = [
 ];
 
 describe('removeSubstring', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeSubstring($s, $k) -> $expected', ({ s, k, expected }) => {
-                expect(removeSubstring(s, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'removeSubstring($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(removeSubstring(s, k)).toStrictEqual(expected);
+                },
+        );
 });

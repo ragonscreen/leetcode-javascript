@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumCandies } from '../../../src/problems/2201-2300/2226_maximum-candies-allocated-to-k-children.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('maximumCandies', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumCandies($candies, $k) -> $expected', ({
-                candies,
-                k,
-                expected,
-        }) => {
-                expect(maximumCandies(candies, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maximumCandies($candies, $k) -> $expected',
+                ({ candies, k, expected }) => {
+                        expect(maximumCandies(candies, k)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { interchangeableRectangles } from '../../../src/problems/2001-2100/2001_number-of-pairs-of-interchangeable-rectangles.js';
 
 const testcases = [
@@ -21,14 +22,10 @@ const testcases = [
 ];
 
 describe('interchangeableRectangles', () => {
-        test.each(
-                structuredClone(testcases),
-        )('interchangeableRectangles($rectangles) -> $expected', ({
-                rectangles,
-                expected,
-        }) => {
-                expect(interchangeableRectangles(rectangles)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'interchangeableRectangles($rectangles) -> $expected',
+                ({ rectangles, expected }) => {
+                        expect(interchangeableRectangles(rectangles)).toStrictEqual(expected);
+                },
+        );
 });

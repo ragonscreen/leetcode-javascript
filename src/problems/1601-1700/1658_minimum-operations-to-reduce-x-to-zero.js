@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Binary Search (topic_11)
@@ -15,11 +16,13 @@
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 231,489
  * - Total Submissions: 571,876
  * - Acceptance Rate: 40.5%
  *
  * Similar Problems:
+ *
  * - minimum-operations-to-convert-number (Medium)
  * - minimum-operations-to-make-the-integer-zero (Medium)
  * - minimum-size-subarray-sum (Medium)
@@ -34,7 +37,7 @@
  *
  * @param {number[]} nums
  * @param {number} x
- * @return {number}
+ * @returns {number}
  */
 const minOperations = (nums, x) => {
         const n = nums.length;

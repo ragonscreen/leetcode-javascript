@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { makeGood } from '../../../src/problems/1501-1600/1544_make-the-string-great.js';
 
 const testcases = [
@@ -11,10 +12,7 @@ const testcases = [
 ];
 
 describe('makeGood', () => {
-        test.each(structuredClone(testcases))('makeGood($s) -> $expected', ({
-                s,
-                expected,
-        }) => {
+        test.each(structuredClone(testcases))('makeGood($s) -> $expected', ({ s, expected }) => {
                 expect(makeGood(s)).toStrictEqual(expected);
         });
 });

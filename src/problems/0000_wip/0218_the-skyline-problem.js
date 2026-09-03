@@ -1,5 +1,5 @@
 /**
- * 0218. The Skyline Problem
+ * 218. The Skyline Problem
  *
  * Link: https://leetcode.com/problems/the-skyline-problem/
  * Category: Algorithms
@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Divide and Conquer (topic_12)
  * - Binary Indexed Tree (topic_28)
@@ -18,17 +19,25 @@
  * - Ordered Set (topic_61070)
  *
  * Stats:
+ *
  * - Total Accepted: 352,470
  * - Total Submissions: 778,360
  * - Acceptance Rate: 45.3%
  *
  * Similar Problems:
+ *
  * - shifting-letters-ii (Medium)
  * - falling-squares (Hard)
  */
-/** biome-ignore-all lint/suspicious/noEmptyBlockStatements: <explanation> */
-/** biome-ignore-all lint/complexity/noUselessContinue: <explanation> */
-/** biome-ignore-all lint/style/useCollapsedIf: <explanation> */
+/**
+ * biome-ignore-all lint/suspicious/noEmptyBlockStatements: <explanation>
+ */
+/**
+ * biome-ignore-all lint/complexity/noUselessContinue: <explanation>
+ */
+/**
+ * biome-ignore-all lint/style/useCollapsedIf: <explanation>
+ */
 
 import { MinPriorityQueue } from '@datastructures-js/priority-queue';
 
@@ -38,7 +47,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * Space Complexity: O()
  *
  * @param {number[][]} buildings
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const getSkyline = (buildings) => {
         const minq = new MinPriorityQueue((e) => e[0], buildings);

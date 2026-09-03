@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { trap } from '../../../src/problems/0001-0100/0042_trapping-rain-water.js';
 
 const testcases = [
@@ -7,10 +8,10 @@ const testcases = [
 ];
 
 describe('trap', () => {
-        test.each(structuredClone(testcases))('trap($height) -> $expected', ({
-                height,
-                expected,
-        }) => {
-                expect(trap(height)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'trap($height) -> $expected',
+                ({ height, expected }) => {
+                        expect(trap(height)).toStrictEqual(expected);
+                },
+        );
 });

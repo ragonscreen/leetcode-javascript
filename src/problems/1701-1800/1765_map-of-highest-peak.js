@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Breadth-First Search (topic_22)
  * - Matrix (topic_61053)
@@ -15,6 +16,7 @@
  * - Biweekly Contest 46 (contest_biweekly-contest-46)
  *
  * Stats:
+ *
  * - Total Accepted: 163,703
  * - Total Submissions: 215,796
  * - Acceptance Rate: 75.9%
@@ -27,7 +29,7 @@
  * `n` = `isWater.length`, `m` = `isWater[0].length`
  *
  * @param {number[][]} isWater
- * @return {number[][]}
+ * @returns {number[][]}
  */
 const highestPeak = (isWater) => {
         const n = isWater.length;

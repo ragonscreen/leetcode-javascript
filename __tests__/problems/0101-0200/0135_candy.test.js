@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { candy } from '../../../src/problems/0101-0200/0135_candy.js';
 
 const testcases = [
@@ -10,10 +11,10 @@ const testcases = [
 ];
 
 describe('candy', () => {
-        test.each(structuredClone(testcases))('candy($ratings) -> $expected', ({
-                ratings,
-                expected,
-        }) => {
-                expect(candy(ratings)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'candy($ratings) -> $expected',
+                ({ ratings, expected }) => {
+                        expect(candy(ratings)).toStrictEqual(expected);
+                },
+        );
 });

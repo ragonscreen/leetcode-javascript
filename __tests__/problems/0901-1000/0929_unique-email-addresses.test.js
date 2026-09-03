@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { numUniqueEmails } from '../../../src/problems/0901-1000/0929_unique-email-addresses.js';
 
 const testcases = [
@@ -17,9 +18,10 @@ const testcases = [
 ];
 
 describe('numUniqueEmails', () => {
-        test.each(
-                structuredClone(testcases),
-        )('numUniqueEmails($emails) -> $expected', ({ emails, expected }) => {
-                expect(numUniqueEmails(emails)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'numUniqueEmails($emails) -> $expected',
+                ({ emails, expected }) => {
+                        expect(numUniqueEmails(emails)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0289. Game of Life
+ * 289. Game of Life
  *
  * Link: https://leetcode.com/problems/game-of-life/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 642,544
  * - Total Submissions: 884,662
  * - Acceptance Rate: 72.6%
  *
  * Similar Problems:
+ *
  * - set-matrix-zeroes (Medium)
  */
 
@@ -28,7 +31,7 @@
  * `n` = `grid.length`, `m` = `grid[0].length`
  *
  * @param {number[][]} board
- * @return {void}
+ * @returns {void}
  */
 const gameOfLife = (board) => {
         const n = board.length;

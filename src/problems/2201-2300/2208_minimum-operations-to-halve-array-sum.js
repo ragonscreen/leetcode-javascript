@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Greedy (topic_17)
  * - Heap (Priority Queue) (topic_61050)
@@ -15,11 +16,13 @@
  * - Biweekly Contest 74 (contest_biweekly-contest-74)
  *
  * Stats:
+ *
  * - Total Accepted: 57,163
  * - Total Submissions: 113,227
  * - Acceptance Rate: 50.5%
  *
  * Similar Problems:
+ *
  * - minimum-operations-to-exceed-threshold-value-ii (Medium)
  * - remove-stones-to-minimize-the-total (Medium)
  */
@@ -33,7 +36,7 @@ import { MaxPriorityQueue } from '@datastructures-js/priority-queue';
  * `n` = `nums.length`
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const halveArray = (nums) => {
         const req = nums.reduce((t, c) => t + c, 0) / 2;

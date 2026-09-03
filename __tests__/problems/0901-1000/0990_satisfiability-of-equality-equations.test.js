@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { equationsPossible } from '../../../src/problems/0901-1000/0990_satisfiability-of-equality-equations.js';
 
 const testcases = [
@@ -15,12 +16,10 @@ const testcases = [
 ];
 
 describe('equationsPossible', () => {
-        test.each(
-                structuredClone(testcases),
-        )('equationsPossible($equations) -> $expected', ({
-                equations,
-                expected,
-        }) => {
-                expect(equationsPossible(equations)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'equationsPossible($equations) -> $expected',
+                ({ equations, expected }) => {
+                        expect(equationsPossible(equations)).toStrictEqual(expected);
+                },
+        );
 });

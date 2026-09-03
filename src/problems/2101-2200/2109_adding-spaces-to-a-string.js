@@ -8,12 +8,14 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - String (topic_10)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 224,018
  * - Total Submissions: 311,997
  * - Acceptance Rate: 71.8%
@@ -27,7 +29,7 @@
  *
  * @param {string} s
  * @param {number[]} spaces
- * @return {string}
+ * @returns {string}
  */
 const addSpaces = (s, spaces) => {
         const res = new Array(spaces.length + 1);
@@ -47,7 +49,7 @@ const addSpaces = (s, spaces) => {
  *
  * @param {string} s
  * @param {number[]} spaces
- * @return {string}
+ * @returns {string}
  */
 const addSpaces1 = (s, spaces) => {
         let res = '';

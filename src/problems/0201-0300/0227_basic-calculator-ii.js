@@ -1,5 +1,5 @@
 /**
- * 0227. Basic Calculator II
+ * 227. Basic Calculator II
  *
  * Link: https://leetcode.com/problems/basic-calculator-ii/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Stack (topic_15)
  *
  * Stats:
+ *
  * - Total Accepted: 937,232
  * - Total Submissions: 2,006,164
  * - Acceptance Rate: 46.7%
  *
  * Similar Problems:
+ *
  * - basic-calculator (Hard)
  * - basic-calculator-iii (Hard)
  * - evaluate-valid-expressions (Hard)
@@ -30,7 +33,7 @@
  * Space Complexity: O(n)
  *
  * @param {string} s
- * @return {number}
+ * @returns {number}
  */
 const calculate = (s) => {
         const o1 = '+-';
@@ -48,8 +51,7 @@ const calculate = (s) => {
                         if (o2.includes(op)) {
                                 stack.pop();
                                 const a = stack.pop();
-                                const v =
-                                        op === '*' ? a * b : Math.trunc(a / b);
+                                const v = op === '*' ? a * b : Math.trunc(a / b);
                                 stack.push(v);
                         } else {
                                 stack.push(b);

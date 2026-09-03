@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxJumps } from '../../../src/problems/1301-1400/1340_jump-game-v.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('maxJumps', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxJumps($arr, $d) -> $expected', ({ arr, d, expected }) => {
-                expect(maxJumps(arr, d)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxJumps($arr, $d) -> $expected',
+                ({ arr, d, expected }) => {
+                        expect(maxJumps(arr, d)).toStrictEqual(expected);
+                },
+        );
 });

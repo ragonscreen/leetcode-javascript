@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { simplifyPath } from '../../../src/problems/0001-0100/0071_simplify-path.js';
 
 const testcases = [
@@ -16,9 +17,10 @@ const testcases = [
 ];
 
 describe('simplifyPath', () => {
-        test.each(
-                structuredClone(testcases),
-        )('simplifyPath($path) -> $expected', ({ path, expected }) => {
-                expect(simplifyPath(path)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'simplifyPath($path) -> $expected',
+                ({ path, expected }) => {
+                        expect(simplifyPath(path)).toStrictEqual(expected);
+                },
+        );
 });

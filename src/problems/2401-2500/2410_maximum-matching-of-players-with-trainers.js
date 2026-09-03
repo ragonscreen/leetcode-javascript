@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Greedy (topic_17)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 183,657
  * - Total Submissions: 244,021
  * - Acceptance Rate: 75.3%
  *
  * Similar Problems:
+ *
  * - long-pressed-name (Easy)
  * - interval-list-intersections (Medium)
  * - largest-merge-of-two-strings (Medium)
@@ -36,7 +39,7 @@
  *
  * @param {number[]} players
  * @param {number[]} trainers
- * @return {number}
+ * @returns {number}
  */
 const matchPlayersAndTrainers = (players, trainers) => {
         players.sort((a, b) => b - a);

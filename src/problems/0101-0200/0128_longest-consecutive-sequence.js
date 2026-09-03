@@ -1,5 +1,5 @@
 /**
- * 0128. Longest Consecutive Sequence
+ * 128. Longest Consecutive Sequence
  *
  * Link: https://leetcode.com/problems/longest-consecutive-sequence/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - Union-Find (topic_23)
  *
  * Stats:
+ *
  * - Total Accepted: 3,193,894
  * - Total Submissions: 6,792,244
  * - Acceptance Rate: 47.0%
  *
  * Similar Problems:
+ *
  * - binary-tree-longest-consecutive-sequence (Medium)
  * - find-the-maximum-number-of-elements-in-subset (Medium)
  * - find-three-consecutive-integers-that-sum-to-a-given-number (Medium)
@@ -31,7 +34,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const longestConsecutive = (nums) => {
         const set = new Set(nums);

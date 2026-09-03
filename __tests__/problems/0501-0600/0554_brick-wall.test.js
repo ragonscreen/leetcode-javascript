@@ -1,8 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import {
-        leastBricks,
-        leastBricks1,
-} from '../../../src/problems/0501-0600/0554_brick-wall.js';
+
+import { leastBricks, leastBricks1 } from '../../../src/problems/0501-0600/0554_brick-wall.js';
 
 const testcases = [
         {
@@ -20,17 +18,19 @@ const testcases = [
 ];
 
 describe('leastBricks', () => {
-        test.each(
-                structuredClone(testcases),
-        )('leastBricks($wall) -> $expected', ({ wall, expected }) => {
-                expect(leastBricks(wall)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'leastBricks($wall) -> $expected',
+                ({ wall, expected }) => {
+                        expect(leastBricks(wall)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('leastBricks1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('leastBricks1($wall) -> $expected', ({ wall, expected }) => {
-                expect(leastBricks1(wall)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'leastBricks1($wall) -> $expected',
+                ({ wall, expected }) => {
+                        expect(leastBricks1(wall)).toStrictEqual(expected);
+                },
+        );
 });

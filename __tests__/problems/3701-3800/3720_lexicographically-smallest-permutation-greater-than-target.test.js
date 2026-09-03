@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         lexGreaterPermutation,
         lexGreaterPermutation1,
@@ -17,29 +18,19 @@ const testcases = [
 ];
 
 describe('lexGreaterPermutation', () => {
-        test.each(
-                structuredClone(testcases),
-        )('lexGreaterPermutation($s, $target) -> $expected', ({
-                s,
-                target,
-                expected,
-        }) => {
-                expect(lexGreaterPermutation(s, target)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'lexGreaterPermutation($s, $target) -> $expected',
+                ({ s, target, expected }) => {
+                        expect(lexGreaterPermutation(s, target)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('lexGreaterPermutation1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('lexGreaterPermutation1($s, $target) -> $expected', ({
-                s,
-                target,
-                expected,
-        }) => {
-                expect(lexGreaterPermutation1(s, target)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'lexGreaterPermutation1($s, $target) -> $expected',
+                ({ s, target, expected }) => {
+                        expect(lexGreaterPermutation1(s, target)).toStrictEqual(expected);
+                },
+        );
 });

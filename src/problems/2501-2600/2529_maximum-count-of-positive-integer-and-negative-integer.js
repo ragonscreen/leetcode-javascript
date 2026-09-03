@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Counting (topic_61062)
  *
  * Stats:
+ *
  * - Total Accepted: 359,998
  * - Total Submissions: 484,572
  * - Acceptance Rate: 74.3%
  *
  * Similar Problems:
+ *
  * - binary-search (Easy)
  * - count-negative-numbers-in-a-sorted-matrix (Easy)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const maximumCount = (nums) => {
         const idxLeft = lowerBound(nums, 0);

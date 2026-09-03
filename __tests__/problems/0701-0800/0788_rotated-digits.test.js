@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         rotatedDigits,
         rotatedDigits1,
@@ -12,17 +13,19 @@ const testcases = [
 ];
 
 describe('rotatedDigits', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rotatedDigits($n) -> $expected', ({ n, expected }) => {
-                expect(rotatedDigits(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rotatedDigits($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(rotatedDigits(n)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('rotatedDigits1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rotatedDigits1($n) -> $expected', ({ n, expected }) => {
-                expect(rotatedDigits1(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rotatedDigits1($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(rotatedDigits1(n)).toStrictEqual(expected);
+                },
+        );
 });

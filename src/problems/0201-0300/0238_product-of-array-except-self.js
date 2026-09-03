@@ -1,5 +1,5 @@
 /**
- * 0238. Product of Array Except Self
+ * 238. Product of Array Except Self
  *
  * Link: https://leetcode.com/problems/product-of-array-except-self/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 4,394,344
  * - Total Submissions: 6,400,781
  * - Acceptance Rate: 68.7%
  *
  * Similar Problems:
+ *
  * - construct-product-matrix (Medium)
  * - maximum-product-subarray (Medium)
  * - find-sum-of-array-product-of-magical-sequences (Hard)
@@ -31,7 +34,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {number[]}
+ * @returns {number[]}
  */
 const productExceptSelf = (nums) => {
         const n = nums.length;

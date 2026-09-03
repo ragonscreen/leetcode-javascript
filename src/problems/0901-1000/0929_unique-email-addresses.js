@@ -1,5 +1,5 @@
 /**
- * 0929. Unique Email Addresses
+ * 929. Unique Email Addresses
  *
  * Link: https://leetcode.com/problems/unique-email-addresses/
  * Category: Algorithms
@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Hash Table (topic_6)
  * - String (topic_10)
  *
  * Stats:
+ *
  * - Total Accepted: 574,475
  * - Total Submissions: 847,187
  * - Acceptance Rate: 67.8%
@@ -25,7 +27,7 @@
  * `n` = length of `emails`, `m` = length of the longest string in `emails`
  *
  * @param {string[]} emails
- * @return {number}
+ * @returns {number}
  */
 const numUniqueEmails = (emails) => {
         const set = new Set();

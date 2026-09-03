@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - String (topic_10)
  * - Binary Search (topic_11)
  *
  * Stats:
+ *
  * - Total Accepted: 43,303
  * - Total Submissions: 91,929
  * - Acceptance Rate: 47.1%
  *
  * Similar Problems:
+ *
  * - maximum-candies-allocated-to-k-children (Medium)
  */
 
@@ -31,7 +34,7 @@
  * @param {string} s
  * @param {string} p
  * @param {number[]} removable
- * @return {number}
+ * @returns {number}
  */
 const maximumRemovals = (s, p, removable) => {
         const n = s.length;

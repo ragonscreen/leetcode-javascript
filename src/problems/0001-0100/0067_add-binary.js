@@ -1,5 +1,5 @@
 /**
- * 0067. Add Binary
+ * 67. Add Binary
  *
  * Link: https://leetcode.com/problems/add-binary/
  * Category: Algorithms
@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Math (topic_8)
  * - String (topic_10)
  * - Bit Manipulation (topic_19)
  * - Simulation (topic_61055)
  *
  * Stats:
+ *
  * - Total Accepted: 2,321,484
  * - Total Submissions: 4,009,182
  * - Acceptance Rate: 57.9%
  *
  * Similar Problems:
+ *
  * - add-to-array-form-of-integer (Easy)
  * - plus-one (Easy)
  * - add-two-numbers (Medium)
@@ -32,7 +35,7 @@
  *
  * @param {string} a
  * @param {string} b
- * @return {string}
+ * @returns {string}
  */
 const addBinary = (a, b) => {
         const n = a.length;
@@ -61,7 +64,7 @@ const addBinary = (a, b) => {
  *
  * @param {string} a
  * @param {string} b
- * @return {string}
+ * @returns {string}
  */
 const addBinary1 = (a, b) => {
         const n = a.length;

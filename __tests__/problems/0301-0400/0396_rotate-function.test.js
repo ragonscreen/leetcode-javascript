@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         maxRotateFunction,
         maxRotateFunction1,
@@ -10,17 +11,19 @@ const testcases = [
 ];
 
 describe('maxRotateFunction', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxRotateFunction($nums) -> $expected', ({ nums, expected }) => {
-                expect(maxRotateFunction(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxRotateFunction($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxRotateFunction(nums)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('maxRotateFunction1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxRotateFunction1($nums) -> $expected', ({ nums, expected }) => {
-                expect(maxRotateFunction1(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxRotateFunction1($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(maxRotateFunction1(nums)).toStrictEqual(expected);
+                },
+        );
 });

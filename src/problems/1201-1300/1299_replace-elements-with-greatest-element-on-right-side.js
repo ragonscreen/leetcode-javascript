@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 534,064
  * - Total Submissions: 741,402
  * - Acceptance Rate: 72.0%
  *
  * Similar Problems:
+ *
  * - two-furthest-houses-with-different-colors (Easy)
  * - next-greater-element-iv (Hard)
  */
@@ -26,7 +29,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} arr
- * @return {number[]}
+ * @returns {number[]}
  */
 const replaceElements = (arr) => {
         let max = -1;

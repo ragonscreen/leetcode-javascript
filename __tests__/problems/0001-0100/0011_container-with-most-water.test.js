@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxArea } from '../../../src/problems/0001-0100/0011_container-with-most-water.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('maxArea', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxArea($height) -> $expected', ({ height, expected }) => {
-                expect(maxArea(height)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxArea($height) -> $expected',
+                ({ height, expected }) => {
+                        expect(maxArea(height)).toStrictEqual(expected);
+                },
+        );
 });

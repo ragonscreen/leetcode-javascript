@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - String (topic_10)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 336,149
  * - Total Submissions: 372,939
  * - Acceptance Rate: 90.1%
  *
  * Similar Problems:
+ *
  * - minimum-cost-to-move-chips-to-the-same-position (Easy)
  * - minimum-moves-to-spread-stones-over-grid (Medium)
  */
@@ -28,7 +31,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {string} boxes
- * @return {number[]}
+ * @returns {number[]}
  */
 const minOperations = (boxes) => {
         const n = boxes.length;
@@ -57,7 +60,7 @@ const minOperations = (boxes) => {
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {string} boxes
- * @return {number[]}
+ * @returns {number[]}
  */
 const minOperations1 = (boxes) => {
         const n = boxes.length;
@@ -90,7 +93,7 @@ const minOperations1 = (boxes) => {
  * `n` = length of `boxes`, `k` = number of 1s in `boxes`
  *
  * @param {string} boxes
- * @return {number[]}
+ * @returns {number[]}
  */
 const minOperations2 = (boxes) => {
         const n = boxes.length;

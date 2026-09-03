@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findMinDifference } from '../../../src/problems/0501-0600/0539_minimum-time-difference.js';
 
 const testcases = [
@@ -7,12 +8,10 @@ const testcases = [
 ];
 
 describe('findMinDifference', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findMinDifference($timePoints) -> $expected', ({
-                timePoints,
-                expected,
-        }) => {
-                expect(findMinDifference(timePoints)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findMinDifference($timePoints) -> $expected',
+                ({ timePoints, expected }) => {
+                        expect(findMinDifference(timePoints)).toStrictEqual(expected);
+                },
+        );
 });

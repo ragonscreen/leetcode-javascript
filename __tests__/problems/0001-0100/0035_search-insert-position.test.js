@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { searchInsert } from '../../../src/problems/0001-0100/0035_search-insert-position.js';
 
 const testcases = [
@@ -9,13 +10,10 @@ const testcases = [
 ];
 
 describe('searchInsert', () => {
-        test.each(
-                structuredClone(testcases),
-        )('searchInsert($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(searchInsert(nums, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'searchInsert($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(searchInsert(nums, target)).toStrictEqual(expected);
+                },
+        );
 });

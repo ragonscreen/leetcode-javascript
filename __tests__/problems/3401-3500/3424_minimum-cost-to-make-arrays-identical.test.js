@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minCost } from '../../../src/problems/3401-3500/3424_minimum-cost-to-make-arrays-identical.js';
 
 const testcases = [
@@ -7,14 +8,10 @@ const testcases = [
 ];
 
 describe('minCost', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minCost($arr, $brr, $k) -> $expected', ({
-                arr,
-                brr,
-                k,
-                expected,
-        }) => {
-                expect(minCost(arr, brr, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minCost($arr, $brr, $k) -> $expected',
+                ({ arr, brr, k, expected }) => {
+                        expect(minCost(arr, brr, k)).toStrictEqual(expected);
+                },
+        );
 });

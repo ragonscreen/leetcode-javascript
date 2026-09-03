@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { reverseBetween } from '../../../src/problems/0001-0100/0092_reverse-linked-list-ii.js';
 import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
@@ -23,18 +24,12 @@ const testcases = [
 ];
 
 describe('reverseBetween', () => {
-        test.each(
-                structuredClone(testcases),
-        )('reverseBetween($head, $left, $right) -> $expected', ({
-                head,
-                left,
-                right,
-                expected,
-        }) => {
-                expect(
-                        listToArray(
-                                reverseBetween(arrayToList(head), left, right),
-                        ),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'reverseBetween($head, $left, $right) -> $expected',
+                ({ head, left, right, expected }) => {
+                        expect(
+                                listToArray(reverseBetween(arrayToList(head), left, right)),
+                        ).toStrictEqual(expected);
+                },
+        );
 });

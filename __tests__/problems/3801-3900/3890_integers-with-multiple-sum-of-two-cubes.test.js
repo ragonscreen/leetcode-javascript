@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { findGoodIntegers } from '../../../src/problems/3801-3900/3890_integers-with-multiple-sum-of-two-cubes.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('findGoodIntegers', () => {
-        test.each(
-                structuredClone(testcases),
-        )('findGoodIntegers($n) -> $expected', ({ n, expected }) => {
-                expect(findGoodIntegers(n)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'findGoodIntegers($n) -> $expected',
+                ({ n, expected }) => {
+                        expect(findGoodIntegers(n)).toStrictEqual(expected);
+                },
+        );
 });

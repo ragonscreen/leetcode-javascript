@@ -8,11 +8,13 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Stack (topic_15)
  * - Monotonic Stack (topic_61054)
  *
  * Stats:
+ *
  * - Total Accepted: 397,465
  * - Total Submissions: 472,746
  * - Acceptance Rate: 84.1%
@@ -24,7 +26,7 @@
  * Space Complexity: O(n)
  *
  * @param {number[]} prices
- * @return {number[]}
+ * @returns {number[]}
  */
 const finalPrices = (prices) => {
         const n = prices.length;

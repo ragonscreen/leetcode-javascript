@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { resultArray } from '../../../src/problems/3001-3100/3069_distribute-elements-into-two-arrays-i.js';
 
 const testcases = [
@@ -7,9 +8,10 @@ const testcases = [
 ];
 
 describe('resultArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('resultArray($nums) -> $expected', ({ nums, expected }) => {
-                expect(resultArray(nums)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'resultArray($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(resultArray(nums)).toStrictEqual(expected);
+                },
+        );
 });

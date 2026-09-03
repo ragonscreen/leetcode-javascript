@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxSum } from '../../../src/problems/2801-2900/2841_maximum-sum-of-almost-unique-subarray.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('maxSum', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxSum($nums, $m, $k) -> $expected', ({ nums, m, k, expected }) => {
-                expect(maxSum(nums, m, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxSum($nums, $m, $k) -> $expected',
+                ({ nums, m, k, expected }) => {
+                        expect(maxSum(nums, m, k)).toStrictEqual(expected);
+                },
+        );
 });

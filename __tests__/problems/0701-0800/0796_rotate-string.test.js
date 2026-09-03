@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { rotateString } from '../../../src/problems/0701-0800/0796_rotate-string.js';
 
 const testcases = [
@@ -8,9 +9,10 @@ const testcases = [
 ];
 
 describe('rotateString', () => {
-        test.each(
-                structuredClone(testcases),
-        )('rotateString($s, $goal) -> $expected', ({ s, goal, expected }) => {
-                expect(rotateString(s, goal)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'rotateString($s, $goal) -> $expected',
+                ({ s, goal, expected }) => {
+                        expect(rotateString(s, goal)).toStrictEqual(expected);
+                },
+        );
 });

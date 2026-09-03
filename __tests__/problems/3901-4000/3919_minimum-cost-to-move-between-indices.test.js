@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minCost } from '../../../src/problems/3901-4000/3919_minimum-cost-to-move-between-indices.js';
 
 const testcases = [
@@ -36,15 +37,10 @@ const testcases = [
 ];
 
 describe('minCost', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minCost($nums, $queries) -> $expected', ({
-                nums,
-                queries,
-                expected,
-        }) => {
-                expect(Array.from(minCost(nums, queries))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'minCost($nums, $queries) -> $expected',
+                ({ nums, queries, expected }) => {
+                        expect(Array.from(minCost(nums, queries))).toStrictEqual(expected);
+                },
+        );
 });

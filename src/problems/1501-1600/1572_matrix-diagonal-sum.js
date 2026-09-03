@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 520,479
  * - Total Submissions: 617,999
  * - Acceptance Rate: 84.2%
  *
  * Similar Problems:
+ *
  * - check-if-every-row-and-column-contains-all-numbers (Easy)
  * - check-if-matrix-is-x-matrix (Easy)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[][]} mat
- * @return {number}
+ * @returns {number}
  */
 const diagonalSum = (mat) => {
         const n = mat.length;

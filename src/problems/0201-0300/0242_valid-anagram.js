@@ -1,5 +1,5 @@
 /**
- * 0242. Valid Anagram
+ * 242. Valid Anagram
  *
  * Link: https://leetcode.com/problems/valid-anagram/
  * Category: Algorithms
@@ -8,16 +8,19 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Sorting (topic_61049)
  *
  * Stats:
+ *
  * - Total Accepted: 5,928,295
  * - Total Submissions: 8,737,633
  * - Acceptance Rate: 67.8%
  *
  * Similar Problems:
+ *
  * - find-resultant-array-after-removing-anagrams (Easy)
  * - palindrome-permutation (Easy)
  * - find-all-anagrams-in-a-string (Medium)
@@ -31,7 +34,7 @@
  *
  * @param {string} s
  * @param {string} t
- * @return {boolean}
+ * @returns {boolean}
  */
 const isAnagram = (s, t) => {
         if (s.length !== t.length) {

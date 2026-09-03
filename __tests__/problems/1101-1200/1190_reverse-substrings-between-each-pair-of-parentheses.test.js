@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { reverseParentheses } from '../../../src/problems/1101-1200/1190_reverse-substrings-between-each-pair-of-parentheses.js';
 
 const testcases = [
@@ -13,9 +14,10 @@ const testcases = [
 ];
 
 describe('reverseParentheses', () => {
-        test.each(
-                structuredClone(testcases),
-        )('reverseParentheses($s) -> $expected', ({ s, expected }) => {
-                expect(reverseParentheses(s)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'reverseParentheses($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(reverseParentheses(s)).toStrictEqual(expected);
+                },
+        );
 });

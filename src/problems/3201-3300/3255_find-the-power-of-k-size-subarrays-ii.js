@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 35,115
  * - Total Submissions: 111,375
  * - Acceptance Rate: 31.5%
  *
  * Similar Problems:
+ *
  * - maximum-sum-of-distinct-subarrays-with-length-k (Medium)
  */
 
@@ -27,7 +30,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const resultsArray = (nums, k) => {
         const n = nums.length;

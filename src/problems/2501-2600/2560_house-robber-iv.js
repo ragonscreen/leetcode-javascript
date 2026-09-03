@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Dynamic Programming (topic_13)
  * - Greedy (topic_17)
  *
  * Stats:
+ *
  * - Total Accepted: 139,962
  * - Total Submissions: 216,189
  * - Acceptance Rate: 64.7%
  *
  * Similar Problems:
+ *
  * - container-with-most-water (Medium)
  * - house-robber (Medium)
  */
@@ -31,7 +34,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const minCapability = (nums, k) => {
         const check = (money) => {

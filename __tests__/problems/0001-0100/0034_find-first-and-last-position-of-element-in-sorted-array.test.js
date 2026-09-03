@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { searchRange } from '../../../src/problems/0001-0100/0034_find-first-and-last-position-of-element-in-sorted-array.js';
 
 const testcases = [
@@ -8,13 +9,10 @@ const testcases = [
 ];
 
 describe('searchRange', () => {
-        test.each(
-                structuredClone(testcases),
-        )('searchRange($nums, $target) -> $expected', ({
-                nums,
-                target,
-                expected,
-        }) => {
-                expect(searchRange(nums, target)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'searchRange($nums, $target) -> $expected',
+                ({ nums, target, expected }) => {
+                        expect(searchRange(nums, target)).toStrictEqual(expected);
+                },
+        );
 });

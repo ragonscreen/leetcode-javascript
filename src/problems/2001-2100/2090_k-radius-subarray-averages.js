@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Sliding Window (topic_55821)
  *
  * Stats:
+ *
  * - Total Accepted: 195,865
  * - Total Submissions: 424,933
  * - Acceptance Rate: 46.1%
  *
  * Similar Problems:
+ *
  * - maximum-average-subarray-i (Easy)
  * - moving-average-from-data-stream (Easy)
  * - find-the-grid-of-region-average (Medium)
@@ -32,7 +35,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number[]}
+ * @returns {number[]}
  */
 const getAverages = (nums, k) => {
         const n = nums.length;

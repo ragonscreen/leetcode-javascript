@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { removeCoveredIntervals } from '../../../src/problems/1201-1300/1288_remove-covered-intervals.js';
 
 const testcases = [
@@ -45,14 +46,10 @@ const testcases = [
 ];
 
 describe('removeCoveredIntervals', () => {
-        test.each(
-                structuredClone(testcases),
-        )('removeCoveredIntervals($intervals) -> $expected', ({
-                intervals,
-                expected,
-        }) => {
-                expect(removeCoveredIntervals(intervals)).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'removeCoveredIntervals($intervals) -> $expected',
+                ({ intervals, expected }) => {
+                        expect(removeCoveredIntervals(intervals)).toStrictEqual(expected);
+                },
+        );
 });

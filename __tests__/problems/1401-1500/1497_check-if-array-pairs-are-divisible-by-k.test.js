@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         canArrange,
         canArrange1,
@@ -13,17 +14,19 @@ const testcases = [
 ];
 
 describe('canArrange', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canArrange($arr, $k) -> $expected', ({ arr, k, expected }) => {
-                expect(canArrange(arr, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canArrange($arr, $k) -> $expected',
+                ({ arr, k, expected }) => {
+                        expect(canArrange(arr, k)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('canArrange1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('canArrange1($arr, $k) -> $expected', ({ arr, k, expected }) => {
-                expect(canArrange1(arr, k)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'canArrange1($arr, $k) -> $expected',
+                ({ arr, k, expected }) => {
+                        expect(canArrange1(arr, k)).toStrictEqual(expected);
+                },
+        );
 });

@@ -1,5 +1,5 @@
 /**
- * 0283. Move Zeroes
+ * 283. Move Zeroes
  *
  * Link: https://leetcode.com/problems/move-zeroes/
  * Category: Algorithms
@@ -8,15 +8,18 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  *
  * Stats:
+ *
  * - Total Accepted: 4,959,788
  * - Total Submissions: 7,795,714
  * - Acceptance Rate: 63.6%
  *
  * Similar Problems:
+ *
  * - apply-operations-to-an-array (Easy)
  * - remove-element (Easy)
  */
@@ -27,7 +30,7 @@
  * Space Complexity: O(1) auxiliary, O(n) total
  *
  * @param {number[]} nums
- * @return {void}
+ * @returns {void}
  */
 const moveZeroes = (nums) => {
         let slow = 0;

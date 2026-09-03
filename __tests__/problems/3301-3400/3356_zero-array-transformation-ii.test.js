@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { minZeroArray } from '../../../src/problems/3301-3400/3356_zero-array-transformation-ii.js';
 
 const testcases = [
@@ -31,13 +32,10 @@ const testcases = [
 ];
 
 describe('minZeroArray', () => {
-        test.each(
-                structuredClone(testcases),
-        )('minZeroArray($nums, $queries) -> $expected', ({
-                nums,
-                queries,
-                expected,
-        }) => {
-                expect(minZeroArray(nums, queries)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'minZeroArray($nums, $queries) -> $expected',
+                ({ nums, queries, expected }) => {
+                        expect(minZeroArray(nums, queries)).toStrictEqual(expected);
+                },
+        );
 });

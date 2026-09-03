@@ -1,5 +1,5 @@
 /**
- * 0485. Max Consecutive Ones
+ * 485. Max Consecutive Ones
  *
  * Link: https://leetcode.com/problems/max-consecutive-ones/
  * Category: Algorithms
@@ -8,14 +8,17 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  *
  * Stats:
+ *
  * - Total Accepted: 2,250,954
  * - Total Submissions: 3,464,122
  * - Acceptance Rate: 65.0%
  *
  * Similar Problems:
+ *
  * - consecutive-characters (Easy)
  * - longer-contiguous-segments-of-ones-than-zeros (Easy)
  * - maximum-enemy-forts-that-can-be-captured (Easy)
@@ -30,7 +33,7 @@
  * Space Complexity: O(1)
  *
  * @param {number[]} nums
- * @return {number}
+ * @returns {number}
  */
 const findMaxConsecutiveOnes = (nums) => {
         let res = 0;

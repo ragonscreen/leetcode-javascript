@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Depth-First Search (topic_21)
  * - Breadth-First Search (topic_22)
@@ -15,11 +16,13 @@
  * - Matrix (topic_61053)
  *
  * Stats:
+ *
  * - Total Accepted: 163,269
  * - Total Submissions: 231,441
  * - Acceptance Rate: 70.5%
  *
  * Similar Problems:
+ *
  * - max-area-of-island (Medium)
  * - number-of-islands (Medium)
  */
@@ -32,7 +35,7 @@ import { Queue } from '@datastructures-js/queue';
  * Space Complexity: O(1) auxiliary, O(n * m) total
  *
  * @param {number[][]} grid
- * @return {number}
+ * @returns {number}
  */
 const findMaxFish = (grid) => {
         const n = grid.length;

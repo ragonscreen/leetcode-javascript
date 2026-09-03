@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maximumProduct } from '../../../src/problems/0601-0700/0628_maximum-product-of-three-numbers.js';
 import { normaliseNegZero } from '../../utils/number.js';
 
@@ -18,11 +19,10 @@ const testcases = [
 ];
 
 describe('maximumProduct', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maximumProduct($nums) -> $expected', ({ nums, expected }) => {
-                expect(normaliseNegZero(maximumProduct(nums))).toStrictEqual(
-                        expected,
-                );
-        });
+        test.each(structuredClone(testcases))(
+                'maximumProduct($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(normaliseNegZero(maximumProduct(nums))).toStrictEqual(expected);
+                },
+        );
 });

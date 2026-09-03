@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Two Pointers (topic_9)
  * - Binary Search (topic_11)
@@ -17,6 +18,7 @@
  * - Biweekly Contest 162 (contest_biweekly-contest-162)
  *
  * Stats:
+ *
  * - Total Accepted: 14,698
  * - Total Submissions: 39,321
  * - Acceptance Rate: 37.4%
@@ -32,14 +34,9 @@
  * @param {number[]} landDuration
  * @param {number[]} waterStartTime
  * @param {number[]} waterDuration
- * @return {number}
+ * @returns {number}
  */
-const earliestFinishTime = (
-        landStartTime,
-        landDuration,
-        waterStartTime,
-        waterDuration,
-) => {
+const earliestFinishTime = (landStartTime, landDuration, waterStartTime, waterDuration) => {
         const INF = Number.MAX_SAFE_INTEGER;
         const n = landStartTime.length;
         const m = waterStartTime.length;

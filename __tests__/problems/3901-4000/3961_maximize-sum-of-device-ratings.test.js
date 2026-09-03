@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { maxRatings } from '../../../src/problems/3901-4000/3961_maximize-sum-of-device-ratings.js';
 
 const testcases = [
@@ -38,9 +39,10 @@ const testcases = [
 ];
 
 describe('maxRatings', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxRatings($units) -> $expected', ({ units, expected }) => {
-                expect(maxRatings(units)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxRatings($units) -> $expected',
+                ({ units, expected }) => {
+                        expect(maxRatings(units)).toStrictEqual(expected);
+                },
+        );
 });

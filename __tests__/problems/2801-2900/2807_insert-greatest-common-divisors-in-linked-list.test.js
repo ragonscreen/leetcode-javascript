@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import { insertGreatestCommonDivisors } from '../../../src/problems/2801-2900/2807_insert-greatest-common-divisors-in-linked-list.js';
 import { arrayToList, listToArray } from '../../utils/linked-list.js';
 
@@ -8,16 +9,12 @@ const testcases = [
 ];
 
 describe('insertGreatestCommonDivisors', () => {
-        test.each(
-                structuredClone(testcases),
-        )('insertGreatestCommonDivisors($head) -> $expected', ({
-                head,
-                expected,
-        }) => {
-                expect(
-                        listToArray(
-                                insertGreatestCommonDivisors(arrayToList(head)),
-                        ),
-                ).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'insertGreatestCommonDivisors($head) -> $expected',
+                ({ head, expected }) => {
+                        expect(
+                                listToArray(insertGreatestCommonDivisors(arrayToList(head))),
+                        ).toStrictEqual(expected);
+                },
+        );
 });

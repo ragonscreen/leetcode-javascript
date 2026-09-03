@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+
 import {
         maxProfit,
         maxProfit1,
@@ -11,17 +12,19 @@ const testcases = [
 ];
 
 describe('maxProfit', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxProfit($prices) -> $expected', ({ prices, expected }) => {
-                expect(maxProfit(prices)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxProfit($prices) -> $expected',
+                ({ prices, expected }) => {
+                        expect(maxProfit(prices)).toStrictEqual(expected);
+                },
+        );
 });
 
 describe('maxProfit1', () => {
-        test.each(
-                structuredClone(testcases),
-        )('maxProfit1($prices) -> $expected', ({ prices, expected }) => {
-                expect(maxProfit1(prices)).toStrictEqual(expected);
-        });
+        test.each(structuredClone(testcases))(
+                'maxProfit1($prices) -> $expected',
+                ({ prices, expected }) => {
+                        expect(maxProfit1(prices)).toStrictEqual(expected);
+                },
+        );
 });

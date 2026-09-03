@@ -8,6 +8,7 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Hash Table (topic_6)
  * - String (topic_10)
  * - Greedy (topic_17)
@@ -17,11 +18,13 @@
  * - Weekly Contest 381 (contest_weekly-contest-381)
  *
  * Stats:
+ *
  * - Total Accepted: 318,013
  * - Total Submissions: 381,713
  * - Acceptance Rate: 83.3%
  *
  * Similar Problems:
+ *
  * - letter-combinations-of-a-phone-number (Medium)
  */
 
@@ -32,7 +35,7 @@
  * `n` = `word.length`
  *
  * @param {string} word
- * @return {number}
+ * @returns {number}
  */
 const minimumPushes = (word) => {
         const map = new Uint32Array(26);
