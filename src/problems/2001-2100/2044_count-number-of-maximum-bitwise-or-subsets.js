@@ -30,7 +30,7 @@
  */
 
 /**
- * Approach: Recursion
+ * Approach: Backtracking
  * Time Complexity: O(2^n)
  * Space Complexity: O(1)
  * `n` = `nums.length`
