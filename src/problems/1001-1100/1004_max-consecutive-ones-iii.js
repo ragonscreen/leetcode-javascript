@@ -8,17 +8,20 @@
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
+ *
  * - Array (topic_5)
  * - Binary Search (topic_11)
  * - Sliding Window (topic_55821)
  * - Prefix Sum (topic_61068)
  *
  * Stats:
+ *
  * - Total Accepted: 1,350,017
  * - Total Submissions: 2,002,117
  * - Acceptance Rate: 67.4%
  *
  * Similar Problems:
+ *
  * - max-consecutive-ones (Easy)
  * - maximum-enemy-forts-that-can-be-captured (Easy)
  * - minimum-recolors-to-get-k-consecutive-black-blocks (Easy)
@@ -38,7 +41,7 @@
  *
  * @param {number[]} nums
  * @param {number} k
- * @return {number}
+ * @returns {number}
  */
 const longestOnes = (nums, k) => {
         let res = 0;
@@ -47,9 +50,7 @@ const longestOnes = (nums, k) => {
         for (let l = 0, r = 0; r < nums.length; r++) {
                 flips += nums[r] ^ 1;
 
-                while (flips > k) {
-                        flips -= nums[l++] ^ 1;
-                }
+                while (flips > k) flips -= nums[l++] ^ 1;
 
                 res = Math.max(res, r - l + 1);
         }

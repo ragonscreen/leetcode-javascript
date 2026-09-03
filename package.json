@@ -1,35 +1,44 @@
 {
         "name": "leetcode-javascript",
+        "private": true,
         "author": "ragonscreen",
+        "type": "module",
         "module": "index.js",
+        "scripts": {
+                "dev": "bun --watch run ./src/main.js",
+                "fmt": "oxfmt --disable-nested-config",
+                "fmt:check": "oxfmt --disable-nested-config --check",
+                "lint": "oxlint --disable-nested-config",
+                "lint:fix": "oxlint --disable-nested-config --fix",
+                "test": "bun test --watch --only-failures",
+                "test:prune": "bun test --watch --only-failures --bail --timeout 4 --rerun-each 10"
+        },
+        "dependencies": {
+                "@datastructures-js/deque": "^1.0.8",
+                "@datastructures-js/priority-queue": "^6.3.5",
+                "@datastructures-js/queue": "^4.3.0",
+                "oxfmt": "^0.66.0",
+                "oxlint": "^1.81.0"
+        },
         "devDependencies": {
-                "@biomejs/biome": "2.4.7",
                 "@types/bun": "^1.3.10",
                 "leetcode-templater-js": "^1.0.0"
         },
         "peerDependencies": {
                 "typescript": "^5.9.3"
         },
-        "private": true,
-        "scripts": {
-                "new": "bun src/lib/new/main.js",
-                "dev": "bun --watch run ./src/main.js",
-                "test": "bun test --watch --only-failures",
-                "test:prune": "bun test --watch --only-failures --bail --timeout 4 --rerun-each 10",
-                "fmt": "bunx biome check --write"
-        },
-        "type": "module",
-        "dependencies": {
-                "@datastructures-js/deque": "^1.0.8",
-                "@datastructures-js/priority-queue": "^6.3.5",
-                "@datastructures-js/queue": "^4.3.0"
-        },
         "lct": {
                 "SOLUTION_AUTHOR_NAME": "ragonscreen",
                 "SOLUTION_AUTHOR_URL": "https://github.com/ragonscreen/",
                 "INDENT_WIDTH": 8,
-                "DIR_SOLUTIONS": ["src", "problems"],
-                "DIR_TESTS": ["__tests__", "problems"],
+                "DIR_SOLUTIONS": [
+                        "src",
+                        "problems"
+                ],
+                "DIR_TESTS": [
+                        "__tests__",
+                        "problems"
+                ],
                 "ADD_HINTS": false
         }
 }

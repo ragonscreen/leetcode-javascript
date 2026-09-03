@@ -1,0 +1,63 @@
+{
+        "$schema": "./node_modules/oxfmt/configuration_schema.json",
+        "arrowParens": "always",
+        "bracketSameLine": true,
+        "bracketSpacing": true,
+        "embeddedLanguageFormatting": "auto",
+        "endOfLine": "lf",
+        "experimentalOperatorPosition": "end",
+        "htmlWhitespaceSensitivity": "css",
+        "ignorePatterns": [],
+        "insertFinalNewline": true,
+        "jsdoc": {
+                "addDefaultToDescription": true,
+                "bracketSpacing": false,
+                "capitalizeDescriptions": false,
+                "commentLineStrategy": "multiline",
+                "descriptionTag": false,
+                "descriptionWithDot": false,
+                "keepUnparsableExampleIndent": false,
+                "lineWrappingStyle": "balance",
+                "preferCodeFences": true,
+                "separateReturnsFromParam": false,
+                "separateTagGroups": false
+        },
+        "jsxSingleQuote": true,
+        "objectWrap": "preserve",
+        "overrides": [],
+        "printWidth": 100,
+        "proseWrap": "always",
+        "quoteProps": "consistent",
+        "semi": true,
+        "singleAttributePerLine": true,
+        "singleQuote": true,
+        "sortImports": {
+                "customGroups": [],
+                "groups": [
+                        "builtin",
+                        "external",
+                        ["internal", "subpath"],
+                        ["parent", "sibling", "index"],
+                        "style",
+                        "unknown"
+                ],
+                "ignoreCase": true,
+                "internalPattern": ["~/", "@/"],
+                "newlinesBetween": true,
+                "order": "asc",
+                "partitionByComment": false,
+                "partitionByNewline": false,
+                "sortSideEffects": false
+        },
+        "sortPackageJson": true,
+        "sortTailwindcss": {
+                "attributes": [],
+                "functions": [],
+                "preserveDuplicates": false,
+                "preserveWhitespace": false,
+                "stylesheet": "src/main.css"
+        },
+        "tabWidth": 8,
+        "trailingComma": "all",
+        "useTabs": false
+}
