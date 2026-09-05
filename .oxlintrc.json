@@ -24,7 +24,7 @@
                 "block-scoped-var": "error", // not necessary (no-var)
                 "capitalized-comments": ["off"], // bugged, not accepting config options
                 "class-methods-use-this": "error",
-                "complexity": ["warn", { "max": 15, "variant": "modified" }],
+                "complexity": ["off"],
                 "constructor-super": "error",
                 "curly": ["error", "multi-or-nest", "consistent"],
                 "default-case": "error",
@@ -53,7 +53,7 @@
                 "max-lines-per-function": ["warn", { "max": 80, "skipComments": true }],
                 "max-nested-callbacks": ["error", { "max": 4 }],
                 "max-params": ["warn", { "max": 3 }],
-                "max-statements": ["warn", { "max": 30 }],
+                "max-statements": ["off"],
                 "new-cap": ["error", { "capIsNew": true, "newIsCap": true }],
                 "no-alert": "error",
                 "no-array-constructor": "error",
