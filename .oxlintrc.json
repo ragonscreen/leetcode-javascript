@@ -2,7 +2,8 @@
         // https://oxc.rs/docs/guide/usage/linter/config-file-reference.html
         "$schema": "./node_modules/oxlint/configuration_schema.json",
         "env": {
-                "builtin": true
+                "builtin": true,
+                "node": true
         },
         "ignorePatterns": [],
         "options": {
@@ -157,7 +158,7 @@
                 "no-this-before-super": "error",
                 "no-throw-literal": "off", // deprecated
                 "no-unassigned-vars": "error",
-                "no-undef": "off", // false positives (nursery)
+                "no-undef": "error",
                 "no-undefined": "off",
                 "no-underscore-dangle": "error",
                 "no-unexpected-multiline": "error",
