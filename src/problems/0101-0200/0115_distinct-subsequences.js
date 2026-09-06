@@ -42,7 +42,7 @@ const numDistinct = (s, t) => {
 
         for (let i = 0; i < m; i++) {
                 for (let j = 0; j < n; j++)
-                        dp[i + 1][j + 1] = t[i] === s[j] ? dp[i][j] + dp[i + 1][j] : dp[i + 1][j];
+                        dp[i + 1][j + 1] = dp[i + 1][j] + (t[i] === s[j] ? dp[i][j] : 0);
         }
 
         return dp[m][n];
