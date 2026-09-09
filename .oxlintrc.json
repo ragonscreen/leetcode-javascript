@@ -221,7 +221,7 @@
                         "asc",
                         { "allowLineSeparatedGroups": true, "minKeys": 3, "natural": false }
                 ],
-                "sort-vars": "warn",
+                "sort-vars": "off",
                 "symbol-description": "error",
                 "unicode-bom": ["error", "never"],
                 "use-isnan": ["error", { "enforceForIndexOf": true, "enforceForSwitchCase": true }],
