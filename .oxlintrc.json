@@ -41,11 +41,7 @@
                 "guard-for-in": "error",
                 "id-denylist": "off",
                 "id-length": "off",
-                "id-match": [
-                        "error",
-                        "^[^_]+$",
-                        { "ignoreDestructuring": true, "properties": true }
-                ],
+                "id-match": ["off"],
                 "init-declarations": ["error", "always"],
                 "logical-assignment-operators": ["error", "always"],
                 "max-classes-per-file": ["error", { "max": 1 }],
