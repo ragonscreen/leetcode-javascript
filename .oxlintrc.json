@@ -472,7 +472,7 @@
                 "unicorn/no-array-method-this-argument": "error",
                 "unicorn/no-array-reduce": ["error", { "allowSimpleOperations": true }],
                 "unicorn/no-array-reverse": "error",
-                "unicorn/no-array-sort": "error",
+                "unicorn/no-array-sort": "off",
                 "unicorn/no-await-expression-member": "error",
                 "unicorn/no-await-in-promise-methods": "error",
                 "unicorn/no-confusing-array-with": "error",
