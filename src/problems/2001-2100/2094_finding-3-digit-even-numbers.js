@@ -66,7 +66,7 @@ const findEvenNumbers = (digits) => {
 };
 
 /**
- * Approach:
+ * Approach: Simulation
  * Time Complexity: O(n^3)
  * Space Complexity: O(1)
  * `n` = `digits.length`
