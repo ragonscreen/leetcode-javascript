@@ -29,7 +29,7 @@
 
 /**
  * Approach: Simulation
- * Time Complexity: O(n^3)
+ * Time Complexity: O(n)
  * Space Complexity: O(1)
  * `n` = `digits.length`
  *
@@ -37,6 +37,42 @@
  * @returns {number}
  */
 const totalNumbers = (digits) => {
+        const frq = new Int8Array(10);
+
+        for (const d of digits) frq[d]++;
+
+        let res = 0;
+
+        for (let num = 100; num <= 998; num += 2) {
+                const x = Math.floor(num / 100);
+                const y = Math.floor((num / 10) % 10);
+                const z = Math.floor(num % 10);
+                const dd = [x, y, z];
+                let ok = true;
+
+                for (const d of dd) frq[d]--;
+
+                for (const d of dd) {
+                        if (frq[d] < 0) ok = false;
+                        frq[d]++;
+                }
+
+                res += ok;
+        }
+
+        return res;
+};
+
+/**
+ * Approach: Simulation
+ * Time Complexity: O(n^3)
+ * Space Complexity: O(1)
+ * `n` = `digits.length`
+ *
+ * @param {number[]} digits
+ * @returns {number}
+ */
+const totalNumbers1 = (digits) => {
         const n = digits.length;
         const vis = new Uint8Array(999);
         let res = 0;
@@ -71,4 +107,4 @@ const totalNumbers = (digits) => {
         return res;
 };
 
-export { totalNumbers };
+export { totalNumbers, totalNumbers1 };

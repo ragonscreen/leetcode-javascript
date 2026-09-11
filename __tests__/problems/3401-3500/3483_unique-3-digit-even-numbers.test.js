@@ -1,6 +1,9 @@
 import { describe, expect, test } from 'bun:test';
 
-import { totalNumbers } from '../../../src/problems/3401-3500/3483_unique-3-digit-even-numbers.js';
+import {
+        totalNumbers,
+        totalNumbers1,
+} from '../../../src/problems/3401-3500/3483_unique-3-digit-even-numbers.js';
 
 const testcases = [
         { digits: [1, 2, 3, 4], expected: 12 },
@@ -14,6 +17,15 @@ describe('totalNumbers', () => {
                 'totalNumbers($digits) -> $expected',
                 ({ digits, expected }) => {
                         expect(totalNumbers(digits)).toStrictEqual(expected);
+                },
+        );
+});
+
+describe('totalNumbers1', () => {
+        test.each(structuredClone(testcases))(
+                'totalNumbers1($digits) -> $expected',
+                ({ digits, expected }) => {
+                        expect(totalNumbers1(digits)).toStrictEqual(expected);
                 },
         );
 });
