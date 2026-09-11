@@ -38,7 +38,7 @@
  */
 const totalNumbers = (digits) => {
         const n = digits.length;
-        const vis = new Uint8Array(1000);
+        const vis = new Uint8Array(999);
         let res = 0;
 
         for (let i = 0; i < n; i++) {
