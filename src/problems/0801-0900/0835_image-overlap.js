@@ -25,7 +25,7 @@
  * Approach: Simulation
  * Time Complexity: O(n^4)
  * Space Complexity: O(1)
- * `n` = `img1.length`,
+ * `n` = `img1.length`
  *
  * @param {number[][]} img1
  * @param {number[][]} img2
