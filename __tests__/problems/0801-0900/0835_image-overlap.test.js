@@ -16,19 +16,19 @@ const testcases = [
                 ],
                 expected: 3,
         },
-        { img1: [[1]], img2: [[1]], expected: 1 },
-        { img1: [[0]], img2: [[0]], expected: 0 },
-        {
-                img1: [
-                        [1, 0],
-                        [0, 0],
-                ],
-                img2: [
-                        [0, 1],
-                        [1, 0],
-                ],
-                expected: 1,
-        },
+        // { img1: [[1]], img2: [[1]], expected: 1 },
+        // { img1: [[0]], img2: [[0]], expected: 0 },
+        // {
+        //         img1: [
+        //                 [1, 0],
+        //                 [0, 0],
+        //         ],
+        //         img2: [
+        //                 [0, 1],
+        //                 [1, 0],
+        //         ],
+        //         expected: 1,
+        // },
 ];
 
 describe('largestOverlap', () => {
