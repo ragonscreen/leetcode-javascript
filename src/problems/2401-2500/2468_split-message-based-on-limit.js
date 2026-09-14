@@ -36,6 +36,8 @@
  * @returns {string[]}
  */
 const splitMessage = (message, limit) => {
+        if (limit < 6) return [];
+
         const n = message.length;
 
         for (let parts = 1, digLen = 1, totDigLen = 0, nxt = 10; parts <= n; parts++) {
@@ -44,12 +46,10 @@ const splitMessage = (message, limit) => {
                         nxt *= 10;
                 }
 
-                if (limit <= 3 + 2 * digLen) return [];
-
                 totDigLen += digLen;
-                const cap = parts * (limit - 3 - digLen) - totDigLen;
+                const rem = parts * (limit - 3 - digLen) - totDigLen;
 
-                if (cap < n) continue;
+                if (rem < n) continue;
 
                 const res = new Array(parts);
 
