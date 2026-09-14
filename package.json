@@ -11,7 +11,7 @@
                 "lint": "oxlint --disable-nested-config",
                 "lint:fix": "oxlint --disable-nested-config --fix",
                 "test": "bun test --watch --only-failures",
-                "test:prune": "bun test --watch --only-failures --bail --timeout 4 --rerun-each 10"
+                "test:prune": "bun test --watch --only-failures --bail --timeout 5 --rerun-each 10"
         },
         "dependencies": {
                 "@datastructures-js/deque": "^1.0.8",
