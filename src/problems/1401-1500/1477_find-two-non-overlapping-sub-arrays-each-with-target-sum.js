@@ -41,7 +41,8 @@
 const minSumOfLengths = (arr, target) => {
         const n = arr.length;
         const INF = n + 1;
-        const dp = new Uint32Array(n + 1).fill(INF);
+        const dp = new Uint32Array(n + 1);
+        dp[0] = INF;
         let res = INF;
 
         for (let l = 0, r = 0, sum = 0; r < n; r++) {
