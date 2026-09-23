@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-03-29
+ * Date: 2026-03-29 (Updated: 2026-09-23)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -41,34 +41,23 @@
  */
 const minOperations = (nums, x) => {
         const n = nums.length;
-        let total = 0;
+        const tot = nums.reduce((t, c) => t + c, 0);
 
-        for (let i = 0; i < n; i++) {
-                total += nums[i];
-        }
+        if (tot < x) return -1;
+        if (tot === x) return n;
 
-        const diff = total - x;
+        const target = tot - x;
+        let res = -1;
 
-        if (diff === 0) {
-                return n;
-        }
-
-        let maxLen = 0;
-        let sum = 0;
-
-        for (let l = 0, r = 0; r < n; r++) {
+        for (let l = 0, r = 0, sum = 0; r < n; r++) {
                 sum += nums[r];
 
-                while (sum > diff) {
-                        sum -= nums[l++];
-                }
+                while (sum > target) sum -= nums[l++];
 
-                if (sum === diff) {
-                        maxLen = Math.max(maxLen, r - l + 1);
-                }
+                if (sum === target) res = Math.max(res, r - l + 1);
         }
 
-        return maxLen ? n - maxLen : -1;
+        return res === -1 ? res : n - res;
 };
 
 export { minOperations };
