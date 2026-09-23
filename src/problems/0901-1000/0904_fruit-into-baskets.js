@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/fruit-into-baskets/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-03-20
+ * Date: 2026-03-20 (Updated: 2026-09-24)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -28,29 +28,21 @@
 /**
  * Approach: Sliding Window
  * Time Complexity: O(n)
- * Space Complexity: O(1)
+ * Space Complexity: O(n)
+ * `n` = `fruits.length`
  *
  * @param {number[]} fruits
  * @returns {number}
  */
 const totalFruit = (fruits) => {
-        const map = new Map();
-        let res = 0;
+        const n = fruits.length;
+        const map = new Uint32Array(n); // fruits[i] < n
+        let res = -1;
 
-        for (let l = 0, r = 0; r < fruits.length; r++) {
-                const fr = fruits[r];
-                map.set(fr, (map.get(fr) || 0) + 1);
+        for (let l = 0, r = 0, cnt = 0; r < n; r++) {
+                if (++map[fruits[r]] === 1) cnt++;
 
-                while (map.size > 2) {
-                        const fl = fruits[l++];
-                        const val = map.get(fl);
-
-                        if (val === 1) {
-                                map.delete(fl);
-                        } else {
-                                map.set(fl, val - 1);
-                        }
-                }
+                while (cnt > 2) if (--map[fruits[l++]] === 0) cnt--;
 
                 res = Math.max(res, r - l + 1);
         }
