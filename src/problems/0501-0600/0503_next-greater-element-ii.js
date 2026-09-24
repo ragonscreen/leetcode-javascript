@@ -28,7 +28,7 @@
  */
 
 /**
- * Approach: Stack
+ * Approach: Monotonic Stack
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  * `n` = `nums.length`
