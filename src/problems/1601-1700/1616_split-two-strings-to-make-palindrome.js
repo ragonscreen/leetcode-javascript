@@ -25,6 +25,7 @@
  * Approach: Two Pointers
  * Time Complexity: O(n)
  * Space Complexity: O(1)
+ * `n` = `a.length`
  *
  * If the substrings `a[0..i]` and `b[n - 1 - i..n - 1]` (all inclusive) can form the ends of a
  * palindrome, then the middle section must also be a palindrome itself, and must come from either
@@ -59,6 +60,7 @@ const checkPalindromeFormation = (a, b) => {
  * Approach: Two Pointers
  * Time Complexity: O(n)
  * Space Complexity: O(1)
+ * `n` = `a.length`
  *
  * @param {string} a
  * @param {string} b
