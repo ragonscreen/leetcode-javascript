@@ -39,7 +39,7 @@ import { PriorityQueue } from '@datastructures-js/priority-queue';
  * Space Complexity: O(n)
  * `n` = `nums.length`
  *
- * This builds on Monotonic Stack [I] but violates the stack principal. This is purely an
+ * This builds on Monotonic Stack [I] but violates the stack principle. This is purely an
  * optimisation, and it is only possible because of the flat fixed size array used as the stack. At
  * each step, it emulates undoing the pop operation on the first stack and pushing the numbers into
  * the second stack while preserving order. This would not be possible with a traditional stack
