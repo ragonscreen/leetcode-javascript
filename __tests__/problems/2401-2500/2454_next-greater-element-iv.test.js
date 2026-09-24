@@ -8,11 +8,11 @@ import {
 
 const testcases = [
         { nums: [2, 4, 0, 9, 6], expected: [9, 6, 6, -1, -1] },
-        // { nums: [3, 3], expected: [-1, -1] },
-        // {
-        //         nums: [11, 13, 15, 12, 0, 15, 12, 11, 9],
-        //         expected: [15, 15, -1, -1, 12, -1, -1, -1, -1],
-        // },
+        { nums: [3, 3], expected: [-1, -1] },
+        {
+                nums: [11, 13, 15, 12, 0, 15, 12, 11, 9],
+                expected: [15, 15, -1, -1, 12, -1, -1, -1, -1],
+        },
 ];
 
 describe('secondGreaterElement', () => {

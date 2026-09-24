@@ -65,9 +65,7 @@ const secondGreaterElement = (nums) => {
 
                 while (sp1 > 0 && num > nums[st1[sp1 - 1]]) sp1--;
 
-                let cur = sp1;
-
-                while (cur < pre) st2[sp2++] = st1[cur++];
+                for (let cur = sp1; cur < pre; cur++) st2[sp2++] = st1[cur];
 
                 st1[sp1++] = i;
         }
