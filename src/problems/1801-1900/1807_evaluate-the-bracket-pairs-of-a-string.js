@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-05-06
+ * Date: 2026-05-06 (Updated: 2026-09-26)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -26,37 +26,28 @@
 
 /**
  * Approach: Sliding Window
- * Time Complexity: O(n + k)
- * Space Complexity: O(k) auxiliary, O(k + m) total
- * `n` = length of `s`, `k` = length of `knowledge`, `m` = sum of lengths of `s[i]`
+ * Time Complexity: O(n + K)
+ * Space Complexity: O(K) auxiliary, O(K + r) total
+ * `n` = `s.length`, `K` = `sum(knowledge[i][0].length + knowledge[i][1].length)`
+ * `r` = `res.length`
  *
  * @param {string} s
  * @param {string[][]} knowledge
  * @returns {string}
  */
 const evaluate = (s, knowledge) => {
-        const map = new Map(knowledge);
         const n = s.length;
+        const mp = new Map(knowledge);
         let res = '';
 
         for (let l = 0, r = 0; r <= n; r++) {
-                if (s[r] === '(' || r === n) {
-                        const str = s.slice(l, r);
+                const c = s[r];
 
-                        if (str) {
-                                res += str;
-                        }
-
+                if (c === '(' || r === n) {
+                        res += s.slice(l, r);
                         l = r + 1;
-                }
-
-                if (s[r] === ')') {
-                        const str = s.slice(l, r);
-
-                        if (str) {
-                                res += map.get(str) || '?';
-                        }
-
+                } else if (c === ')') {
+                        res += mp.get(s.slice(l, r)) ?? '?';
                         l = r + 1;
                 }
         }
