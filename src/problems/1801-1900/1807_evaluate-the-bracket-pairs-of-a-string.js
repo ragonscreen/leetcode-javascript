@@ -39,11 +39,12 @@ const evaluate = (s, knowledge) => {
         const n = s.length;
         const mp = new Map(knowledge);
         let res = '';
+        let l = 0;
 
-        for (let l = 0, r = 0; r <= n; r++) {
+        for (let r = 0; r < n; r++) {
                 const c = s[r];
 
-                if (c === '(' || r === n) {
+                if (c === '(') {
                         res += s.slice(l, r);
                         l = r + 1;
                 } else if (c === ')') {
@@ -51,6 +52,8 @@ const evaluate = (s, knowledge) => {
                         l = r + 1;
                 }
         }
+
+        res += s.slice(l, n);
 
         return res;
 };
