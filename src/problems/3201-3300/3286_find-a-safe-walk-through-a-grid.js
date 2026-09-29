@@ -33,7 +33,7 @@
  * Approach: 0-1 BFS
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @param {number} health
@@ -97,7 +97,7 @@ const findSafeWalk = (grid, health) => {
  * Approach: BFS
  * Time Complexity: O(n * m * K) [O(n * m * (n + m))]
  * Space Complexity: O(n * m * K) [O(n * m * (n + m))]
- * `n` = `gird.length`, `m` = `grid[0].length`, `K` = `health`
+ * `n` = `gird.length`, `m` = `grid[i].length`, `K` = `health`
  *
  * @param {number[][]} grid
  * @param {number} health

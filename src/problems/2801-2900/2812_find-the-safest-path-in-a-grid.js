@@ -33,7 +33,7 @@
  * Approach: BFS + Binary Search
  * Time Complexity: O(n * m * lg (n * m))
  * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @returns {number}

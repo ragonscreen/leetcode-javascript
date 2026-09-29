@@ -27,7 +27,7 @@
  * Approach: Prefix Sum [Space Optimized]
  * Time Complexity: O(n * m)
  * Space Complexity: O(1)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @returns {boolean}
@@ -67,7 +67,7 @@ const canPartitionGrid = (grid) => {
  * Approach: Prefix Sum
  * Time Complexity: O(n * m)
  * Space Complexity: O(n + m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @returns {boolean}

@@ -31,7 +31,7 @@
  * Approach: DFS
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @param {number} row

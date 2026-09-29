@@ -35,7 +35,7 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
  * Approach: 0-1 BFS [Deque]
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @returns {number}
@@ -90,7 +90,7 @@ const minimumObstacles = (grid) => {
  * Approach: 0-1 BFS [Two Stacks]
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @returns {number}
@@ -145,7 +145,7 @@ const minimumObstacles1 = (grid) => {
  * Approach: Dijkstra's Algorithm
  * Time Complexity: O(n * m * lg (n * m))
  * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * @param {number[][]} grid
  * @returns {number}

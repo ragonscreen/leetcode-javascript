@@ -34,7 +34,7 @@
  * Approach: BFS + Binary Search
  * Time Complexity: O(n * m)
  * Space Complexity: O(n * m)
- * `n` = `grid.length`, `m` = `grid[0].length`
+ * `n` = `grid.length`, `m` = `grid[i].length`
  *
  * Multi-source BFS to find the earliest time for each cell to be engulfed by fire. Binary search
  * on time to find latest wait time possible while still finding a safe route.
