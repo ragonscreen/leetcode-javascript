@@ -1,0 +1,18 @@
+import { describe, expect, test } from 'bun:test';
+
+import { findValidElements } from './3912_valid-elements-in-an-array.js';
+
+const testcases = [
+        { nums: [1, 2, 4, 2, 3, 2], expected: [1, 2, 4, 3, 2] },
+        { nums: [5, 5, 5, 5], expected: [5, 5] },
+        { nums: [1], expected: [1] },
+];
+
+describe('findValidElements', () => {
+        test.each(structuredClone(testcases))(
+                'findValidElements($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(findValidElements(nums)).toStrictEqual(expected);
+                },
+        );
+});

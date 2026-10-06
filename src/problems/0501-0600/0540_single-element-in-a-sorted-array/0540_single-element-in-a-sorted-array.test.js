@@ -1,0 +1,17 @@
+import { describe, expect, test } from 'bun:test';
+
+import { singleNonDuplicate } from './0540_single-element-in-a-sorted-array.js';
+
+const testcases = [
+        { nums: [1, 1, 2, 3, 3, 4, 4, 8, 8], expected: 2 },
+        { nums: [3, 3, 7, 7, 10, 11, 11], expected: 10 },
+];
+
+describe('singleNonDuplicate', () => {
+        test.each(structuredClone(testcases))(
+                'singleNonDuplicate($nums) -> $expected',
+                ({ nums, expected }) => {
+                        expect(singleNonDuplicate(nums)).toStrictEqual(expected);
+                },
+        );
+});

@@ -1,0 +1,18 @@
+import { describe, expect, test } from 'bun:test';
+
+import { rotate } from './0189_rotate-array.js';
+
+const testcases = [
+        { nums: [1, 2, 3, 4, 5, 6, 7], k: 3, expected: [5, 6, 7, 1, 2, 3, 4] },
+        { nums: [-1, -100, 3, 99], k: 2, expected: [3, 99, -1, -100] },
+];
+
+describe('rotate', () => {
+        test.each(structuredClone(testcases))(
+                'rotate($nums, $k) -> $expected',
+                ({ nums, k, expected }) => {
+                        expect(rotate(nums, k)).toBeNil();
+                        expect(nums).toStrictEqual(expected);
+                },
+        );
+});

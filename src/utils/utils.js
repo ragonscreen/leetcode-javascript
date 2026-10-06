@@ -1,11 +1,11 @@
 const debug = (obj) => {
         console.log(
                 JSON.stringify(obj)
-                        .replace(/"/g, '')
-                        .replace(/,/g, ', ')
-                        .replace(/:/g, ': ')
-                        .replace(/\{/g, '{ ')
-                        .replace(/\}/g, ' }'),
+                        .replaceAll('"', '')
+                        .replaceAll(',', ', ')
+                        .replaceAll(':', ': ')
+                        .replaceAll('{', '{ ')
+                        .replaceAll('}', ' }'),
         );
 };
 

@@ -36,7 +36,7 @@
                         "problems"
                 ],
                 "DIR_TESTS": [
-                        "__tests__",
+                        "src",
                         "problems"
                 ],
                 "ADD_HINTS": false

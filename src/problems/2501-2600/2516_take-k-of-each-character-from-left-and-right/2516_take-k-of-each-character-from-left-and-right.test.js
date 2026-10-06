@@ -1,0 +1,17 @@
+import { describe, expect, test } from 'bun:test';
+
+import { takeCharacters } from './2516_take-k-of-each-character-from-left-and-right.js';
+
+const testcases = [
+        { s: 'aabaaaacaabc', k: 2, expected: 8 },
+        { s: 'a', k: 1, expected: -1 },
+];
+
+describe('takeCharacters', () => {
+        test.each(structuredClone(testcases))(
+                'takeCharacters($s, $k) -> $expected',
+                ({ s, k, expected }) => {
+                        expect(takeCharacters(s, k)).toStrictEqual(expected);
+                },
+        );
+});

@@ -1,0 +1,23 @@
+import { describe, expect, test } from 'bun:test';
+
+import { countPaths } from './2328_number-of-increasing-paths-in-a-grid.js';
+
+const testcases = [
+        {
+                grid: [
+                        [1, 1],
+                        [3, 4],
+                ],
+                expected: 8,
+        },
+        { grid: [[1], [2]], expected: 3 },
+];
+
+describe('countPaths', () => {
+        test.each(structuredClone(testcases))(
+                'countPaths($grid) -> $expected',
+                ({ grid, expected }) => {
+                        expect(countPaths(grid)).toStrictEqual(expected);
+                },
+        );
+});
