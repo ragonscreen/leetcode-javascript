@@ -7,16 +7,16 @@ import {
 } from './0301_remove-invalid-parentheses.js';
 
 const testcases = [
-        // { s: '()())()', expected: ['(())()', '()()()'] },
-        // { s: '(a)())()', expected: ['(a())()', '(a)()()'] },
-        // { s: ')(', expected: [''] },
-        // { s: '()', expected: ['()'] },
-        // { s: '(a)', expected: ['(a)'] },
-        // { s: '(a)()(())', expected: ['(a)()(())'] },
-        // { s: '))', expected: [''] },
-        // { s: ')d))', expected: ['d'] },
+        { s: '()())()', expected: ['(())()', '()()()'] },
+        { s: '(a)())()', expected: ['(a())()', '(a)()()'] },
+        { s: ')(', expected: [''] },
+        { s: '()', expected: ['()'] },
+        { s: '(a)', expected: ['(a)'] },
+        { s: '(a)()(())', expected: ['(a)()(())'] },
+        { s: '))', expected: [''] },
+        { s: ')d))', expected: ['d'] },
         // disabled for test performance
-        { s: '((((((((((((((((((aaaaa))', expected: ['((aaaaa))'] },
+        // { s: '((((((((((((((((((aaaaa))', expected: ['((aaaaa))'] },
 ];
 
 describe('removeInvalidParentheses', () => {
