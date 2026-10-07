@@ -26,6 +26,68 @@
  */
 
 /**
+ * Approach: BFS
+ * Time Complexity: O(n^2 * 2^n)
+ * Space Complexity: O(n * 2^n)
+ * `n` = `s.length`
+ *
+ * @param {string} s
+ * @returns {string[]}
+ */
+const removeInvalidParentheses = (s) => {
+        const isValid = (str) => {
+                let score = 0;
+
+                for (let i = 0; i < str.length; i++) {
+                        const v = str.charCodeAt(i);
+
+                        if (v === 40) {
+                                score++;
+                        } else if (v === 41) {
+                                if (score === 0) return false;
+
+                                score--;
+                        }
+                }
+
+                return score === 0;
+        };
+
+        let q = [s];
+        const vis = new Set([s]);
+
+        while (q.length) {
+                const valid = q.filter((str) => isValid(str));
+
+                if (valid.length > 0) return valid;
+
+                const q2 = [];
+
+                for (const str of q) {
+                        const len = str.length;
+
+                        for (let i = 0; i < len; i++) {
+                                const v = str.charCodeAt(i);
+
+                                if (!(v === 40 || v === 41)) continue;
+                                if (v === str.charCodeAt(i - 1)) continue; // same effect as removing cur char
+
+                                const nxt = str.slice(0, i) + str.slice(i + 1);
+
+                                if (!vis.has(nxt)) {
+                                        vis.add(nxt);
+                                        q2.push(nxt);
+                                }
+                        }
+                }
+
+                q = q2;
+        }
+
+        return [''];
+};
+
+/**
  * Approach: BFS + Stack + Bitmask
  * Time Complexity: O(n * 2^n)
  * Space Complexity: O(n * 2^n)
@@ -34,7 +96,7 @@
  * @param {string} s
  * @returns {string[]}
  */
-const removeInvalidParentheses = (s) => {
+const removeInvalidParentheses1 = (s) => {
         const n = s.length;
         let cnto = 0;
         let mnRem = 0;
@@ -148,7 +210,7 @@ const removeInvalidParentheses = (s) => {
  * @param {string} s
  * @returns {string[]}
  */
-const removeInvalidParentheses1 = (s) => {
+const removeInvalidParentheses2 = (s) => {
         const n = s.length;
         let cnto = 0;
         let mnRem = 0;
@@ -235,4 +297,4 @@ const removeInvalidParentheses1 = (s) => {
         return [...set];
 };
 
-export { removeInvalidParentheses, removeInvalidParentheses1 };
+export { removeInvalidParentheses, removeInvalidParentheses1, removeInvalidParentheses2 };
