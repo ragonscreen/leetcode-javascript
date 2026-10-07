@@ -1,6 +1,9 @@
 import { describe, expect, test } from 'bun:test';
 
-import { removeInvalidParentheses } from './0301_remove-invalid-parentheses.js';
+import {
+        removeInvalidParentheses,
+        removeInvalidParentheses1,
+} from './0301_remove-invalid-parentheses.js';
 
 const testcases = [
         { s: '()())()', expected: ['(())()', '()()()'] },
@@ -18,6 +21,15 @@ describe('removeInvalidParentheses', () => {
                 'removeInvalidParentheses($s) -> $expected',
                 ({ s, expected }) => {
                         expect(removeInvalidParentheses(s)).toContainAllValues(expected);
+                },
+        );
+});
+
+describe('removeInvalidParentheses1', () => {
+        test.each(structuredClone(testcases))(
+                'removeInvalidParentheses1($s) -> $expected',
+                ({ s, expected }) => {
+                        expect(removeInvalidParentheses1(s)).toContainAllValues(expected);
                 },
         );
 });
