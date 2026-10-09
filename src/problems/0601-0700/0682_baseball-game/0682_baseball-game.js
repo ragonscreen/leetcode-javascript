@@ -25,7 +25,7 @@
  */
 
 /**
- * Approach: Stack
+ * Approach: Stack [II]
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  * `n` = `operations.length`
@@ -59,4 +59,40 @@ const calPoints = (operations) => {
         return res;
 };
 
-export { calPoints };
+/**
+ * Approach: Stack [I]
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ * `n` = `operations.length`
+ *
+ * @param {string[]} operations
+ * @returns {number}
+ */
+const calPoints1 = (operations) => {
+        const stack = [];
+
+        for (const op of operations) {
+                switch (op) {
+                        case '+':
+                                stack.push(stack.at(-1) + stack.at(-2));
+                                break;
+                        case 'D':
+                                stack.push(stack.at(-1) * 2);
+                                break;
+                        case 'C':
+                                stack.pop();
+                                break;
+                        default:
+                                stack.push(Number(op));
+                                break;
+                }
+        }
+
+        let res = 0;
+
+        for (const n of stack) res += n;
+
+        return res;
+};
+
+export { calPoints, calPoints1 };
