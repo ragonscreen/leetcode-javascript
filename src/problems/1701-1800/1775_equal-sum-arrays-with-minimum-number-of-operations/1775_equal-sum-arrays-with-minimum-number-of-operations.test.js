@@ -6,10 +6,10 @@ import {
 } from './1775_equal-sum-arrays-with-minimum-number-of-operations.js';
 
 const testcases = [
-        // { nums1: [1, 2, 3, 4, 5, 6], nums2: [1, 1, 2, 2, 2, 2], expected: 3 },
-        // { nums1: [1, 1, 1, 1, 1, 1, 1], nums2: [6], expected: -1 },
-        // { nums1: [6, 6], nums2: [1], expected: 3 },
-        // { nums1: [1, 2, 3], nums2: [1, 2, 3], expected: 0 },
+        { nums1: [1, 2, 3, 4, 5, 6], nums2: [1, 1, 2, 2, 2, 2], expected: 3 },
+        { nums1: [1, 1, 1, 1, 1, 1, 1], nums2: [6], expected: -1 },
+        { nums1: [6, 6], nums2: [1], expected: 3 },
+        { nums1: [1, 2, 3], nums2: [1, 2, 3], expected: 0 },
         {
                 nums1: [
                         1, 2, 6, 4, 1, 5, 4, 6, 5, 4, 4, 6, 6, 4, 3, 3, 1, 2, 1, 6, 2, 2, 4, 2, 5,
