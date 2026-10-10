@@ -30,12 +30,59 @@
  */
 
 /**
- * Approach: Binary Search + Greedy
- * Time Complexity: O(n lg K)
- * Space Complexity: O(n)
- * `n` = `nums1.length`, `K` = `max(abs(nums1[i] - nums2[i]))`
+ * Approach: Prefix Sum + Greedy
+ * Time Complexity: O(n + D)
+ * Space Complexity: O(U)
+ * `n` = `nums1.length`, `D` = `max(abs(nums1[i] - nums2[i]))`, `U` = 1e5
  *
- * The idea behind this approach is the same as the other one, only without sorting the diffs array.
+ * This approach simulates accumulating the differences starting with the max, one at a time. A
+ * prefix sum array is used to accumulate diffs remaining. At each step to simulate a difference of
+ * one, each value is decremented by the number of possible moves, while the previous value is
+ * incremented by the same amount.
+ *
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @param {number} k1
+ * @param {number} k2
+ * @returns {number}
+ */
+const minSumSquareDiff = (nums1, nums2, k1, k2) => {
+        const MXD = 1e5;
+        const frq = new Uint32Array(MXD + 1);
+        let mxDiff = 0;
+
+        for (let i = 0; i < nums1.length; i++) {
+                const diff = Math.abs(nums1[i] - nums2[i]);
+                frq[diff]++;
+                mxDiff = Math.max(mxDiff, diff);
+        }
+
+        let moves = k1 + k2;
+        let res = 0;
+
+        for (let diff = mxDiff; diff > 0; diff--) {
+                if (frq[diff] === 0) continue;
+
+                if (moves > 0) {
+                        const take = Math.min(moves, frq[diff]);
+                        moves -= take;
+                        frq[diff] -= take;
+                        frq[diff - 1] += take;
+                }
+
+                res += frq[diff] * diff * diff;
+        }
+
+        return res;
+};
+
+/**
+ * Approach: Binary Search + Greedy
+ * Time Complexity: O(n lg D)
+ * Space Complexity: O(n)
+ * `n` = `nums1.length`, `D` = `max(abs(nums1[i] - nums2[i]))`
+ *
+ * The idea behind this approach is the same as approach 3, only without sorting the diffs array.
  * Notice that since we find the smallest value each diff can be made, and each smaller value is
  * ignored during before the simulation begins, we can instead safely ignore them during the
  * simulation itself.
@@ -46,7 +93,7 @@
  * @param {number} k2
  * @returns {number}
  */
-const minSumSquareDiff = (nums1, nums2, k1, k2) => {
+const minSumSquareDiff1 = (nums1, nums2, k1, k2) => {
         const n = nums1.length;
         const diffs = new Uint32Array(n);
         const mxMoves = k1 + k2;
@@ -103,9 +150,9 @@ const minSumSquareDiff = (nums1, nums2, k1, k2) => {
 
 /**
  * Approach: Sorting + Binary Search + Greedy
- * Time Complexity: O(n lg (n + K))
+ * Time Complexity: O(n lg (n + D))
  * Space Complexity: O(n)
- * `n` = `nums1.length`, `K` = `max(abs(nums1[i] - nums2[i]))`
+ * `n` = `nums1.length`, `D` = `max(abs(nums1[i] - nums2[i]))`
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
@@ -113,7 +160,7 @@ const minSumSquareDiff = (nums1, nums2, k1, k2) => {
  * @param {number} k2
  * @returns {number}
  */
-const minSumSquareDiff1 = (nums1, nums2, k1, k2) => {
+const minSumSquareDiff2 = (nums1, nums2, k1, k2) => {
         const n = nums1.length;
         const diffs = new Uint32Array(n);
         const mxMoves = k1 + k2;
@@ -182,4 +229,4 @@ const minSumSquareDiff1 = (nums1, nums2, k1, k2) => {
         return res;
 };
 
-export { minSumSquareDiff, minSumSquareDiff1 };
+export { minSumSquareDiff, minSumSquareDiff1, minSumSquareDiff2 };

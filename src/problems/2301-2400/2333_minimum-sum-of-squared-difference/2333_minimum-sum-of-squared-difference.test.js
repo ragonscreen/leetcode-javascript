@@ -1,6 +1,10 @@
 import { describe, expect, test } from 'bun:test';
 
-import { minSumSquareDiff } from './2333_minimum-sum-of-squared-difference.js';
+import {
+        minSumSquareDiff,
+        minSumSquareDiff1,
+        minSumSquareDiff2,
+} from './2333_minimum-sum-of-squared-difference.js';
 
 const testcases = [
         { nums1: [1, 2, 3, 4], nums2: [2, 10, 20, 19], k1: 0, k2: 0, expected: 579 },
@@ -29,6 +33,24 @@ describe('minSumSquareDiff', () => {
                 'minSumSquareDiff($nums1, $nums2, $k1, $k2) -> $expected',
                 ({ nums1, nums2, k1, k2, expected }) => {
                         expect(minSumSquareDiff(nums1, nums2, k1, k2)).toStrictEqual(expected);
+                },
+        );
+});
+
+describe('minSumSquareDiff1', () => {
+        test.each(structuredClone(testcases))(
+                'minSumSquareDiff1($nums1, $nums2, $k1, $k2) -> $expected',
+                ({ nums1, nums2, k1, k2, expected }) => {
+                        expect(minSumSquareDiff1(nums1, nums2, k1, k2)).toStrictEqual(expected);
+                },
+        );
+});
+
+describe('minSumSquareDiff2', () => {
+        test.each(structuredClone(testcases))(
+                'minSumSquareDiff2($nums1, $nums2, $k1, $k2) -> $expected',
+                ({ nums1, nums2, k1, k2, expected }) => {
+                        expect(minSumSquareDiff2(nums1, nums2, k1, k2)).toStrictEqual(expected);
                 },
         );
 });
