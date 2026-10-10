@@ -103,9 +103,9 @@ const minSumSquareDiff = (nums1, nums2, k1, k2) => {
 
 /**
  * Approach: Sorting + Binary Search + Greedy
- * Time Complexity: O(n lg n)
+ * Time Complexity: O(n lg (n + K))
  * Space Complexity: O(n)
- * `n` = `nums1.length`
+ * `n` = `nums1.length`, `K` = `max(abs(nums1[i] - nums2[i]))`
  *
  * @param {number[]} nums1
  * @param {number[]} nums2
