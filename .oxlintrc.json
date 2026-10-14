@@ -49,7 +49,7 @@
                 "max-lines": ["warn", { "max": 200, "skipComments": true }],
                 "max-lines-per-function": ["off"],
                 "max-nested-callbacks": ["error", { "max": 4 }],
-                "max-params": ["warn", { "max": 3 }],
+                "max-params": "off",
                 "max-statements": ["off"],
                 "new-cap": ["error", { "capIsNew": true, "newIsCap": true }],
                 "no-alert": "error",
