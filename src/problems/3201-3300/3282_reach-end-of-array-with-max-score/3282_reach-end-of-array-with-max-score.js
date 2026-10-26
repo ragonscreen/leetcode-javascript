@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/reach-end-of-array-with-max-score/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-10-26
+ * Date: 2026-10-17
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
