@@ -12,7 +12,7 @@ describe('targetIndices', () => {
         test.each(structuredClone(testcases))(
                 'targetIndices($nums, $target) -> $expected',
                 ({ nums, target, expected }) => {
-                        expect(targetIndices(nums, target)).toStrictEqual(expected);
+                        expect([...targetIndices(nums, target)]).toStrictEqual(expected);
                 },
         );
 });

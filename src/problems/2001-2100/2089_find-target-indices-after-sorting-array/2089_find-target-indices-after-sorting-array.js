@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/find-target-indices-after-sorting-array/
  * Category: Algorithms
  * Difficulty: Easy
- * Date: 2026-10-26
+ * Date: 2026-10-19
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
