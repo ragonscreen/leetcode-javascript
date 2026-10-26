@@ -461,7 +461,7 @@
                 "unicorn/no-anonymous-default-export": "error",
                 "unicorn/no-array-callback-reference": "error",
                 "unicorn/no-array-fill-with-reference-type": "error",
-                "unicorn/no-array-for-each": "error",
+                "unicorn/no-array-for-each": "warn",
                 "unicorn/no-array-method-this-argument": "error",
                 "unicorn/no-array-reduce": ["off"],
                 "unicorn/no-array-reverse": "error",

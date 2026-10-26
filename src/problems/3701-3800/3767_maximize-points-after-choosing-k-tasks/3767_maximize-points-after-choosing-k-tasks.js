@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/maximize-points-after-choosing-k-tasks/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-10-26
+ * Date: 2026-10-16
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
