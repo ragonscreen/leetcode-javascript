@@ -28,7 +28,7 @@
  * Approach: Sorting + Greedy
  * Time Complexity: O(n + K lg K)
  * Space Complexity: O(K)
- * `n` = `arr.length`, `K` = `max(cnt(nums))`
+ * `n` = `arr.length`, `K` = `max(nums[i])`
  *
  * @param {number[]} arr
  * @returns {number}
