@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-05-24
+ * Date: 2026-05-24 (Updated: 2026-10-22)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -41,17 +41,12 @@ const minOperations = (nums) => {
         }
 
         const nl = nums[0];
-        const nr = nums.at(-1);
+        const nr = nums[n - 1];
         asc += nl === nr + 1;
         dsc += nl === nr - 1;
 
-        if (asc === n) {
-                return nl === 0 ? 0 : Math.min(n - nl, nl + 2);
-        }
-
-        if (dsc === n) {
-                return nr === 0 ? 1 : Math.min(n - nr, nr) + 1;
-        }
+        if (asc === n) return nl === 0 ? 0 : Math.min(n - nl, nl + 2);
+        if (dsc === n) return nr === 0 ? 1 : Math.min(n - nr, nr) + 1;
 
         return -1;
 };
