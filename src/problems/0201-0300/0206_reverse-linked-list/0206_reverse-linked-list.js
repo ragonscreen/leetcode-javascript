@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/reverse-linked-list/
  * Category: Algorithms
  * Difficulty: Easy
- * Date: 2026-04-14
+ * Date: 2026-04-14 (Updated: 2026-10-28)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -51,4 +51,36 @@ const reverseList = (head) => {
         return prev;
 };
 
-export { reverseList };
+/**
+ * Approach: Recursion
+ * Time Complexity: O(n)
+ * Space Complexity: O(1) auxiliary, O(n) total
+ *
+ * @param {ListNode} head
+ * @returns {ListNode}
+ */
+const reverseList1 = (head) => {
+        if (!head) return null;
+
+        let res = null;
+
+        const rec = (curr) => {
+                if (!curr.next) {
+                        res = curr;
+
+                        return curr;
+                }
+
+                const node = rec(curr.next);
+                curr.next = null;
+                node.next = curr;
+
+                return curr;
+        };
+
+        rec(head);
+
+        return res;
+};
+
+export { reverseList, reverseList1 };
