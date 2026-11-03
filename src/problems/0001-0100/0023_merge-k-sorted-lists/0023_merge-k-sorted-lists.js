@@ -32,6 +32,53 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
 import { ListNode } from '../../../data-structures/linked-list/LinkedListNode.js';
 
 /**
+ * Approach: Divide and Conquer
+ * Time Complexity: O(m lg n)
+ * Space Complexity: O(n)
+ * `n` = `lists.length`, `m` = `sum(lists[i].length)`
+ *
+ * @param {ListNode[]} lists
+ * @returns {ListNode}
+ */
+const mergeKLists = (lists) => {
+        if (lists.length === 0) return null;
+
+        const dummy = new ListNode();
+
+        while (lists.length > 1) {
+                const tmp = [];
+                const n = lists.length;
+
+                for (let i = 0; i < n - 1; i += 2) {
+                        let l1 = lists[i];
+                        let l2 = lists[i + 1];
+                        let curr = dummy;
+
+                        while (l1 && l2) {
+                                if (l1.val <= l2.val) {
+                                        curr.next = l1;
+                                        l1 = l1.next;
+                                } else {
+                                        curr.next = l2;
+                                        l2 = l2.next;
+                                }
+
+                                curr = curr.next;
+                        }
+
+                        curr.next = l1 || l2;
+                        tmp.push(dummy.next);
+                }
+
+                if (n & 1) tmp.push(lists[n - 1]);
+
+                lists = tmp;
+        }
+
+        return lists[0];
+};
+
+/**
  * Approach: Sorting
  * Time Complexity: O(m lg m)
  * Space Complexity: O(m)
@@ -40,7 +87,7 @@ import { ListNode } from '../../../data-structures/linked-list/LinkedListNode.js
  * @param {ListNode[]} lists
  * @returns {ListNode}
  */
-const mergeKLists = (lists) => {
+const mergeKLists1 = (lists) => {
         const nodes = [];
 
         for (let list of lists) {
@@ -71,7 +118,7 @@ const mergeKLists = (lists) => {
  * @param {ListNode[]} lists
  * @returns {ListNode}
  */
-const mergeKLists1 = (lists) => {
+const mergeKLists2 = (lists) => {
         const pq = new MinPriorityQueue((e) => e.val);
 
         for (const list of lists) if (list) pq.enqueue(list);
@@ -100,7 +147,7 @@ const mergeKLists1 = (lists) => {
  * @param {ListNode[]} lists
  * @returns {ListNode}
  */
-const mergeKLists2 = (lists) => {
+const mergeKLists3 = (lists) => {
         const n = lists.length;
         const dummy = new ListNode();
         let curr = dummy;
@@ -128,4 +175,4 @@ const mergeKLists2 = (lists) => {
         return dummy.next;
 };
 
-export { mergeKLists, mergeKLists1, mergeKLists2 };
+export { mergeKLists, mergeKLists1, mergeKLists2, mergeKLists3 };

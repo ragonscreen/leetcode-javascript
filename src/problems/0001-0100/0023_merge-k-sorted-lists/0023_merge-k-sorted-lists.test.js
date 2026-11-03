@@ -1,7 +1,12 @@
 import { describe, expect, test } from 'bun:test';
 
 import { arrayToList, listToArray } from '../../../utils/test-utils/linked-list.js';
-import { mergeKLists, mergeKLists1, mergeKLists2 } from './0023_merge-k-sorted-lists.js';
+import {
+        mergeKLists,
+        mergeKLists1,
+        mergeKLists2,
+        mergeKLists3,
+} from './0023_merge-k-sorted-lists.js';
 
 const testcases = [
         {
@@ -20,9 +25,9 @@ describe('mergeKLists', () => {
         test.each(structuredClone(testcases))(
                 'mergeKLists($lists) -> $expected',
                 ({ lists, expected }) => {
-                        expect(listToArray(mergeKLists(lists.map(arrayToList)))).toStrictEqual(
-                                expected,
-                        );
+                        expect(
+                                listToArray(mergeKLists(lists.map((e) => arrayToList(e)))),
+                        ).toStrictEqual(expected);
                 },
         );
 });
@@ -31,9 +36,9 @@ describe('mergeKLists1', () => {
         test.each(structuredClone(testcases))(
                 'mergeKLists1($lists) -> $expected',
                 ({ lists, expected }) => {
-                        expect(listToArray(mergeKLists1(lists.map(arrayToList)))).toStrictEqual(
-                                expected,
-                        );
+                        expect(
+                                listToArray(mergeKLists1(lists.map((e) => arrayToList(e)))),
+                        ).toStrictEqual(expected);
                 },
         );
 });
@@ -42,9 +47,20 @@ describe('mergeKLists2', () => {
         test.each(structuredClone(testcases))(
                 'mergeKLists2($lists) -> $expected',
                 ({ lists, expected }) => {
-                        expect(listToArray(mergeKLists2(lists.map(arrayToList)))).toStrictEqual(
-                                expected,
-                        );
+                        expect(
+                                listToArray(mergeKLists2(lists.map((e) => arrayToList(e)))),
+                        ).toStrictEqual(expected);
+                },
+        );
+});
+
+describe('mergeKLists3', () => {
+        test.each(structuredClone(testcases))(
+                'mergeKLists3($lists) -> $expected',
+                ({ lists, expected }) => {
+                        expect(
+                                listToArray(mergeKLists3(lists.map((e) => arrayToList(e)))),
+                        ).toStrictEqual(expected);
                 },
         );
 });
