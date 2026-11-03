@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/merge-sorted-array/
  * Category: Algorithms
  * Difficulty: Easy
- * Date: 2026-03-04
+ * Date: 2026-03-04 (Updated: 2026-11-03)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -29,8 +29,9 @@
 
 /**
  * Approach: Two Pointers
- * Time Complexity: O(n)
- * Space Complexity: O(n)
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ * `N` = `m`
  *
  * @param {number[]} nums1
  * @param {number} m
@@ -41,19 +42,11 @@
 const merge = (nums1, m, nums2, n) => {
         let p = m - 1;
         let q = n - 1;
-        let k = m + n - 1;
+        let i = m + n - 1;
 
-        while (p > -1 && q > -1) {
-                if (nums1[p] < nums2[q]) {
-                        nums1[k--] = nums2[q--];
-                } else {
-                        nums1[k--] = nums1[p--];
-                }
-        }
-
-        while (p > -1 || q > -1) {
-                nums1[k--] = nums1[p--] ?? nums2[q--];
-        }
+        while (p > -1 && q > -1) nums1[i--] = nums1[p] > nums2[q] ? nums1[p--] : nums2[q--];
+        while (p > -1) nums1[i--] = nums1[p--];
+        while (q > -1) nums1[i--] = nums2[q--];
 };
 
 export { merge };
