@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/sort-an-array/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-05-04
+ * Date: 2026-05-04 (Updated: 2026-11-03)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -27,40 +27,36 @@
 
 /**
  * Approach: Counting Sort
- * Time Complexity: O(n + d)
- * Space Complexity: O(d) auxiliary, O(n + d) total
- * `n` = length of `nums`, `d` = difference between maximum and minimum value in `nums`
+ * Time Complexity: O(n + K)
+ * Space Complexity: O(K) auxiliary, O(n + K) total
+ * `n` = `nums.length`, `K` = `max(nums[i]) - min(nums[i])`
  *
  * @param {number[]} nums
  * @returns {number[]}
  */
 const sortArray = (nums) => {
         const n = nums.length;
-        let max = nums[0];
-        let min = nums[0];
+        let mx = nums[0];
+        let mn = nums[0];
 
         for (let i = 1; i < n; i++) {
-                const num = nums[i];
-                max = Math.max(max, num);
-                min = Math.min(min, num);
+                const v = nums[i];
+
+                if (v > mx) mx = v;
+                else if (v < mn) mn = v;
         }
 
-        const d = max - min + 1;
-        const buckets = new Uint32Array(d);
+        const k = mx - mn + 1;
+        const b = new Uint32Array(k);
 
-        for (let i = 0; i < n; i++) {
-                buckets[nums[i] - min]++;
-        }
+        for (let i = 0; i < n; i++) b[nums[i] - mn]++;
 
         const res = new Int32Array(n);
 
-        for (let i = 0, j = 0; i < d; i++) {
-                let cnt = buckets[i];
+        for (let v = 0, ri = 0; v < k; v++) {
+                let cnt = b[v];
 
-                while (cnt) {
-                        res[j++] = i + min;
-                        cnt--;
-                }
+                while (cnt--) res[ri++] = v + mn;
         }
 
         return res;
@@ -68,73 +64,63 @@ const sortArray = (nums) => {
 
 /**
  * Approach: Merge Sort
- * Time Complexity: O(n log n)
+ * Time Complexity: O(n lg n)
  * Space Complexity: O(n)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @returns {number[]}
  */
 const sortArray1 = (nums) => {
-        const merge = (A, l, m, r) => {
-                const L = A.slice(l, m + 1);
-                const R = A.slice(m + 1, r + 1);
-                const nl = L.length;
-                const nr = R.length;
-                let p = 0;
-                let q = 0;
-                let i = l;
+        const n = nums.length;
+        const arr = Int32Array.from(nums);
+        const buf = new Int32Array(n);
 
-                while (p < nl && q < nr) {
-                        if (L[p] <= R[q]) {
-                                A[i++] = L[p++];
-                        } else {
-                                A[i++] = R[q++];
-                        }
-                }
+        const merge = (l, m, r) => {
+                let bi = 0;
+                let p = l;
+                let q = m + 1;
 
-                while (p < nl) {
-                        A[i++] = L[p++];
-                }
+                while (p <= m && q <= r) buf[bi++] = arr[p] <= arr[q] ? arr[p++] : arr[q++];
+                while (p <= m) buf[bi++] = arr[p++];
+                while (q <= r) buf[bi++] = arr[q++];
 
-                while (q < nr) {
-                        A[i++] = R[q++];
-                }
+                bi = 0;
+
+                for (let i = l; i <= r; i++, bi++) arr[i] = buf[bi];
         };
 
-        const mergeSort = (A, l, r) => {
-                if (l >= r) {
-                        return;
-                }
+        const mergeSort = (l, r) => {
+                if (l >= r) return;
 
-                const m = Math.floor((l + r) / 2);
-                mergeSort(A, l, m);
-                mergeSort(A, m + 1, r);
-                merge(A, l, m, r);
+                const m = (l + r) >> 1;
+                mergeSort(l, m);
+                mergeSort(m + 1, r);
+                merge(l, m, r);
         };
 
-        mergeSort(nums, 0, nums.length - 1);
+        mergeSort(0, n - 1);
 
-        return nums;
+        return arr;
 };
 
 /**
  * Approach: Insertion Sort [TLE]
  * Time Complexity: O(n^2)
- * Space Complexity: O(1) auxiliary, O(n)
+ * Space Complexity: O(1) auxiliary, O(n) total
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @returns {number[]}
  */
 const sortArray2 = (nums) => {
         for (let i = 1; i < nums.length; i++) {
-                const num = nums[i];
+                const v = nums[i];
                 let j = i - 1;
 
-                while (j > -1 && nums[j] > num) {
-                        nums[j + 1] = nums[j--];
-                }
+                while (j > -1 && nums[j] > v) nums[j + 1] = nums[j--];
 
-                nums[j + 1] = num;
+                nums[j + 1] = v;
         }
 
         return nums;
