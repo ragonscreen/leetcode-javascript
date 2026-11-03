@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/merge-k-sorted-lists/
  * Category: Algorithms
  * Difficulty: Hard
- * Date: 2026-04-15
+ * Date: 2026-04-15 (Updated: 2026-11-03)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -32,10 +32,10 @@ import { MinPriorityQueue } from '@datastructures-js/priority-queue';
 import { ListNode } from '../../../data-structures/linked-list/LinkedListNode.js';
 
 /**
- * Approach: Sorting [Optimal]
- * Time Complexity: O(n + k log k)
- * Space Complexity: O(k)
- * `k` = total number of nodes across all lists in `lists`
+ * Approach: Sorting
+ * Time Complexity: O(m lg m)
+ * Space Complexity: O(m)
+ * `m` = `sum(lists[i].length)`
  *
  * @param {ListNode[]} lists
  * @returns {ListNode}
@@ -64,9 +64,9 @@ const mergeKLists = (lists) => {
 
 /**
  * Approach: Priority Queue
- * Time Complexity: O(n + k log n)
- * Space Complexity: O(n)
- * `n` = length of `lists`, `k` = total number of nodes across all lists in `lists`
+ * Time Complexity: O(n + m lg n)
+ * Space Complexity: O(m)
+ * `n` = `lists.length`, `m` = `sum(lists[i].length)`
  *
  * @param {ListNode[]} lists
  * @returns {ListNode}
@@ -74,14 +74,10 @@ const mergeKLists = (lists) => {
 const mergeKLists1 = (lists) => {
         const pq = new MinPriorityQueue((e) => e.val);
 
-        for (const list of lists) {
-                if (list) {
-                        pq.enqueue(list);
-                }
-        }
+        for (const list of lists) if (list) pq.enqueue(list);
 
-        const res = new ListNode();
-        let curr = res;
+        const dummy = new ListNode();
+        let curr = dummy;
 
         while (pq.size()) {
                 const node = pq.dequeue();
@@ -89,50 +85,47 @@ const mergeKLists1 = (lists) => {
                 curr = curr.next;
                 const next = node.next;
 
-                if (next) {
-                        pq.enqueue(next);
-                }
+                if (next) pq.enqueue(next);
         }
 
-        return res.next;
+        return dummy.next;
 };
 
 /**
- * Approach: Iteration
- * Time Complexity: O(n * k)
- * Space Complexity: O(1) auxiliary, O(k) total
- * `n` = length of `lists`, `k` = total number of nodes across all lists in `lists`
+ * Approach: Simulation
+ * Time Complexity: O(n * m)
+ * Space Complexity: O(1) auxiliary, O(m) total
+ * `n` = `lists.length`, `m` = `sum(lists[i].length)`
  *
  * @param {ListNode[]} lists
  * @returns {ListNode}
  */
 const mergeKLists2 = (lists) => {
-        const res = new ListNode();
-        let curr = res;
+        const n = lists.length;
+        const dummy = new ListNode();
+        let curr = dummy;
 
         while (true) {
-                let min = Number.MAX_SAFE_INTEGER;
-                let minI;
+                let mn = Number.MAX_SAFE_INTEGER;
+                let mni = -1;
 
-                for (let i = 0; i < lists.length; i++) {
+                for (let i = 0; i < n; i++) {
                         const list = lists[i];
 
-                        if (list?.val < min) {
-                                min = list.val;
-                                minI = i;
+                        if (list?.val < mn) {
+                                mn = list.val;
+                                mni = i;
                         }
                 }
 
-                if (minI === undefined) {
-                        break;
-                }
+                if (mni === -1) break;
 
-                curr.next = new ListNode(min);
+                curr.next = new ListNode(mn);
                 curr = curr.next;
-                lists[minI] = lists[minI].next;
+                lists[mni] = lists[mni].next;
         }
 
-        return res.next;
+        return dummy.next;
 };
 
 export { mergeKLists, mergeKLists1, mergeKLists2 };
