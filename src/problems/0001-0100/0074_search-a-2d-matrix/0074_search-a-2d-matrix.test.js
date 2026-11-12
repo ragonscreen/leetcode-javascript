@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 
-import { searchMatrix } from './0074_search-a-2d-matrix.js';
+import { searchMatrix, searchMatrix1 } from './0074_search-a-2d-matrix.js';
 
 const testcases = [
         {
@@ -48,6 +48,15 @@ describe('searchMatrix', () => {
                 'searchMatrix($matrix, $target) -> $expected',
                 ({ matrix, target, expected }) => {
                         expect(searchMatrix(matrix, target)).toStrictEqual(expected);
+                },
+        );
+});
+
+describe('searchMatrix1', () => {
+        test.each(structuredClone(testcases))(
+                'searchMatrix1($matrix, $target) -> $expected',
+                ({ matrix, target, expected }) => {
+                        expect(searchMatrix1(matrix, target)).toStrictEqual(expected);
                 },
         );
 });
