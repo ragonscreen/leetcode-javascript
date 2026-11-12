@@ -29,53 +29,47 @@
 /**
  * Approach: Three Pointers (Dutch National Flag Algorithm)
  * Time Complexity: O(n)
- * Space Complexity: O(1) auxiliary, O(n) total
+ * Space Complexity: O(1)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @returns {void}
  */
 const sortColors = (nums) => {
+        // oxlint-disable-next-line no-return-assign
+        const swap = (i, j) => ([nums[i], nums[j]] = [nums[j], nums[i]]);
+
         for (let i = 0, l = 0, r = nums.length - 1; i <= r; i++) {
-                if (nums[i] === 0) {
-                        [nums[i], nums[l]] = [nums[l], nums[i]];
-                        l++;
-                } else if (nums[i] === 2) {
-                        [nums[i], nums[r]] = [nums[r], nums[i]];
-                        r--;
-                        i--;
-                }
+                const v = nums[i];
+
+                if (v < 1) swap(l++, i);
+                else if (v > 1) swap(r--, i--);
         }
 };
 
 /**
  * Approach: Counting Sort
  * Time Complexity: O(n)
- * Space Complexity: O(1) auxiliary, O(n) total
+ * Space Complexity: O(k)
+ * `n` = `nums.length`, `k` = `max(nums[i])`
  *
  * @param {number[]} nums
  * @returns {void}
  */
 const sortColors1 = (nums) => {
-        const arr = [0, 0, 0];
+        const frq = [0, 0, 0];
 
-        for (const num of nums) {
-                arr[num]++;
-        }
+        for (const v of nums) frq[v]++;
 
-        for (let i = 0, j = 0; i < nums.length; i++) {
-                while (!arr[j]) {
-                        j++;
-                }
-
-                nums[i] = j;
-                arr[j]--;
-        }
+        for (let v = 0, ri = 0; v < frq.length; v++)
+                for (let j = 0; j < frq[v]; j++) nums[ri++] = v;
 };
 
 /**
  * Approach: Insertion Sort
  * Time Complexity: O(n^2)
- * Space Complexity: O(1) auxiliary, O(n) total
+ * Space Complexity: O(1)
+ * `n` = `nums.length`
  *
  * @param {number[]} nums
  * @returns {void}
@@ -85,9 +79,7 @@ const sortColors2 = (nums) => {
                 const num = nums[i];
                 let idx = i;
 
-                while (num < nums[idx - 1]) {
-                        nums[idx] = nums[--idx];
-                }
+                while (num < nums[idx - 1]) nums[idx] = nums[--idx];
 
                 nums[idx] = num;
         }
