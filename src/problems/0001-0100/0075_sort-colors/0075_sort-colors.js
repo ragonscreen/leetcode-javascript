@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/sort-colors/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-04-08
+ * Date: 2026-04-08 (Updated: 2026-11-12)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
