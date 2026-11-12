@@ -65,24 +65,4 @@ const sortColors1 = (nums) => {
                 for (let j = 0; j < frq[v]; j++) nums[ri++] = v;
 };
 
-/**
- * Approach: Insertion Sort
- * Time Complexity: O(n^2)
- * Space Complexity: O(1)
- * `n` = `nums.length`
- *
- * @param {number[]} nums
- * @returns {void}
- */
-const sortColors2 = (nums) => {
-        for (let i = 1; i < nums.length; i++) {
-                const num = nums[i];
-                let idx = i;
-
-                while (num < nums[idx - 1]) nums[idx] = nums[--idx];
-
-                nums[idx] = num;
-        }
-};
-
-export { sortColors, sortColors1, sortColors2 };
+export { sortColors, sortColors1 };

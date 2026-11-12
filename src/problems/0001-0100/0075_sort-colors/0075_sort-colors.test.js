@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 
-import { sortColors, sortColors1, sortColors2 } from './0075_sort-colors.js';
+import { sortColors, sortColors1 } from './0075_sort-colors.js';
 
 const testcases = [
         { nums: [2, 0, 2, 1, 1, 0], expected: [0, 0, 1, 1, 2, 2] },
@@ -24,16 +24,6 @@ describe('sortColors1', () => {
                 'sortColors1($nums) -> $expected',
                 ({ nums, expected }) => {
                         expect(sortColors1(nums)).toBeNil();
-                        expect(nums).toStrictEqual(expected);
-                },
-        );
-});
-
-describe('sortColors2', () => {
-        test.each(structuredClone(testcases))(
-                'sortColors2($nums) -> $expected',
-                ({ nums, expected }) => {
-                        expect(sortColors2(nums)).toBeNil();
                         expect(nums).toStrictEqual(expected);
                 },
         );
