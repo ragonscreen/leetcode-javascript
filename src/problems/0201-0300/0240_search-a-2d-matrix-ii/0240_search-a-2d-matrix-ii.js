@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/search-a-2d-matrix-ii/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-04-02
+ * Date: 2026-04-02 (Updated: 2026-11-12)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -26,10 +26,10 @@
  */
 
 /**
- * Approach: Linear Scan [Optimal]
+ * Approach: Two Pointers
  * Time Complexity: O(n + m)
  * Space Complexity: O(1)
- * `n` = length of `matrix`, `m` = length of `matrix[i]`
+ * `n` = `matrix.length`, `m` = `matrix[i].length`
  *
  * @param {number[][]} matrix
  * @param {number} target
@@ -38,20 +38,15 @@
 const searchMatrix = (matrix, target) => {
         const n = matrix.length;
         const m = matrix[0].length;
-        let j = 0;
+        let y = n - 1;
+        let x = 0;
 
-        for (let i = n - 1; i >= 0; i--) {
-                while (j < m && target > matrix[i][j]) {
-                        j++;
-                }
+        while (y > -1 && x < m) {
+                const v = matrix[y][x];
 
-                if (j === m) {
-                        return false;
-                }
-
-                if (matrix[i][j] === target) {
-                        return true;
-                }
+                if (v < target) x++;
+                else if (v > target) y--;
+                else return true;
         }
 
         return false;
@@ -61,7 +56,7 @@ const searchMatrix = (matrix, target) => {
  * Approach: Binary Search
  * Time Complexity: O(n + m)
  * Space Complexity: O(1)
- * `n` = length of `matrix`, `m` = length of `matrix[i]`
+ * `n` = `matrix.length`, `m` = `matrix[i].length`
  *
  * @param {number[][]} matrix
  * @param {number} target
@@ -70,24 +65,20 @@ const searchMatrix = (matrix, target) => {
 const searchMatrix1 = (matrix, target) => {
         const n = matrix.length;
         const m = matrix[0].length;
-        let l = 0;
+        let ok = 0;
 
-        for (let i = n - 1; i >= 0; i--) {
-                const row = matrix[i];
-                let r = m - 1;
+        for (let y = n - 1; y > -1; y--) {
+                const row = matrix[y];
+                let ng = m;
 
-                while (l <= r) {
-                        const mid = l + Math.floor((r - l) / 2);
-                        const val = row[mid];
+                while (ng - ok > 1) {
+                        const mid = (ok + ng) >> 1;
 
-                        if (val < target) {
-                                l = mid + 1;
-                        } else if (val > target) {
-                                r = mid - 1;
-                        } else {
-                                return true;
-                        }
+                        if (row[mid] <= target) ok = mid;
+                        else ng = mid;
                 }
+
+                if (row[ok] === target) return true;
         }
 
         return false;
