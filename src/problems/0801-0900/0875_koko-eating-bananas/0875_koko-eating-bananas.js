@@ -4,7 +4,7 @@
  * Link: https://leetcode.com/problems/koko-eating-bananas/
  * Category: Algorithms
  * Difficulty: Medium
- * Date: 2026-04-02
+ * Date: 2026-04-02 (Updated: 2026-11-12)
  * Author: ragonscreen (https://github.com/ragonscreen/)
  *
  * Topics:
@@ -29,34 +29,38 @@
 
 /**
  * Approach: Binary Search
- * Time Complexity: O(n log k)
+ * Time Complexity: O(n lg K)
  * Space Complexity: O(1)
- * `n` = length of `piles`, `k` = maximum value in `piles`
+ * `n` = `piles.length`, `K` = `max(piles[i])`
  *
  * @param {number[]} piles
  * @param {number} h
  * @returns {number}
  */
 const minEatingSpeed = (piles, h) => {
-        let l = 1;
-        let r = Math.max(...piles);
+        const check = (v) => {
+                let t = 0;
 
-        while (l < r) {
-                const m = l + Math.floor((r - l) / 2);
-                let time = 0;
+                for (const p of piles) {
+                        t += Math.ceil(p / v);
 
-                for (const pile of piles) {
-                        time += Math.ceil(pile / m);
+                        if (t > h) return false;
                 }
 
-                if (time > h) {
-                        l = m + 1;
-                } else {
-                        r = m;
-                }
+                return true;
+        };
+
+        let ng = 0;
+        let ok = Math.max(...piles);
+
+        while (ok - ng > 1) {
+                const mid = (ok + ng) >> 1;
+
+                if (check(mid)) ok = mid;
+                else ng = mid;
         }
 
-        return r;
+        return ok;
 };
 
 export { minEatingSpeed };
